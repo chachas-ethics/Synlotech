@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web Apps & Systems | Synlotech Technologies</title>
+  <meta name="description"
+    content="Custom web applications and internal systems that automate workflows, reduce manual work, and scale with your business." />
+
+    <!-- TAILWIND CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- CUSTOM CONFIG -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2563EB',
+            accent: '#38BDF8',
+            dark: '#020617',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .bar {
+  position: absolute;
+  width: 24px;
+  height: 2.5px;              /* thicker = visible */
+  background-color: #ffffff; /* force white */
+  border-radius: 999px;
+  transition: all 0.3s ease;
+}
+
+.top { transform: translateY(-7px); }
+.middle { opacity: 1; }
+.bottom { transform: translateY(7px); }
+
+/* OPEN STATE */
+.open .top {
+  transform: rotate(45deg);
+}
+
+.open .middle {
+  opacity: 0;
+}
+
+.open .bottom {
+  transform: rotate(-45deg);
+}
+
+  </style>
+</head>
+
+<body class="bg-dark text-white">
+<header class="fixed top-0 inset-x-0 z-50 backdrop-blur bg-dark/70 border-b border-white/5 py-3">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex items-center justify-between h-20">
+
+        <!-- LOGO -->
+        <a href="/" class="text-2xl font-extrabold text-primary tracking-tight">
+          SYNLOTECH
+        </a>
+
+        <!-- DESKTOP NAV -->
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+          <a href="#services" class="hover:text-primary transition">Services</a>
+          <a href="#work" class="hover:text-primary transition">Work</a>
+          <a href="#process" class="hover:text-primary transition">Process</a>
+          <a href="#contact" class="hover:text-primary transition">Contact</a>
+        </nav>
+
+        <!-- CTA -->
+        <div class="hidden md:block">
+          <a href="#contact"
+             class="px-5 py-2.5 rounded-lg bg-primary text-white font-semibold
+                    hover:bg-blue-700 transition shadow-lg shadow-primary/30">
+            Get a Quote
+          </a>
+        </div>
+
+        <!-- MOBILE MENU BUTTON -->
+       <button
+  id="menuBtn"
+  class="md:hidden relative w-10 h-10 flex items-center justify-center
+         z-50 rounded-md hover: transition"
+  aria-label="Open menu"
+>
+  <span class="bar top"></span>
+  <span class="bar middle"></span>
+  <span class="bar bottom"></span>
+</button>
+
+      </div>
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div id="mobileMenu"
+  class="md:hidden absolute top-full left-0 w-full
+         bg-dark/95 backdrop-blur
+         transform scale-y-0 origin-top
+         opacity-0
+         transition-all duration-300 ease-out">
+
+      <nav class="px-6 py-6 flex flex-col gap-4 text-sm font-medium border-t border-white/10">
+        <a href="#services" class="hover:text-primary">Services</a>
+        <a href="#work" class="hover:text-primary">Work</a>
+        <a href="#process" class="hover:text-primary">Process</a>
+        <a href="#contact" class="hover:text-primary">Contact</a>
+
+        <a href="#contact"
+           class="mt-4 inline-flex justify-center px-6 py-3 rounded-lg bg-primary text-white font-semibold">
+          Get a Quote
+        </a>
+      </nav>
+    </div>
+  </header>
+<!-- HERO -->
+<section class="pt-40 pb-24">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="max-w-3xl">
+      <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight">
+        Web Apps & Systems
+      </h1>
+      <p class="mt-6 text-slate-300 text-lg">
+        We build secure, scalable web applications and internal systems that
+        automate processes, reduce costs, and give you full control over your operations.
+      </p>
+
+      <div class="mt-8 flex flex-wrap gap-4">
+        <a href="#contact"
+          class="px-8 py-4 bg-primary rounded-xl font-semibold hover:bg-blue-700 transition">
+          Request a Quote
+        </a>
+        <a href="#use-cases"
+          class="px-8 py-4 border border-white/20 rounded-xl font-semibold hover:border-primary transition">
+          See Use Cases
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT WE BUILD -->
+<section class="py-24 bg-white/5">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-3xl font-bold mb-12">What We Build</h2>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="p-6 rounded-xl bg-white/5 border border-white/10">
+        <h3 class="font-semibold mb-2">Business Dashboards</h3>
+        <p class="text-slate-300 text-sm">
+          Real-time dashboards to monitor sales, users, and performance.
+        </p>
+      </div>
+
+      <div class="p-6 rounded-xl bg-white/5 border border-white/10">
+        <h3 class="font-semibold mb-2">Admin Panels</h3>
+        <p class="text-slate-300 text-sm">
+          Secure admin systems to manage data, users, and content.
+        </p>
+      </div>
+
+      <div class="p-6 rounded-xl bg-white/5 border border-white/10">
+        <h3 class="font-semibold mb-2">Booking & Management Systems</h3>
+        <p class="text-slate-300 text-sm">
+          Custom booking, scheduling, and workflow automation.
+        </p>
+      </div>
+
+      <div class="p-6 rounded-xl bg-white/5 border border-white/10">
+        <h3 class="font-semibold mb-2">E-commerce & Ordering Systems</h3>
+        <p class="text-slate-300 text-sm">
+          Custom e-commerce logic beyond basic templates.
+        </p>
+      </div>
+
+      <div class="p-6 rounded-xl bg-white/5 border border-white/10">
+        <h3 class="font-semibold mb-2">APIs & Integrations</h3>
+        <p class="text-slate-300 text-sm">
+          Payment gateways, SMS, email, WhatsApp, and third-party APIs.
+        </p>
+      </div>
+
+      <div class="p-6 rounded-xl bg-white/5 border border-white/10">
+        <h3 class="font-semibold mb-2">SaaS Platforms</h3>
+        <p class="text-slate-300 text-sm">
+          Multi-user systems built for growth and scalability.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO THIS IS FOR -->
+<section id="use-cases" class="py-24">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-3xl font-bold mb-8">Who This Is For</h2>
+
+    <ul class="grid sm:grid-cols-2 gap-6 text-slate-300">
+      <li>✔ Businesses tired of manual work</li>
+      <li>✔ Schools, hospitals & institutions</li>
+      <li>✔ Startups building digital products</li>
+      <li>✔ Companies outgrowing spreadsheets</li>
+    </ul>
+  </div>
+</section>
+
+<!-- HOW WE WORK -->
+<section class="py-24 bg-white/5">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-3xl font-bold mb-12">How We Build Your System</h2>
+
+    <div class="grid md:grid-cols-4 gap-8">
+      <div>
+        <span class="text-primary font-bold">01</span>
+        <h3 class="font-semibold mt-2">System Planning</h3>
+        <p class="text-slate-300 text-sm">
+          Requirements, workflows, and architecture design.
+        </p>
+      </div>
+
+      <div>
+        <span class="text-primary font-bold">02</span>
+        <h3 class="font-semibold mt-2">UI & UX Design</h3>
+        <p class="text-slate-300 text-sm">
+          Clean interfaces focused on usability.
+        </p>
+      </div>
+
+      <div>
+        <span class="text-primary font-bold">03</span>
+        <h3 class="font-semibold mt-2">Development</h3>
+        <p class="text-slate-300 text-sm">
+          Secure, scalable, and well-documented code.
+        </p>
+      </div>
+
+      <div>
+        <span class="text-primary font-bold">04</span>
+        <h3 class="font-semibold mt-2">Testing & Deployment</h3>
+        <p class="text-slate-300 text-sm">
+          QA, security checks, and production launch.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-24">
+  <div class="max-w-4xl mx-auto px-6 text-center">
+    <h2 class="text-3xl font-bold">
+      Ready to Build Your Custom System?
+    </h2>
+    <p class="mt-4 text-slate-300">
+      Tell us what you want to automate — we’ll design the solution.
+    </p>
+
+    <a href="#contact"
+      class="inline-block mt-8 px-10 py-4 bg-primary rounded-xl font-semibold hover:bg-blue-700 transition">
+      Start Your Project
+    </a>
+  </div>
+</section>
+
+<script>
+   const btn = document.getElementById('menuBtn');
+const menu = document.getElementById('mobileMenu');
+
+btn.addEventListener('click', () => {
+  btn.classList.toggle('open');
+  menu.classList.toggle('scale-y-0');
+  menu.classList.toggle('opacity-0');
+
+});
+  </script>
+</body>
+</html>

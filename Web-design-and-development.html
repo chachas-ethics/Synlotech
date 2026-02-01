@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Website Design & Development | Synlotech Technologies</title>
+  <meta name="description" content="High-performance, mobile-first websites built to convert visitors into customers. Custom design, clean code, SEO-ready." />
+
+  <!-- TAILWIND CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- CUSTOM CONFIG -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2563EB',
+            accent: '#38BDF8',
+            dark: '#020617',
+          }
+        }
+      }
+    }
+  </script>
+
+<style>
+    .bar {
+  position: absolute;
+  width: 24px;
+  height: 2.5px;              /* thicker = visible */
+  background-color: #ffffff; /* force white */
+  border-radius: 999px;
+  transition: all 0.3s ease;
+}
+
+.top { transform: translateY(-7px); }
+.middle { opacity: 1; }
+.bottom { transform: translateY(7px); }
+
+/* OPEN STATE */
+.open .top {
+  transform: rotate(45deg);
+}
+
+.open .middle {
+  opacity: 0;
+}
+
+.open .bottom {
+  transform: rotate(-45deg);
+}
+
+  </style>
+  
+</head>
+
+<body class="bg-dark text-white">
+<header class="fixed top-0 inset-x-0 z-50 backdrop-blur bg-dark/70 border-b border-white/5 py-3">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex items-center justify-between h-20">
+
+        <!-- LOGO -->
+        <a href="/" class="text-2xl font-extrabold text-primary tracking-tight">
+          SYNLOTECH
+        </a>
+
+        <!-- DESKTOP NAV -->
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+          <a href="#services" class="hover:text-primary transition">Services</a>
+          <a href="#work" class="hover:text-primary transition">Work</a>
+          <a href="#process" class="hover:text-primary transition">Process</a>
+          <a href="#contact" class="hover:text-primary transition">Contact</a>
+        </nav>
+
+        <!-- CTA -->
+        <div class="hidden md:block">
+          <a href="#contact"
+             class="px-5 py-2.5 rounded-lg bg-primary text-white font-semibold
+                    hover:bg-blue-700 transition shadow-lg shadow-primary/30">
+            Get a Quote
+          </a>
+        </div>
+
+        <!-- MOBILE MENU BUTTON -->
+       <button
+  id="menuBtn"
+  class="md:hidden relative w-10 h-10 flex items-center justify-center
+         z-50 rounded-md hover: transition"
+  aria-label="Open menu"
+>
+  <span class="bar top"></span>
+  <span class="bar middle"></span>
+  <span class="bar bottom"></span>
+</button>
+
+      </div>
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div id="mobileMenu"
+  class="md:hidden absolute top-full left-0 w-full
+         bg-dark/95 backdrop-blur
+         transform scale-y-0 origin-top
+         opacity-0
+         transition-all duration-300 ease-out">
+
+      <nav class="px-6 py-6 flex flex-col gap-4 text-sm font-medium border-t border-white/10">
+        <a href="#services" class="hover:text-primary">Services</a>
+        <a href="#work" class="hover:text-primary">Work</a>
+        <a href="#process" class="hover:text-primary">Process</a>
+        <a href="#contact" class="hover:text-primary">Contact</a>
+
+        <a href="#contact"
+           class="mt-4 inline-flex justify-center px-6 py-3 rounded-lg bg-primary text-white font-semibold">
+          Get a Quote
+        </a>
+      </nav>
+    </div>
+  </header>
+
+<!-- HERO -->
+<section class="pt-40 pb-24">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="max-w-3xl">
+      <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight">
+        Website Design & Development
+      </h1>
+      <p class="mt-6 text-slate-300 text-lg">
+        We design and build fast, secure, and conversion-focused websites that
+        help businesses grow, attract customers, and look credible online.
+      </p>
+
+      <div class="mt-8 flex flex-wrap gap-4">
+        <a href="#contact"
+           class="px-8 py-4 bg-primary rounded-xl font-semibold hover:bg-blue-700 transition">
+          Get a Quote
+        </a>
+        <a href="#process"
+           class="px-8 py-4 border border-white/20 rounded-xl font-semibold hover:border-primary transition">
+          See Our Process
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT YOU GET -->
+<section class="py-24 bg-white/5">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-3xl font-bold mb-12">What You Get</h2>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="p-6 rounded-xl bg-white/5 border border-white/10">
+        <h3 class="font-semibold mb-2">Custom UI/UX Design</h3>
+        <p class="text-slate-300 text-sm">
+          Clean, modern designs tailored to your brand and target audience.
+        </p>
+      </div>
+
+      <div class="p-6 rounded-xl bg-white/5 border border-white/10">
+        <h3 class="font-semibold mb-2">Mobile-First Development</h3>
+        <p class="text-slate-300 text-sm">
+          Your website will look and work perfectly on phones, tablets, and desktops.
+        </p>
+      </div>
+
+      <div class="p-6 rounded-xl bg-white/5 border border-white/10">
+        <h3 class="font-semibold mb-2">Fast Performance</h3>
+        <p class="text-slate-300 text-sm">
+          Optimized code and assets for fast load times and better SEO.
+        </p>
+      </div>
+
+      <div class="p-6 rounded-xl bg-white/5 border border-white/10">
+        <h3 class="font-semibold mb-2">SEO-Ready Structure</h3>
+        <p class="text-slate-300 text-sm">
+          Built with clean markup, proper headings, and best SEO practices.
+        </p>
+      </div>
+
+      <div class="p-6 rounded-xl bg-white/5 border border-white/10">
+        <h3 class="font-semibold mb-2">Secure & Scalable</h3>
+        <p class="text-slate-300 text-sm">
+          Secure builds that can scale as your business grows.
+        </p>
+      </div>
+
+      <div class="p-6 rounded-xl bg-white/5 border border-white/10">
+        <h3 class="font-semibold mb-2">Easy Management</h3>
+        <p class="text-slate-300 text-sm">
+          Optional CMS or admin panel so you can update content easily.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO THIS IS FOR -->
+<section class="py-24">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-3xl font-bold mb-8">Who This Is For</h2>
+
+    <ul class="grid sm:grid-cols-2 gap-6 text-slate-300">
+      <li>✔ Startups that need credibility</li>
+      <li>✔ Businesses that want more leads</li>
+      <li>✔ Schools, hospitals & institutions</li>
+      <li>✔ Brands outgrowing template websites</li>
+    </ul>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process" class="py-24 bg-white/5">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-3xl font-bold mb-12">Our Process</h2>
+
+    <div class="grid md:grid-cols-4 gap-8">
+      <div>
+        <span class="text-primary font-bold">01</span>
+        <h3 class="font-semibold mt-2">Discovery</h3>
+        <p class="text-slate-300 text-sm">
+          We understand your business, goals, and users.
+        </p>
+      </div>
+
+      <div>
+        <span class="text-primary font-bold">02</span>
+        <h3 class="font-semibold mt-2">Design</h3>
+        <p class="text-slate-300 text-sm">
+          Wireframes and visuals crafted for clarity and conversion.
+        </p>
+      </div>
+
+      <div>
+        <span class="text-primary font-bold">03</span>
+        <h3 class="font-semibold mt-2">Development</h3>
+        <p class="text-slate-300 text-sm">
+          Clean, responsive, and scalable code.
+        </p>
+      </div>
+
+      <div>
+        <span class="text-primary font-bold">04</span>
+        <h3 class="font-semibold mt-2">Launch & Support</h3>
+        <p class="text-slate-300 text-sm">
+          Testing, deployment, and optional maintenance.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-24">
+  <div class="max-w-4xl mx-auto px-6 text-center">
+    <h2 class="text-3xl font-bold">
+      Ready to Build a Website That Works?
+    </h2>
+    <p class="mt-4 text-slate-300">
+      Let’s turn your idea into a high-performing digital experience.
+    </p>
+
+    <a href="#contact"
+       class="inline-block mt-8 px-10 py-4 bg-primary rounded-xl font-semibold hover:bg-blue-700 transition">
+      Get a Quote
+    </a>
+  </div>
+</section>
+
+
+<script>
+   const btn = document.getElementById('menuBtn');
+const menu = document.getElementById('mobileMenu');
+
+btn.addEventListener('click', () => {
+  btn.classList.toggle('open');
+  menu.classList.toggle('scale-y-0');
+  menu.classList.toggle('opacity-0');
+
+});
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,1302 @@
+<!DOCTYPE html>
+<html lang="en" CLASS="scroll-smooth">
+<head>
+  <!-- BASIC META -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Synlotech Technologies | Transform Ideas Into Digital Reality</title>
+  <meta name="description" content="Synlotech Technologies builds high-performance websites, web apps, and digital systems for businesses, startups, schools, and hospitals in Tanzania and beyond." />
+  <meta name="keywords" content="Web Design Tanzania, Web Development, Software Company Tanzania, Synlotech Technologies" />
+  <meta name="author" content="Synlotech Technologies" />
+
+  <!-- TAILWIND CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- CUSTOM CONFIG -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2563EB',
+            accent: '#38BDF8',
+            dark: '#020617',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .bar {
+  position: absolute;
+  width: 24px;
+  height: 2.5px;              /* thicker = visible */
+  background-color: #ffffff; /* force white */
+  border-radius: 999px;
+  transition: all 0.3s ease;
+}
+
+.top { transform: translateY(-7px); }
+.middle { opacity: 1; }
+.bottom { transform: translateY(7px); }
+
+/* OPEN STATE */
+.open .top {
+  transform: rotate(45deg);
+}
+
+.open .middle {
+  opacity: 0;
+}
+
+.open .bottom {
+  transform: rotate(-45deg);
+}
+
+  </style>
+</head>
+
+<body style="font-family: inter;" class="bg-dark text-slate-200 antialiased">
+
+  <!-- NAVBAR -->
+  <header class="fixed top-0 inset-x-0 z-50 backdrop-blur bg-dark/70 border-b border-white/5 py-3">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex items-center justify-between h-20">
+
+        <!-- LOGO -->
+         <div>
+        <a href="home"  class="text-2xl font-extrabold text-primary tracking-tight">
+          <img style="width: 40px;
+          height: 45px;
+          display: inline-block;
+          margin-bottom: 10px;
+          " src="thumbnails/theS.png">
+        </a>
+         <p  class="text-xl font-extrabold text-blue-400 tracking-tight" style="display: inline-block;
+          ">
+          SYNLOTECH
+          </p>
+         </div>
+
+        <!-- DESKTOP NAV -->
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+          <a href="#services" class="hover:text-primary transition">Services</a>
+          <a href="#work" class="hover:text-primary transition">Work</a>
+          <a href="#process" class="hover:text-primary transition">Process</a>
+          <a href="#contact" class="hover:text-primary transition">Contact</a>
+        </nav>
+
+        <!-- CTA -->
+        <div class="hidden md:block">
+          <a href="#contact"
+             class="px-5 py-2.5 rounded-lg bg-primary text-white font-semibold
+                    hover:bg-blue-700 transition shadow-lg shadow-primary/30">
+            Get a Quote
+          </a>
+        </div>
+
+        <!-- MOBILE MENU BUTTON -->
+       <button
+  id="menuBtn"
+  class="md:hidden relative w-10 h-10 flex items-center justify-center
+         z-50 rounded-md hover: transition"
+  aria-label="Open menu"
+>
+  <span class="bar top"></span>
+  <span class="bar middle"></span>
+  <span class="bar bottom"></span>
+</button>
+
+      </div>
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div id="mobileMenu"
+  class="md:hidden absolute top-full left-0 w-full
+         bg-dark backdrop-blur
+         transform scale-y-0 origin-top
+         opacity-0
+         transition-all duration-300 ease-out">
+
+      <nav class="px-6 py-6 flex flex-col gap-4 text-sm font-medium border-t text-center border-white/10">
+        <a href="#services" class="hover:text-primary">Services</a>
+        <a href="#work" class="hover:text-primary">Work</a>
+        <a href="#process" class="hover:text-primary">Process</a>
+        <a href="#contact" class="hover:text-primary">Contact</a>
+
+        <a href="#contact"
+           class="mt-4 inline-flex justify-center px-6 py-3 rounded-lg bg-primary text-white font-semibold">
+          Get a Quote
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="relative overflow-hidden pt-32">
+    <!-- Background Gradient -->
+    <div class="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-accent/10"></div>
+
+    <!-- Grid Pattern -->
+    <div class="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.15)_1px,transparent_0)] bg-[size:32px_32px]"></div>
+
+    <div class="relative max-w-7xl mx-auto px-6 py-6">
+      <div class="max-w-3xl">
+
+        <p class="inline-flex items-center gap-2 text-sm font-medium text-accent mb-6">
+          <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+          Future-Driven Digital Solutions
+        </p>
+
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-white">
+          Transforming Ideas Into <span class="text-primary">Digital Reality</span>
+        </h1>
+
+        <p class="mt-6 text-lg sm:text-xl text-slate-300 max-w-2xl">
+          Synlotech Technologies builds high-performance websites, web applications, and digital systems
+          for a <span class="text-white font-medium">Broad field Of Businesses</span>
+          that want to scale with confidence.
+        </p>
+
+        <div class="mt-10 flex flex-col sm:flex-row gap-4">
+          <a href="#contact"
+             class="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white
+                    bg-primary rounded-xl hover:bg-blue-700 transition-all duration-300 shadow-lg shadow-primary/30">
+            Get a Quote
+          </a>
+
+          <a href="https://wa.me/255788296274"
+             class="inline-flex items-center justify-center px-8 py-4 text-base font-semibold
+                    text-primary border border-primary/40 rounded-xl hover:bg-primary/10 transition-all duration-300">
+            Contact Us
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST SIGNALS -->
+<section class="relative bg-dark border-t border-white/5">
+  <div class="max-w-7xl mx-auto px-6 py-16">
+
+    <!-- SECTION HEADER -->
+    <div class="text-center max-w-2xl mx-auto mb-12">
+      <p class="text-sm font-medium text-accent uppercase tracking-wider">
+        Trusted by Growing Businesses
+      </p>
+      <h2 class="mt-4 text-2xl sm:text-3xl font-bold text-white">
+        Built for Performance, Reliability & Growth
+      </h2>
+    </div>
+
+    <!-- METRICS -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-14">
+      
+      <div class="text-center p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur">
+        <p class="text-3xl font-extrabold text-primary">5+</p>
+        <p class="mt-2 text-sm text-slate-300">Years Experience</p>
+      </div>
+
+      <div class="text-center p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur">
+        <p class="text-3xl font-extrabold text-primary">50+</p>
+        <p class="mt-2 text-sm text-slate-300">Projects Delivered</p>
+      </div>
+
+      <div class="text-center p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur">
+        <p class="text-3xl font-extrabold text-primary">99.9%</p>
+        <p class="mt-2 text-sm text-slate-300">Uptime Reliability</p>
+      </div>
+
+      <div class="text-center p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur">
+        <p class="text-3xl font-extrabold text-primary">&lt;2s</p>
+        <p class="mt-2 text-sm text-slate-300">Load Speed Target</p>
+      </div>
+
+    </div>
+
+    <!-- CLIENT LOGOS -->
+    <div class="mt-10">
+      <p class="text-center text-xs uppercase tracking-widest text-slate-400 mb-6">
+        Businesses & Organizations We’ve Worked With
+      </p>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 items-center opacity-80">
+        <!-- PLACEHOLDER LOGOS -->
+        <a href="/" class="flex items-center gap-3">
+  <img
+    src="thumbnails/MY LOG.jpg"
+    alt="Synlotech Technologies Logo"
+    class="h-9 w-auto rounded-full"
+  />
+  <span class="text-xl font-extrabold tracking-tight text-primary">
+    SYNLOTECH
+  </span>
+</a>
+        <a href="/" class="flex items-center gap-3">
+  <img
+    src="thumbnails/kayydot.PNG"
+    alt="Synlotech Technologies Logo"
+    class="h-9 w-auto rounded-full"
+  />
+  <span class="text-xl font-extrabold tracking-tight text-primary">
+    kayy. KAFE AND GRILL
+  </span>
+</a>
+        <a href="/" class="flex items-center gap-3">
+  <img
+    src="thumbnails/two cones.PNG"
+    alt="Synlotech Technologies Logo"
+    class="h-9 w-auto rounded-full"
+  />
+  <span class="text-xl font-extrabold tracking-tight text-primary">
+    THE SCOOP
+  </span>
+</a>
+        <a href="/" class="flex items-center gap-3">
+  <img
+    src="thumbnails/hoslog.jpg"
+    alt="Synlotech Technologies Logo"
+    class="h-9 w-auto rounded-full"
+  />
+  <span class="text-xl font-extrabold tracking-tight text-primary">
+    SUNRISE MEDICAL
+  </span>
+</a>
+
+<a href="/" class="flex items-center gap-3">
+  <img
+    src="thumbnails/avilogo.jpg"
+    alt="Synlotech Technologies Logo"
+    class="h-9 w-auto rounded-full"
+  />
+  <span class="text-xl font-extrabold tracking-tight text-primary">
+    AVIOCEAN LTD
+  </span>
+</a>
+        
+       <a href="/" class="flex items-center gap-3">
+  <img
+    src="thumbnails/camblog.jpg"
+    alt="Synlotech Technologies Logo"
+    class="h-9 w-auto rounded-full"
+  />
+  <span class="text-xl font-extrabold tracking-tight text-primary">
+    SUNRISE SCHOOLS
+  </span>
+</a> 
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SERVICES SECTION -->
+<section id="services" class="relative bg-dark">
+  <!-- Background Accent -->
+  <div class="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent"></div>
+
+  <div class="relative max-w-7xl mx-auto px-6 py-24">
+
+    <!-- SECTION HEADER -->
+    <div class="max-w-2xl mb-16">
+      <p class="text-sm font-medium text-accent uppercase tracking-wider">
+        What We Do
+      </p>
+      <h2 class="mt-4 text-3xl sm:text-4xl font-extrabold text-white">
+        Services Built to Drive Results
+      </h2>
+      <p class="mt-4 text-slate-300">
+        We focus on high-impact digital services that help businesses operate better, convert faster, and scale smarter.
+      </p>
+    </div>
+
+    <!-- SERVICES GRID -->
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+
+      <!-- SERVICE CARD -->
+      <div class="group relative p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur
+                  hover:border-primary/40 transition">
+        <div class="mb-6">
+          <div class="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center text-primary font-bold">
+            01
+          </div>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">
+          Website Design & Development
+        </h3>
+        <p class="text-slate-300 text-sm mb-6">
+          High-performance, mobile-first websites designed to convert visitors into customers.
+        </p>
+        <a href="Web-design-and-development.html" class="inline-flex items-center gap-2 text-primary font-semibold text-sm">
+          Get Started →
+        </a>
+      </div>
+
+      <!-- SERVICE CARD -->
+      <div class="group relative p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur
+                  hover:border-primary/40 transition">
+        <div class="mb-6">
+          <div class="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center text-primary font-bold">
+            02
+          </div>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">
+          Graphics Design And Branding
+        </h3>
+        <p class="text-slate-300 text-sm mb-6">
+          Visual identities and marketing assets that make your brand instantly recognizable.
+        </p>
+        <a href="Web-Apps-Systems.html" class="inline-flex items-center gap-2 text-primary font-semibold text-sm">
+          Build My Brand →
+        </a>
+      </div>
+
+      <!-- SERVICE CARD -->
+      <div class="group relative p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur
+                  hover:border-primary/40 transition">
+        <div class="mb-6">
+          <div class="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center text-primary font-bold">
+            03
+          </div>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">
+          UI/UX Design
+        </h3>
+        <p class="text-slate-300 text-sm mb-6">
+          Intuitive interfaces and user experiences that keep users engaged and converting.
+        </p>
+        <a href="UI-UX-Design.html" class="inline-flex items-center gap-2 text-primary font-semibold text-sm">
+          Improve UX →
+        </a>
+      </div>
+
+      <!-- SERVICE CARD -->
+      <div class="group relative p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur
+                  hover:border-primary/40 transition">
+        <div class="mb-6">
+          <div class="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center text-primary font-bold">
+            04
+          </div>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">
+          Web Applications & Systems
+        </h3>
+        <p class="text-slate-300 text-sm mb-6">
+          Custom web applications that automate operations and scale with your business.
+        </p>
+        <a href="#contact" class="inline-flex items-center gap-2 text-primary font-semibold text-sm">
+          Build My System →
+        </a>
+      </div>
+
+      <!-- SERVICE CARD -->
+      <div class="group relative p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur
+                  hover:border-primary/40 transition">
+        <div class="mb-6">
+          <div class="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center text-primary font-bold">
+            05
+          </div>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">
+          Maintenance & Support
+        </h3>
+        <p class="text-slate-300 text-sm mb-6">
+          Ongoing updates, security, and performance monitoring so your systems stay reliable.
+        </p>
+        <a href="#contact" class="inline-flex items-center gap-2 text-primary font-semibold text-sm">
+          View Plans →
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- WHY SYNOTECH -->
+<section id="why-synlotech" class="relative bg-dark overflow-hidden">
+  <!-- Ambient Background -->
+  <div class="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/5"></div>
+
+  <div class="relative max-w-7xl mx-auto px-6 py-24">
+
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+      <!-- LEFT CONTENT -->
+      <div>
+        <p class="text-sm font-medium text-accent uppercase tracking-wider">
+          Why Choose Synlotech
+        </p>
+
+        <h2 class="mt-4 text-3xl sm:text-4xl font-extrabold text-white">
+          Built Different. Built for Growth.
+        </h2>
+
+        <p class="mt-6 text-slate-300 max-w-xl">
+          We don’t just build websites or systems — we engineer digital products
+          with performance, scalability, and long-term support in mind.
+        </p>
+
+        <!-- DIFFERENTIATORS -->
+        <div class="mt-10 space-y-6">
+
+          <div class="flex gap-4">
+            <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-primary/20 text-primary flex items-center justify-center font-bold">
+              ⚡
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-white">
+                Performance First
+              </h3>
+              <p class="text-sm text-slate-300">
+                Fast load times, clean code, and systems optimized for real-world usage — not demos.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-4">
+            <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-primary/20 text-primary flex items-center justify-center font-bold">
+              🛠
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-white">
+                Long-Term Support
+              </h3>
+              <p class="text-sm text-slate-300">
+                We don’t disappear after launch. Ongoing maintenance, updates, and real human support.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-4">
+            <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-primary/20 text-primary flex items-center justify-center font-bold">
+              📈
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-white">
+                Built to Scale
+              </h3>
+              <p class="text-sm text-slate-300">
+                Your platform is designed to grow with your business, not limit it.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- RIGHT VISUAL CARD -->
+      <div class="relative">
+        <div class="relative p-10 rounded-3xl bg-white/5 border border-white/10 backdrop-blur">
+
+          <h3 class="text-2xl font-bold text-white mb-6">
+            Our Standards
+          </h3>
+
+          <ul class="space-y-4 text-slate-300 text-sm">
+            <li class="flex items-start gap-3">
+              <span class="text-primary font-bold">✓</span>
+              SEO-ready and mobile-first builds by default
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-primary font-bold">✓</span>
+              Secure, maintainable, and scalable codebases
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-primary font-bold">✓</span>
+              Clear communication and predictable timelines
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-primary font-bold">✓</span>
+              Post-launch support and performance monitoring
+            </li>
+          </ul>
+
+          <!-- CTA -->
+          <a href="#contact"
+             class="mt-8 inline-flex items-center justify-center px-6 py-3 rounded-xl
+                    bg-primary text-white font-semibold hover:bg-blue-700 transition shadow-lg shadow-primary/30">
+            Start a Project
+          </a>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- PROCESS / HOW IT WORKS -->
+<section id="process" class="relative bg-dark overflow-hidden">
+  <!-- Subtle Background Pattern -->
+  <div class="absolute inset-0 bg-[linear-gradient(to_right,rgba(37,99,235,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(37,99,235,0.05)_1px,transparent_1px)] bg-[size:48px_48px]"></div>
+
+  <div class="relative max-w-7xl mx-auto px-6 py-24">
+
+    <!-- SECTION HEADER -->
+    <div class="max-w-2xl mb-16">
+      <p class="text-sm font-medium text-accent uppercase tracking-wider">
+        How It Works
+      </p>
+      <h2 class="mt-4 text-3xl sm:text-4xl font-extrabold text-white">
+        A Clear Process From Idea to Launch
+      </h2>
+      <p class="mt-4 text-slate-300">
+        We follow a proven, transparent process so you always know what’s happening, what’s next,
+        and when you’ll see results.
+      </p>
+    </div>
+
+    <!-- STEPS -->
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-5">
+
+      <!-- STEP 1 -->
+      <div class="relative p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur">
+        <span class="absolute -top-4 right-6 text-5xl font-extrabold text-primary/20">01</span>
+        <h3 class="text-lg font-bold text-white mb-3">
+          Discovery & Planning
+        </h3>
+        <p class="text-sm text-slate-300">
+          We understand your goals, users, and requirements before anything is built.
+        </p>
+        <p class="mt-3 text-xs text-slate-400">
+          Outcome: Clear roadmap & timeline
+        </p>
+      </div>
+
+      <!-- STEP 2 -->
+      <div class="relative p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur">
+        <span class="absolute -top-4 right-6 text-5xl font-extrabold text-primary/20">02</span>
+        <h3 class="text-lg font-bold text-white mb-3">
+          Design & Prototyping
+        </h3>
+        <p class="text-sm text-slate-300">
+          Visual layouts and user flows are designed for usability and conversion.
+        </p>
+        <p class="mt-3 text-xs text-slate-400">
+          Outcome: Approved designs
+        </p>
+      </div>
+
+      <!-- STEP 3 -->
+      <div class="relative p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur">
+        <span class="absolute -top-4 right-6 text-5xl font-extrabold text-primary/20">03</span>
+        <h3 class="text-lg font-bold text-white mb-3">
+          Development
+        </h3>
+        <p class="text-sm text-slate-300">
+          Clean, scalable code is built with performance, SEO, and security in mind.
+        </p>
+        <p class="mt-3 text-xs text-slate-400">
+          Outcome: Functional product
+        </p>
+      </div>
+
+      <!-- STEP 4 -->
+      <div class="relative p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur">
+        <span class="absolute -top-4 right-6 text-5xl font-extrabold text-primary/20">04</span>
+        <h3 class="text-lg font-bold text-white mb-3">
+          Testing & Launch
+        </h3>
+        <p class="text-sm text-slate-300">
+          We test across devices, optimize speed, and launch with confidence.
+        </p>
+        <p class="mt-3 text-xs text-slate-400">
+          Outcome: Live & optimized
+        </p>
+      </div>
+
+      <!-- STEP 5 -->
+      <div class="relative p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur">
+        <span class="absolute -top-4 right-6 text-5xl font-extrabold text-primary/20">05</span>
+        <h3 class="text-lg font-bold text-white mb-3">
+          Support & Growth
+        </h3>
+        <p class="text-sm text-slate-300">
+          Ongoing maintenance, improvements, and support as your business grows.
+        </p>
+        <p class="mt-3 text-xs text-slate-400">
+          Outcome: Long-term reliability
+        </p>
+      </div>
+
+    </div>
+
+    <!-- TIMELINE NOTE -->
+    <div class="mt-16 max-w-3xl">
+      <p class="text-slate-300 text-sm">
+        <span class="font-semibold text-white">Typical timelines:</span>
+        Initial designs in 7–14 days. Most projects launch within 2–6 weeks depending on scope.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- PORTFOLIO / CASE STUDIES -->
+<section id="work" class="relative bg-dark">
+  <!-- Background Accent -->
+  <div class="absolute inset-0 bg-gradient-to-t from-primary/5 via-transparent to-transparent"></div>
+
+  <div class="relative max-w-7xl mx-auto px-6 py-24">
+
+    <!-- SECTION HEADER -->
+    <div class="max-w-2xl mb-16">
+      <p class="text-sm font-medium text-accent uppercase tracking-wider">
+        Our Work
+      </p>
+      <h2 class="mt-4 text-3xl sm:text-4xl font-extrabold text-white">
+        Proven Results, Real Solutions
+      </h2>
+      <p class="mt-4 text-slate-300">
+        A selection of projects where we solved real business problems with clean, scalable digital solutions.
+      </p>
+    </div>
+
+    <!-- CASE STUDIES GRID -->
+    <div class="grid gap-10 lg:grid-cols-3">
+
+      <!-- CASE STUDY -->
+     <article class="group rounded-3xl bg-white/5 border border-white/10 overflow-hidden backdrop-blur hover:border-primary/40 transition">
+  <div class="h-48 bg-gradient-to-br from-primary/30 to-accent/20 flex items-center justify-center">
+    <img 
+  src="thumbnails/kayydot.PNG"
+  alt="Restaurant Logo"
+  class="h-16 w-auto object-contain opacity-90 group-hover:opacity-100 transition"
+/>
+
+  </div>
+
+  <div class="p-8">
+    <h3 class="text-xl font-bold text-white mb-3">
+      Restaurant Online Ordering Website
+    </h3>
+
+    <p class="text-sm text-slate-300 mb-4">
+      <span class="font-semibold text-white">Problem:</span>
+      The restaurant had no website, relied only on walk-in customers, and had no way for customers to view the menu or place orders online.
+    </p>
+
+    <p class="text-sm text-slate-300 mb-4">
+      <span class="font-semibold text-white">Solution:</span>
+      Designed and developed a modern restaurant website with an online menu, WhatsApp-based ordering, and mobile-first user experience.
+    </p>
+
+    <p class="text-sm text-slate-300 mb-6">
+      <span class="font-semibold text-white">Result:</span>
+      Increased daily orders, improved customer reach, and boosted sales as customers could now order easily from their phones.
+    </p>
+
+    <a href="https://kayyfood.com" target="_blank" class="text-primary font-semibold text-sm">
+      View Project →
+    </a>
+  </div>
+</article>
+
+
+      <!-- CASE STUDY -->
+      <article class="group rounded-3xl bg-white/5 border border-white/10 overflow-hidden backdrop-blur hover:border-primary/40 transition">
+  <div class="h-48 bg-gradient-to-br from-primary/30 to-accent/20 flex items-center justify-center">
+    <img 
+  src="thumbnails/camblog.jpg"
+  alt="School Logo"
+  class="h-16 w-auto object-contain opacity-90 group-hover:opacity-100 transition"
+/>
+
+  </div>
+
+  <div class="p-8">
+    <h3 class="text-xl font-bold text-white mb-3">
+      School Management Website
+    </h3>
+
+    <p class="text-sm text-slate-300 mb-4">
+      <span class="font-semibold text-white">Problem:</span>
+      The school relied on manual processes for admissions and announcements, with no central online platform for parents or students.
+    </p>
+
+    <p class="text-sm text-slate-300 mb-4">
+      <span class="font-semibold text-white">Solution:</span>
+      Developed a modern school website with online admissions, downloadable forms, and a centralized information system for updates.
+    </p>
+
+    <p class="text-sm text-slate-300 mb-6">
+      <span class="font-semibold text-white">Result:</span>
+      Faster admissions processing, improved parent communication, and a stronger online presence for the school.
+    </p>
+
+    <a href="https://chachas-ethics.github.io/school/" target="_blank" class="text-primary font-semibold text-sm">
+      View Project →
+    </a>
+  </div>
+</article>
+
+
+      <!-- CASE STUDY -->
+     <article class="group rounded-3xl bg-white/5 border border-white/10 overflow-hidden backdrop-blur hover:border-primary/40 transition">
+  <div class="h-48 bg-gradient-to-br from-primary/30 to-accent/20 flex items-center justify-center">
+    <img 
+  src="thumbnails/hoslog.jpg"
+  alt="Hospital Logo"
+  class="h-16 w-auto object-contain opacity-90 group-hover:opacity-100 transition"
+/>
+
+  </div>
+
+  <div class="p-8">
+    <h3 class="text-xl font-bold text-white mb-3">
+      Hospital Information & Appointment Platform
+    </h3>
+
+    <p class="text-sm text-slate-300 mb-4">
+      <span class="font-semibold text-white">Problem:</span>
+      Patients struggled to find accurate information, clinic hours, and services, leading to frequent phone calls and confusion.
+    </p>
+
+    <p class="text-sm text-slate-300 mb-4">
+      <span class="font-semibold text-white">Solution:</span>
+      Built a clear, user-friendly hospital website with service listings, doctor profiles, appointment requests, and mobile-first navigation.
+    </p>
+
+    <p class="text-sm text-slate-300 mb-6">
+      <span class="font-semibold text-white">Result:</span>
+      Reduced front-desk inquiries, improved patient experience, and easier access to hospital services online.
+    </p>
+
+    <a href="https://chachas-ethics.github.io/healthcare/" target="_blank" class="text-primary font-semibold text-sm">
+      View Project →
+    </a>
+  </div>
+</article>
+
+
+    </div>
+
+  </div>
+</section>
+
+<!-- SOCIAL PROOF / TESTIMONIALS -->
+<section id="testimonials" class="relative bg-dark overflow-hidden">
+  <!-- Subtle Background Glow -->
+  <div class="absolute inset-0 bg-gradient-to-t from-accent/5 via-transparent to-transparent"></div>
+
+  <div class="relative max-w-7xl mx-auto px-6 py-24">
+
+    <!-- SECTION HEADER -->
+    <div class="max-w-2xl text-center mx-auto mb-16">
+      <p class="text-sm font-medium text-accent uppercase tracking-wider">
+        Trusted by Businesses & Organizations
+      </p>
+      <h2 class="mt-4 text-3xl sm:text-4xl font-extrabold text-white">
+        What Our Clients Say
+      </h2>
+      <p class="mt-4 text-slate-300">
+        Real feedback from people who trusted us to deliver high-performance websites, apps, and systems.
+      </p>
+    </div>
+
+    <!-- TESTIMONIAL CARDS -->
+    <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+
+      <!-- TESTIMONIAL 1 -->
+      <div class="group relative p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur hover:border-primary/40 transition">
+        <div class="mb-4">
+          <p class="text-slate-300 text-sm">
+            “Synlotech transformed our outdated website into a modern, fast, and highly converting platform. 
+            Communication was excellent, and the results exceeded our expectations.”
+          </p>
+        </div>
+        <div class="mt-4 flex items-center gap-3">
+          <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">
+            A
+          </div>
+          <div>
+            <p class="text-white font-semibold text-sm">Hajra Khan, kayy. Kafe & Grill CEO</p>
+            <p class="text-slate-400 text-xs">Restaurant</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- TESTIMONIAL 2 -->
+      <div class="group relative p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur hover:border-primary/40 transition">
+        <div class="mb-4">
+          <p class="text-slate-300 text-sm">
+            “The custom web application built by Synlotech streamlined our workflow and significantly improved efficiency. 
+            The team was responsive and delivered exactly what we needed.”
+          </p>
+        </div>
+        <div class="mt-4 flex items-center gap-3">
+          <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">
+            B
+          </div>
+          <div>
+            <p class="text-white font-semibold text-sm">Hudhaifa Ashraf, THE SCOOP CEO</p>
+            <p class="text-slate-400 text-xs">Desserts café</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- TESTIMONIAL 3 -->
+      <div class="group relative p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur hover:border-primary/40 transition">
+        <div class="mb-4">
+          <p class="text-slate-300 text-sm">
+            “Synlotech’s team built a secure, user-friendly platform for our institution. 
+            They handled everything professionally, and the results were delivered on time.”
+          </p>
+        </div>
+        <div class="mt-4 flex items-center gap-3">
+          <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">
+            C
+          </div>
+          <div>
+            <p class="text-white font-semibold text-sm">Aboubakr Moustapha, Head of IT</p>
+            <p class="text-slate-400 text-xs">Tech Institution</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+   
+  </div>
+</section>
+
+<!-- PRICING SIGNAL / PRE-QUALIFIER -->
+<section id="pricing" class="relative bg-dark overflow-hidden">
+  <!-- Subtle Background Glow -->
+  <div class="absolute inset-0 bg-gradient-to-r from-primary/10 via-transparent to-accent/10"></div>
+
+  <div class="relative max-w-7xl mx-auto px-6 py-24 text-center">
+
+    <!-- SECTION HEADER -->
+    <div class="max-w-2xl mx-auto mb-12">
+      <p class="text-sm font-medium text-accent uppercase tracking-wider">
+        Pricing Overview
+      </p>
+      <h2 class="mt-4 text-3xl sm:text-4xl font-extrabold text-white">
+        Projects From as low as $500
+      </h2>
+      <p class="mt-4 text-slate-300">
+        Each project is tailored to your goals and scope. We focus on quality, performance, and long-term results.
+      </p>
+    </div>
+
+    <!-- BENEFITS / SIGNALS -->
+    <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 max-w-4xl mx-auto mb-12">
+      <div class="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur">
+        <h3 class="text-white font-bold mb-2">Custom Scope</h3>
+        <p class="text-slate-300 text-sm">Pricing adapts to your project’s size and complexity.</p>
+      </div>
+      <div class="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur">
+        <h3 class="text-white font-bold mb-2">No Hidden Fees</h3>
+        <p class="text-slate-300 text-sm">Transparent communication on costs from the start.</p>
+      </div>
+      <div class="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur">
+        <h3 class="text-white font-bold mb-2">High ROI</h3>
+        <p class="text-slate-300 text-sm">We prioritize solutions that deliver measurable value.</p>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <a href="#contact"
+       class="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-primary text-white font-semibold
+              hover:bg-blue-700 transition shadow-lg shadow-primary/30">
+      Request Your Quote
+    </a>
+
+    <p class="mt-4 text-slate-400 text-sm">
+      Custom pricing ensures you get exactly what your business needs without overpaying.
+    </p>
+
+  </div>
+</section>
+
+<!-- CTA / HARD CLOSE -->
+<section id="contact" class="relative bg-dark py-32">
+  <!-- Background Glow -->
+  <div class="absolute inset-0 bg-gradient-to-tr from-primary/20 via-accent/10 to-transparent"></div>
+
+  <div class="relative max-w-3xl mx-auto px-6 text-center">
+    <!-- HEADER -->
+    <h2 class="text-4xl sm:text-5xl font-extrabold text-white mb-6">
+      Ready to Build Your Digital Future?
+    </h2>
+    <p class="text-slate-300 text-lg sm:text-xl mb-12">
+      Let’s turn your ideas into high-performance websites, apps, and systems that scale with your business.
+    </p>
+
+    <!-- BUTTONS -->
+    <div class="flex flex-col sm:flex-row justify-center gap-6">
+      <a href="#contact-form"
+         class="inline-flex items-center justify-center px-10 py-4 rounded-xl bg-primary text-white font-semibold
+                hover:bg-blue-700 transition shadow-lg shadow-primary/30">
+        Start a Project
+      </a>
+
+      <a href="https://wa.me/255788296274" target="_blank"
+         class="inline-flex items-center justify-center px-10 py-4 rounded-xl text-primary border border-primary/40
+                hover:bg-primary/10 transition font-semibold">
+        Contact Us
+      </a>
+    </div>
+
+    <!-- TRUST / REASSURANCE -->
+    <p class="mt-8 text-slate-400 text-sm">
+      No commitments. Transparent communication. Your project, your control.
+    </p>
+  </div>
+</section>
+
+<!-- INDUSTRIES / WHO WE HELP -->
+<section id="industries" class="relative bg-dark py-24">
+  <!-- Subtle Background Grid -->
+  <div class="absolute inset-0 bg-[linear-gradient(to_right,rgba(37,99,235,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(37,99,235,0.05)_1px,transparent_1px)] bg-[size:48px_48px]"></div>
+
+  <div class="relative max-w-7xl mx-auto px-6">
+
+    <!-- SECTION HEADER -->
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <p class="text-sm font-medium text-accent uppercase tracking-wider">
+        Who We Help
+      </p>
+      <h2 class="mt-4 text-3xl sm:text-4xl font-extrabold text-white">
+        We Serve a Wide Range of Industries
+      </h2>
+      <p class="mt-4 text-slate-300">
+        Whether you’re a startup, an established business, or an educational institution, our solutions are tailored for your needs.
+      </p>
+    </div>
+
+    <!-- INDUSTRIES GRID -->
+    <div class="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
+
+      <div class="flex flex-col items-center justify-center p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur hover:border-primary/40 transition">
+       <div class="w-16 h-16 mb-4 flex items-center justify-center rounded-full bg-primary/20 text-primary">
+            <img src="thumbnails/startup.png">
+</div>
+<p class="text-white font-semibold text-sm text-center">Startups</p>
+      </div>
+
+      <div class="flex flex-col items-center justify-center p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur hover:border-primary/40 transition">
+        <div class="w-16 h-16 mb-4 flex items-center justify-center rounded-full bg-primary/20 text-primary font-bold text-lg">
+           <img src="thumbnails/business.png">
+        </div>
+        <p class="text-white font-semibold text-sm text-center">Businesses</p>
+      </div>
+
+      <div class="flex flex-col items-center justify-center p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur hover:border-primary/40 transition">
+        <div class="w-16 h-16 mb-4 flex items-center justify-center rounded-full bg-primary/20 text-primary font-bold text-lg">
+          <img src="thumbnails/school.png">
+        </div>
+        <p class="text-white font-semibold text-sm text-center">Schools</p>
+      </div>
+
+      <div class="flex flex-col items-center justify-center p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur hover:border-primary/40 transition">
+        <div class="w-16 h-16 mb-4 flex items-center justify-center rounded-full bg-primary/20 text-primary font-bold text-lg">
+           <img src="thumbnails/hospital.png">
+        </div>
+        <p class="text-white font-semibold text-sm text-center">Hospitals</p>
+      </div>
+
+      <div class="flex flex-col items-center justify-center p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur hover:border-primary/40 transition">
+        <div class="w-16 h-16 mb-4 flex items-center justify-center rounded-full bg-primary/20 text-primary font-bold text-lg">
+           <img src="thumbnails/ecommerce.png">
+        </div>
+        <p class="text-white font-semibold text-sm text-center">E-commerce Brands</p>
+      </div>
+
+      <div class="flex flex-col items-center justify-center p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur hover:border-primary/40 transition">
+        <div class="w-16 h-16 mb-4 flex items-center justify-center rounded-full bg-primary/20 text-primary font-bold text-lg">
+            <img src="thumbnails/individual.png">
+        </div>
+        <p class="text-white font-semibold text-sm text-center">Individuals</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- TECH STACK / TOOLS -->
+<section id="tech-stack" class="relative bg-dark py-24">
+  <!-- Subtle Background Glow -->
+  <div class="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/5"></div>
+
+  <div class="relative max-w-7xl mx-auto px-6">
+
+    <!-- SECTION HEADER -->
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <p class="text-sm font-medium text-accent uppercase tracking-wider">
+        Our Tools & Technologies
+      </p>
+      <h2 class="mt-4 text-3xl sm:text-4xl font-extrabold text-white">
+        We Use Modern, Reliable, & Scalable Tech
+      </h2>
+      <p class="mt-4 text-slate-300">
+        We build with the best tools and platforms to ensure your digital solutions are fast, secure, and future-proof.
+      </p>
+    </div>
+
+    <!-- TECH GRID -->
+    <div class="grid gap-8 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6">
+
+      <div class="flex flex-col items-center justify-center p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur hover:border-primary/40 transition">
+        <img src="thumbnails/reactlogo.png" alt="React" class="h-12 mb-4">
+        <p class="text-white font-semibold text-sm text-center">React</p>
+      </div>
+
+      <div class="flex flex-col items-center justify-center p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur hover:border-primary/40 transition">
+        <img src="thumbnails/nodejslogo.png" alt="Node.js" class="h-12 mb-4">
+        <p class="text-white font-semibold text-sm text-center">Node.js</p>
+      </div>
+
+      <div class="flex flex-col items-center justify-center p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur hover:border-primary/40 transition">
+        <img src="thumbnails/tailwindlogo.png" alt="Tailwind CSS" class="h-12 mb-4">
+        <p class="text-white font-semibold text-sm text-center">Tailwind CSS</p>
+      </div>
+
+      <div class="flex flex-col items-center justify-center p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur hover:border-primary/40 transition">
+        <img src="thumbnails/photoshoplogo.png" alt="Adobe Photoshop" class="h-12 mb-4">
+        <p class="text-white font-semibold text-sm text-center">Adobe Photoshop</p>
+      </div>
+
+      <div class="flex flex-col items-center justify-center p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur hover:border-primary/40 transition">
+        <img src="thumbnails/figmalogo.png" alt="Figma" class="h-12 mb-4">
+        <p class="text-white font-semibold text-sm text-center">Figma</p>
+      </div>
+
+      <div class="flex flex-col items-center justify-center p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur hover:border-primary/40 transition">
+        <img src="thumbnails/illustratorlogo.png" alt="Adobe Illustrator" class="h-12 mb-4">
+        <p class="text-white font-semibold text-sm text-center">Adobe Illustrator</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- MAINTENANCE & SUPPORT -->
+<section id="maintenance" class="relative bg-dark py-24">
+  <!-- Background Accent -->
+  <div class="absolute inset-0 bg-gradient-to-tr from-primary/10 via-transparent to-accent/10"></div>
+
+  <div class="relative max-w-7xl mx-auto px-6">
+
+    <!-- SECTION HEADER -->
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <p class="text-sm font-medium text-accent uppercase tracking-wider">
+        Maintenance & Support
+      </p>
+      <h2 class="mt-4 text-3xl sm:text-4xl font-extrabold text-white">
+        Long-Term Performance & Reliability
+      </h2>
+      <p class="mt-4 text-slate-300">
+        Keep your digital products secure, up-to-date, and performing at their best with our comprehensive support plans.
+      </p>
+    </div>
+
+    <!-- SUPPORT PLANS GRID -->
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+
+      <!-- PLAN 1 -->
+      <div class="p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur hover:border-primary/40 transition">
+  <h3 class="text-xl font-bold text-white mb-1">Basic Plan</h3>
+  <p class="text-3xl font-extrabold text-white mb-4">
+    $80<span class="text-sm font-medium text-slate-400">/month</span>
+  </p>
+
+  <ul class="text-slate-300 text-sm space-y-2 mb-6">
+    <li>✅ Monthly updates & backups</li>
+    <li>✅ Security monitoring</li>
+    <li>✅ Email support</li>
+  </ul>
+
+  <a href="https://wa.me/255788296274?text=Hi%20Synlotech,%20I%20want%20to%20start%20the%20Basic%20Plan"
+   target="_blank"
+   class="inline-flex items-center gap-2 text-primary font-semibold text-sm">
+  Get Started →
+</a>
+
+</div>
+
+<!--plan 2 -->
+ <div class="p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur hover:border-primary/40 transition">
+  <h3 class="text-xl font-bold text-white mb-1">Pro Plan</h3>
+  <p class="text-3xl font-extrabold text-white mb-4">
+    $140<span class="text-sm font-medium text-slate-400">/month</span>
+  </p>
+
+  <ul class="text-slate-300 text-sm space-y-2 mb-6">
+   <li>✅ Weekly updates & backups</li>
+          <li>✅ Security & performance monitoring</li>
+          <li>✅ Priority email & chat support</li>
+  </ul>
+
+  <a href="https://wa.me/255788296274?text=Hi%20Synlotech,%20I%20want%20to%20start%20the%20Pro%20Plan"
+   target="_blank"
+   class="inline-flex items-center gap-2 text-primary font-semibold text-sm">
+  Get Started →
+</a>
+
+</div>
+
+<!--plan 3 -->
+ <div class="p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur hover:border-primary/40 transition">
+  <h3 class="text-xl font-bold text-white mb-1">Enterprise Plan</h3>
+  <p class="text-3xl font-extrabold text-white mb-4">
+    $200<span class="text-sm font-medium text-slate-400">/month</span>
+  </p>
+
+  <ul class="text-slate-300 text-sm space-y-2 mb-6">
+    <li>✅ Daily updates & backups</li>
+            <li>✅ Advanced security & performance monitoring</li>
+            <li>✅ 24/7 dedicated support</li>
+  </ul>
+
+  <a href="https://wa.me/255788296274?text=Hi%20Synlotech,%20I%20want%20to%20start%20the%20Enterprise%20Plan"
+   target="_blank"
+   class="inline-flex items-center gap-2 text-primary font-semibold text-sm">
+  Get Started →
+</a>
+
+</div>
+
+      
+
+    <!-- NOTE -->
+    <p class="mt-12 text-center text-slate-400 text-sm max-w-2xl mx-auto">
+      Ongoing support ensures your digital products stay reliable, secure, and high-performing — long after launch.
+    </p>
+
+  </div>
+</section>
+
+<!-- CONTACT / LEAD CAPTURE -->
+<section id="contact-form" class="relative bg-dark py-24">
+  <!-- Background Glow -->
+  <div class="absolute inset-0 bg-gradient-to-tr from-primary/10 via-transparent to-accent/10"></div>
+
+  <div class="relative max-w-4xl mx-auto px-6">
+
+    <!-- SECTION HEADER -->
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <p class="text-sm font-medium text-accent uppercase tracking-wider">
+        Get in Touch
+      </p>
+      <h2 class="mt-4 text-3xl sm:text-4xl font-extrabold text-white">
+        Start Your Project Today
+      </h2>
+      <p class="mt-4 text-slate-300">
+        Fill out the form, WhatsApp, email, or call us — we make contacting us ridiculously easy.
+      </p>
+    </div>
+
+    <!-- CONTACT GRID -->
+    <div class="grid gap-12 md:grid-cols-2">
+
+      <!-- FORM -->
+      <form action="#" method="POST" class="space-y-6">
+        <input type="text" name="name" placeholder="Your Name" required
+               class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary">
+        <input type="email" name="email" placeholder="Your Email" required
+               class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary">
+        <textarea name="message" placeholder="Your Message" required rows="5"
+                  class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
+        <button type="submit"
+                class="w-full px-6 py-4 rounded-xl bg-primary text-white font-semibold hover:bg-blue-700 transition shadow-lg shadow-primary/30">
+          Send Message
+        </button>
+      </form>
+
+      <!-- OTHER CONTACT METHODS -->
+      <div class="flex flex-col justify-center space-y-6 text-center md:text-left">
+
+        <div class="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur hover:border-primary/40 transition">
+          <h3 class="text-white font-bold mb-2">WhatsApp</h3>
+          <p class="text-slate-300 mb-2">Chat with us instantly:</p>
+          <a href="https://wa.me/255788296274" class="text-primary font-semibold">+255 788 296 274</a>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur hover:border-primary/40 transition">
+          <h3 class="text-white font-bold mb-2">Email</h3>
+          <p class="text-slate-300 mb-2">Send us a message anytime:</p>
+          <a href="mailto:hello@synlotech.dev" class="text-primary font-semibold">hello@synlotech.dev</a>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur hover:border-primary/40 transition">
+          <h3 class="text-white font-bold mb-2">Phone</h3>
+          <p class="text-slate-300 mb-2">Call us directly:</p>
+          <a href="tel:+255788296274" class="text-primary font-semibold">+255 788 296 274</a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="relative bg-dark border-t border-white/10 py-16">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- TOP GRID -->
+    <div class="grid gap-12 md:grid-cols-4">
+
+      <!-- CONTACT INFO -->
+      <div>
+        <h3 class="text-white font-bold mb-4">Contact Us</h3>
+        <p class="text-slate-300 text-sm mb-2">Email: <a href="mailto:hello@synlotech.dev" class="text-primary">hello@synlotech.dev</a></p>
+        <p class="text-slate-300 text-sm mb-2">Phone: <a href="tel:+255788296274" class="text-primary">+255 788 296 274</a></p>
+        <p class="text-slate-300 text-sm">WhatsApp: <a href="https://wa.me/255788296274" class="text-primary">Chat Now</a></p>
+      </div>
+
+      
+
+      <!-- SOCIAL LINKS -->
+      <div>
+        <h3 class="text-white font-bold mb-4">Follow Us</h3>
+        <div class="flex gap-4">
+          <a href="#" class="text-slate-400 hover:text-primary transition" aria-label="LinkedIn">
+            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8h4V24h-4V8zm7 0h3.75v2.15h.05c.52-.99 1.8-2.04 3.7-2.04 3.95 0 4.68 2.6 4.68 5.97V24H15v-7.5c0-1.8-.03-4.12-2.5-4.12s-2.88 1.95-2.88 3.97V24H7V8z"/></svg>
+          </a>
+          <a href="#" class="text-slate-400 hover:text-primary transition" aria-label="Twitter">
+            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M24 4.56c-.88.39-1.82.65-2.81.77a4.93 4.93 0 002.16-2.72c-.95.57-2.01.99-3.13 1.21a4.92 4.92 0 00-8.38 4.48A13.97 13.97 0 011.67 3.15a4.92 4.92 0 001.52 6.56c-.79-.02-1.54-.24-2.2-.6v.06a4.93 4.93 0 003.95 4.83c-.69.19-1.42.23-2.15.09a4.93 4.93 0 004.6 3.42A9.87 9.87 0 010 21.54 13.94 13.94 0 007.55 24c9.06 0 14.02-7.51 14.02-14.02 0-.21 0-.42-.02-.63A10.03 10.03 0 0024 4.56z"/></svg>
+          </a>
+          <a href="#" class="text-slate-400 hover:text-primary transition" aria-label="Instagram">
+            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.584.012 4.85.07 1.17.055 1.97.24 2.43.403a4.92 4.92 0 011.77 1.03 4.92 4.92 0 011.03 1.77c.163.46.348 1.26.403 2.43.058 1.266.07 1.65.07 4.85s-.012 3.584-.07 4.85c-.055 1.17-.24 1.97-.403 2.43a4.92 4.92 0 01-1.03 1.77 4.92 4.92 0 01-1.77 1.03c-.46.163-1.26.348-2.43.403-1.266.058-1.65.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.055-1.97-.24-2.43-.403a4.92 4.92 0 01-1.77-1.03 4.92 4.92 0 01-1.03-1.77c-.163-.46-.348-1.26-.403-2.43C2.172 15.584 2.16 15.2 2.16 12s.012-3.584.07-4.85c.055-1.17.24-1.97.403-2.43a4.92 4.92 0 011.03-1.77 4.92 4.92 0 011.77-1.03c.46-.163 1.26-.348 2.43-.403C8.416 2.172 8.8 2.16 12 2.16zm0-2.16C8.735 0 8.332.012 7.052.07 5.773.128 4.842.308 4.042.57a7.07 7.07 0 00-2.53 1.64A7.07 7.07 0 00.57 4.042c-.262.8-.442 1.73-.5 3.008C.012 8.332 0 8.735 0 12s.012 3.668.07 4.948c.058 1.277.238 2.208.5 3.008a7.07 7.07 0 001.64 2.53 7.07 7.07 0 002.53 1.64c.8.262 1.73.442 3.008.5 1.28.058 1.683.07 4.948.07s3.668-.012 4.948-.07c1.277-.058 2.208-.238 3.008-.5a7.07 7.07 0 002.53-1.64 7.07 7.07 0 001.64-2.53c.262-.8.442-1.73.5-3.008.058-1.28.07-1.683.07-4.948s-.012-3.668-.07-4.948c-.058-1.277-.238-2.208-.5-3.008a7.07 7.07 0 00-1.64-2.53 7.07 7.07 0 00-2.53-1.64c-.8-.262-1.73-.442-3.008-.5C15.668.012 15.265 0 12 0z"/><path d="M12 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zm0 10.162a3.999 3.999 0 110-7.998 3.999 3.999 0 010 7.998z"/><circle cx="18.406" cy="5.594" r="1.44"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- LEGAL / LINKS -->
+      <div class="md:col-span-2">
+        <h3 class="text-white font-bold mb-4">Legal & Links</h3>
+        <p class="text-slate-300 text-sm mb-2">© 2026 Synlotech Technologies. All rights reserved.</p>
+        <p class="text-slate-300 text-sm mb-2"><a href="Privacy-Policy.html" class="text-primary">Privacy Policy</a> | <a href="Terms-Of-Service.html" class="text-primary">Terms of Service</a></p>
+      </div>
+
+    </div>
+
+  </div>
+</footer>
+
+
+  <!-- MOBILE MENU SCRIPT -->
+  <script>
+   const btn = document.getElementById('menuBtn');
+const menu = document.getElementById('mobileMenu');
+
+btn.addEventListener('click', () => {
+  btn.classList.toggle('open');
+  menu.classList.toggle('scale-y-0');
+  menu.classList.toggle('opacity-0');
+
+});
+  </script>
+
+</body>
+</html>

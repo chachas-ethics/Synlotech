@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UI / UX Design | Synlotech Technologies</title>
+  <meta name="description"
+    content="User-centered UI/UX design that improves usability, engagement, and conversions across web and mobile platforms." />
+
+     <!-- TAILWIND CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- CUSTOM CONFIG -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2563EB',
+            accent: '#38BDF8',
+            dark: '#020617',
+          }
+        }
+      }
+    }
+  </script>
+  
+    <style>
+    .bar {
+  position: absolute;
+  width: 24px;
+  height: 2.5px;              /* thicker = visible */
+  background-color: #ffffff; /* force white */
+  border-radius: 999px;
+  transition: all 0.3s ease;
+}
+
+.top { transform: translateY(-7px); }
+.middle { opacity: 1; }
+.bottom { transform: translateY(7px); }
+
+/* OPEN STATE */
+.open .top {
+  transform: rotate(45deg);
+}
+
+.open .middle {
+  opacity: 0;
+}
+
+.open .bottom {
+  transform: rotate(-45deg);
+}
+
+  </style>
+</head>
+
+<body class="bg-dark text-white">
+<header class="fixed top-0 inset-x-0 z-50 backdrop-blur bg-dark/70 border-b border-white/5 py-3">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex items-center justify-between h-20">
+
+        <!-- LOGO -->
+        <a href="/" class="text-2xl font-extrabold text-primary tracking-tight">
+          SYNLOTECH
+        </a>
+
+        <!-- DESKTOP NAV -->
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+          <a href="#services" class="hover:text-primary transition">Services</a>
+          <a href="#work" class="hover:text-primary transition">Work</a>
+          <a href="#process" class="hover:text-primary transition">Process</a>
+          <a href="#contact" class="hover:text-primary transition">Contact</a>
+        </nav>
+
+        <!-- CTA -->
+        <div class="hidden md:block">
+          <a href="#contact"
+             class="px-5 py-2.5 rounded-lg bg-primary text-white font-semibold
+                    hover:bg-blue-700 transition shadow-lg shadow-primary/30">
+            Get a Quote
+          </a>
+        </div>
+
+        <!-- MOBILE MENU BUTTON -->
+       <button
+  id="menuBtn"
+  class="md:hidden relative w-10 h-10 flex items-center justify-center
+         z-50 rounded-md hover: transition"
+  aria-label="Open menu"
+>
+  <span class="bar top"></span>
+  <span class="bar middle"></span>
+  <span class="bar bottom"></span>
+</button>
+
+      </div>
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div id="mobileMenu"
+  class="md:hidden absolute top-full left-0 w-full
+         bg-dark/95 backdrop-blur
+         transform scale-y-0 origin-top
+         opacity-0
+         transition-all duration-300 ease-out">
+
+      <nav class="px-6 py-6 flex flex-col gap-4 text-sm font-medium border-t border-white/10">
+        <a href="#services" class="hover:text-primary">Services</a>
+        <a href="#work" class="hover:text-primary">Work</a>
+        <a href="#process" class="hover:text-primary">Process</a>
+        <a href="#contact" class="hover:text-primary">Contact</a>
+
+        <a href="#contact"
+           class="mt-4 inline-flex justify-center px-6 py-3 rounded-lg bg-primary text-white font-semibold">
+          Get a Quote
+        </a>
+      </nav>
+    </div>
+  </header>
+<!-- HERO -->
+<section class="pt-40 pb-24">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="max-w-3xl">
+      <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight">
+        UI / UX Design
+      </h1>
+      <p class="mt-6 text-slate-300 text-lg">
+        We design intuitive interfaces and seamless user experiences that
+        help users navigate faster, stay longer, and take action.
+      </p>
+
+      <div class="mt-8 flex flex-wrap gap-4">
+        <a href="#contact"
+          class="px-8 py-4 bg-primary rounded-xl font-semibold hover:bg-blue-700 transition">
+          Improve My UX
+        </a>
+        <a href="#principles"
+          class="px-8 py-4 border border-white/20 rounded-xl font-semibold hover:border-primary transition">
+          Our Design Principles
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT WE DESIGN -->
+<section class="py-24 bg-white/5">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-3xl font-bold mb-12">What We Design</h2>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="p-6 rounded-xl bg-white/5 border border-white/10">
+        <h3 class="font-semibold mb-2">Website Interfaces</h3>
+        <p class="text-slate-300 text-sm">
+          Clear layouts that guide users toward key actions.
+        </p>
+      </div>
+
+      <div class="p-6 rounded-xl bg-white/5 border border-white/10">
+        <h3 class="font-semibold mb-2">Web & Mobile App UI</h3>
+        <p class="text-slate-300 text-sm">
+          Consistent and scalable interfaces for apps and platforms.
+        </p>
+      </div>
+
+      <div class="p-6 rounded-xl bg-white/5 border border-white/10">
+        <h3 class="font-semibold mb-2">Dashboards & Systems</h3>
+        <p class="text-slate-300 text-sm">
+          Data-heavy interfaces designed for clarity and speed.
+        </p>
+      </div>
+
+      <div class="p-6 rounded-xl bg-white/5 border border-white/10">
+        <h3 class="font-semibold mb-2">User Flows & Wireframes</h3>
+        <p class="text-slate-300 text-sm">
+          Logical flows that eliminate friction and confusion.
+        </p>
+      </div>
+
+      <div class="p-6 rounded-xl bg-white/5 border border-white/10">
+        <h3 class="font-semibold mb-2">Design Systems</h3>
+        <p class="text-slate-300 text-sm">
+          Reusable components for long-term consistency.
+        </p>
+      </div>
+
+      <div class="p-6 rounded-xl bg-white/5 border border-white/10">
+        <h3 class="font-semibold mb-2">UX Audits</h3>
+        <p class="text-slate-300 text-sm">
+          Identify usability issues and conversion blockers.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY UX MATTERS -->
+<section id="principles" class="py-24">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-3xl font-bold mb-8">Why UX Matters</h2>
+
+    <div class="grid sm:grid-cols-2 gap-6 text-slate-300">
+      <p>✔ Users decide in seconds whether to stay or leave</p>
+      <p>✔ Clear UX increases trust and credibility</p>
+      <p>✔ Better UX improves conversions and retention</p>
+      <p>✔ Bad UX silently kills good products</p>
+    </div>
+  </div>
+</section>
+
+<!-- DESIGN PROCESS -->
+<section class="py-24 bg-white/5">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-3xl font-bold mb-12">Our UI / UX Process</h2>
+
+    <div class="grid md:grid-cols-4 gap-8">
+      <div>
+        <span class="text-primary font-bold">01</span>
+        <h3 class="font-semibold mt-2">Research</h3>
+        <p class="text-slate-300 text-sm">
+          Understanding users, goals, and pain points.
+        </p>
+      </div>
+
+      <div>
+        <span class="text-primary font-bold">02</span>
+        <h3 class="font-semibold mt-2">Structure</h3>
+        <p class="text-slate-300 text-sm">
+          User flows, wireframes, and information architecture.
+        </p>
+      </div>
+
+      <div>
+        <span class="text-primary font-bold">03</span>
+        <h3 class="font-semibold mt-2">Visual Design</h3>
+        <p class="text-slate-300 text-sm">
+          High-fidelity UI aligned with your brand.
+        </p>
+      </div>
+
+      <div>
+        <span class="text-primary font-bold">04</span>
+        <h3 class="font-semibold mt-2">Validation</h3>
+        <p class="text-slate-300 text-sm">
+          Feedback, iteration, and refinement.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-24">
+  <div class="max-w-4xl mx-auto px-6 text-center">
+    <h2 class="text-3xl font-bold">
+      Ready to Improve Your User Experience?
+    </h2>
+    <p class="mt-4 text-slate-300">
+      Let’s design interfaces your users actually enjoy using.
+    </p>
+
+    <a href="#contact"
+      class="inline-block mt-8 px-10 py-4 bg-primary rounded-xl font-semibold hover:bg-blue-700 transition">
+      Start a UX Project
+    </a>
+  </div>
+</section>
+
+<script>
+   const btn = document.getElementById('menuBtn');
+const menu = document.getElementById('mobileMenu');
+
+btn.addEventListener('click', () => {
+  btn.classList.toggle('open');
+  menu.classList.toggle('scale-y-0');
+  menu.classList.toggle('opacity-0');
+
+});
+  </script>
+
+</body>
+</html>
