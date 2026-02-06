@@ -42,6 +42,40 @@
       color: #e5e7eb;
       font-family: inter;
     }
+
+    .bar {
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background: white;
+  transition: 0.3s ease;
+}
+
+.top {
+  top: 12px;
+}
+
+.middle {
+  opacity: 1;
+}
+
+.bottom {
+  bottom: 12px;
+}
+
+/* OPEN STATE */
+#menuBtn.open .top {
+  transform: translateY(6px) rotate(45deg);
+}
+
+#menuBtn.open .middle {
+  opacity: 0;
+}
+
+#menuBtn.open .bottom {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
   </style>
 </head>
 
@@ -85,38 +119,12 @@
         </div>
 
         <!-- MOBILE MENU BUTTON -->
-       <button
-  id="menuBtn"
-  class="md:hidden relative w-10 h-10 flex items-center justify-center
-         z-50 rounded-md hover: transition"
-  aria-label="Open menu"
->
-  <span style="
-    position:absolute;
-    width:24px;
-    height:2px;
-    background:white;
-    top:12px;
-    transition:0.3s;
-  "></span>
-
-  <span style="
-    position:absolute;
-    width:24px;
-    height:2px;
-    background:white;
-    transition:0.3s;
-  "></span>
-
-  <span style="
-    position:absolute;
-    width:24px;
-    height:2px;
-    background:white;
-    bottom:12px;
-    transition:0.3s;
-  "></span>
+       <button id="menuBtn" class="md:hidden relative w-10 h-10 flex items-center justify-center z-50 rounded-md">
+  <span class="bar top"></span>
+  <span class="bar middle"></span>
+  <span class="bar bottom"></span>
 </button>
+
 
       </div>
     </div>
