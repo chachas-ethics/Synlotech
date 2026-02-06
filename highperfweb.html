@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <link rel="icon" class="rounded-full" href="thumbnails/theS.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>5 Tips for Building High-Performance Websites | Synlotech Technologies</title>
+  <meta name="description" content="Learn 5 actionable tips to build fast, secure, and SEO-friendly websites that provide a great user experience.">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom Tailwind Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2563EB',
+            accent: '#38BDF8',
+            dark: '#020617',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Scroll-triggered animations */
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .animate-on-scroll.in-view {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Hamburger menu bars */
+    .bar { position: absolute; width: 24px; height: 2.5px; background-color: #ffffff; border-radius: 999px; transition: all 0.3s ease; }
+    .top { transform: translateY(-7px); }
+    .middle { opacity: 1; }
+    .bottom { transform: translateY(7px); }
+    .open .top { transform: rotate(45deg); }
+    .open .middle { opacity: 0; }
+    .open .bottom { transform: rotate(-45deg); }
+  </style>
+</head>
+
+<body style="font-family: inter;" class="bg-dark text-white font-sans opacity-0 transition-opacity duration-700 ease-out">
+
+<!-- NAVBAR -->
+<header class="fixed top-0 inset-x-0 z-50 backdrop-blur bg-dark/70 border-b border-white/5 py-3">
+  <div class="max-w-7xl mx-auto px-4 flex items-center justify-between h-20">
+    <a href="index.html#home" class="flex items-center gap-2">
+      <img src="thumbnails/theS.png" style="width:40px;height:45px;">
+      <p class="text-xl font-extrabold text-white">
+        SYNLOTECH<br>TECHNOLOGIES
+      </p>
+    </a>
+    <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+      <a href="index.html#services" class="hover:text-primary transition">Services</a>
+      <a href="index.html#work" class="hover:text-primary transition">Work</a>
+      <a href="index.html#blog" class="hover:text-primary transition">Blog</a>
+      <a href="index.html#contact" class="hover:text-primary transition">Contact</a>
+    </nav>
+    <div class="hidden md:block">
+      <a href="#contact" class="px-5 py-2.5 rounded-lg bg-primary text-white font-semibold hover:bg-blue-700 transition shadow-lg shadow-primary/30">Get a Quote</a>
+    </div>
+    <button id="menuBtn" class="md:hidden relative w-10 h-10 flex items-center justify-center z-50 rounded-md" aria-label="Open menu">
+      <span class="bar top"></span>
+      <span class="bar middle"></span>
+      <span class="bar bottom"></span>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="md:hidden absolute top-full left-0 w-full bg-dark backdrop-blur transform scale-y-0 origin-top opacity-0 transition-all duration-300 ease-out">
+    <nav class="px-6 py-6 flex flex-col gap-4 text-sm font-medium border-t text-center border-white/10">
+      <a href="index.html#services" class="hover:text-primary">Services</a>
+      <a href="index.html#work" class="hover:text-primary">Work</a>
+      <a href="index.html#blog" class="hover:text-primary">Blog</a>
+      <a href="index.html#contact" class="hover:text-primary">Contact</a>
+      <a href="index.html#contact" class="mt-4 inline-flex justify-center px-6 py-3 rounded-lg bg-primary text-white font-semibold">Get a Quote</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="animate-on-scroll pt-40 pb-24 text-center max-w-4xl mx-auto px-6">
+  <h1 class="text-4xl sm:text-5xl font-extrabold">5 Tips for Building High-Performance Websites</h1>
+  <p class="mt-6 text-slate-300 text-lg">
+    Discover actionable strategies to build websites that load fast, rank better, and provide excellent user experiences.
+  </p>
+</section>
+
+<!-- ARTICLE -->
+<main class="max-w-5xl mx-auto px-6 py-16 space-y-12">
+
+  <section class="space-y-4">
+    <p class="text-slate-300 text-lg">
+      High-performance websites aren't just about looks—they need speed, scalability, and SEO optimization. These 5 tips will help you deliver a site that users love and search engines reward.
+    </p>
+    <img src="thumbnails/highperfweb.jpg" alt="High performance website illustration" class="w-full rounded-2xl">
+  </section>
+
+  <!-- TIP 1 -->
+  <section class="space-y-4">
+    <h2 class="text-2xl font-bold text-white">1. Optimize Your Images</h2>
+    <p class="text-slate-300">Use WebP or compressed formats, resize to display dimensions, and lazy-load below-the-fold content for faster page load.</p>
+    <img src="thumbnails/optimized.webp" alt="Optimized images" class="w-full rounded-2xl">
+  </section>
+
+  <!-- TIP 2 -->
+  <section class="space-y-4">
+    <h2 class="text-2xl font-bold text-white">2. Minify CSS, JS & HTML</h2>
+    <p class="text-slate-300">Remove whitespace and comments. Use Tailwind purge or build tools to keep file sizes small and loading fast.</p>
+  </section>
+
+  <!-- TIP 3 -->
+  <section class="space-y-4">
+    <h2 class="text-2xl font-bold text-white">3. Leverage Browser Caching</h2>
+    <p class="text-slate-300">Cache frequently used assets to improve repeat visits speed.</p>
+  </section>
+
+  <!-- TIP 4 -->
+  <section class="space-y-4">
+    <h2 class="text-2xl font-bold text-white">4. Optimize Server & Hosting</h2>
+    <p class="text-slate-300">Use reliable hosting, Gzip/Brotli compression, and CDNs for global performance.</p>
+    <img src="thumbnails/server.jpg" alt="Fast server" class="w-full rounded-2xl">
+  </section>
+
+  <!-- TIP 5 -->
+  <section class="space-y-4">
+    <h2 class="text-2xl font-bold text-white">5. Prioritize Above-the-Fold Content</h2>
+    <p class="text-slate-300">Load critical content first and defer non-essential scripts to improve perceived speed.</p>
+  </section>
+
+  <!-- CONCLUSION -->
+  <section class="space-y-4 text-center">
+    <h2 class="text-2xl font-bold text-white">Conclusion</h2>
+    <p class="text-slate-300">By following these tips, you can build websites that load fast, rank higher, and provide an exceptional user experience. At Synlotech Technologies, we specialize in scalable, SEO-friendly websites that grow with your business.</p>
+    <a href="#contact" class="inline-block mt-6 px-8 py-4 bg-primary text-white rounded-xl font-semibold hover:bg-blue-700 transition shadow-lg shadow-primary/30">Contact Us</a>
+  </section>
+
+</main>
+
+<!-- FOOTER (reuse existing styling) -->
+
+<footer class="relative bg-dark border-t border-white/10 pt-16">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- TOP GRID + IMAGE FLEX -->
+    <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-12 pb-12">
+
+      <!-- LINKS GRID -->
+      <div class="grid gap-12 md:grid-cols-4 flex-1">
+
+        <!-- CONTACT INFO -->
+        <div>
+          <h3 class="text-white font-bold mb-4">Contact Us</h3>
+          <p class="text-slate-300 text-sm mb-2">
+            Email:
+            <a href="mailto:hello@synlotech.dev" class="text-white hover:text-primary transition">hello@synlotech.dev</a>
+          </p>
+          <p class="text-slate-300 text-sm mb-2">
+            Phone:
+            <a href="tel:+255788296274" class="text-white hover:text-primary transition">+255 788 296 274</a>
+          </p>
+          <p class="text-slate-300 text-sm">
+            WhatsApp:
+            <a href="https://wa.me/255788296274" class="text-white hover:text-primary transition">Chat Now</a>
+          </p>
+        </div>
+
+        <!-- SOCIAL LINKS -->
+        <div>
+          <h3 class="text-white font-bold mb-4">Follow Us</h3>
+          <div class="flex gap-4 text-slate-300">
+            <a href="#" aria-label="Facebook" class="hover:text-primary transition">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="#" aria-label="Twitter" class="hover:text-primary transition">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="#" aria-label="Instagram" class="hover:text-primary transition">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="#" aria-label="WhatsApp" class="hover:text-primary transition">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="#" aria-label="LinkedIn" class="hover:text-primary transition">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- LEGAL LINKS -->
+        <div class="md:col-span-2">
+          <h3 class="text-white font-bold mb-4">Legal & Links</h3>
+          <p class="text-slate-300 text-sm">
+            <a href="Privacy-Policy.html" class="text-white hover:text-primary transition">Privacy Policy</a>
+            <span class="mx-2">|</span>
+            <a href="Terms-Of-Service.html" class="text-white hover:text-primary">Terms of Service</a>
+          </p>
+        </div>
+
+      </div>
+</div>
+
+    <!-- BOTTOM BAR -->
+    <div class="border-t border-white/10 py-6 text-center">
+      <p class="text-slate-400 text-sm">
+        © 2026 SYNLOTECH TECHNOLOGIES. All rights reserved.
+      </p>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+  const btn = document.getElementById('menuBtn');
+  const menu = document.getElementById('mobileMenu');
+  btn.addEventListener('click', () => {
+    btn.classList.toggle('open');
+    menu.classList.toggle('scale-y-0');
+    menu.classList.toggle('opacity-0');
+  });
+
+  window.addEventListener('load', () => {
+    document.body.classList.remove('opacity-0');
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {threshold: 0.1, rootMargin: '0px 0px -50px 0px'});
+
+  document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

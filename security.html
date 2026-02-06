@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <link rel="icon" href="thumbnails/theS.png" type="image/x-icon">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- SEO -->
+  <title>Cybersecurity Basics Every Business Must Know | Synlotech Technologies</title>
+  <meta name="description" content="Learn essential cybersecurity practices every business needs to prevent data breaches, ransomware, and cyber attacks in 2026." />
+  <meta name="keywords" content="cybersecurity basics, business cybersecurity, data protection, ransomware prevention, cyber threats" />
+  <meta name="author" content="Synlotech Technologies" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Cybersecurity Basics Every Business Must Know" />
+  <meta property="og:description" content="Protect your business from cyber threats with proven security practices." />
+  <meta property="og:image" content="thumbnails/cybersecurity.jpg" />
+  <meta property="og:type" content="article" />
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2563EB',
+            accent: '#38BDF8',
+            dark: '#020617',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #0b0f19;
+      color: #e5e7eb;
+      font-family: inter;
+    }
+  </style>
+</head>
+
+<body>
+ <header class="fixed top-0 inset-x-0 z-50 backdrop-blur bg-dark/70 border-b border-white/5 py-3">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex items-center justify-between h-20">
+
+        <!-- LOGO -->
+         <div>
+        <a href="#home"  class="text-2xl font-extrabold text-primary tracking-tight">
+          <img style="width: 40px;
+          height: 45px;
+          display: inline-block;
+          margin-bottom: 30px;
+          " src="thumbnails/theS.png">
+        
+         <p  class="text-xl font-extrabold text-white tracking-tight" style="display: inline-block;
+         margin-top: 30px;
+          ">
+          <span style="text-align: center;" >SYNLOTECH</span><br>
+          TECHNOLOGIES
+          </p>
+          </a>
+         </div>
+
+        <!-- DESKTOP NAV -->
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+          <a href="#services" class="hover:text-primary transition">Services</a>
+          <a href="#work" class="hover:text-primary transition">Work</a>
+          <a href="#process" class="hover:text-primary transition">Process</a>
+          <a href="#contact" class="hover:text-primary transition">Contact</a>
+        </nav>
+
+        <!-- CTA -->
+        <div class="hidden md:block">
+          <a href="#contact"
+             class="px-5 py-2.5 rounded-lg bg-primary text-white font-semibold
+                    hover:bg-blue-700 transition shadow-lg shadow-primary/30">
+            Get a Quote
+          </a>
+        </div>
+
+        <!-- MOBILE MENU BUTTON -->
+       <button
+  id="menuBtn"
+  class="md:hidden relative w-10 h-10 flex items-center justify-center
+         z-50 rounded-md hover: transition"
+  aria-label="Open menu"
+>
+  <span style="
+    position:absolute;
+    width:24px;
+    height:2px;
+    background:white;
+    top:12px;
+    transition:0.3s;
+  "></span>
+
+  <span style="
+    position:absolute;
+    width:24px;
+    height:2px;
+    background:white;
+    transition:0.3s;
+  "></span>
+
+  <span style="
+    position:absolute;
+    width:24px;
+    height:2px;
+    background:white;
+    bottom:12px;
+    transition:0.3s;
+  "></span>
+</button>
+
+      </div>
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div id="mobileMenu"
+  class="md:hidden absolute top-full left-0 w-full
+         bg-dark backdrop-blur
+         transform scale-y-0 origin-top
+         opacity-0
+         transition-all duration-300 ease-out">
+
+      <nav class="px-6 py-6 flex flex-col gap-4 text-sm font-medium border-t text-center border-white/10">
+        <a href="#services" class="hover:text-primary">Services</a>
+        <a href="#work" class="hover:text-primary">Work</a>
+        <a href="#process" class="hover:text-primary">Process</a>
+        <a href="#contact" class="hover:text-primary">Contact</a>
+
+        <a href="#contact"
+           class="mt-4 inline-flex justify-center px-6 py-3 rounded-lg bg-primary text-white font-semibold">
+          Get a Quote
+        </a>
+      </nav>
+    </div>
+  </header>
+
+<!-- HERO -->
+<section class="max-w-4xl mx-auto px-6 pt-36">
+  <span class="text-primary text-sm font-bold uppercase pt-24">Cybersecurity</span>
+  <h1 class="text-4xl md:text-5xl font-extrabold text-white mt-4 mb-6 leading-tight">
+    Cybersecurity Basics Every Business Must Know
+  </h1>
+  <p class="text-slate-300 text-lg">
+    Cyber attacks are no longer a “big company problem.”  
+    If your business uses email, cloud storage, or online payments — you are a target.
+  </p>
+</section>
+
+<!-- FEATURE IMAGE -->
+<section class="max-w-5xl mx-auto px-6 mt-12">
+  <img src="thumbnails/cybersecurity.jpg"
+       alt="Cybersecurity protection concept"
+       class="rounded-3xl w-full object-cover shadow-lg shadow-blue-500/10">
+</section>
+
+<!-- ARTICLE CONTENT -->
+<main class="max-w-4xl mx-auto px-6 mt-16 space-y-16 leading-relaxed">
+
+  <!-- SECTION 1 -->
+  <section>
+    <h2 class="text-2xl font-bold text-white mb-4">
+      1. The Modern Cyber Threat Landscape
+    </h2>
+    <p class="text-slate-300">
+      Cybercrime has evolved from random hacks to organized, automated attacks.
+      Businesses of all sizes are targeted because attackers know many companies
+      lack proper defenses.
+    </p>
+    <p class="text-slate-300 mt-4">
+      One weak password or unpatched system is enough to expose sensitive customer
+      data, financial records, and internal systems.
+    </p>
+  </section>
+
+  <!-- SECTION 2 -->
+  <section class="grid md:grid-cols-2 gap-8 items-center">
+    <div>
+      <h2 class="text-2xl font-bold text-white mb-4">
+        2. Common Cyber Threats You Should Know
+      </h2>
+      <ul class="text-slate-300 space-y-3 list-disc pl-5">
+        <li><strong>Phishing Attacks:</strong> Fake emails or messages designed to steal logins.</li>
+        <li><strong>Ransomware:</strong> Malicious software that locks your files until payment is demanded.</li>
+        <li><strong>Data Breaches:</strong> Unauthorized access to customer or company data.</li>
+        <li><strong>Weak Passwords:</strong> Easily guessed or reused credentials.</li>
+        <li><strong>Outdated Software:</strong> Systems running unpatched vulnerabilities.</li>
+      </ul>
+    </div>
+
+    <img src="thumbnails/cyber-threats.jpg"
+         alt="Common cybersecurity threats"
+         class="rounded-2xl shadow-lg shadow-blue-500/10">
+  </section>
+
+  <!-- SECTION 3 -->
+  <section>
+    <h2 class="text-2xl font-bold text-white mb-4">
+      3. Essential Cybersecurity Practices
+    </h2>
+    <p class="text-slate-300 mb-4">
+      You don’t need enterprise-level budgets to improve security. These fundamentals
+      eliminate most attack vectors when implemented consistently.
+    </p>
+
+    <ol class="text-slate-300 space-y-3 list-decimal pl-5">
+      <li><strong>Strong Passwords & MFA:</strong> Use long, unique passwords with multi-factor authentication.</li>
+      <li><strong>Regular Updates:</strong> Keep operating systems and software fully patched.</li>
+      <li><strong>Secure Backups:</strong> Maintain offline or cloud backups to recover from attacks.</li>
+      <li><strong>Employee Awareness:</strong> Train staff to recognize suspicious links and emails.</li>
+      <li><strong>Firewalls & Antivirus:</strong> Protect all devices accessing your network.</li>
+      <li><strong>Access Control:</strong> Give users only the permissions they actually need.</li>
+    </ol>
+  </section>
+
+  <!-- SECTION 4 -->
+  <section class="grid md:grid-cols-2 gap-8 items-center">
+    <img src="thumbnails/cyberthreats.jpg"
+         alt="Cybersecurity awareness training"
+         class="rounded-2xl shadow-lg shadow-blue-500/10">
+
+    <div>
+      <h2 class="text-2xl font-bold text-white mb-4">
+        4. Cybersecurity Is a Culture, Not a Tool
+      </h2>
+      <p class="text-slate-300">
+        Technology alone cannot protect your business. Most breaches happen due
+        to human error — clicking the wrong link or sharing credentials unknowingly.
+      </p>
+      <p class="text-slate-300 mt-4">
+        A security-aware team combined with clear policies dramatically reduces risk.
+      </p>
+    </div>
+  </section>
+
+  <!-- FINAL TAKEAWAY -->
+  <section class="bg-white/5 border border-white/10 rounded-3xl p-8">
+    <h3 class="text-2xl font-bold text-white mb-4">
+      Final Takeaway
+    </h3>
+    <p class="text-slate-300">
+      Cybersecurity isn’t optional anymore. Basic protections prevent costly downtime,
+      legal trouble, and loss of customer trust. The goal isn’t perfection —
+      it’s preparedness.
+    </p>
+  </section>
+
+</main>
+
+<!-- CTA -->
+<section class="max-w-5xl mx-auto px-6 mt-20 mb-24">
+  <div class="rounded-3xl bg-gradient-to-r from-blue-600 to-indigo-600 p-10 text-center">
+    <h3 class="text-3xl font-extrabold text-white mb-4">
+      Need Help Securing Your Business?
+    </h3>
+    <p class="text-white/90 mb-6">
+      We help businesses implement modern, practical cybersecurity solutions.
+    </p>
+    <a href="contact.html"
+       class="inline-block px-8 py-3 rounded-xl bg-white text-blue-700 font-bold hover:scale-105 transition">
+      Talk to a Security Expert
+    </a>
+  </div>
+</section>
+
+
+<footer class="relative bg-dark border-t border-white/10 pt-16">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- TOP GRID + IMAGE FLEX -->
+    <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-12 pb-12">
+
+      <!-- LINKS GRID -->
+      <div class="grid gap-12 md:grid-cols-4 flex-1">
+
+        <!-- CONTACT INFO -->
+        <div>
+          <h3 class="text-white font-bold mb-4">Contact Us</h3>
+          <p class="text-slate-300 text-sm mb-2">
+            Email:
+            <a href="mailto:hello@synlotech.dev" class="text-white hover:text-primary transition">hello@synlotech.dev</a>
+          </p>
+          <p class="text-slate-300 text-sm mb-2">
+            Phone:
+            <a href="tel:+255788296274" class="text-white hover:text-primary transition">+255 788 296 274</a>
+          </p>
+          <p class="text-slate-300 text-sm">
+            WhatsApp:
+            <a href="https://wa.me/255788296274" class="text-white hover:text-primary transition">Chat Now</a>
+          </p>
+        </div>
+
+        <!-- SOCIAL LINKS -->
+        <div>
+          <h3 class="text-white font-bold mb-4">Follow Us</h3>
+          <div class="flex gap-4 text-slate-300">
+            <a href="#" aria-label="Facebook" class="hover:text-primary transition">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="#" aria-label="Twitter" class="hover:text-primary transition">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="#" aria-label="Instagram" class="hover:text-primary transition">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="#" aria-label="WhatsApp" class="hover:text-primary transition">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="#" aria-label="LinkedIn" class="hover:text-primary transition">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- LEGAL LINKS -->
+        <div class="md:col-span-2">
+          <h3 class="text-white font-bold mb-4">Legal & Links</h3>
+          <p class="text-slate-300 text-sm">
+            <a href="Privacy-Policy.html" class="text-white hover:text-primary transition">Privacy Policy</a>
+            <span class="mx-2">|</span>
+            <a href="Terms-Of-Service.html" class="text-white hover:text-primary">Terms of Service</a>
+          </p>
+        </div>
+
+      </div>
+</div>
+
+    <!-- BOTTOM BAR -->
+    <div class="border-t border-white/10 py-6 text-center">
+      <p class="text-slate-400 text-sm">
+        © 2026 SYNLOTECH TECHNOLOGIES. All rights reserved.
+      </p>
+    </div>
+
+  </div>
+</footer>
+
+<footer class="relative bg-dark border-t border-white/10 pt-16">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- TOP GRID + IMAGE FLEX -->
+    <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-12 pb-12">
+
+      <!-- LINKS GRID -->
+      <div class="grid gap-12 md:grid-cols-4 flex-1">
+
+        <!-- CONTACT INFO -->
+        <div>
+          <h3 class="text-white font-bold mb-4">Contact Us</h3>
+          <p class="text-slate-300 text-sm mb-2">
+            Email:
+            <a href="mailto:hello@synlotech.dev" class="text-white hover:text-primary transition">hello@synlotech.dev</a>
+          </p>
+          <p class="text-slate-300 text-sm mb-2">
+            Phone:
+            <a href="tel:+255788296274" class="text-white hover:text-primary transition">+255 788 296 274</a>
+          </p>
+          <p class="text-slate-300 text-sm">
+            WhatsApp:
+            <a href="https://wa.me/255788296274" class="text-white hover:text-primary transition">Chat Now</a>
+          </p>
+        </div>
+
+        <!-- SOCIAL LINKS -->
+        <div>
+          <h3 class="text-white font-bold mb-4">Follow Us</h3>
+          <div class="flex gap-4 text-slate-300">
+            <a href="#" aria-label="Facebook" class="hover:text-primary transition">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="#" aria-label="Twitter" class="hover:text-primary transition">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="#" aria-label="Instagram" class="hover:text-primary transition">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="#" aria-label="WhatsApp" class="hover:text-primary transition">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="#" aria-label="LinkedIn" class="hover:text-primary transition">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- LEGAL LINKS -->
+        <div class="md:col-span-2">
+          <h3 class="text-white font-bold mb-4">Legal & Links</h3>
+          <p class="text-slate-300 text-sm">
+            <a href="Privacy-Policy.html" class="text-white hover:text-primary transition">Privacy Policy</a>
+            <span class="mx-2">|</span>
+            <a href="Terms-Of-Service.html" class="text-white hover:text-primary">Terms of Service</a>
+          </p>
+        </div>
+
+      </div>
+</div>
+
+    <!-- BOTTOM BAR -->
+    <div class="border-t border-white/10 py-6 text-center">
+      <p class="text-slate-400 text-sm">
+        © 2026 SYNLOTECH TECHNOLOGIES. All rights reserved.
+      </p>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+
+  const btn = document.getElementById('menuBtn');
+const menu = document.getElementById('mobileMenu');
+
+btn.addEventListener('click', () => {
+  btn.classList.toggle('open');
+  menu.classList.toggle('scale-y-0');
+  menu.classList.toggle('opacity-0');
+
+});
+      </script>
+</body>
+</html>
