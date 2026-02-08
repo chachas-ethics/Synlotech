@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy | Synlotech Technologies</title>
-  <meta name="description" content="Synlotech Technologies Privacy Policy. Learn how we collect, use, and protect your information when using our website and services.">
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.3/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- TAILWIND CDN -->
+  <title>Privacy Policy | Synlotech Technologies</title>
+  <meta name="description" content="Read Synlotech Technologies' Privacy Policy to understand how we collect, use, and protect your personal information. Full transparency and compliance with global standards." />
+
+  <link rel="icon" href="thumbnails/theS.png" />
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- CUSTOM CONFIG -->
   <script>
     tailwind.config = {
       theme: {
@@ -18,28 +18,60 @@
           colors: {
             primary: '#2563EB',
             accent: '#38BDF8',
-            dark: '#020617',
+            dark: '#020617'
           }
         }
       }
     }
   </script>
-  <style>
-    /* Override Tailwind's text-white utility to display black text instead */
-    .text-white { color: #000 !important; }
+
+   <style>
+     .bar {
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background: white;
+  transition: 0.3s ease;
+}
+
+
+.top {
+  top: 12px;
+}
+
+.middle {
+  opacity: 1;
+}
+
+.bottom {
+  bottom: 12px;
+}
+
+/* OPEN STATE */
+#menuBtn.open .top {
+  transform: translateY(6px) rotate(45deg);
+}
+
+#menuBtn.open .middle {
+  opacity: 0;
+}
+
+#menuBtn.open .bottom {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
   </style>
 </head>
-<body class="bg-dark text-white font-sans opacity-0 transition-opacity duration-700 ease-out">
 
-  <!-- NAVBAR (Optional) -->
-   <!-- NAVBAR -->
-  <header class="fixed top-0 inset-x-0 z-50 backdrop-blur bg-dark/70 border-b border-white/5 py-3">
+<body style="font-family: inter;" class="bg-dark text-white opacity-0 translate-y-6 transition-all duration-700 ease-out">
+
+   <header class="fixed top-0 inset-x-0 z-50 backdrop-blur bg-dark/70 border-b border-white/5 py-3">
     <div class="max-w-7xl mx-auto px-4">
       <div class="flex items-center justify-between h-20">
 
         <!-- LOGO -->
          <div>
-        <a href="#home"  class="text-2xl font-extrabold text-primary tracking-tight">
+        <a href="index.html#home"  class="text-2xl font-extrabold text-primary tracking-tight">
           <img style="width: 40px;
           height: 45px;
           display: inline-block;
@@ -57,15 +89,15 @@
 
         <!-- DESKTOP NAV -->
         <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
-          <a href="#services" class="hover:text-primary transition">Services</a>
-          <a href="#work" class="hover:text-primary transition">Work</a>
-          <a href="#process" class="hover:text-primary transition">Process</a>
-          <a href="#contact" class="hover:text-primary transition">Contact</a>
+          <a href="index.html#services" class="hover:text-primary transition">Services</a>
+          <a href="index.html#work" class="hover:text-primary transition">Work</a>
+          <a href="index.html#process" class="hover:text-primary transition">Process</a>
+          <a href="index.html#contact" class="hover:text-primary transition">Contact</a>
         </nav>
 
         <!-- CTA -->
         <div class="hidden md:block">
-          <a href="#contact"
+          <a href="index.html#contact"
              class="px-5 py-2.5 rounded-lg bg-primary text-white font-semibold
                     hover:bg-blue-700 transition shadow-lg shadow-primary/30">
             Get a Quote
@@ -73,16 +105,12 @@
         </div>
 
         <!-- MOBILE MENU BUTTON -->
-       <button
-  id="menuBtn"
-  class="md:hidden relative w-10 h-10 flex items-center justify-center
-         z-50 rounded-md hover: transition"
-  aria-label="Open menu"
->
+      <button id="menuBtn" class="md:hidden relative w-10 h-10 flex items-center justify-center z-50 rounded-md">
   <span class="bar top"></span>
   <span class="bar middle"></span>
   <span class="bar bottom"></span>
 </button>
+
 
       </div>
     </div>
@@ -96,12 +124,12 @@
          transition-all duration-300 ease-out">
 
       <nav class="px-6 py-6 flex flex-col gap-4 text-sm font-medium border-t text-center border-white/10">
-        <a href="#services" class="hover:text-primary">Services</a>
-        <a href="#work" class="hover:text-primary">Work</a>
-        <a href="#process" class="hover:text-primary">Process</a>
-        <a href="#contact" class="hover:text-primary">Contact</a>
+        <a href="index.html#services" class="hover:text-primary">Services</a>
+        <a href="index.html#work" class="hover:text-primary">Work</a>
+        <a href="index.html#process" class="hover:text-primary">Process</a>
+        <a href="index.html#contact" class="hover:text-primary">Contact</a>
 
-        <a href="#contact"
+        <a href="index.html#contact"
            class="mt-4 inline-flex justify-center px-6 py-3 rounded-lg bg-primary text-white font-semibold">
           Get a Quote
         </a>
@@ -109,129 +137,198 @@
     </div>
   </header>
 
-  <!-- PAGE HEADER -->
-  <header class="text-center py-16 bg-gradient-to-b from-primary/20 via-transparent to-transparent">
-    <h1 class="text-4xl sm:text-5xl font-extrabold text-white mb-4">Privacy Policy</h1>
-    <p class="text-slate-300 max-w-2xl mx-auto">Your privacy is important to us. Learn how Synlotech Technologies collects, uses, and protects your information.</p>
-  </header>
 
-  <!-- CONTENT -->
-  <main class="max-w-4xl mx-auto px-6 py-16 space-y-12">
+<!-- HERO -->
+<section class="pt-36 pb-20 px-6 text-center max-w-4xl mx-auto">
+  <h1 class="text-4xl sm:text-5xl font-extrabold text-primary">
+    Privacy Policy
+  </h1>
+  <p class="mt-4 text-slate-300 text-lg">
+    At Synlotech Technologies, your privacy is our priority. This page explains how we collect, use, and protect your information.
+  </p>
+</section>
 
-    <!-- Section: Information Collection -->
-    <section class="animate-on-scroll">
-      <h2 class="text-2xl font-bold text-white mb-4">Information We Collect</h2>
-      <p class="text-slate-300 text-base leading-relaxed">
-        We may collect personal information such as your name, email, phone number, and any details you provide when contacting us or using our services. Non-personal data such as browser type, pages visited, and session duration may also be collected for analytics and performance purposes.
-      </p>
-    </section>
+<!-- ARTICLE -->
+<article class="max-w-4xl mx-auto px-6 space-y-12 leading-relaxed">
 
-    <!-- Section: How We Use Your Information -->
-    <section class="animate-on-scroll">
-      <h2 class="text-2xl font-bold text-white mb-4">How We Use Your Information</h2>
-      <p class="text-slate-300 text-base leading-relaxed">
-        Your information is used to provide and improve our services, respond to inquiries, process requests, send important updates, and ensure the security and functionality of our website. We never sell your personal data to third parties.
-      </p>
-    </section>
+  <!-- Introduction -->
+  <section>
+    <p class="text-slate-300">
+      Synlotech Technologies (“we”, “our”, “us”) respects your privacy and is committed to protecting it through compliance with this policy. By visiting or using our website, you agree to the terms outlined below.
+    </p>
+  </section>
 
-    <!-- Section: Data Security -->
-    <section class="animate-on-scroll">
-      <h2 class="text-2xl font-bold text-white mb-4">Data Security</h2>
-      <p class="text-slate-300 text-base leading-relaxed">
-        We implement industry-standard measures to protect your data from unauthorized access, alteration, disclosure, or destruction. This includes secure servers, encryption, and restricted access to sensitive information.
-      </p>
-    </section>
+  <!-- Information We Collect -->
+  <section>
+    <h2 class="text-2xl font-bold mb-4 text-primary">Information We Collect</h2>
+    <p class="text-slate-300">
+      We may collect information that identifies you or can be used to contact you (“Personal Information”). This includes:
+    </p>
+    <ul class="list-disc list-inside text-slate-300 mt-4 space-y-2">
+      <li>Name, email address, and phone number when you contact us or submit forms.</li>
+      <li>IP address, browser type, and device information automatically via cookies and analytics.</li>
+      <li>Information you voluntarily provide through surveys, subscriptions, or feedback.</li>
+    </ul>
+  </section>
 
-    <!-- Section: Cookies & Tracking -->
-    <section class="animate-on-scroll">
-      <h2 class="text-2xl font-bold text-white mb-4">Cookies & Tracking</h2>
-      <p class="text-slate-300 text-base leading-relaxed">
-        Our website may use cookies and similar technologies to enhance user experience, analyze website traffic, and improve functionality. You can adjust your browser settings to manage cookies if desired.
-      </p>
-    </section>
+  <!-- How We Use Your Information -->
+  <section>
+    <h2 class="text-2xl font-bold mb-4 text-primary">How We Use Your Information</h2>
+    <p class="text-slate-300">
+      Your information is used solely for legitimate business purposes, including:
+    </p>
+    <ul class="list-disc list-inside text-slate-300 mt-4 space-y-2">
+      <li>Responding to inquiries and providing requested services.</li>
+      <li>Improving our website, products, and services.</li>
+      <li>Sending promotional emails only if you’ve opted-in.</li>
+      <li>Monitoring and analyzing usage patterns for website performance.</li>
+    </ul>
+  </section>
 
-    <!-- Section: Third-Party Services -->
-    <section class="animate-on-scroll">
-      <h2 class="text-2xl font-bold text-white mb-4">Third-Party Services</h2>
-      <p class="text-slate-300 text-base leading-relaxed">
-        We may use trusted third-party services for analytics, hosting, and marketing. These services are bound by confidentiality agreements and are only granted access necessary to perform their functions.
-      </p>
-    </section>
+  <!-- Cookies & Tracking -->
+  <section>
+    <h2 class="text-2xl font-bold mb-4 text-primary">Cookies and Tracking</h2>
+    <p class="text-slate-300">
+      We use cookies and similar technologies to enhance your experience, analyze traffic, and personalize content. You can manage cookie preferences through your browser settings.
+    </p>
+  </section>
 
-    <!-- Section: Your Rights -->
-    <section class="animate-on-scroll">
-      <h2 class="text-2xl font-bold text-white mb-4">Your Rights</h2>
-      <p class="text-slate-300 text-base leading-relaxed">
-        You have the right to access, correct, or delete your personal information. You may also opt out of communications or revoke consent at any time by contacting us via email or phone.
-      </p>
-    </section>
+  <!-- Sharing Your Information -->
+  <section>
+    <h2 class="text-2xl font-bold mb-4 text-primary">Sharing Your Information</h2>
+    <p class="text-slate-300">
+      We do not sell or rent your personal information. We may share it in limited circumstances, including:
+    </p>
+    <ul class="list-disc list-inside text-slate-300 mt-4 space-y-2">
+      <li>With trusted third-party service providers for business operations.</li>
+      <li>To comply with legal obligations or enforce our terms of service.</li>
+      <li>In connection with a merger, acquisition, or sale of assets.</li>
+    </ul>
+  </section>
 
-    <!-- Section: Updates to this Policy -->
-    <section class="animate-on-scroll">
-      <h2 class="text-2xl font-bold text-white mb-4">Updates to this Policy</h2>
-      <p class="text-slate-300 text-base leading-relaxed">
-        Synlotech Technologies may update this Privacy Policy from time to time. Any changes will be reflected on this page with the updated date. We encourage you to review this policy periodically.
-      </p>
-    </section>
+  <!-- Data Security -->
+  <section>
+    <h2 class="text-2xl font-bold mb-4 text-primary">Data Security</h2>
+    <p class="text-slate-300">
+      We implement reasonable technical and organizational measures to protect your personal data from unauthorized access, disclosure, alteration, or destruction. However, no online system is completely secure.
+    </p>
+  </section>
 
-  </main>
+  <!-- Your Rights -->
+  <section>
+    <h2 class="text-2xl font-bold mb-4 text-primary">Your Privacy Rights</h2>
+    <p class="text-slate-300">
+      Depending on your location, you may have rights to:
+    </p>
+    <ul class="list-disc list-inside text-slate-300 mt-4 space-y-2">
+      <li>Access, correct, or request deletion of your personal data.</li>
+      <li>Opt-out of marketing communications.</li>
+      <li>Restrict or object to certain data processing activities.</li>
+    </ul>
+    <p class="text-slate-300 mt-4">
+      To exercise any of these rights, contact us at 
+      <a href="mailto:hello@synlotech.dev" class="text-primary hover:underline">hello@synlotech.dev</a>.
+    </p>
+  </section>
 
-  <footer class="relative bg-dark border-t border-white/10 pt-16">
+  <!-- Third-Party Links -->
+  <section>
+    <h2 class="text-2xl font-bold mb-4 text-primary">Third-Party Links</h2>
+    <p class="text-slate-300">
+      Our website may contain links to third-party websites. We are not responsible for their privacy practices. Please review their policies before providing personal information.
+    </p>
+  </section>
+
+  <!-- Children’s Privacy -->
+  <section>
+    <h2 class="text-2xl font-bold mb-4 text-primary">Children’s Privacy</h2>
+    <p class="text-slate-300">
+      Our website is not intended for children under 13. We do not knowingly collect personal information from children. If you believe a child’s data has been collected, contact us immediately.
+    </p>
+  </section>
+
+  <!-- Changes to This Policy -->
+  <section>
+    <h2 class="text-2xl font-bold mb-4 text-primary">Changes to This Privacy Policy</h2>
+    <p class="text-slate-300">
+      We may update this privacy policy periodically. Any changes will be posted on this page with the “Last Updated” date. We encourage you to review it regularly.
+    </p>
+  </section>
+
+  <!-- Contact Information -->
+  <section>
+    <h2 class="text-2xl font-bold mb-4 text-primary">Contact Us</h2>
+    <p class="text-slate-300">
+      If you have questions or concerns about this policy, email us at 
+      <a href="mailto:hello@synlotech.dev" class="text-primary hover:underline">hello@synlotech.dev</a> 
+      or call us at 
+      <a href="tel:+255788296274" class="text-primary hover:underline">+255 788 296 274</a>.
+    </p>
+  </section>
+
+</article>
+
+<!-- FOOTER -->
+<footer class="relative bg-dark border-t border-white/10 pt-16">
   <div class="max-w-7xl mx-auto px-6">
 
-    <!-- TOP GRID -->
-    <div class="grid gap-12 md:grid-cols-4 pb-12">
+    <!-- TOP GRID + IMAGE FLEX -->
+    <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-12 pb-12">
 
-      <!-- CONTACT INFO -->
-      <div>
-        <h3 class="text-white font-bold mb-4">Contact Us</h3>
-        <p class="text-slate-300 text-sm mb-2">
-          Email:
-          <a href="mailto:hello@synlotech.dev" class="text-white hover:text-primary transition">hello@synlotech.dev</a>
-        </p>
-        <p class="text-slate-300 text-sm mb-2">
-          Phone:
-          <a href="tel:+255788296274" class="text-white hover:text-primary transition">+255 788 296 274</a>
-        </p>
-        <p class="text-slate-300 text-sm">
-          WhatsApp:
-          <a href="https://wa.me/255788296274" class="text-white hover:text-primary transition">Chat Now</a>
-        </p>
-      </div>
+      <!-- LINKS GRID -->
+      <div class="grid gap-12 md:grid-cols-4 flex-1">
 
-      <!-- SOCIAL LINKS -->
-      <div>
-        <h3 class="text-white font-bold mb-4">Follow Us</h3>
-        <div class="flex gap-4 text-slate-300">
-          <a href="#" aria-label="Facebook" class="hover:text-primary transition">
-            <i class="fa-brands fa-facebook-f"></i>
-          </a>
-          <a href="#" aria-label="Twitter" class="hover:text-primary transition">
-            <i class="fa-brands fa-x-twitter"></i>
-          </a>
-          <a href="#" aria-label="Instagram" class="hover:text-primary transition">
-            <i class="fa-brands fa-instagram"></i>
-          </a>
-          <a href="#" aria-label="WhatsApp" class="hover:text-primary transition">
-            <i class="fa-brands fa-whatsapp"></i>
-          </a>
-          <a href="#" aria-label="LinkedIn" class="hover:text-primary transition">
-            <i class="fa-brands fa-linkedin-in"></i>
-          </a>
+        <!-- CONTACT INFO -->
+        <div>
+          <h3 class="text-white font-bold mb-4">Contact Us</h3>
+          <p class="text-slate-300 text-sm mb-2">
+            Email:
+            <a href="mailto:hello@synlotech.dev" class="text-white hover:text-primary transition">hello@synlotech.dev</a>
+          </p>
+          <p class="text-slate-300 text-sm mb-2">
+            Phone:
+            <a href="tel:+255788296274" class="text-white hover:text-primary transition">+255 788 296 274</a>
+          </p>
+          <p class="text-slate-300 text-sm">
+            WhatsApp:
+            <a href="https://wa.me/255788296274" class="text-white hover:text-primary transition">Chat Now</a>
+          </p>
         </div>
-      </div>
 
-      <!-- LEGAL LINKS -->
-      <div class="md:col-span-2">
-        <h3 class="text-white font-bold mb-4">Legal & Links</h3>
-        <p class="text-slate-300 text-sm">
-          <a href="Privacy-Policy.html" class="text-white hover:text-primary transition">Privacy Policy</a>
-          <span class="mx-2">|</span>
-          <a href="Terms-Of-Service.html" class="text-white hover:text-primary">Terms of Service</a>
-        </p>
-      </div>
+        <!-- SOCIAL LINKS -->
+        <div>
+          <h3 class="text-white font-bold mb-4">Follow Us</h3>
+          <div class="flex gap-4 text-slate-300">
+            <a href="#" aria-label="Facebook" class="hover:text-primary transition">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="#" aria-label="Twitter" class="hover:text-primary transition">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="#" aria-label="Instagram" class="hover:text-primary transition">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="#" aria-label="WhatsApp" class="hover:text-primary transition">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="#" aria-label="LinkedIn" class="hover:text-primary transition">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
 
-    </div>
+        <!-- LEGAL LINKS -->
+        <div class="md:col-span-2">
+          <h3 class="text-white font-bold mb-4">Legal & Links</h3>
+          <p class="text-slate-300 text-sm">
+            <a href="Privacy-Policy.html" class="text-white hover:text-primary transition">Privacy Policy</a>
+            <span class="mx-2">|</span>
+            <a href="Terms-Of-Service.html" class="text-white hover:text-primary">Terms of Service</a>
+          </p>
+        </div>
+
+      </div>
+</div>
 
     <!-- BOTTOM BAR -->
     <div class="border-t border-white/10 py-6 text-center">
@@ -243,11 +340,20 @@
   </div>
 </footer>
 
-  <script>
-  window.addEventListener('load', () => {
-    document.body.classList.remove('opacity-0');
+<script>
+   const btn = document.getElementById('menuBtn');
+const menu = document.getElementById('mobileMenu');
+
+btn.addEventListener('click', () => {
+  btn.classList.toggle('open');
+  menu.classList.toggle('scale-y-0');
+  menu.classList.toggle('opacity-0');
+
+});
+
+ window.addEventListener('DOMContentLoaded', () => {
+    document.body.classList.remove('opacity-0', 'translate-y-6');
   });
 </script>
-
 </body>
 </html>

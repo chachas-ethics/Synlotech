@@ -82,7 +82,7 @@
 
         <!-- LOGO -->
          <div>
-        <a href="#home"  class="text-2xl font-extrabold text-primary tracking-tight">
+        <a href="index.html#home"  class="text-2xl font-extrabold text-primary tracking-tight">
           <img style="width: 40px;
           height: 45px;
           display: inline-block;
@@ -100,15 +100,15 @@
 
         <!-- DESKTOP NAV -->
         <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
-          <a href="#services" class="hover:text-primary transition">Services</a>
-          <a href="#work" class="hover:text-primary transition">Work</a>
-          <a href="#process" class="hover:text-primary transition">Process</a>
-          <a href="#contact" class="hover:text-primary transition">Contact</a>
+          <a href="index.html#services" class="hover:text-primary transition">Services</a>
+          <a href="index.html#work" class="hover:text-primary transition">Work</a>
+          <a href="index.html#process" class="hover:text-primary transition">Process</a>
+          <a href="index.html#contact" class="hover:text-primary transition">Contact</a>
         </nav>
 
         <!-- CTA -->
         <div class="hidden md:block">
-          <a href="#contact"
+          <a href="index.html#contact"
              class="px-5 py-2.5 rounded-lg bg-primary text-white font-semibold
                     hover:bg-blue-700 transition shadow-lg shadow-primary/30">
             Get a Quote
@@ -139,12 +139,12 @@
          transition-all duration-300 ease-out">
 
       <nav class="px-6 py-6 flex flex-col gap-4 text-sm font-medium border-t text-center border-white/10">
-        <a href="#services" class="hover:text-primary">Services</a>
-        <a href="#work" class="hover:text-primary">Work</a>
-        <a href="#process" class="hover:text-primary">Process</a>
-        <a href="#contact" class="hover:text-primary">Contact</a>
+        <a href="index.html#services" class="hover:text-primary">Services</a>
+        <a href="index.html#work" class="hover:text-primary">Work</a>
+        <a href="index.html#process" class="hover:text-primary">Process</a>
+        <a href="index.html#contact" class="hover:text-primary">Contact</a>
 
-        <a href="#contact"
+        <a href="index.html#contact"
            class="mt-4 inline-flex justify-center px-6 py-3 rounded-lg bg-primary text-white font-semibold">
           Get a Quote
         </a>
@@ -153,30 +153,46 @@
   </header>
 
 <!-- HERO -->
+<!-- HERO WITH IMAGE -->
 <section class="animate-on-scroll pt-40 pb-24">
   <div class="max-w-7xl mx-auto px-6">
-    <div class="max-w-3xl">
-      <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight">
-        UI / UX Design
-      </h1>
-      <p class="mt-6 text-slate-300 text-lg">
-        We design intuitive interfaces and seamless user experiences that
-        help users navigate faster, stay longer, and take action.
-      </p>
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
 
-      <div class="mt-8 flex flex-wrap gap-4">
-        <a href="#contact"
-          class="px-8 py-4 bg-primary rounded-xl font-semibold hover:bg-blue-700 transition">
-          Improve My UX
-        </a>
-        <a href="#principles"
-          class="px-8 py-4 border border-white/20 rounded-xl font-semibold hover:border-primary transition">
-          Our Design Principles
-        </a>
+      <!-- LEFT: Text content -->
+      <div class="max-w-xl">
+        <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight">
+          UI / UX Design
+        </h1>
+        <p class="mt-6 text-slate-300 text-lg">
+          We design intuitive interfaces and seamless user experiences that
+          help users navigate faster, stay longer, and take action.
+        </p>
+
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="#contact"
+            class="px-8 py-4 bg-primary rounded-xl font-semibold hover:bg-blue-700 transition">
+            Improve My UX
+          </a>
+          <a href="#principles"
+            class="px-8 py-4 border border-white/20 rounded-xl font-semibold hover:border-primary transition">
+            Our Design Principles
+          </a>
+        </div>
       </div>
+
+      <!-- RIGHT: Hero image -->
+      <div class="relative w-full h-80 sm:h-96 lg:h-96 rounded-3xl overflow-hidden">
+        <img 
+          src="thumbnails/uiux.avif" 
+          alt="UI UX design illustration" 
+          class="w-full h-full object-cover rounded-3xl shadow-lg shadow-primary/30"
+        >
+      </div>
+
     </div>
   </div>
 </section>
+
 
 <!-- WHAT WE DESIGN -->
 <section class="animate-on-scroll py-24 bg-white/5">

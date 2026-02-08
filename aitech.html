@@ -39,41 +39,81 @@
 <body style="font-family: inter;" class="bg-dark text-white font-sans opacity-0 transition-opacity duration-700 ease-out">
 
 <!-- NAVBAR -->
-<header class="fixed top-0 inset-x-0 z-50 backdrop-blur bg-dark/70 border-b border-white/5 py-3">
-  <div class="max-w-7xl mx-auto px-4 flex items-center justify-between h-20">
-    <a href="index.html#home" class="flex items-center gap-2">
-      <img src="thumbnails/theS.png" style="width:40px;height:45px;">
-      <p class="text-xl font-extrabold text-white">
-        SYNLOTECH<br>TECHNOLOGIES
-      </p>
-    </a>
-    <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
-      <a href="index.html#services" class="hover:text-primary transition">Services</a>
-      <a href="index.html#work" class="hover:text-primary transition">Work</a>
-      <a href="index.html#blog" class="hover:text-primary transition">Blog</a>
-      <a href="index.html#contact" class="hover:text-primary transition">Contact</a>
-    </nav>
-    <div class="hidden md:block">
-      <a href="#contact" class="px-5 py-2.5 rounded-lg bg-primary text-white font-semibold hover:bg-blue-700 transition shadow-lg shadow-primary/30">Get a Quote</a>
-    </div>
-    <button id="menuBtn" class="md:hidden relative w-10 h-10 flex items-center justify-center z-50 rounded-md" aria-label="Open menu">
-      <span class="bar top"></span>
-      <span class="bar middle"></span>
-      <span class="bar bottom"></span>
-    </button>
-  </div>
+  <header class="fixed top-0 inset-x-0 z-50 backdrop-blur bg-dark/70 border-b border-white/5 py-3">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex items-center justify-between h-20">
 
-  <!-- Mobile Menu -->
-  <div id="mobileMenu" class="md:hidden absolute top-full left-0 w-full bg-dark backdrop-blur transform scale-y-0 origin-top opacity-0 transition-all duration-300 ease-out">
-    <nav class="px-6 py-6 flex flex-col gap-4 text-sm font-medium border-t text-center border-white/10">
-      <a href="index.html#services" class="hover:text-primary">Services</a>
-      <a href="index.html#work" class="hover:text-primary">Work</a>
-      <a href="index.html#blog" class="hover:text-primary">Blog</a>
-      <a href="index.html#contact" class="hover:text-primary">Contact</a>
-      <a href="index.html#contact" class="mt-4 inline-flex justify-center px-6 py-3 rounded-lg bg-primary text-white font-semibold">Get a Quote</a>
-    </nav>
-  </div>
-</header>
+        <!-- LOGO -->
+         <div>
+        <a href="index.html#home"  class="text-2xl font-extrabold text-primary tracking-tight">
+          <img style="width: 40px;
+          height: 45px;
+          display: inline-block;
+          margin-bottom: 30px;
+          " src="thumbnails/theS.png">
+        
+         <p  class="text-xl font-extrabold text-white tracking-tight" style="display: inline-block;
+         margin-top: 30px;
+          ">
+          <span style="text-align: center;" >SYNLOTECH</span><br>
+          TECHNOLOGIES
+          </p>
+          </a>
+         </div>
+
+        <!-- DESKTOP NAV -->
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+          <a href="index.html#services" class="hover:text-primary transition">Services</a>
+          <a href="index.html#work" class="hover:text-primary transition">Work</a>
+          <a href="index.html#process" class="hover:text-primary transition">Process</a>
+          <a href="index.html#contact-form" class="hover:text-primary transition">Contact</a>
+        </nav>
+
+        <!-- CTA -->
+        <div class="hidden md:block">
+          <a href="index.html#contact-form"
+             class="px-5 py-2.5 rounded-lg bg-primary text-white font-semibold
+                    hover:bg-blue-700 transition shadow-lg shadow-primary/30">
+            Get a Quote
+          </a>
+        </div>
+
+        <!-- MOBILE MENU BUTTON -->
+       <button
+  id="menuBtn"
+  class="md:hidden relative w-10 h-10 flex items-center justify-center
+         z-50 rounded-md hover: transition"
+  aria-label="Open menu"
+>
+  <span class="bar top"></span>
+  <span class="bar middle"></span>
+  <span class="bar bottom"></span>
+</button>
+
+      </div>
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div id="mobileMenu"
+  class="md:hidden absolute top-full left-0 w-full
+         bg-dark backdrop-blur
+         transform scale-y-0 origin-top
+         opacity-0
+         transition-all duration-300 ease-out">
+
+      <nav class="px-6 py-6 flex flex-col gap-4 text-sm font-medium border-t text-center border-white/10">
+        <a href="index.html#services" class="hover:text-primary">Services</a>
+        <a href="index.html#work" class="hover:text-primary">Work</a>
+        <a href="index.html#process" class="hover:text-primary">Process</a>
+        <a href="index.html#contact-form" class="hover:text-primary">Contact</a>
+
+        <a href="index.html#contact-form"
+           class="mt-4 inline-flex justify-center px-6 py-3 rounded-lg bg-primary text-white font-semibold">
+          Get a Quote
+        </a>
+      </nav>
+    </div>
+  </header>
 
 <!-- HERO -->
 <section class="animate-on-scroll pt-40 pb-24 text-center max-w-4xl mx-auto px-6">
