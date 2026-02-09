@@ -75,11 +75,16 @@
   transform: translateY(-6px) rotate(-45deg);
 }
 
+.animate-on-scroll { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+    .animate-on-scroll.in-view { opacity: 1; transform: translateY(0); }
+
+
   </style>
 </head>
 
-<body>
-<header class="fixed top-0 inset-x-0 z-50 backdrop-blur bg-dark/70 border-b border-white/5 py-3">
+<body class="animate-on-scroll">
+ <!-- NAVBAR -->
+  <header class="fixed top-0 inset-x-0 z-50 backdrop-blur bg-dark/70 border-b border-white/5 py-3 sticky">
     <div class="max-w-7xl mx-auto px-4">
       <div class="flex items-center justify-between h-20">
 
@@ -103,15 +108,15 @@
 
         <!-- DESKTOP NAV -->
         <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
-          <a href="#services" class="hover:text-primary transition">Services</a>
-          <a href="#work" class="hover:text-primary transition">Work</a>
-          <a href="#process" class="hover:text-primary transition">Process</a>
-          <a href="#contact" class="hover:text-primary transition">Contact</a>
+          <a href="index.html#services" class="hover:text-primary transition">Services</a>
+          <a href="index.html#work" class="hover:text-primary transition">Work</a>
+          <a href="index.html#process" class="hover:text-primary transition">Process</a>
+          <a href="index.html#contact-form" class="hover:text-primary transition">Contact Us</a>
         </nav>
 
         <!-- CTA -->
         <div class="hidden md:block">
-          <a href="#contact"
+          <a href="index.html#contact-form"
              class="px-5 py-2.5 rounded-lg bg-primary text-white font-semibold
                     hover:bg-blue-700 transition shadow-lg shadow-primary/30">
             Get a Quote
@@ -119,12 +124,16 @@
         </div>
 
         <!-- MOBILE MENU BUTTON -->
-      <button id="menuBtn" class="md:hidden relative w-10 h-10 flex items-center justify-center z-50 rounded-md">
+       <button
+  id="menuBtn"
+  class="md:hidden relative w-10 h-10 flex items-center justify-center
+         z-50 rounded-md hover: transition"
+  aria-label="Open menu"
+>
   <span class="bar top"></span>
   <span class="bar middle"></span>
   <span class="bar bottom"></span>
 </button>
-
 
       </div>
     </div>
@@ -138,12 +147,12 @@
          transition-all duration-300 ease-out">
 
       <nav class="px-6 py-6 flex flex-col gap-4 text-sm font-medium border-t text-center border-white/10">
-        <a href="#services" class="hover:text-primary">Services</a>
-        <a href="#work" class="hover:text-primary">Work</a>
-        <a href="#process" class="hover:text-primary">Process</a>
-        <a href="#contact" class="hover:text-primary">Contact</a>
+        <a href="index.html#services" class="hover:text-primary">Services</a>
+        <a href="index.html#work" class="hover:text-primary">Work</a>
+        <a href="index.html#process" class="hover:text-primary">Process</a>
+        <a href="index.html#contact-form" class="hover:text-primary">Contact Us</a>
 
-        <a href="#contact"
+        <a href="index.html#contact-form"
            class="mt-4 inline-flex justify-center px-6 py-3 rounded-lg bg-primary text-white font-semibold">
           Get a Quote
         </a>
@@ -269,74 +278,90 @@
     <p class="text-white/90 mb-6">
       We help startups design scalable, future-proof tech foundations.
     </p>
-    <a href="contact.html"
+    <a href="index.html#contact-form"
        class="inline-block px-8 py-3 rounded-xl bg-white text-blue-700 font-bold hover:scale-105 transition">
       Talk to Our Team
     </a>
   </div>
 </section>
 
-
 <footer class="relative bg-dark border-t border-white/10 pt-16">
   <div class="max-w-7xl mx-auto px-6">
 
-    <!-- TOP GRID + IMAGE FLEX -->
-    <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-12 pb-12">
-
-      <!-- LINKS GRID -->
-      <div class="grid gap-12 md:grid-cols-4 flex-1">
+    <!-- TOP GRID -->
+    <div class="pb-12">
+      <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-5">
 
         <!-- CONTACT INFO -->
         <div>
-          <h3 class="text-white font-bold mb-4">Contact Us</h3>
-          <p class="text-slate-300 text-sm mb-2">
+          <h3 class="text-white text-xl font-bold mb-4">Contact Us</h3>
+          <p class="text-white text-sm mb-2">
             Email:
-            <a href="mailto:hello@synlotech.dev" class="text-white hover:text-primary transition">hello@synlotech.dev</a>
+            <a href="mailto:synlotech@outlook.com" class="text-gray-400 hover:text-primary transition">
+              synlotech@outlook.com
+            </a>
           </p>
-          <p class="text-slate-300 text-sm mb-2">
-            Phone:
-            <a href="tel:+255788296274" class="text-white hover:text-primary transition">+255 788 296 274</a>
-          </p>
-          <p class="text-slate-300 text-sm">
+          <p class="text-white text-sm">
             WhatsApp:
-            <a href="https://wa.me/255788296274" class="text-white hover:text-primary transition">Chat Now</a>
+            <a href="https://wa.me/255788296274" class="text-gray-400 hover:text-primary transition">
+              Chat Now
+            </a>
           </p>
         </div>
 
         <!-- SOCIAL LINKS -->
         <div>
-          <h3 class="text-white font-bold mb-4">Follow Us</h3>
-          <div class="flex gap-4 text-slate-300">
-            <a href="#" aria-label="Facebook" class="hover:text-primary transition">
-              <i class="fa-brands fa-facebook-f"></i>
-            </a>
-            <a href="#" aria-label="Twitter" class="hover:text-primary transition">
-              <i class="fa-brands fa-x-twitter"></i>
-            </a>
-            <a href="#" aria-label="Instagram" class="hover:text-primary transition">
-              <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a href="#" aria-label="WhatsApp" class="hover:text-primary transition">
-              <i class="fa-brands fa-whatsapp"></i>
-            </a>
-            <a href="#" aria-label="LinkedIn" class="hover:text-primary transition">
-              <i class="fa-brands fa-linkedin-in"></i>
-            </a>
+          <h3 class="text-white text-xl font-bold mb-4">Follow Us</h3>
+          <div class="flex gap-4">
+            <a href="#" class="text-gray-400 hover:text-primary transition"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="text-gray-400 hover:text-primary transition"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="text-gray-400 hover:text-primary transition"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="text-gray-400 hover:text-primary transition"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="#" class="text-gray-400 hover:text-primary transition"><i class="fa-brands fa-threads"></i></a>
           </div>
         </div>
 
-        <!-- LEGAL LINKS -->
-        <div class="md:col-span-2">
-          <h3 class="text-white font-bold mb-4">Legal & Links</h3>
+        <!-- POLICIES -->
+        <div>
+          <h3 class="text-white text-xl font-bold mb-4">Policies</h3>
           <p class="text-slate-300 text-sm">
-            <a href="Privacy-Policy.html" class="text-white hover:text-primary transition">Privacy Policy</a>
+            <a href="Privacy-Policy.html" class="text-gray-400 hover:text-primary transition">Privacy Policy</a>
             <span class="mx-2">|</span>
-            <a href="Terms-Of-Service.html" class="text-white hover:text-primary">Terms of Service</a>
+            <a href="Terms-Of-Service.html" class="text-gray-400 hover:text-primary transition">Terms of Service</a>
           </p>
         </div>
 
+         <!-- QUICK LINKS -->
+        <div>
+          <h4 class="text-white font-bold mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html#services" class="text-gray-400 hover:text-primary transition">Services</a></li>
+            <li><a href="index.html#work" class="text-gray-400 hover:text-primary transition">Work</a></li>
+            <li><a href="index.html#process" class="text-gray-400 hover:text-primary transition">Process</a></li>
+            <li><a href="index.html#contact-form" class="text-gray-400 hover:text-primary transition">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- OPTIONAL EXTRA COLUMN (branding / CTA / location) -->
+        <div >
+        <a href="index.html#home"  class="text-2xl font-extrabold text-primary tracking-tight">
+          <img style="width: 40px;
+          height: 45px;
+          display: inline-block;
+          margin-bottom: 30px;
+          " src="thumbnails/theS.png">
+        
+         <p  class="text-xl font-extrabold text-white tracking-tight" style="display: inline-block;
+         margin-top: 30px;
+          ">
+          <span style="text-align: center;" >SYNLOTECH</span><br>
+          TECHNOLOGIES
+          </p>
+          </a>
+         </div>
+
       </div>
-</div>
+    </div>
 
     <!-- BOTTOM BAR -->
     <div class="border-t border-white/10 py-6 text-center">
@@ -359,6 +384,23 @@ btn.addEventListener('click', () => {
   menu.classList.toggle('opacity-0');
 
 });
+
+window.addEventListener('load', () => {
+    document.body.classList.remove('opacity-0');
+  });
+
+   window.addEventListener('load', () => document.body.classList.remove('opacity-0'));
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {threshold: 0.1, rootMargin: '0px 0px -50px 0px'});
+
+  document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
       </script>
 </body>
 </html>
