@@ -82,8 +82,40 @@
       transform: translateY(0);
     }
 
+
+    @keyframes whatsappPulse {
+  0% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.6); }
+  70% { box-shadow: 0 0 0 14px rgba(37, 99, 235, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0); }
+}
+
+.whatsapp-pulse {
+  animation: whatsappPulse 2.5s infinite;
+}
   </style>
 </head>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Synlotech Technologies",
+  "url": "https://synlotech.com",
+  "logo": "https://synlotech.com/images/logo.png",
+  "description": "Synlotech Technologies specializes in stunning website design, responsive web development, graphics, motion visuals, and 3D animations.",
+  "sameAs": [
+    "https://instagram.com/synlo_tech",
+    "https://facebook.com/synlotech",
+    "https://linkedin.com/company/synlotech"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+255788296274",
+    "contactType": "customer service",
+    "areaServed": "Worldwide",
+    "availableLanguage": ["English"]
+  }
+}
+</script>
 
 <body style="font-family: inter;" class="bg-dark text-slate-200 antialiased opacity-0 transition-opacity duration-700 ease-out">
 
@@ -104,7 +136,7 @@
          <p  class="text-xl font-extrabold text-white tracking-tight" style="display: inline-block;
          margin-top: 30px;
           ">
-          <span style="text-align: center;" >SYNLOTECH</span><br>
+          <span style="text-align: center ;" >SYNLOTECH</span><br>
           TECHNOLOGIES
           </p>
           </a>
@@ -302,7 +334,7 @@
     alt="Logo design"
     class="rounded-xl mb-5"
   />
-        <h3 class="text-xl font-bold text-white mb-3">
+        <h3 class="text-xl font-bold text-primary mb-3">
           Website Design & Development
         </h3>
         <p class="text-slate-300 text-sm mb-6">
@@ -324,7 +356,7 @@
     class="rounded-xl mb-5"
   />
         
-        <h3 class="text-xl font-bold text-white mb-3">
+        <h3 class="text-xl font-bold text-primary mb-3">
           Graphics Design And Branding
         </h3>
         <p class="text-slate-300 text-sm mb-6">
@@ -345,7 +377,7 @@
     class="rounded-xl mb-5"
   />
         </div>
-        <h3 class="text-xl font-bold text-white mb-3">
+        <h3 class="text-xl font-bold text-primary mb-3">
           UI/UX Design
         </h3>
         <p class="text-slate-300 text-sm mb-6">
@@ -365,15 +397,15 @@
     class="rounded-xl mb-5"
   />
         
-        <h3 class="text-xl font-bold text-white mb-3">
+        <h3 class="text-xl font-bold text-primary mb-3">
           Web Applications & Systems
         </h3>
         <p class="text-slate-300 text-sm mb-6">
           Custom web applications that automate operations and scale with your business.
         </p>
-        <a href="Web-Apps-Systems.html" class="inline-flex items-center gap-2 text-primary font-semibold text-sm hover:underline">
-          Build My System →
-        </a>
+        <button class="bg-primary p-3 rounded-2xl">
+          Coming Soon
+        </button>
       </div>
 
       <!-- SERVICE CARD -->
@@ -386,7 +418,7 @@
     class="rounded-xl mb-5"
   />
         </div>
-        <h3 class="text-xl font-bold text-white mb-3">
+        <h3 class="text-xl font-bold text-primary mb-3">
           Maintenance & Support
         </h3>
         <p class="text-slate-300 text-sm mb-6">
@@ -420,7 +452,7 @@
         </p>
 
         <h2 class="mt-4 text-3xl sm:text-4xl font-extrabold text-white">
-          Built Different. Built for Growth.
+          Built <span class="text-primary">Different</span>. Built for <span class="text-primary">Growth.</span>
         </h2>
 
         <p class="mt-6 text-slate-300 max-w-xl">
@@ -531,7 +563,7 @@
         How It Works
       </p>
       <h2 class="mt-4 text-3xl sm:text-4xl font-extrabold text-white">
-        A Clear Process From Idea to Launch
+        A <span class="text-primary">Clear</span> Process From Idea to <span class="text-primary">Launch</span>
       </h2>
       <p class="mt-4 text-slate-300">
         We follow a proven, transparent process so you always know what’s happening, what’s next,
@@ -786,7 +818,7 @@
         Trusted by Businesses & Organizations
       </p>
       <h2 class="mt-4 text-3xl sm:text-4xl font-extrabold text-white">
-        What Our Clients Say
+        What Our <span class="text-primary">Clients</span> Say
       </h2>
       <p class="mt-4 text-slate-300">
         Real feedback from people who trusted us to deliver high-performance websites, apps, and systems.
@@ -870,7 +902,7 @@
         Pricing Overview
       </p>
       <h2 class="mt-4 text-3xl sm:text-4xl font-extrabold text-white">
-       Custom web projects tailored to your goals and scope.
+       Custom <span class="text-primary">Website</span> projects tailored to your goals and scope.
       </h2>
       <p class="mt-4 text-slate-300">
         Each project is tailored to your goals and scope. We focus on quality, performance, and long-term results.
@@ -896,7 +928,7 @@
         <div class="max-w-2xl mx-auto mb-12 mt-24">
       
       <h2 class="mt-4 text-3xl sm:text-4xl font-extrabold text-white">
-        Custom graphics and branding projects tailored to your needs.
+        Custom <span class="text-primary">Graphics and Branding</span> projects tailored to your needs.
       </h2>
       <p class="mt-4 text-slate-300">
   Our designs are built to attract attention, build trust, and elevate your brand presence.
@@ -1218,7 +1250,7 @@
         Insights & Blog
       </p>
       <h2 class="mt-4 text-3xl sm:text-4xl font-extrabold text-white">
-        Latest From the Tech World
+        <span class="text-primary">Latest</span> From the Tech World
       </h2>
       <p class="mt-4 text-slate-300">
         Stay updated with the latest trends, tips, and case studies from Synlotech Technologies.
@@ -1287,7 +1319,7 @@
         Get in Touch
       </p>
       <h2 class="mt-4 text-3xl sm:text-4xl font-extrabold text-white">
-        Start Your Project Today
+        <span class="text-primary">Start</span> Your Project <span class="text-primary">Today</span>
       </h2>
       <p class="mt-4 text-slate-300">
         Fill out the form, WhatsApp, email, or call us — we make contacting us ridiculously easy.
@@ -1319,13 +1351,13 @@
       <div class="flex flex-col justify-center space-y-6 text-center md:text-left">
 
         <div class="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur hover:border-primary/40 transition">
-          <h3 class="text-white font-bold mb-2">WhatsApp</h3>
+          <h3 class="text-white font-bold mb-2">Send us a Message</h3>
           <p class="text-slate-300 mb-2">Chat with us instantly:</p>
           <a href="https://wa.me/255788296274" class="text-primary font-semibold">+255 788 296 274</a>
         </div>
 
         <div class="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur hover:border-primary/40 transition">
-          <h3 class="text-white font-bold mb-2">Email</h3>
+          <h3 class="text-white font-bold mb-2">Send us an Email</h3>
           <p class="text-slate-300 mb-2">Send us a message anytime:</p>
           <a href="mailto:synlotech@outlook.com" class="text-primary font-semibold">synlotech@outlook.com</a>
         </div>
@@ -1367,9 +1399,9 @@
         <div>
           <h3 class="text-white text-xl font-bold mb-4">Follow Us</h3>
           <div class="flex gap-4">
-            <a href="#" class="text-gray-400 hover:text-primary transition"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#" class="text-gray-400 hover:text-primary transition"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="#" class="text-gray-400 hover:text-primary transition"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/synlotech-technologies-7252933b2" target="_blank" class="text-gray-400 hover:text-primary transition"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/synlo_tech" target="_blank" class="text-gray-400 hover:text-primary transition"><i class="fa-brands fa-instagram"></i></a>
+             <a href="https://www.facebook.com/synlotech" target="_blank" class="text-gray-400 hover:text-primary transition"><i class="fa-brands fa-facebook-f"></i></a>
           </div>
         </div>
 
@@ -1380,6 +1412,8 @@
             <a href="Privacy-Policy.html" class="text-gray-400 hover:text-primary transition">Privacy Policy</a>
             <span class="mx-2">|</span>
             <a href="Terms-Of-Service.html" class="text-gray-400 hover:text-primary transition">Terms of Service</a>
+            <span class="mx-2">|</span>
+            <a href="disclaimer.html" class="text-gray-400 hover:text-primary transition">Disclaimer</a>
           </p>
         </div>
 
@@ -1509,5 +1543,37 @@ Message: ${message}`;
 });
   </script>
 
+
+<a href="https://wa.me/255788296274"
+   target="_blank"
+   aria-label="Chat on WhatsApp"
+   class="fixed bottom-6 right-6 z-50 group">
+
+  <div class="flex items-center gap-3">
+
+    <!-- Optional Tooltip -->
+    <span class="hidden md:block
+                 opacity-0 group-hover:opacity-100
+                 translate-x-2 group-hover:translate-x-0
+                 transition-all duration-300
+                 bg-dark text-white text-sm
+                 px-4 py-2 rounded-lg shadow-lg">
+      Chat with us
+    </span>
+
+    <!-- Button -->
+         <div class="w-14 h-14 rounded-full
+                bg-green-500
+                flex items-center justify-center
+                shadow-lg shadow-green-500/40
+                hover:scale-110 hover:shadow-green-500/60
+                transition-all duration-300">
+
+
+      <i class="fa-brands fa-whatsapp text-white text-2xl"></i>
+
+    </div>
+  </div>
+</a>
 </body>
 </html>

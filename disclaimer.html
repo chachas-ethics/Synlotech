@@ -1,32 +1,25 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4PMXTMQXM4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4PMXTMQXM4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4PMXTMQXM4');
+  </script>
 
-  // Replace with your GA4 Measurement ID
-  gtag('config', 'G-4PMXTMQXM4');
-</script>
+  <link rel="icon" href="thumbnails/theS.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 
-   <link rel="icon" class="rounded-full" href="thumbnails/theS.png" type="image/x-icon">
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-  />
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Graphics Design & Branding | Synlotech Technologies</title>
-  <meta name="description"
-    content="Visual identities and marketing assets that make your brand instantly recognizable. Custom graphics design and branding services by Synlotech Technologies." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- TAILWIND CDN -->
+  <title>Disclaimer | Synlotech Technologies</title>
+
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- CUSTOM CONFIG -->
   <script>
     tailwind.config = {
       theme: {
@@ -40,8 +33,30 @@
       }
     }
   </script>
+
   <style>
-    /* Scroll-triggered animations */
+    body {
+      background-color: #0b0f19;
+      color: #e5e7eb;
+      font-family: inter, sans-serif;
+    }
+
+    .bar {
+      position: absolute;
+      width: 24px;
+      height: 2px;
+      background: white;
+      transition: 0.3s ease;
+    }
+
+    .top { top: 12px; }
+    .middle { opacity: 1; }
+    .bottom { bottom: 12px; }
+
+    #menuBtn.open .top { transform: translateY(6px) rotate(45deg); }
+    #menuBtn.open .middle { opacity: 0; }
+    #menuBtn.open .bottom { transform: translateY(-6px) rotate(-45deg); }
+
     .animate-on-scroll {
       opacity: 0;
       transform: translateY(30px);
@@ -53,53 +68,11 @@
       transform: translateY(0);
     }
   </style>
-
-  <style>
-    .bar {
-      position: absolute;
-      width: 24px;
-      height: 2.5px;
-      background-color: #ffffff;
-      border-radius: 999px;
-      transition: all 0.3s ease;
-    }
-    .top { transform: translateY(-7px); }
-    .middle { opacity: 1; }
-    .bottom { transform: translateY(7px); }
-
-    /* OPEN STATE */
-    .open .top { transform: rotate(45deg); }
-    .open .middle { opacity: 0; }
-    .open .bottom { transform: rotate(-45deg); }
-  </style>
 </head>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Synlotech Technologies",
-  "url": "https://synlotech.com",
-  "logo": "https://synlotech.com/images/logo.png",
-  "description": "Synlotech Technologies specializes in stunning website design, responsive web development, graphics, motion visuals, and 3D animations.",
-  "sameAs": [
-    "https://instagram.com/synlo_tech",
-    "https://facebook.com/synlotech",
-    "https://linkedin.com/company/synlotech"
-  ],
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+255788296274",
-    "contactType": "customer service",
-    "areaServed": "Worldwide",
-    "availableLanguage": ["English"]
-  }
-}
-</script>
 
-<body style="font-family: inter;" class="bg-dark text-white opacity-0 transition-opacity duration-700 ease-out">
+<body style="font-family: inter;" class="animate-on-scroll">
 
-  <!-- HEADER -->
-   <!-- NAVBAR -->
+  <!-- NAVBAR -->
   <header class="fixed top-0 inset-x-0 z-50 backdrop-blur bg-dark/70 border-b border-white/5 py-3">
     <div class="max-w-7xl mx-auto px-4">
       <div class="flex items-center justify-between h-20">
@@ -116,7 +89,7 @@
          <p  class="text-xl font-extrabold text-white tracking-tight" style="display: inline-block;
          margin-top: 30px;
           ">
-          <span style="text-align: center;" >SYNLOTECH</span><br>
+          <span style="text-align: center ;" >SYNLOTECH</span><br>
           TECHNOLOGIES
           </p>
           </a>
@@ -177,82 +150,97 @@
   </header>
 
   <!-- HERO -->
- <section class="animate-on-scroll pt-40 pb-24">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="grid lg:grid-cols-2 gap-12 items-center">
-
-      <!-- TEXT -->
-      <div>
-        <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight">
-          Graphics Design & Branding
-        </h1>
-        <p class="mt-6 text-slate-300 text-lg">
-          Logos, brand identities, and marketing visuals that make your business
-          instantly recognizable.
-        </p>
-
-        <div class="mt-8 flex gap-4">
-          <a href="index.html#contact-form" class="px-8 py-4 bg-primary rounded-xl font-semibold">
-            Request a Quote
-          </a>
-          <a href="index.html#process" class="px-8 py-4 border border-white/20 rounded-xl">
-            How we build your brand
-          </a>
-        </div>
-      </div>
-
-      <!-- IMAGE -->
-      <div class="relative">
-        <img
-          src="thumbnails/graphics.avif"
-          alt="Branding mockup"
-          class="rounded-2xl shadow-2xl"
-        />
-        <div class="absolute inset-0 bg-primary/10 rounded-2xl"></div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-  
-
-  <!-- PROCESS -->
-  <section id="process" class="animate-on-scroll py-12 bg-white/5">
-    <div class="max-w-7xl mx-auto px-6">
-      <h2 class="text-3xl font-bold mb-12">How We Build Your Brand</h2>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div>
-          <span class="text-primary font-bold">01</span>
-          <h3 class="font-semibold mt-2">Consultation</h3>
-          <p class="text-slate-300 text-sm">Understanding your brand vision and goals.</p>
-        </div>
-        <div>
-          <span class="text-primary font-bold">02</span>
-          <h3 class="font-semibold mt-2">Design & Review</h3>
-          <p class="text-slate-300 text-sm">Crafting visuals and iterating until perfection.</p>
-        </div>
-        <div>
-          <span class="text-primary font-bold">03</span>
-          <h3 class="font-semibold mt-2">Delivery & Support</h3>
-          <p class="text-slate-300 text-sm">Providing assets and guidance for brand implementation.</p>
-        </div>
-      </div>
-    </div>
+  <section class="max-w-4xl mx-auto px-6 pt-36">
+    <span class="text-primary text-sm font-bold uppercase">Legal</span>
+    <h1 class="text-4xl md:text-5xl font-extrabold text-primary mt-4 mb-6 leading-tight">
+      Disclaimer
+    </h1>
+    <p class="text-slate-300 text-lg">
+      Important information regarding the use of Synlotech Technologies’ website, services, and content.
+    </p>
   </section>
 
-  <!-- CTA -->
-  <section id="contact" class="animate-on-scroll py-24 text-center">
-    <div class="max-w-4xl mx-auto px-6">
-      <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Build Your Brand?</h2>
-      <p class="text-slate-300 mb-8">Contact us today to get custom graphics and branding for your business.</p>
-      <a href="index.html#contact-form" class="px-10 py-4 bg-primary rounded-xl font-semibold hover:bg-blue-700 transition">Request a Quote</a>
-    </div>
-  </section>
+  <!-- CONTENT -->
+  <main class="max-w-4xl mx-auto px-6 mt-16 space-y-10 leading-relaxed">
 
-<!-- FOOTER -->
-<footer class="relative bg-dark border-t border-white/10 pt-16">
+    <section>
+      <h2 class="text-2xl font-bold text-primary mb-3">1. General Information</h2>
+      <p class="text-slate-300">
+        The information provided on this website is for general informational and promotional purposes only.
+        While Synlotech Technologies makes reasonable efforts to ensure accuracy, we make no warranties
+        regarding completeness, reliability, or suitability.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-bold text-primary mb-3">2. No Professional Advice</h2>
+      <p class="text-slate-300">
+        Content on this website does not constitute legal, financial, or professional advice. Decisions made
+        based on information from this website are at your own risk. You should consult a qualified professional
+        where appropriate.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-bold text-primary mb-3">3. Limitation of Liability</h2>
+      <p class="text-slate-300">
+        Synlotech Technologies shall not be held liable for any direct, indirect, incidental, consequential,
+        or special damages arising from the use of, or inability to use, this website or our services.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-bold text-primary mb-3">4. External Links</h2>
+      <p class="text-slate-300">
+        This website may contain links to third-party websites. We do not control or endorse their content and
+        accept no responsibility for any losses or damages resulting from their use.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-bold text-primary mb-3">5. Service & Results Disclaimer</h2>
+      <p class="text-slate-300">
+        Any examples, testimonials, or case studies displayed represent past outcomes and do not guarantee
+        future results. Project success depends on multiple external variables beyond our control.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-bold text-primary mb-3">6. Website Availability</h2>
+      <p class="text-slate-300">
+        We do not guarantee uninterrupted access to this website. Downtime, errors, or technical issues may occur
+        without prior notice.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-bold text-primary mb-3">7. Intellectual Property</h2>
+      <p class="text-slate-300">
+        All content, branding, visuals, and materials are the intellectual property of Synlotech Technologies unless
+        otherwise stated. Unauthorized use, reproduction, or distribution is prohibited.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-bold text-primary mb-3">8. Changes to This Disclaimer</h2>
+      <p class="text-slate-300">
+        Synlotech Technologies reserves the right to modify this Disclaimer at any time. Continued use of the website
+        constitutes acceptance of any revisions.
+      </p>
+    </section>
+
+    <section class="bg-white/5 border border-white/10 rounded-3xl p-6">
+      <h3 class="text-xl font-bold text-primary mb-2">Contact</h3>
+      <p class="text-slate-300">
+        For questions regarding this Disclaimer, please contact Synlotech Technologies through the official channels
+        listed on our website.
+      </p>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+<footer class="relative bg-dark border-t border-white/10 pt-16 mt-16">
   <div class="max-w-7xl mx-auto px-6">
 
     <div class="pb-12">
@@ -280,9 +268,9 @@
         <div>
           <h3 class="text-white text-xl font-bold mb-4">Follow Us</h3>
           <div class="flex gap-4">
-            <a href="#" class="text-gray-400 hover:text-primary transition"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#" class="text-gray-400 hover:text-primary transition"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/synlotech-technologies-7252933b2" target="_blank" class="text-gray-400 hover:text-primary transition"><i class="fa-brands fa-linkedin-in"></i></a>
             <a href="https://www.instagram.com/synlo_tech" target="_blank" class="text-gray-400 hover:text-primary transition"><i class="fa-brands fa-instagram"></i></a>
+             <a href="https://www.facebook.com/synlotech" target="_blank" class="text-gray-400 hover:text-primary transition"><i class="fa-brands fa-facebook-f"></i></a>
           </div>
         </div>
 
@@ -293,6 +281,8 @@
             <a href="Privacy-Policy.html" class="text-gray-400 hover:text-primary transition">Privacy Policy</a>
             <span class="mx-2">|</span>
             <a href="Terms-Of-Service.html" class="text-gray-400 hover:text-primary transition">Terms of Service</a>
+            <span class="mx-2">|</span>
+            <a href="disclaimer.html" class="text-gray-400 hover:text-primary transition">Disclaimer</a>
           </p>
         </div>
 
@@ -334,6 +324,7 @@
   </form>
 </div>
 
+
         <!-- BRANDING -->
         <div>
           <a href="index.html#home" class="flex items-center gap-3">
@@ -360,34 +351,23 @@
   <script>
     const btn = document.getElementById('menuBtn');
     const menu = document.getElementById('mobileMenu');
+
     btn.addEventListener('click', () => {
       btn.classList.toggle('open');
       menu.classList.toggle('scale-y-0');
       menu.classList.toggle('opacity-0');
     });
 
-     window.addEventListener('load', () => {
-    document.body.classList.remove('opacity-0');
-  });
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {threshold: 0.1});
 
-  // Scroll-triggered animation for sections
-  const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-  };
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('in-view');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, observerOptions);
-
-  document.querySelectorAll('.animate-on-scroll').forEach(section => {
-    observer.observe(section);
-  });
+    document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
   </script>
 
 </body>
