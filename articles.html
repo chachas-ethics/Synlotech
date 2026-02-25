@@ -84,6 +84,9 @@
     .animate-on-scroll.in-view { opacity: 1; transform: translateY(0); }
 
 
+    
+@keyframes whatsappPulse { 0% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.6); } 70% { box-shadow: 0 0 0 14px rgba(37, 99, 235, 0); } 100% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0); } } 
+.whatsapp-pulse { animation: whatsappPulse 2.5s infinite; }
   </style>
 </head>
 <script type="application/ld+json">
@@ -262,6 +265,17 @@
       </div>
     </article>
 
+     <!-- BLOG CARD 11 -->
+      <div class="group relative rounded-2xl overflow-hidden bg-white/5 border border-white/10 backdrop-blur hover:shadow-lg hover:shadow-primary/30 transition">
+        <img src="thumbnails/pexels-luis-gomes-166706-546819.jpg" alt="Blog 1" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+        <div class="p-6">
+          <span class="text-primary text-xs font-bold uppercase">Web Development</span>
+          <h3 class="text-white text-lg font-bold mt-2 mb-2  transition">5 Tips for Building High-Performance Websites</h3>
+          <p class="text-slate-300 text-sm mb-4">Learn how to optimize websites for speed, SEO, and better user experience.</p>
+          <a href="highperfweb.html" class="text-primary font-semibold text-sm hover:underline">Read More →</a>
+        </div>
+      </div>
+
     <!-- BLOG 3 -->
     <article class="group relative rounded-2xl overflow-hidden bg-white/5 border border-white/10 backdrop-blur hover:shadow-lg hover:shadow-primary/30 transition">
       <img src="thumbnails/techstack.webp" alt="Startup Tech Stack" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
@@ -296,6 +310,17 @@
     </a>
   </div>
 </article>
+
+ <!-- BLOG CARD 22 -->
+      <div class="group relative rounded-2xl overflow-hidden bg-white/5 border border-white/10 backdrop-blur hover:shadow-lg hover:shadow-primary/30 transition">
+        <img src="thumbnails/AI.jpg" alt="Blog 2" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+        <div class="p-6">
+          <span class="text-primary text-xs font-bold uppercase">AI & Tech</span>
+          <h3 class="text-white text-lg font-bold mt-2 mb-2  transition">AI Trends Every Developer Should Know</h3>
+          <p class="text-slate-300 text-sm mb-4">Explore the latest AI technologies and how they impact digital solutions.</p>
+          <a href="aitech.html" class="text-primary font-semibold text-sm hover:underline">Read More →</a>
+        </div>
+      </div>
 
 <!-- BLOG 4 -->
     <article class="group relative rounded-2xl overflow-hidden bg-white/5 border border-white/10 backdrop-blur hover:shadow-lg hover:shadow-primary/30 transition">
@@ -348,6 +373,18 @@
       </div>
     </article>
 
+     <!-- BLOG CARD 3 -->
+      <div class="group relative rounded-2xl overflow-hidden bg-white/5 border border-white/10 backdrop-blur hover:shadow-lg hover:shadow-primary/30 transition">
+        <img src="thumbnails/chartup.jpg" alt="Blog 3" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+        <div class="p-6">
+          <span class="text-primary text-xs font-bold uppercase">Case Study</span>
+          <h3 class="text-white text-lg font-bold mt-2 mb-2 ">How Synlotech Boosted Startup Growth</h3>
+          <p class="text-slate-300 text-sm mb-4">See a real-world example of how we helped a startup scale with our solutions.</p>
+          <a href="casestudy.html" class="text-primary font-semibold text-sm hover:underline">Read More →</a>
+        </div>
+      </div>
+
+
   
 
   </section>
@@ -368,7 +405,6 @@
   </section>
 
 
-<!-- FOOTER -->
 <footer class="relative bg-dark border-t border-white/10 pt-16">
   <div class="max-w-7xl mx-auto px-6">
 
@@ -397,9 +433,9 @@
         <div>
           <h3 class="text-white text-xl font-bold mb-4">Follow Us</h3>
           <div class="flex gap-4">
-            <a href="#" class="text-gray-400 hover:text-primary transition"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#" class="text-gray-400 hover:text-primary transition"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/synlotech-technologies-7252933b2" target="_blank" class="text-gray-400 hover:text-primary transition"><i class="fa-brands fa-linkedin-in"></i></a>
             <a href="https://www.instagram.com/synlo_tech" target="_blank" class="text-gray-400 hover:text-primary transition"><i class="fa-brands fa-instagram"></i></a>
+             <a href="https://www.facebook.com/synlotech" target="_blank" class="text-gray-400 hover:text-primary transition"><i class="fa-brands fa-facebook-f"></i></a>
           </div>
         </div>
 
@@ -410,6 +446,8 @@
             <a href="Privacy-Policy.html" class="text-gray-400 hover:text-primary transition">Privacy Policy</a>
             <span class="mx-2">|</span>
             <a href="Terms-Of-Service.html" class="text-gray-400 hover:text-primary transition">Terms of Service</a>
+            <span class="mx-2">|</span>
+            <a href="disclaimer.html" class="text-gray-400 hover:text-primary transition">Disclaimer</a>
           </p>
         </div>
 
@@ -450,6 +488,7 @@
     </button>
   </form>
 </div>
+
 
         <!-- BRANDING -->
         <div>
@@ -502,5 +541,30 @@ btn.addEventListener('click', () => {
 
   document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
       </script>
+
+     <a href="https://wa.me/255788296274" target="_blank" aria-label="Chat on WhatsApp" class="fixed bottom-6 right-3 z-50 group"> 
+    <div class="flex items-center gap-3">
+     <!-- Optional Tooltip --> 
+      <span class="hidden md:block opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 transition-all duration-300 bg-dark text-white text-sm px-4 py-2 rounded-lg shadow-lg"> Chat with us </span> 
+      <!-- Button --> <div class="w-14 h-14 rounded-full bg-green-500 flex items-center justify-center shadow-lg shadow-green-500/40 hover:scale-110 hover:shadow-green-500/60 transition-all duration-300"> <i class="fa-brands fa-whatsapp text-white text-2xl"></i> 
+      </div>
+     </div>
+     </a>
+
+       <a href="tel:+255788296274" target="_blank" aria-label="Call us" class="fixed bottom-24 right-5 z-50 group"> 
+  <div class="flex items-center gap-3">
+
+    <!-- Optional Tooltip --> 
+    <span class="hidden md:block opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 transition-all duration-300 bg-dark text-white text-sm px-4 py-2 rounded-lg shadow-lg">
+      Call us
+    </span> 
+
+    <!-- Button --> 
+    <div class="w-14 h-14 rounded-full bg-primary flex items-center justify-center shadow-lg shadow-primary/80 hover:scale-110 hover:shadow-primary/60 transition-all duration-300"> 
+      <i class="fa-solid fa-phone text-white text-2xl"></i>
+    </div>
+
+  </div>
+</a>
   </body>
   </html>

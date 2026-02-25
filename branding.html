@@ -86,7 +86,9 @@
 .animate-on-scroll { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
     .animate-on-scroll.in-view { opacity: 1; transform: translateY(0); }
 
-
+    
+@keyframes whatsappPulse { 0% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.6); } 70% { box-shadow: 0 0 0 14px rgba(37, 99, 235, 0); } 100% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0); } } 
+.whatsapp-pulse { animation: whatsappPulse 2.5s infinite; }
   </style>
 </head>
 <script type="application/ld+json">
@@ -112,7 +114,7 @@
 }
 </script>
 
-<body style="font-family: inter;" class="animate-on-scroll bg-dark text-white font-sans">
+<body style="font-family: inter;" class=" bg-dark text-white font-sans">
 
    <!-- NAVBAR -->
      <!-- NAVBAR -->
@@ -194,8 +196,7 @@
 
 
 <!-- HERO -->
-<section class="pt-36 pb-20 px-6 text-center max-w-4xl mx-auto">
-  <span class="text-primary text-xs font-bold uppercase">Company Branding</span>
+<section class="pt-5 pb-20 px-6 text-center max-w-4xl mx-auto">
   <h1 class="text-4xl sm:text-5xl font-extrabold mt-4 leading-tight">
     Company <span class="text-primary">Branding Concepts</span> That Build Trust and Recognition
   </h1>
@@ -388,6 +389,8 @@
             <a href="Privacy-Policy.html" class="text-gray-400 hover:text-primary transition">Privacy Policy</a>
             <span class="mx-2">|</span>
             <a href="Terms-Of-Service.html" class="text-gray-400 hover:text-primary transition">Terms of Service</a>
+            <span class="mx-2">|</span>
+            <a href="disclaimer.html" class="text-gray-400 hover:text-primary transition">Disclaimer</a>
           </p>
         </div>
 
@@ -484,5 +487,29 @@ btn.addEventListener('click', () => {
   
 </script>
 
+ <a href="https://wa.me/255788296274" target="_blank" aria-label="Chat on WhatsApp" class="fixed bottom-6 right-3 z-50 group"> 
+    <div class="flex items-center gap-3">
+     <!-- Optional Tooltip --> 
+      <span class="hidden md:block opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 transition-all duration-300 bg-dark text-white text-sm px-4 py-2 rounded-lg shadow-lg"> Chat with us </span> 
+      <!-- Button --> <div class="w-14 h-14 rounded-full bg-green-500 flex items-center justify-center shadow-lg shadow-green-500/40 hover:scale-110 hover:shadow-green-500/60 transition-all duration-300"> <i class="fa-brands fa-whatsapp text-white text-2xl"></i> 
+      </div>
+     </div>
+     </a>
+
+       <a href="tel:+255788296274" target="_blank" aria-label="Call us" class="fixed bottom-24 right-5 z-50 group"> 
+  <div class="flex items-center gap-3">
+
+    <!-- Optional Tooltip --> 
+    <span class="hidden md:block opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 transition-all duration-300 bg-dark text-white text-sm px-4 py-2 rounded-lg shadow-lg">
+      Call us
+    </span> 
+
+    <!-- Button --> 
+    <div class="w-14 h-14 rounded-full bg-primary flex items-center justify-center shadow-lg shadow-primary/80 hover:scale-110 hover:shadow-primary/60 transition-all duration-300"> 
+      <i class="fa-solid fa-phone text-white text-2xl"></i>
+    </div>
+
+  </div>
+</a>
 </body>
 </html>

@@ -73,6 +73,10 @@
 .animate-on-scroll { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
     .animate-on-scroll.in-view { opacity: 1; transform: translateY(0); }
 
+    
+@keyframes whatsappPulse { 0% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.6); } 70% { box-shadow: 0 0 0 14px rgba(37, 99, 235, 0); } 100% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0); } } 
+.whatsapp-pulse { animation: whatsappPulse 2.5s infinite; }
+
   </style>
 </head>
 <script type="application/ld+json">
@@ -98,7 +102,7 @@
 }
 </script>
 
-<body style="font-family: inter;" class="animate-on-scroll bg-dark text-white">
+<body style="font-family: inter;" class=" bg-dark text-white">
 
  <!-- NAVBAR -->
   <!-- NAVBAR -->
@@ -180,9 +184,8 @@
 
 <!-- HERO -->
 <section class="pt-40 pb-20 max-w-4xl mx-auto px-6 text-center">
-  <span class="text-primary text-xs font-bold uppercase">Case Study</span>
   <h1 class="text-4xl sm:text-5xl font-extrabold mt-4">
-    How Synlotech Boosted Startup Growth
+    How Synlotech <span class="text-primary">Boosted</span> Startup Growth
   </h1>
   <p class="mt-6 text-slate-300 text-lg">
     A real-world breakdown of how strategic design, performance optimization,
@@ -200,7 +203,7 @@
 
   <!-- Overview -->
   <section>
-    <h2 class="text-2xl font-bold mb-4">Client Overview</h2>
+    <h2 class="text-2xl font-bold mb-4 text-primary">Client Overview</h2>
     <p class="text-slate-300 leading-relaxed">
       The client was an early-stage startup struggling with visibility, slow performance,
       and poor conversion rates. Their goal was clear: build a modern digital presence
@@ -210,7 +213,7 @@
 
   <!-- Challenges -->
   <section>
-    <h2 class="text-2xl font-bold mb-4">Challenges</h2>
+    <h2 class="text-2xl font-bold mb-4 text-primary">Challenges</h2>
     <ul class="list-disc list-inside text-slate-300 space-y-2">
       <li>Slow page load times affecting user retention</li>
       <li>No clear conversion flow</li>
@@ -221,7 +224,7 @@
 
   <!-- Solution -->
   <section>
-    <h2 class="text-2xl font-bold mb-6">Our Solution</h2>
+    <h2 class="text-2xl font-bold mb-6 text-primary">Our Solution</h2>
 
     <div class="grid sm:grid-cols-2 gap-6">
       <div class="p-6 rounded-2xl bg-white/5 border border-white/10">
@@ -256,7 +259,7 @@
 
   <!-- Results -->
   <section>
-    <h2 class="text-2xl font-bold mb-6">Results</h2>
+    <h2 class="text-2xl font-bold mb-6 text-primary">Results</h2>
 
     <div class="grid sm:grid-cols-3 gap-6">
       <div class="p-6 rounded-2xl bg-white/5 border border-white/10 text-center">
@@ -278,7 +281,7 @@
 
   <!-- CTA -->
   <section class="text-center pt-12">
-    <h2 class="text-2xl font-bold mb-4">
+    <h2 class="text-2xl font-bold mb-4 text-primary">
       Want Similar Results?
     </h2>
     <p class="text-slate-300 max-w-xl mx-auto">
@@ -292,7 +295,6 @@
 
 </article>
 
-<!-- FOOTER -->
 <footer class="relative bg-dark border-t border-white/10 pt-16">
   <div class="max-w-7xl mx-auto px-6">
 
@@ -321,9 +323,9 @@
         <div>
           <h3 class="text-white text-xl font-bold mb-4">Follow Us</h3>
           <div class="flex gap-4">
-            <a href="#" class="text-gray-400 hover:text-primary transition"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#" class="text-gray-400 hover:text-primary transition"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/synlotech-technologies-7252933b2" target="_blank" class="text-gray-400 hover:text-primary transition"><i class="fa-brands fa-linkedin-in"></i></a>
             <a href="https://www.instagram.com/synlo_tech" target="_blank" class="text-gray-400 hover:text-primary transition"><i class="fa-brands fa-instagram"></i></a>
+             <a href="https://www.facebook.com/synlotech" target="_blank" class="text-gray-400 hover:text-primary transition"><i class="fa-brands fa-facebook-f"></i></a>
           </div>
         </div>
 
@@ -334,6 +336,8 @@
             <a href="Privacy-Policy.html" class="text-gray-400 hover:text-primary transition">Privacy Policy</a>
             <span class="mx-2">|</span>
             <a href="Terms-Of-Service.html" class="text-gray-400 hover:text-primary transition">Terms of Service</a>
+            <span class="mx-2">|</span>
+            <a href="disclaimer.html" class="text-gray-400 hover:text-primary transition">Disclaimer</a>
           </p>
         </div>
 
@@ -374,6 +378,7 @@
     </button>
   </form>
 </div>
+
 
         <!-- BRANDING -->
         <div>
@@ -426,5 +431,30 @@ btn.addEventListener('click', () => {
 
   document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
   </script>
+
+  <a href="https://wa.me/255788296274" target="_blank" aria-label="Chat on WhatsApp" class="fixed bottom-6 right-3 z-50 group"> 
+    <div class="flex items-center gap-3">
+     <!-- Optional Tooltip --> 
+      <span class="hidden md:block opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 transition-all duration-300 bg-dark text-white text-sm px-4 py-2 rounded-lg shadow-lg"> Chat with us </span> 
+      <!-- Button --> <div class="w-14 h-14 rounded-full bg-green-500 flex items-center justify-center shadow-lg shadow-green-500/40 hover:scale-110 hover:shadow-green-500/60 transition-all duration-300"> <i class="fa-brands fa-whatsapp text-white text-2xl"></i> 
+      </div>
+     </div>
+     </a>
+
+       <a href="tel:+255788296274" target="_blank" aria-label="Call us" class="fixed bottom-24 right-5 z-50 group"> 
+  <div class="flex items-center gap-3">
+
+    <!-- Optional Tooltip --> 
+    <span class="hidden md:block opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 transition-all duration-300 bg-dark text-white text-sm px-4 py-2 rounded-lg shadow-lg">
+      Call us
+    </span> 
+
+    <!-- Button --> 
+    <div class="w-14 h-14 rounded-full bg-primary flex items-center justify-center shadow-lg shadow-primary/80 hover:scale-110 hover:shadow-primary/60 transition-all duration-300"> 
+      <i class="fa-solid fa-phone text-white text-2xl"></i>
+    </div>
+
+  </div>
+</a>
 </body>
 </html>

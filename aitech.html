@@ -45,6 +45,10 @@
     .open .top { transform: rotate(45deg); }
     .open .middle { opacity: 0; }
     .open .bottom { transform: rotate(-45deg); }
+
+
+@keyframes whatsappPulse { 0% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.6); } 70% { box-shadow: 0 0 0 14px rgba(37, 99, 235, 0); } 100% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0); } } 
+.whatsapp-pulse { animation: whatsappPulse 2.5s infinite; }
   </style>
 </head>
 <script type="application/ld+json">
@@ -151,7 +155,7 @@
 
 <!-- HERO -->
 <section class="animate-on-scroll pt-40 pb-12 text-center max-w-4xl mx-auto px-6">
-  <h1 class="text-4xl sm:text-5xl font-extrabold">AI Trends Every Developer Should Know</h1>
+  <h1 class="text-4xl sm:text-5xl font-extrabold text-primary">AI Trends Every Developer Should Know</h1>
   <p class="mt-6 text-slate-300 text-lg">
     Explore the latest AI technologies and tools shaping the future of digital solutions in 2026.
   </p>
@@ -170,39 +174,39 @@
 
   <!-- TREND 1 -->
   <section class="space-y-4">
-    <h2 class="text-2xl font-bold text-white">1. AI-Powered Code Assistants</h2>
+    <h2 class="text-2xl font-bold text-primary">1. AI-Powered Code Assistants</h2>
     <p class="text-slate-300">Tools like GitHub Copilot, Tabnine, and ChatGPT assist developers by suggesting code, reducing bugs, and accelerating development.</p>
   </section>
 
   <!-- TREND 2 -->
   <section class="space-y-4">
-    <h2 class="text-2xl font-bold text-white">2. Machine Learning Integration</h2>
+    <h2 class="text-2xl font-bold text-primary">2. Machine Learning Integration</h2>
     <p class="text-slate-300">Developers increasingly integrate ML models for predictive analytics, recommendation engines, and intelligent automation.</p>
     <img src="thumbnails/machinelearning.jpg" alt="Machine learning illustration" class="w-full rounded-2xl">
   </section>
 
   <!-- TREND 3 -->
   <section class="space-y-4">
-    <h2 class="text-2xl font-bold text-white">3. AI for Testing & QA</h2>
+    <h2 class="text-2xl font-bold text-primary">3. AI for Testing & QA</h2>
     <p class="text-slate-300">AI-driven testing tools automatically detect bugs, optimize test coverage, and improve software reliability.</p>
   </section>
 
   <!-- TREND 4 -->
   <section class="space-y-4">
-    <h2 class="text-2xl font-bold text-white">4. Conversational AI & Chatbots</h2>
+    <h2 class="text-2xl font-bold text-primary">4. Conversational AI & Chatbots</h2>
     <p class="text-slate-300">Intelligent chatbots and AI-driven customer support enhance user experiences and reduce support costs.</p>
     <img src="thumbnails/chatbot.jpg" alt="AI chatbot illustration" class="w-full rounded-2xl">
   </section>
 
   <!-- TREND 5 -->
   <section class="space-y-4">
-    <h2 class="text-2xl font-bold text-white">5. Edge AI & On-Device Intelligence</h2>
+    <h2 class="text-2xl font-bold text-primary">5. Edge AI & On-Device Intelligence</h2>
     <p class="text-slate-300">AI processing on devices improves speed, reduces latency, and enhances privacy for mobile and IoT applications.</p>
   </section>
 
   <!-- CONCLUSION -->
   <section class="space-y-4 text-center">
-    <h2 class="text-2xl font-bold text-white">Conclusion</h2>
+    <h2 class="text-2xl font-bold text-primary">Conclusion</h2>
     <p class="text-slate-300">Keeping up with these AI trends ensures developers build smarter, more efficient, and future-ready applications. At Synlotech Technologies, we leverage AI to deliver cutting-edge digital solutions.</p>
     <a href="index.html#contact-form" class="inline-block mt-6 px-8 py-4 bg-primary text-white rounded-xl font-semibold hover:bg-blue-700 transition shadow-lg shadow-primary/30">Contact Us</a>
   </section>
@@ -211,7 +215,6 @@
 
 <!-- FOOTER -->
 
-<!-- FOOTER -->
 <footer class="relative bg-dark border-t border-white/10 pt-16">
   <div class="max-w-7xl mx-auto px-6">
 
@@ -240,9 +243,9 @@
         <div>
           <h3 class="text-white text-xl font-bold mb-4">Follow Us</h3>
           <div class="flex gap-4">
-            <a href="#" class="text-gray-400 hover:text-primary transition"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#" class="text-gray-400 hover:text-primary transition"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/synlotech-technologies-7252933b2" target="_blank" class="text-gray-400 hover:text-primary transition"><i class="fa-brands fa-linkedin-in"></i></a>
             <a href="https://www.instagram.com/synlo_tech" target="_blank" class="text-gray-400 hover:text-primary transition"><i class="fa-brands fa-instagram"></i></a>
+             <a href="https://www.facebook.com/synlotech" target="_blank" class="text-gray-400 hover:text-primary transition"><i class="fa-brands fa-facebook-f"></i></a>
           </div>
         </div>
 
@@ -253,6 +256,8 @@
             <a href="Privacy-Policy.html" class="text-gray-400 hover:text-primary transition">Privacy Policy</a>
             <span class="mx-2">|</span>
             <a href="Terms-Of-Service.html" class="text-gray-400 hover:text-primary transition">Terms of Service</a>
+            <span class="mx-2">|</span>
+            <a href="disclaimer.html" class="text-gray-400 hover:text-primary transition">Disclaimer</a>
           </p>
         </div>
 
@@ -294,6 +299,7 @@
   </form>
 </div>
 
+
         <!-- BRANDING -->
         <div>
           <a href="index.html#home" class="flex items-center gap-3">
@@ -315,6 +321,7 @@
     </div>
 
   </div>
+</footer>
 </footer>
 
 <script>
@@ -340,5 +347,29 @@
   document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
 </script>
 
+ <a href="https://wa.me/255788296274" target="_blank" aria-label="Chat on WhatsApp" class="fixed bottom-6 right-3 z-50 group"> 
+    <div class="flex items-center gap-3">
+     <!-- Optional Tooltip --> 
+      <span class="hidden md:block opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 transition-all duration-300 bg-dark text-white text-sm px-4 py-2 rounded-lg shadow-lg"> Chat with us </span> 
+      <!-- Button --> <div class="w-14 h-14 rounded-full bg-green-500 flex items-center justify-center shadow-lg shadow-green-500/40 hover:scale-110 hover:shadow-green-500/60 transition-all duration-300"> <i class="fa-brands fa-whatsapp text-white text-2xl"></i> 
+      </div>
+     </div>
+     </a>
+
+       <a href="tel:+255788296274" target="_blank" aria-label="Call us" class="fixed bottom-24 right-5 z-50 group"> 
+  <div class="flex items-center gap-3">
+
+    <!-- Optional Tooltip --> 
+    <span class="hidden md:block opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 transition-all duration-300 bg-dark text-white text-sm px-4 py-2 rounded-lg shadow-lg">
+      Call us
+    </span> 
+
+    <!-- Button --> 
+    <div class="w-14 h-14 rounded-full bg-primary flex items-center justify-center shadow-lg shadow-primary/80 hover:scale-110 hover:shadow-primary/60 transition-all duration-300"> 
+      <i class="fa-solid fa-phone text-white text-2xl"></i>
+    </div>
+
+  </div>
+</a>
 </body>
 </html>

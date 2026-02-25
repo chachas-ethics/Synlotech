@@ -90,6 +90,8 @@
     .animate-on-scroll.in-view { opacity: 1; transform: translateY(0); }
 
 
+@keyframes whatsappPulse { 0% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.6); } 70% { box-shadow: 0 0 0 14px rgba(37, 99, 235, 0); } 100% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0); } } 
+.whatsapp-pulse { animation: whatsappPulse 2.5s infinite; }
   </style>
 </head>
 <script type="application/ld+json">
@@ -115,7 +117,7 @@
 }
 </script>
 
-<body class="animate-on-scroll" style="font-family: inter;">
+<body  style="font-family: inter;" class="bg-dark">
    
  <!-- NAVBAR -->
    <!-- NAVBAR -->
@@ -196,8 +198,7 @@
   </header>
 
 <!-- HERO -->
-<section class="max-w-4xl mx-auto px-6 pt-36">
-  <span class="text-primary text-sm font-bold uppercase">Automation</span>
+<section class="max-w-4xl mx-auto px-6 pt-5">
   <h1 class="text-4xl md:text-5xl font-extrabold text-primary mt-4 mb-6 leading-tight">
     Automating Business Processes with Tech
   </h1>
@@ -295,23 +296,22 @@
   </div>
 </section>
 
-        <!-- LOGO -->
-         <div>
-        <a href="index.html#home"  class="text-2xl font-extrabold text-primary tracking-tight">
-          <img style="width: 40px;
-          height: 45px;
-          display: inline-block;
-          margin-bottom: 30px;
-          " src="thumbnails/theS.png">
-        
-         <p  class="text-xl font-extrabold text-white tracking-tight" style="display: inline-block;
-         margin-top: 30px;
-          ">
-          <span style="text-align: center; font-size: 1rem; margin-left: 13px;" >SYNLOTECH</span><br>
-          <span style="font-size: 1rem">TECHNOLOGIES</span>
+<footer class="relative bg-dark border-t border-white/10 pt-16">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <div class="pb-12">
+      <!-- AUTO-FIT GRID (THE FIX) -->
+      <div class="grid gap-12 grid-cols-[repeat(auto-fit,minmax(220px,1fr))]">
+
+        <!-- CONTACT -->
+        <div>
+          <h3 class="text-white text-xl font-bold mb-4">Contact Us</h3>
+          <p class="text-white text-sm mb-2">
+            Email:
+            <a href="mailto:synlotech@outlook.com" class="text-gray-400 hover:text-primary transition">
+              synlotech@outlook.com
+            </a>
           </p>
-          </a>
-         </div>
           <p class="text-white text-sm">
             WhatsApp:
             <a href="https://wa.me/255788296274" class="text-gray-400 hover:text-primary transition">
@@ -324,9 +324,9 @@
         <div>
           <h3 class="text-white text-xl font-bold mb-4">Follow Us</h3>
           <div class="flex gap-4">
-            <a href="#" class="text-gray-400 hover:text-primary transition"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#" class="text-gray-400 hover:text-primary transition"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/synlotech-technologies-7252933b2" target="_blank" class="text-gray-400 hover:text-primary transition"><i class="fa-brands fa-linkedin-in"></i></a>
             <a href="https://www.instagram.com/synlo_tech" target="_blank" class="text-gray-400 hover:text-primary transition"><i class="fa-brands fa-instagram"></i></a>
+             <a href="https://www.facebook.com/synlotech" target="_blank" class="text-gray-400 hover:text-primary transition"><i class="fa-brands fa-facebook-f"></i></a>
           </div>
         </div>
 
@@ -337,6 +337,8 @@
             <a href="Privacy-Policy.html" class="text-gray-400 hover:text-primary transition">Privacy Policy</a>
             <span class="mx-2">|</span>
             <a href="Terms-Of-Service.html" class="text-gray-400 hover:text-primary transition">Terms of Service</a>
+            <span class="mx-2">|</span>
+            <a href="disclaimer.html" class="text-gray-400 hover:text-primary transition">Disclaimer</a>
           </p>
         </div>
 
@@ -377,6 +379,7 @@
     </button>
   </form>
 </div>
+
 
         <!-- BRANDING -->
         <div>
@@ -430,5 +433,29 @@ btn.addEventListener('click', () => {
   document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
       </script>
 
+ <a href="https://wa.me/255788296274" target="_blank" aria-label="Chat on WhatsApp" class="fixed bottom-6 right-3 z-50 group"> 
+    <div class="flex items-center gap-3">
+     <!-- Optional Tooltip --> 
+      <span class="hidden md:block opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 transition-all duration-300 bg-dark text-white text-sm px-4 py-2 rounded-lg shadow-lg"> Chat with us </span> 
+      <!-- Button --> <div class="w-14 h-14 rounded-full bg-green-500 flex items-center justify-center shadow-lg shadow-green-500/40 hover:scale-110 hover:shadow-green-500/60 transition-all duration-300"> <i class="fa-brands fa-whatsapp text-white text-2xl"></i> 
+      </div>
+     </div>
+     </a>
+
+       <a href="tel:+255788296274" target="_blank" aria-label="Call us" class="fixed bottom-24 right-5 z-50 group"> 
+  <div class="flex items-center gap-3">
+
+    <!-- Optional Tooltip --> 
+    <span class="hidden md:block opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 transition-all duration-300 bg-dark text-white text-sm px-4 py-2 rounded-lg shadow-lg">
+      Call us
+    </span> 
+
+    <!-- Button --> 
+    <div class="w-14 h-14 rounded-full bg-primary flex items-center justify-center shadow-lg shadow-primary/80 hover:scale-110 hover:shadow-primary/60 transition-all duration-300"> 
+      <i class="fa-solid fa-phone text-white text-2xl"></i>
+    </div>
+
+  </div>
+</a>
 </body>
 </html>
