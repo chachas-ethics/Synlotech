@@ -100,304 +100,305 @@
 }
 </script>
 
-<body style="font-family: inter;" class="bg-dark text-white opacity-0 translate-y-6 transition-all duration-700 ease-out">
+<body class="bg-dark text-white  transition-all duration-700 ease-out">
 
   <!-- NAVBAR -->
-  <header class="fixed top-0 inset-x-0 z-50 backdrop-blur bg-dark/90 border-b border-white/5 py-3">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="flex items-center justify-between h-20">
-
-        <!-- LOGO -->
-         <div style="margin-bottom: 30px;">
-        <a href="homepage.html#home"  class="text-2xl font-extrabold text-primary tracking-tight">
-          <img style="width: 40px;
-          height: 45px;
-          display: inline-block;
-          " loading="lazy" src="thumbnails/theS.png">
-        
-         <p  class="text-xl font-extrabold text-white tracking-tight" style="display: inline-block;
-         margin-top: 35px;
-          ">
-          <span style="font-size: 1.2rem;" >SYNLOTECH</span><br>
-          </p>
-          </a>
-         </div>
-
-        <!-- DESKTOP NAV -->
-        <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
-          <a href="homepage.html#services" class="hover:text-primary transition">Services</a>
-          <a href="homepage.html#work" class="hover:text-primary transition">Work</a>
-          <a href="homepage.html#process" class="hover:text-primary transition">Process</a>
-          <a href="homepage.html#contact-form" class="hover:text-primary transition">Contact Us</a>
-        </nav>
-
-        <!-- CTA -->
-        <div class="hidden md:block">
-          <a href="homepage.html#contact-form"
-             class="px-5 py-2.5 rounded-lg bg-primary text-white font-semibold
-                    hover:bg-blue-700 transition shadow-lg shadow-primary/30">
-            Get a Quote
-          </a>
+   
+<header class="fixed top-6 inset-x-0 z-50 transition-all duration-500">
+  <div class="max-w-5xl mx-auto px-4 relative">
+    <!-- Main Bar -->
+    <div class="backdrop-blur-xl bg-black/40 border border-white/10 rounded-[2rem] px-8 py-2 flex items-center justify-between shadow-2xl relative z-50">
+      
+      <a href="#home" class="group flex items-center gap-3 py-2">
+        <div class="relative">
+          <div class="absolute inset-0 bg-primary/40 blur-md rounded-full group-hover:bg-primary transition-all"></div>
+          <img src="thumbnails/theS.png" class="relative w-8 h-9 object-contain group-hover:scale-110 transition-transform">
         </div>
+        <span class="text-lg font-black text-white tracking-tighter uppercase">Synlo<span class="text-primary italic">tech</span></span>
+      </a>
 
-        <!-- MOBILE MENU BUTTON -->
-       <button
-  id="menuBtn"
-  class="md:hidden relative w-10 h-10 flex items-center justify-center
-         z-50 rounded-md hover: transition"
-  aria-label="Open menu"
->
-  <span class="bar top"></span>
-  <span class="bar middle"></span>
-  <span class="bar bottom"></span>
-</button>
+      <!-- DESKTOP NAV -->
+      <nav class="hidden md:flex items-center gap-10">
+        <a href="#services" class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 hover:text-primary transition-colors">Services</a>
+        <a href="#work" class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 hover:text-primary transition-colors">Work</a>
+        <a href="#process" class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 hover:text-primary transition-colors">Process</a>
+      </nav>
 
+      <div class="hidden md:block">
+        <a href="#contact-form" class="px-6 py-3 rounded-xl bg-white text-black text-[10px] font-black uppercase tracking-widest hover:bg-primary transition-all active:scale-95">
+          Initiate Quote
+        </a>
       </div>
+
+      <!-- MOBILE TOGGLE -->
+      <button id="menuBtn" class="md:hidden w-10 h-10 flex flex-col justify-center items-center gap-1.5 focus:outline-none">
+        <span class="bar-1 w-6 h-0.5 bg-white rounded-full transition-all duration-300"></span>
+        <span class="bar-2 w-4 h-0.5 bg-primary self-end rounded-full transition-all duration-300"></span>
+      </button>
     </div>
 
-    <!-- MOBILE MENU -->
-    <div id="mobileMenu"
-  class="md:hidden absolute top-full left-0 w-full
-         bg-dark backdrop-blur
-         transform scale-y-0 origin-top
-         opacity-0
-         transition-all duration-300 ease-out">
-
-      <nav class="px-6 py-6 flex flex-col gap-4 text-sm font-medium border-t text-center border-white/10">
-        <a href="homepage.html#services" class="hover:text-primary">Services</a>
-        <a href="homepage.html#work" class="hover:text-primary">Work</a>
-        <a href="homepage.html#process" class="hover:text-primary">Process</a>
-        <a href="homepage.html#contact-form" class="hover:text-primary">Contact Us</a>
-
-        <a href="homepage.html#contact-form"
-           class="mt-4 inline-flex justify-center px-6 py-3 rounded-lg bg-primary text-white font-semibold">
-          Get a Quote
-        </a>
+    <!-- MOBILE MENU (The part you were missing) -->
+    <div id="mobileMenu" class="absolute top-0 left-4 right-4 pt-24 pb-8 px-8 bg-black/90 backdrop-blur-2xl border border-white/10 rounded-[2.5rem] transform -translate-y-full opacity-0 pointer-events-none transition-all duration-500 ease-in-out z-40">
+      <nav class="flex flex-col gap-6 text-center">
+        <a href="#services" class="text-xs font-black uppercase tracking-[0.3em] text-white hover:text-primary transition-colors">Services</a>
+        <a href="#work" class="text-xs font-black uppercase tracking-[0.3em] text-white hover:text-primary transition-colors">Work</a>
+        <a href="#process" class="text-xs font-black uppercase tracking-[0.3em] text-white hover:text-primary transition-colors">Process</a>
+        <div class="h-px bg-white/10 my-2"></div>
+        <a href="#contact-form" class="py-4 rounded-2xl bg-primary text-black text-xs font-black uppercase tracking-widest">Initiate Quote</a>
       </nav>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+ <div class="bg-[#020202] text-slate-400 font-sans selection:bg-primary/30 overflow-x-hidden">
+
+  <!-- SYSTEM OVERLAY DECOR -->
+  <div class="fixed inset-0 pointer-events-none opacity-20">
+    <div class="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:40px_40px]"></div>
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-primary to-transparent"></div>
+  </div>
+
+  <!-- HERO: PROTOCOL INITIALIZATION -->
+  <header class="relative pt-40 pb-24 px-6 overflow-hidden">
+    <div class="max-w-7xl mx-auto relative z-10">
+      <div class="flex flex-col items-start">
+        <div class="inline-flex items-center gap-3 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-8 backdrop-blur-xl">
+          <span class="h-1.5 w-1.5 bg-primary rounded-full animate-pulse"></span>
+          <span class="text-[10px] font-mono tracking-[0.4em] text-primary uppercase">Agreement // Protocol_v2.1</span>
+        </div>
+
+        <h1 class="text-6xl md:text-9xl font-black text-white leading-[0.8] tracking-tighter uppercase mb-10">
+          Terms of <br/>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-white to-white/20 italic">Service.</span>
+        </h1>
+
+        <p class="max-w-2xl text-lg text-slate-400 leading-relaxed border-l-2 border-primary/40 pl-8">
+          This document defines the <span class="text-white font-bold">Operational Parameters</span> between Synlotech Technologies and the User. By accessing our infrastructure, you acknowledge these protocols.
+        </p>
+      </div>
     </div>
   </header>
 
-<!-- HERO -->
-<section class="pt-36 pb-20 px-6 text-center max-w-4xl mx-auto">
-  <h1 class="text-4xl sm:text-5xl font-extrabold text-primary">
-    Terms of Service
-  </h1>
-  <p class="mt-4 text-slate-300 text-lg">
-    These Terms of Service outline your rights and responsibilities when using Synlotech Technologies’ website and services.
-  </p>
-</section>
+  <!-- LEGAL INFRASTRUCTURE GRID -->
+  <main class="max-w-7xl mx-auto px-6 pb-40 relative z-10">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-px bg-white/10 border border-white/10">
+      
+      <!-- 01: INTRODUCTION -->
+      <article class="md:col-span-12 bg-[#050505] p-12 md:p-16 border-b border-white/10 group">
+        <span class="font-mono text-[10px] text-primary mb-8 block tracking-[0.5em] uppercase">// 00_IDENTITY_VERIFICATION</span>
+        <p class="text-xl md:text-2xl text-slate-300 font-light leading-relaxed max-w-4xl italic">
+          Welcome to Synlotech Technologies (“we”, “our”, “us”). By engaging with our digital solutions, you enter into a <span class="text-white font-bold">Binding Service Agreement</span>. Non-compliance results in immediate access termination.
+        </p>
+      </article>
 
-<!-- ARTICLE -->
-<article class="max-w-4xl mx-auto px-6 space-y-12 leading-relaxed">
+      <!-- 02: USE OF WEBSITE (Brutalist Left) -->
+      <article class="md:col-span-7 bg-[#050505] p-12 group">
+        <span class="font-mono text-[10px] text-white/20 mb-16 block tracking-[0.5em] uppercase">01_USAGE_RESTRICTIONS</span>
+        <h2 class="text-3xl font-black text-white uppercase mb-8">System Compliance</h2>
+        <p class="text-slate-400 mb-8">You are authorized for lawful use only. The following behaviors are flagged as <span class="text-red-500">System Violations</span>:</p>
+        <ul class="space-y-4 font-mono text-xs uppercase tracking-widest text-slate-500">
+          <li class="flex items-center gap-4"><span class="text-primary">[!]</span> Illegal Activity Injection</li>
+          <li class="flex items-center gap-4"><span class="text-primary">[!]</span> Security Layer Interference</li>
+          <li class="flex items-center gap-4"><span class="text-primary">[!]</span> Unauthorized Data Harvesting</li>
+        </ul>
+      </article>
 
-  <!-- Introduction -->
-  <section>
-    <p class="text-slate-300">
-      Welcome to Synlotech Technologies (“we”, “our”, “us”). By accessing or using our website and services, you agree to comply with and be bound by these Terms of Service. If you do not agree, please do not use our website.
-    </p>
-  </section>
+      <!-- 03: SERVICES (Visual Card Right) -->
+      <article class="md:col-span-5 bg-[#050505] p-12 border-l border-white/10 relative overflow-hidden group">
+        <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-primary/10 rounded-full blur-[80px] group-hover:bg-primary/20 transition-all"></div>
+        <span class="font-mono text-[10px] text-white/20 mb-16 block uppercase tracking-widest">02_SERVICE_SCOPE</span>
+        <h3 class="text-2xl font-black text-white uppercase mb-6">Deliverables</h3>
+        <p class="text-sm text-slate-400 leading-relaxed mb-6">
+          Service parameters (Design, Dev, Graphics) are governed by specific project proposals. Actual output is subject to the <span class="text-white">Mutual Agreement Protocol</span>.
+        </p>
+      </article>
 
-  <!-- Use of Website -->
-  <section>
-    <h2 class="text-2xl font-bold mb-4 text-primary">Use of Website</h2>
-    <p class="text-slate-300">
-      You may use our website for lawful purposes only. You agree not to:
-    </p>
-    <ul class="list-disc list-inside text-slate-300 mt-4 space-y-2">
-      <li>Access, use, or attempt to use the website for illegal activities.</li>
-      <li>Interfere with the website’s functionality or security.</li>
-      <li>Harvest or collect personal information of other users without consent.</li>
-    </ul>
-  </section>
+      <!-- 04: IP & CONTENT (Split Row) -->
+      <article class="md:col-span-6 bg-[#050505] p-12 border-t border-white/10">
+        <span class="font-mono text-[10px] text-primary mb-10 block tracking-widest">03_INTELLECTUAL_PROPERTY</span>
+        <h3 class="text-xl font-bold text-white uppercase mb-4">Ownership</h3>
+        <p class="text-sm leading-relaxed">
+          All digital assets, code-bases, and visual frameworks are the exclusive property of Synlotech. Unauthorized cloning or redistribution is a breach of protocol.
+        </p>
+      </article>
 
-  <!-- Services -->
-  <section>
-    <h2 class="text-2xl font-bold mb-4 text-primary">Our Services</h2>
-    <p class="text-slate-300">
-      Synlotech Technologies provides web design, development, graphics, and digital solutions. Service descriptions are available on our website, and actual deliverables may vary depending on project scope. All projects are subject to mutual agreement via contracts or proposals.
-    </p>
-  </section>
+      <article class="md:col-span-6 bg-[#050505] p-12 border-t md:border-l border-white/10">
+        <span class="font-mono text-[10px] text-primary mb-10 block tracking-widest">04_USER_INPUT</span>
+        <h3 class="text-xl font-bold text-white uppercase mb-4">Feedback License</h3>
+        <p class="text-sm leading-relaxed">
+          Submitted data or feedback grants us a non-exclusive, worldwide license to modify and integrate it into our <span class="italic text-slate-500">Service Roadmap</span>.
+        </p>
+      </article>
 
-  <!-- Intellectual Property -->
-  <section>
-    <h2 class="text-2xl font-bold mb-4 text-primary">Intellectual Property</h2>
-    <p class="text-slate-300">
-      All content on this website, including text, images, graphics, logos, and software, is the property of Synlotech Technologies or its licensors. You may not reproduce, distribute, or create derivative works without explicit written permission.
-    </p>
-  </section>
+      <!-- 05: DISCLAIMERS (The Highlight Card) -->
+      <article class="md:col-span-12 bg-white text-black p-12 md:p-20 border-t border-white/10 group relative overflow-hidden">
+        <div class="absolute top-0 right-0 p-8 font-mono text-[10px] text-black/20 tracking-[0.5em]">LIMITATION_OF_RISK</div>
+        <div class="max-w-4xl relative z-10">
+          <h2 class="text-5xl md:text-7xl font-black uppercase tracking-tighter mb-8 leading-none">
+            As-Is <br/> <span class="text-primary italic">Provision.</span>
+          </h2>
+          <p class="text-xl font-medium leading-relaxed mb-10">
+            Our infrastructure is provided without warranties. Synlotech shall not be liable for incidental, consequential, or punitive damages arising from system usage.
+          </p>
+          <div class="inline-block px-6 py-2 border-2 border-black font-mono text-[10px] uppercase font-bold tracking-widest">
+            Liability_Cap: Amount_Paid_Per_Service
+          </div>
+        </div>
+      </article>
 
-  <!-- User Content -->
-  <section>
-    <h2 class="text-2xl font-bold mb-4 text-primary">User Content</h2>
-    <p class="text-slate-300">
-      If you submit content, feedback, or ideas to us, you grant Synlotech Technologies a non-exclusive, royalty-free, worldwide license to use, modify, and display it in connection with our business.
-    </p>
-  </section>
+      <!-- 06: GOVERNING LAW & CHANGES (Data Nodes) -->
+      <article class="md:col-span-4 bg-[#050505] p-12 border-t border-white/10">
+        <span class="font-mono text-[10px] text-white/20 mb-8 block uppercase tracking-widest">05_JURISDICTION</span>
+        <h3 class="text-xl font-bold text-white uppercase mb-4">Tanzania_Legal</h3>
+        <p class="text-xs text-slate-500 leading-relaxed uppercase tracking-wider">
+          Interpretations governed by the laws of Tanzania. Dispute resolution via Tanzanian Courts exclusively.
+        </p>
+      </article>
 
-  <!-- Disclaimers -->
-  <section>
-    <h2 class="text-2xl font-bold mb-4 text-primary">Disclaimers</h2>
-    <p class="text-slate-300">
-      Our website and services are provided “as-is” without warranties of any kind. Synlotech Technologies does not guarantee accuracy, completeness, or reliability of information provided. You use the website at your own risk.
-    </p>
-  </section>
+      <article class="md:col-span-4 bg-[#050505] p-12 border-t md:border-l border-white/10">
+        <span class="font-mono text-[10px] text-white/20 mb-8 block uppercase tracking-widest">06_TERMINATION</span>
+        <h3 class="text-xl font-bold text-white uppercase mb-4">Access_Cutoff</h3>
+        <p class="text-xs text-slate-500 leading-relaxed uppercase tracking-wider">
+          We reserve the right to revoke system privileges for behavioral anomalies or agreement breaches.
+        </p>
+      </article>
 
-  <!-- Limitation of Liability -->
-  <section>
-    <h2 class="text-2xl font-bold mb-4 text-primary">Limitation of Liability</h2>
-    <p class="text-slate-300">
-      Synlotech Technologies shall not be liable for any indirect, incidental, consequential, or punitive damages arising from your use of our website or services. Maximum liability is limited to the amount paid for the specific services rendered.
-    </p>
-  </section>
+      <article class="md:col-span-4 bg-[#050505] p-12 border-t md:border-l border-white/10">
+        <span class="font-mono text-[10px] text-white/20 mb-8 block uppercase tracking-widest">07_REVISIONS</span>
+        <h3 class="text-xl font-bold text-white uppercase mb-4">Update_Cycle</h3>
+        <p class="text-xs text-slate-500 leading-relaxed uppercase tracking-wider">
+          Terms evolve periodically. Continued usage constitutes active acceptance of the latest protocol version.
+        </p>
+      </article>
 
-  <!-- Termination -->
-  <section>
-    <h2 class="text-2xl font-bold mb-4 text-primary">Termination</h2>
-    <p class="text-slate-300">
-      We reserve the right to suspend or terminate access to the website or services for users who violate these Terms of Service or engage in harmful behavior.
-    </p>
-  </section>
+    </div>
 
-  <!-- Governing Law -->
-  <section>
-    <h2 class="text-2xl font-bold mb-4 text-primary">Governing Law</h2>
-    <p class="text-slate-300">
-      These Terms of Service are governed by and interpreted according to the laws of Tanzania. Any disputes will be resolved in the courts of Tanzania unless otherwise agreed in writing.
-    </p>
-  </section>
+    <!-- CTA / CONTACT: THE SYSTEM SUPPORT -->
+    <section class="mt-40 flex flex-col md:flex-row items-center justify-between gap-12 py-20 border-y border-white/5">
+        <div class="text-center md:text-left">
+            <h3 class="text-4xl font-black text-white uppercase tracking-tighter mb-4 italic">Query_Protocol?</h3>
+            <p class="text-slate-500 font-mono text-[10px] uppercase tracking-widest">Technical Support Desk: Online</p>
+        </div>
+        
+        <div class="flex flex-wrap justify-center gap-6">
+            <a href="mailto:synlotech@outlook.com" class="px-10 py-5 bg-white text-black font-black uppercase text-sm tracking-widest hover:bg-primary transition-all">
+                Email_Desk
+            </a>
+            <a href="https://wa.me/255788296274" target="_blank" class="px-10 py-5 border border-white/10 text-white font-black uppercase text-sm tracking-widest hover:bg-white hover:text-black transition-all">
+                WhatsApp_Secure
+            </a>
+        </div>
+    </section>
 
-  <!-- Changes to Terms -->
-  <section>
-    <h2 class="text-2xl font-bold mb-4 text-primary">Changes to Terms</h2>
-    <p class="text-slate-300">
-      We may update these Terms of Service periodically. Updated terms will be posted on this page with a “Last Updated” date. Continued use of our website constitutes acceptance of the updated terms.
-    </p>
-  </section>
+    <footer class="mt-20 text-center">
+        <p class="font-mono text-[9px] text-slate-700 uppercase tracking-[1em]">Termination_of_Legal_Briefing // 2026</p>
+    </footer>
 
-  <!-- Contact Information -->
-  <section>
-    <h2 class="text-2xl font-bold mb-4 text-primary">Contact Us</h2>
-    <p class="text-slate-300">
-      For questions about these Terms of Service, contact us at 
-      <a href="mailto:synlotech@outlook.com" class="text-primary hover:underline">synlotech@outlook.com</a> or text us at 
-      <a href="https://wa.me/255788296274" target="_blank" class="text-primary hover:underline">+255 788 296 274</a>.
-    </p>
-  </section>
+  </main>
+</div>
 
-</article>
 
 <!-- FOOTER -->
- <footer class="relative bg-dark border-t border-white/10 pt-16">
-  <div class="max-w-7xl mx-auto px-6">
+ 
+<footer class="relative bg-[#020202] pt-24 pb-12 overflow-hidden border-t border-white/5">
+  <!-- Decorative Grid Overlay -->
+  <div class="absolute inset-0 bg-[radial-gradient(#ffffff03_1px,transparent_1px)] bg-[size:30px_30px] pointer-events-none"></div>
 
-    <div class="pb-12">
-      <!-- AUTO-FIT GRID (THE FIX) -->
-      <div class="grid gap-12 grid-cols-[repeat(auto-fit,minmax(220px,1fr))]">
-
-        <!-- CONTACT -->
-        <div>
-          <h3 class="text-white text-xl font-bold mb-4">Contact Us</h3>
-          <p class="text-white text-sm mb-2">
-            Email:
-            <a href="mailto:synlotech@outlook.com" class="text-gray-400 hover:text-primary transition">
-              synlotech@outlook.com
-            </a>
-          </p>
-          <p class="text-white text-sm">
-            WhatsApp:
-            <a href="https://wa.me/255788296274" class="text-gray-400 hover:text-primary transition">
-              Chat Now
-            </a>
-          </p>
+  <div class="relative max-w-7xl mx-auto px-6">
+    
+    <!-- UPPER TIER: BRAND & NEWSLETTER -->
+    <div class="grid lg:grid-cols-12 gap-16 mb-20">
+      
+      <!-- BRAND HUB -->
+      <div class="lg:col-span-4">
+        <a href="homepage.html#home" class="group flex items-center gap-4 mb-8">
+          <div class="relative">
+            <div class="absolute inset-0 bg-primary/20 blur-lg rounded-full group-hover:bg-primary/40 transition-all"></div>
+            <img loading="lazy" src="thumbnails/theS.png" class="relative w-12 h-12 object-contain grayscale group-hover:grayscale-0 transition-all">
+          </div>
+          <span class="text-3xl font-black text-white tracking-tighter uppercase">Synlo<span class="text-primary italic">tech</span></span>
+        </a>
+        <p class="text-slate-500 text-sm leading-relaxed max-w-xs mb-8">
+          Engineering high-frequency digital assets for global innovators. Built for performance, reliability, and growth.
+        </p>
+        <!-- SYSTEM STATUS INDICATOR -->
+        <div class="inline-flex items-center gap-3 px-4 py-2 rounded-xl bg-white/[0.03] border border-white/10">
+          <div class="h-2 w-2 rounded-full bg-green-500 animate-pulse"></div>
+          <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest">All Systems Operational</span>
         </div>
+      </div>
 
-        <!-- SOCIAL -->
-        <div>
-  <h3 class="text-white text-xl font-bold mb-4">Follow Us</h3>
-  <div class="flex gap-4">
-    <a href="https://www.linkedin.com/in/synlotech-technologies-7252933b2" target="_blank" class="text-gray-400 hover:text-primary transition">
-      <i class="fa-brands fa-linkedin-in"></i>
-    </a>
+      <!-- THE FEED (NEWSLETTER) -->
+      <div class="lg:col-span-4">
+        <h3 class="text-xs font-black text-white uppercase tracking-[0.3em] mb-6">Internal Feed</h3>
+        <p class="text-slate-500 text-xs mb-6">Join the technical dispatch for weekly performance insights.</p>
+        <form action="https://formspree.io/f/mwvnvdko" method="POST" class="relative group">
+          <input type="email" name="email" placeholder="Terminal@address.com" required
+                 class="w-full px-5 py-4 rounded-2xl bg-white/[0.03] border border-white/10 text-white text-sm focus:outline-none focus:border-primary transition-all">
+          <button type="submit" class="absolute right-2 top-2 bottom-2 px-6 rounded-xl bg-primary text-black text-[10px] font-black uppercase tracking-widest hover:bg-white transition-all">
+            Join
+          </button>
+        </form>
+      </div>
 
-    <a href="https://www.instagram.com/synlo_tech" target="_blank" class="text-gray-400 hover:text-primary transition">
-      <i class="fa-brands fa-instagram"></i>
-    </a>
-
-    <a href="https://x.com/synlotech" target="_blank" class="text-gray-400 hover:text-primary transition">
-      <i class="fa-brands fa-x-twitter"></i>
-    </a>
-  </div>
-</div>
-
-        <!-- POLICIES -->
-        <div>
-          <h3 class="text-white text-xl font-bold mb-4">Policies</h3>
-          <p class="text-slate-300 text-sm">
-            <a href="Privacy-Policy.html" class="text-gray-400 hover:text-primary transition">Privacy Policy</a>
-            <span class="mx-2">|</span>
-            <a href="Terms-Of-Service.html" class="text-gray-400 hover:text-primary transition">Terms of Service</a>
-            <span class="mx-2">|</span>
-            <a href="disclaimer.html" class="text-gray-400 hover:text-primary transition">Disclaimer</a>
-          </p>
-        </div>
-
-        <!-- QUICK LINKS -->
-        <div>
-          <h4 class="text-white font-bold mb-4">Quick Links</h4>
-          <ul class="space-y-2">
-            <li><a href="homepage.html#services" class="text-gray-400 hover:text-primary transition">Services</a></li>
-            <li><a href="homepage.html#work" class="text-gray-400 hover:text-primary transition">Work</a></li>
-            <li><a href="homepage.html#process" class="text-gray-400 hover:text-primary transition">Process</a></li>
-            <li><a href="homepage.html#contact-form" class="text-gray-400 hover:text-primary transition">Contact Us</a></li>
-          </ul>
-        </div>
-
-        <!-- NEWSLETTER -->
-
-         <div>
-  <h3 class="mb-5">Subscribe to Our Newsletter</h3>
-
-  <form 
-    action="https://formspree.io/f/mwvnvdko" 
-    method="POST"
-    class="flex flex-col gap-2"
-  >
-    <input 
-      type="email" 
-      name="email"
-      placeholder="Your email"
-      required
-      class="w-full px-3 py-4 rounded-lg mb-4 bg-white/5 border border-white/10 text-white text-sm focus:outline-none focus:border-primary"
-    />
-
-    <button 
-      type="submit"
-      class="w-full px-4 py-2 rounded-lg bg-primary text-white text-sm font-semibold hover:opacity-90 transition"
-    >
-      Subscribe
-    </button>
-  </form>
-</div>
-
-
-        <!-- BRANDING -->
-        <div>
-          <a href="homepage.html#home" class="flex items-center gap-3">
-            <img loading="lazy" src="thumbnails/theS.png" class="w-10 h-11 object-contain">
-            <p class="text-xl font-extrabold text-white leading-tight">
-              SYNLOTECH <br> TECHNOLOGIES
-            </p>
+      <!-- SOCIAL COMM LINKS -->
+      <div class="lg:col-span-4 flex flex-col lg:items-end">
+        <h3 class="text-xs font-black text-white uppercase tracking-[0.3em] mb-6">Active Channels</h3>
+        <div class="flex gap-4">
+          <a href="https://linkedin.com..." class="w-12 h-12 rounded-2xl bg-white/[0.03] border border-white/10 flex items-center justify-center text-slate-400 hover:text-primary hover:border-primary/50 transition-all group">
+            <i class="fa-brands fa-linkedin-in text-lg group-hover:scale-110 transition-transform"></i>
+          </a>
+          <a href="https://instagram.com..." class="w-12 h-12 rounded-2xl bg-white/[0.03] border border-white/10 flex items-center justify-center text-slate-400 hover:text-primary hover:border-primary/50 transition-all group">
+            <i class="fa-brands fa-instagram text-lg group-hover:scale-110 transition-transform"></i>
+          </a>
+          <a href="https://x.com..." class="w-12 h-12 rounded-2xl bg-white/[0.03] border border-white/10 flex items-center justify-center text-slate-400 hover:text-primary hover:border-primary/50 transition-all group">
+            <i class="fa-brands fa-x-twitter text-lg group-hover:scale-110 transition-transform"></i>
           </a>
         </div>
-
       </div>
     </div>
 
-    <!-- BOTTOM -->
-    <div class="border-t border-white/10 py-6 text-center">
-      <p class="text-slate-400 text-sm">
-        © 2026 SYNLOTECH TECHNOLOGIES. All rights reserved.
+    <!-- MIDDLE TIER: NAVIGATION MATRIX -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-12 py-16 border-y border-white/5">
+      <div>
+        <h4 class="text-[10px] font-black text-slate-600 uppercase tracking-[0.4em] mb-6">Navigation</h4>
+        <ul class="space-y-4">
+          <li><a href="#services" class="text-sm text-slate-400 hover:text-primary transition-colors">Core Services</a></li>
+          <li><a href="#work" class="text-sm text-slate-400 hover:text-primary transition-colors">Case Archive</a></li>
+          <li><a href="#process" class="text-sm text-slate-400 hover:text-primary transition-colors">Logic Flow</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-[10px] font-black text-slate-600 uppercase tracking-[0.4em] mb-6">Support</h4>
+        <ul class="space-y-4">
+          <li><a href="mailto:synlotech@outlook.com" class="text-sm text-slate-400 hover:text-primary transition-colors">Direct Uplink</a></li>
+          <li><a href="https://wa.me..." class="text-sm text-slate-400 hover:text-primary transition-colors">WhatsApp Sync</a></li>
+          <li><a href="#maintenance" class="text-sm text-slate-400 hover:text-primary transition-colors">SLA Plans</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-[10px] font-black text-slate-600 uppercase tracking-[0.4em] mb-6">Legal</h4>
+        <ul class="space-y-4">
+          <li><a href="Privacy-Policy.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Privacy Protocol</a></li>
+          <li><a href="Terms-Of-Service.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Service Terms</a></li>
+        </ul>
+      </div>
+      <div class="flex flex-col items-start md:items-end">
+        <h4 class="text-[10px] font-black text-slate-600 uppercase tracking-[0.4em] mb-6">Global Ops</h4>
+        <p class="text-xs text-slate-500 font-mono text-left md:text-right">DAR ES SALAAM, TZ<br/>GLOBAL REMOTE DEPLOYMENT</p>
+      </div>
+    </div>
+
+    <!-- LOWER TIER: SYSTEM COPYRIGHT -->
+    <div class="pt-12 flex flex-col md:flex-row justify-between items-center gap-6">
+      <p class="text-[10px] font-mono text-slate-700 uppercase tracking-[0.4em]">
+        © 2026 SYNLOTECH // PERFORMANCE ENGINEERING
       </p>
+      <div class="flex items-center gap-6">
+        <div class="h-[1px] w-12 bg-white/5"></div>
+        <p class="text-[10px] font-mono text-slate-700 uppercase tracking-[0.4em]">Integrated Terminal v2.4.0</p>
+      </div>
     </div>
 
   </div>
@@ -405,19 +406,60 @@
 
 
 <script>
-   const btn = document.getElementById('menuBtn');
-const menu = document.getElementById('mobileMenu');
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Navbar Logic
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const bars = menuBtn ? menuBtn.querySelectorAll('span') : [];
 
-btn.addEventListener('click', () => {
-  btn.classList.toggle('open');
-  menu.classList.toggle('scale-y-0');
-  menu.classList.toggle('opacity-0');
+    if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', () => {
+            const isClosed = mobileMenu.classList.contains('-translate-y-full');
+            if (isClosed) {
+                // Open Menu
+                mobileMenu.classList.remove('-translate-y-full', 'opacity-0', 'pointer-events-none');
+                mobileMenu.classList.add('translate-y-0', 'opacity-100', 'pointer-events-auto');
+                // Morph to X
+                bars[0].style.transform = "translateY(4px) rotate(45deg)";
+                bars[1].style.transform = "translateY(-4px) rotate(-45deg)";
+                bars[1].style.width = "1.5rem";
+            } else {
+                // Close Menu
+                mobileMenu.classList.add('-translate-y-full', 'opacity-0', 'pointer-events-none');
+                mobileMenu.classList.remove('translate-y-0', 'opacity-100', 'pointer-events-auto');
+                // Reset Bars
+                bars[0].style.transform = "none";
+                bars[1].style.transform = "none";
+                bars[1].style.width = "1rem";
+            }
+        });
+    }
 
+    // 2. Scroll Animations (Intersection Observer)
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('in-view');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.animate-on-scroll').forEach(section => observer.observe(section));
+
+    // 3. WhatsApp Form Uplink
+    const form = document.getElementById("form");
+    if (form) {
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const name = form.elements["name"].value;
+            const email = form.elements["email"].value;
+            const message = form.elements["message"].value;
+            const text = `Hello, I have a new project inquiry:\n\nName: ${name}\nEmail: ${email}\nMessage: ${message}`;
+            window.open(`https://wa.me{encodeURIComponent(text)}`, "_blank");
+        });
+    }
 });
-
-window.addEventListener('DOMContentLoaded', () => {
-    document.body.classList.remove('opacity-0', 'translate-y-6');
-  });
 </script>
 
  

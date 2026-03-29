@@ -72,7 +72,8 @@
   "logo": "https://synlotech.com/images/logo.png",
   "description": "Synlotech Technologies specializes in stunning website design, responsive web development, graphics, motion visuals, and 3D animations.",
   "sameAs": [
-    "https://instagram.com/synlo_tech",
+    "https://instagram.com/synlotech",
+    "https://facebook.com/synlotech",
     "https://linkedin.com/company/synlotech"
   ],
   "contactPoint": {
@@ -85,283 +86,348 @@
 }
 </script>
 
-<body style="font-family: inter;" class="bg-dark text-white font-sans opacity-0 transition-opacity duration-700 ease-out">
+<body style="font-family: inter;" class="bg-dark text-white font-sans transition-opacity duration-700 ease-out">
 
 <!-- NAVBAR -->
- <!-- NAVBAR -->
-  <header class="fixed top-0 inset-x-0 z-50 backdrop-blur bg-dark/90 border-b border-white/5 py-3">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="flex items-center justify-between h-20">
-
-       <!-- LOGO -->
-         <div style="margin-bottom: 30px;">
-        <a href="homepage.html#home"  class="text-2xl font-extrabold text-primary tracking-tight">
-          <img style="width: 40px;
-          height: 45px;
-          display: inline-block;
-          " loading="lazy" src="thumbnails/theS.png">
-        
-         <p  class="text-xl font-extrabold text-accent tracking-tight" style="display: inline-block;
-         margin-top: 35px;
-          ">
-          <span style="font-size: 1.2rem;" >SYNLOTECH</span><br>
-          </p>
-          </a>
-         </div>
-
-        <!-- DESKTOP NAV -->
-        <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
-          <a href="homepage.html#services" class="hover:text-primary transition">Services</a>
-          <a href="homepage.html#work" class="hover:text-primary transition">Work</a>
-          <a href="homepage.html#process" class="hover:text-primary transition">Process</a>
-          <a href="homepage.html#contact-form" class="hover:text-primary transition">Contact Us</a>
-        </nav>
-
-        <!-- CTA -->
-        <div class="hidden md:block">
-          <a href="homepage.html#contact-form"
-             class="px-5 py-2.5 rounded-lg bg-primary text-white font-semibold
-                    hover:bg-blue-700 transition shadow-lg shadow-primary/30">
-            Get a Quote
-          </a>
+ 
+<header class="fixed top-6 inset-x-0 z-50 transition-all duration-500">
+  <div class="max-w-5xl mx-auto px-4 relative">
+    <!-- Main Bar -->
+    <div class="backdrop-blur-xl bg-black/40 border border-white/10 rounded-[2rem] px-8 py-2 flex items-center justify-between shadow-2xl relative z-50">
+      
+      <a href="#home" class="group flex items-center gap-3 py-2">
+        <div class="relative">
+          <div class="absolute inset-0 bg-primary/40 blur-md rounded-full group-hover:bg-primary transition-all"></div>
+          <img src="thumbnails/theS.png" class="relative w-8 h-9 object-contain group-hover:scale-110 transition-transform">
         </div>
+        <span class="text-lg font-black text-white tracking-tighter uppercase">Synlo<span class="text-primary italic">tech</span></span>
+      </a>
 
-        <!-- MOBILE MENU BUTTON -->
-       <button
-  id="menuBtn"
-  class="md:hidden relative w-10 h-10 flex items-center justify-center
-         z-50 rounded-md hover: transition"
-  aria-label="Open menu"
->
-  <span class="bar top"></span>
-  <span class="bar middle"></span>
-  <span class="bar bottom"></span>
-</button>
+      <!-- DESKTOP NAV -->
+      <nav class="hidden md:flex items-center gap-10">
+        <a href="#services" class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 hover:text-primary transition-colors">Services</a>
+        <a href="#work" class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 hover:text-primary transition-colors">Work</a>
+        <a href="#process" class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 hover:text-primary transition-colors">Process</a>
+      </nav>
 
+      <div class="hidden md:block">
+        <a href="#contact-form" class="px-6 py-3 rounded-xl bg-white text-black text-[10px] font-black uppercase tracking-widest hover:bg-primary transition-all active:scale-95">
+          Initiate Quote
+        </a>
       </div>
+
+      <!-- MOBILE TOGGLE -->
+      <button id="menuBtn" class="md:hidden w-10 h-10 flex flex-col justify-center items-center gap-1.5 focus:outline-none">
+        <span class="bar-1 w-6 h-0.5 bg-white rounded-full transition-all duration-300"></span>
+        <span class="bar-2 w-4 h-0.5 bg-primary self-end rounded-full transition-all duration-300"></span>
+      </button>
     </div>
 
-    <!-- MOBILE MENU -->
-    <div id="mobileMenu"
-  class="md:hidden absolute top-full left-0 w-full
-         bg-dark backdrop-blur
-         transform scale-y-0 origin-top
-         opacity-0
-         transition-all duration-300 ease-out">
-
-      <nav class="px-6 py-6 flex flex-col gap-4 text-sm font-medium border-t text-center border-white/10">
-        <a href="homepage.html#services" class="hover:text-primary">Services</a>
-        <a href="homepage.html#work" class="hover:text-primary">Work</a>
-        <a href="homepage.html#process" class="hover:text-primary">Process</a>
-        <a href="homepage.html#contact-form" class="hover:text-primary">Contact Us</a>
-
-        <a href="homepage.html#contact-form"
-           class="mt-4 inline-flex justify-center px-6 py-3 rounded-lg bg-primary text-white font-semibold">
-          Get a Quote
-        </a>
+    <!-- MOBILE MENU (The part you were missing) -->
+    <div id="mobileMenu" class="absolute top-0 left-4 right-4 pt-24 pb-8 px-8 bg-black/90 backdrop-blur-2xl border border-white/10 rounded-[2.5rem] transform -translate-y-full opacity-0 pointer-events-none transition-all duration-500 ease-in-out z-40">
+      <nav class="flex flex-col gap-6 text-center">
+        <a href="#services" class="text-xs font-black uppercase tracking-[0.3em] text-white hover:text-primary transition-colors">Services</a>
+        <a href="#work" class="text-xs font-black uppercase tracking-[0.3em] text-white hover:text-primary transition-colors">Work</a>
+        <a href="#process" class="text-xs font-black uppercase tracking-[0.3em] text-white hover:text-primary transition-colors">Process</a>
+        <div class="h-px bg-white/10 my-2"></div>
+        <a href="#contact-form" class="py-4 rounded-2xl bg-primary text-black text-xs font-black uppercase tracking-widest">Initiate Quote</a>
       </nav>
     </div>
-  </header>
-
-<!-- HERO -->
-<section class="animate-on-scroll pt-40 pb-12 text-center max-w-4xl mx-auto px-6">
-  <h1 class="text-4xl sm:text-5xl font-extrabold">5 Tips for Building <span class="text-primary">High-Performance</span> Websites</h1>
-  <p class="mt-6 text-slate-300 text-lg">
-    Discover actionable strategies to build websites that load fast, rank better, and provide excellent user experiences.
-  </p>
-</section>
-
-<!-- ARTICLE -->
-<main class="max-w-5xl mx-auto px-6 py-8 space-y-12">
-
-  <section class="space-y-4">
-    <p class="text-slate-300 text-lg">
-      High-performance websites aren't just about looks, they need speed, scalability, and SEO optimization. These 5 tips will help you deliver a site that users love and search engines reward.
-    </p>
-    <img loading="lazy" src="thumbnails/highperfweb.jpg" alt="High performance website illustration" class="w-full rounded-2xl">
-  </section>
-
-  <!-- TIP 1 -->
-  <section class="space-y-4">
-    <h2 class="text-2xl font-bold text-primary">1. Optimize Your Images</h2>
-    <p class="text-slate-300">Use WebP or compressed formats, resize to display dimensions, and lazy-load below-the-fold content for faster page load.</p>
-    <img loading="lazy" src="thumbnails/optimized.webp" alt="Optimized images" class="w-full rounded-2xl">
-  </section>
-
-  <!-- TIP 2 -->
-  <section class="space-y-4">
-    <h2 class="text-2xl font-bold text-primary">2. Minify CSS, JS & HTML</h2>
-    <p class="text-slate-300">Remove whitespace and comments. Use Tailwind purge or build tools to keep file sizes small and loading fast.</p>
-  </section>
-
-  <!-- TIP 3 -->
-  <section class="space-y-4">
-    <h2 class="text-2xl font-bold text-primary">3. Leverage Browser Caching</h2>
-    <p class="text-slate-300">Cache frequently used assets to improve repeat visits speed.</p>
-  </section>
-
-  <!-- TIP 4 -->
-  <section class="space-y-4">
-    <h2 class="text-2xl font-bold text-primary">4. Optimize Server & Hosting</h2>
-    <p class="text-slate-300">Use reliable hosting, Gzip/Brotli compression, and CDNs for global performance.</p>
-    <img loading="lazy" src="thumbnails/server.jpg" alt="Fast server" class="w-full rounded-2xl">
-  </section>
-
-  <!-- TIP 5 -->
-  <section class="space-y-4">
-    <h2 class="text-2xl font-bold text-primary">5. Prioritize Above-the-Fold Content</h2>
-    <p class="text-slate-300">Load critical content first and defer non-essential scripts to improve perceived speed.</p>
-  </section>
-
-  <!-- CONCLUSION -->
-  <section class="space-y-4 text-center">
-    <h2 class="text-2xl font-bold text-primary">Conclusion</h2>
-    <p class="text-slate-300">By following these tips, you can build websites that load fast, rank higher, and provide an exceptional user experience. At Synlotech Technologies, we specialize in scalable, SEO-friendly websites that grow with your business.</p>
-    <a href="homepage.html#contact-form" class="inline-block mt-6 px-8 py-4 bg-primary text-white rounded-xl font-semibold hover:bg-blue-700 transition shadow-lg shadow-primary/30">Contact Us</a>
-  </section>
-
-</main>
-
-<footer class="relative bg-dark border-t border-white/10 pt-16">
-  <div class="max-w-7xl mx-auto px-6">
-
-    <div class="pb-12">
-      <!-- AUTO-FIT GRID (THE FIX) -->
-      <div class="grid gap-12 grid-cols-[repeat(auto-fit,minmax(220px,1fr))]">
-
-        <!-- CONTACT -->
-        <div>
-          <h3 class="text-white text-xl font-bold mb-4">Contact Us</h3>
-          <p class="text-white text-sm mb-2">
-            Email:
-            <a href="mailto:synlotech@outlook.com" class="text-gray-400 hover:text-primary transition">
-              synlotech@outlook.com
-            </a>
-          </p>
-          <p class="text-white text-sm">
-            WhatsApp:
-            <a href="https://wa.me/255788296274" class="text-gray-400 hover:text-primary transition">
-              Chat Now
-            </a>
-          </p>
-        </div>
-
-        <!-- SOCIAL -->
-       <div>
-  <h3 class="text-white text-xl font-bold mb-4">Follow Us</h3>
-  <div class="flex gap-4">
-    <a href="https://www.linkedin.com/in/synlotech-technologies-7252933b2" target="_blank" class="text-gray-400 hover:text-primary transition">
-      <i class="fa-brands fa-linkedin-in"></i>
-    </a>
-
-    <a href="https://www.instagram.com/synlo_tech" target="_blank" class="text-gray-400 hover:text-primary transition">
-      <i class="fa-brands fa-instagram"></i>
-    </a>
-
-    <a href="https://x.com/synlotech" target="_blank" class="text-gray-400 hover:text-primary transition">
-      <i class="fa-brands fa-x-twitter"></i>
-    </a>
   </div>
-</div>
+</header>
 
-        <!-- POLICIES -->
-        <div>
-          <h3 class="text-white text-xl font-bold mb-4">Policies</h3>
-          <p class="text-slate-300 text-sm">
-            <a href="Privacy-Policy.html" class="text-gray-400 hover:text-primary transition">Privacy Policy</a>
-            <span class="mx-2">|</span>
-            <a href="Terms-Of-Service.html" class="text-gray-400 hover:text-primary transition">Terms of Service</a>
-            <span class="mx-2">|</span>
-            <a href="disclaimer.html" class="text-gray-400 hover:text-primary transition">Disclaimer</a>
-          </p>
+<!-- HIGH-PERFORMANCE WEBSITES ARTICLE -->
+ <section id="high-performance-v2" class="relative py-32 bg-[#020202] text-white selection:bg-blue-500/30 overflow-hidden font-sans">
+  
+  <!-- THE KINETIC GRID (Visualizing Speed) -->
+  <div class="absolute inset-0 overflow-hidden pointer-events-none">
+    <div class="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:40px_40px]"></div>
+    <!-- Moving Light Ray -->
+    <div class="absolute top-0 left-1/4 w-px h-full bg-gradient-to-b from-transparent via-blue-500/20 to-transparent animate-pulse"></div>
+  </div>
+
+  <div class="relative max-w-7xl mx-auto px-6 z-10">
+    
+    <!-- TELEMETRY HEADER -->
+    <header class="relative mb-32 border-l border-white/10 pl-8 md:pl-16">
+      <div class="flex items-center gap-4 mb-8">
+        <span class="text-[10px] font-mono tracking-[0.6em] text-blue-500 uppercase animate-pulse">System_Status // Optimization_Active</span>
+        <div class="h-px flex-1 bg-white/10"></div>
+      </div>
+
+      <h1 class="text-6xl md:text-[140px] font-black tracking-[calc(-0.05em)] leading-[0.8] uppercase mb-12">
+        Zero <br/> <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-white to-white/20 italic">Friction.</span>
+      </h1>
+
+      <div class="grid md:grid-cols-2 gap-12 items-end">
+        <p class="text-xl text-slate-400 leading-relaxed font-light max-w-xl">
+          Aesthetics get them to look. Performance gets them to stay. We engineer <span class="text-white font-bold border-b border-blue-500/50">High-Velocity Infrastructure</span> that outruns the competition.
+        </p>
+        <div class="hidden md:flex justify-end gap-16 border-t border-white/10 pt-8">
+            <div class="text-center"><p class="text-4xl font-black">99</p><p class="text-[9px] uppercase tracking-widest text-slate-500">Lighthouse</p></div>
+            <div class="text-center"><p class="text-4xl font-black">&lt;1s</p><p class="text-[9px] uppercase tracking-widest text-slate-500">LCP Time</p></div>
+            <div class="text-center"><p class="text-4xl font-black">0ms</p><p class="text-[9px] uppercase tracking-widest text-slate-500">Input Delay</p></div>
         </div>
+      </div>
+    </header>
 
-        <!-- QUICK LINKS -->
-        <div>
-          <h4 class="text-white font-bold mb-4">Quick Links</h4>
-          <ul class="space-y-2">
-            <li><a href="homepage.html#services" class="text-gray-400 hover:text-primary transition">Services</a></li>
-            <li><a href="homepage.html#work" class="text-gray-400 hover:text-primary transition">Work</a></li>
-            <li><a href="homepage.html#process" class="text-gray-400 hover:text-primary transition">Process</a></li>
-            <li><a href="homepage.html#contact-form" class="text-gray-400 hover:text-primary transition">Contact Us</a></li>
-          </ul>
+    <!-- THE INFRASTRUCTURE BENTO (Sharp Edge Style) -->
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-px bg-white/10 border border-white/10">
+      
+      <!-- 01: IMAGE MASTERY (8 Cols) -->
+      <section class="md:col-span-8 bg-[#050505] group relative overflow-hidden p-12">
+        <div class="flex flex-col h-full justify-between relative z-10">
+          <div>
+            <span class="font-mono text-[10px] text-blue-500 uppercase tracking-[0.4em] mb-12 block">Ref_01 // Visual_Payload</span>
+            <h2 class="text-5xl font-black uppercase tracking-tighter mb-6">Asset <br/>Compression</h2>
+            <p class="text-slate-400 max-w-sm text-lg leading-relaxed">WebP/AVIF isn't a suggestion; it's the standard. Slash payload size without losing a single pixel of clarity.</p>
+          </div>
+          <div class="mt-12 relative grayscale group-hover:grayscale-0 transition-all duration-700">
+             <div class="absolute -top-6 -left-6 bg-blue-600 text-black font-black text-[10px] px-3 py-1 uppercase italic shadow-xl">Optimized_v2</div>
+             <img src="thumbnails/optimized.webp" class="w-full h-64 object-cover border border-white/10" alt="Mastery">
+          </div>
         </div>
+      </section>
 
-        <!-- NEWSLETTER -->
+      <!-- 02: ASSETS (4 Cols) -->
+      <section class="md:col-span-4 bg-blue-600 text-black p-12 flex flex-col justify-between group overflow-hidden relative">
+        <span class="text-[120px] font-black leading-none absolute -right-4 -top-8 opacity-20 group-hover:scale-110 transition-transform">02</span>
+        <div class="relative z-10">
+            <h2 class="text-3xl font-black uppercase leading-[0.9] mb-6 tracking-tighter">Minify <br/>Everything</h2>
+            <p class="text-black/80 text-sm font-bold uppercase tracking-tight">Purge unused CSS. Compress JS. Every byte is a bottleneck.</p>
+        </div>
+        <div class="h-px w-full bg-black/20"></div>
+      </section>
 
-         <div>
-  <h3 class="mb-5">Subscribe to Our Newsletter</h3>
-
-  <form 
-    action="https://formspree.io/f/mwvnvdko" 
-    method="POST"
-    class="flex flex-col gap-2"
-  >
-    <input 
-      type="email" 
-      name="email"
-      placeholder="Your email"
-      required
-      class="w-full px-3 py-4 rounded-lg mb-4 bg-white/5 border border-white/10 text-white text-sm focus:outline-none focus:border-primary"
-    />
-
-    <button 
-      type="submit"
-      class="w-full px-4 py-2 rounded-lg bg-primary text-white text-sm font-semibold hover:opacity-90 transition"
-    >
-      Subscribe
-    </button>
-  </form>
-</div>
-
-
-        <!-- BRANDING -->
+      <!-- 03: CACHING (4 Cols) -->
+      <section class="md:col-span-4 bg-[#050505] p-12 border-t border-white/10 group flex flex-col justify-between">
         <div>
-          <a href="homepage.html#home" class="flex items-center gap-3">
-            <img loading="lazy" src="thumbnails/theS.png" class="w-10 h-11 object-contain">
-            <p class="text-xl font-extrabold text-accent leading-tight">
-              SYNLOTECH 
-            </p>
+            <span class="font-mono text-[10px] text-white/30 uppercase tracking-[0.4em] mb-12 block">Ref_03 // Latency</span>
+            <h3 class="text-4xl font-black uppercase tracking-tighter mb-4">Memory <br/>Persistence</h3>
+        </div>
+        <p class="text-slate-500 text-sm italic group-hover:text-blue-400 transition-colors">"The fastest request is the one never made." - Leverage aggressive browser caching.</p>
+      </section>
+
+      <!-- 04: INFRASTRUCTURE (8 Cols) -->
+      <section class="md:col-span-8 bg-[#050505] border-t md:border-l border-white/10 p-12 group overflow-hidden relative">
+        <div class="grid md:grid-cols-2 gap-12 items-center h-full relative z-10">
+          <div class="space-y-6">
+            <span class="text-blue-500 font-mono text-[10px] uppercase tracking-[0.4em]">Ref_04 // Global_Node</span>
+            <h2 class="text-4xl font-black uppercase tracking-tighter">Edge <br/>Delivery</h2>
+            <p class="text-slate-400 text-sm leading-relaxed">Brotli compression and CDNs. Bring your data to the user's doorstep, reducing TTFB to near-zero.</p>
+          </div>
+          <div class="relative h-full bg-[#020202] border border-white/5 flex items-center justify-center grayscale group-hover:grayscale-0 overflow-hidden">
+             <img src="thumbnails/server.jpg" alt="Server" class="w-full h-full object-cover opacity-30 group-hover:scale-110 transition-all duration-[2s]">
+             <div class="absolute inset-0 bg-gradient-to-t from-[#050505] to-transparent"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 05: FOLD (12 Cols) -->
+      <section class="md:col-span-12 bg-white text-black p-12 md:p-24 relative overflow-hidden group">
+        <div class="absolute top-0 right-0 p-8 font-mono text-[10px] text-black/20 uppercase tracking-[0.5em]">Critical_Path_Render</div>
+        <div class="flex flex-col md:flex-row items-center justify-between gap-16 relative z-10">
+          <div class="max-w-3xl">
+            <h2 class="text-5xl md:text-7xl font-black tracking-tighter uppercase leading-[0.85] mb-8">
+              Perception <br/> is <span class="italic font-serif group-hover:text-blue-600 transition-colors">Reality.</span>
+            </h2>
+            <p class="text-slate-600 text-xl font-medium border-l-4 border-black pl-8">Prioritize the first fold. Defer heavy scripts. Users don't wait for your site to finish loading; they wait for it to <span class="text-black font-black">become useful.</span></p>
+          </div>
+          <a href="#" class="shrink-0 group/btn relative px-12 py-8 bg-black text-white font-black uppercase text-xl tracking-tighter hover:bg-blue-600 transition-all duration-300">
+            Deploy Audit
+            <div class="absolute -top-2 -right-2 w-4 h-4 bg-blue-600 group-hover/btn:bg-black transition-colors"></div>
           </a>
         </div>
+      </section>
+    </div>
 
+    <!-- CALL TO ACTION: THE FINAL DEPLOYMENT -->
+    <footer class="mt-48 text-center relative py-32 border-y border-white/5">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[300px] bg-blue-600/10 blur-[150px] rounded-full"></div>
+        
+        <h2 class="relative z-10 text-5xl md:text-8xl font-black uppercase tracking-tighter mb-10 leading-none">
+            Ready to <span class="text-blue-500 italic">Optimize?</span>
+        </h2>
+        
+        <p class="relative z-10 text-slate-400 text-lg md:text-xl max-w-2xl mx-auto mb-16 font-light">
+            Don't let a 2015 tech stack limit your 2026 growth. <span class="text-white font-bold">Synlotech</span> engineers the speed you need to dominate the index.
+        </p>
+
+        <a href="#contact" class="relative z-10 inline-flex items-center gap-8 group">
+            <span class="text-2xl font-black uppercase tracking-tighter border-b-2 border-blue-600 pb-2 group-hover:text-blue-500 transition-colors">Start Project Pipeline</span>
+            <div class="w-16 h-16 rounded-full border border-blue-500 flex items-center justify-center group-hover:bg-blue-600 transition-all">
+                <svg class="w-6 h-6 text-blue-500 group-hover:text-black transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </div>
+        </a>
+    </footer>
+
+  </div>
+</section>
+
+
+
+
+<footer class="relative bg-[#020202] pt-24 pb-12 overflow-hidden border-t border-white/5">
+  <!-- Decorative Grid Overlay -->
+  <div class="absolute inset-0 bg-[radial-gradient(#ffffff03_1px,transparent_1px)] bg-[size:30px_30px] pointer-events-none"></div>
+
+  <div class="relative max-w-7xl mx-auto px-6">
+    
+    <!-- UPPER TIER: BRAND & NEWSLETTER -->
+    <div class="grid lg:grid-cols-12 gap-16 mb-20">
+      
+      <!-- BRAND HUB -->
+      <div class="lg:col-span-4">
+        <a href="homepage.html#home" class="group flex items-center gap-4 mb-8">
+          <div class="relative">
+            <div class="absolute inset-0 bg-primary/20 blur-lg rounded-full group-hover:bg-primary/40 transition-all"></div>
+            <img loading="lazy" src="thumbnails/theS.png" class="relative w-12 h-12 object-contain grayscale group-hover:grayscale-0 transition-all">
+          </div>
+          <span class="text-3xl font-black text-white tracking-tighter uppercase">Synlo<span class="text-primary italic">tech</span></span>
+        </a>
+        <p class="text-slate-500 text-sm leading-relaxed max-w-xs mb-8">
+          Engineering high-frequency digital assets for global innovators. Built for performance, reliability, and growth.
+        </p>
+        <!-- SYSTEM STATUS INDICATOR -->
+        <div class="inline-flex items-center gap-3 px-4 py-2 rounded-xl bg-white/[0.03] border border-white/10">
+          <div class="h-2 w-2 rounded-full bg-green-500 animate-pulse"></div>
+          <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest">All Systems Operational</span>
+        </div>
+      </div>
+
+      <!-- THE FEED (NEWSLETTER) -->
+      <div class="lg:col-span-4">
+        <h3 class="text-xs font-black text-white uppercase tracking-[0.3em] mb-6">Internal Feed</h3>
+        <p class="text-slate-500 text-xs mb-6">Join the technical dispatch for weekly performance insights.</p>
+        <form action="https://formspree.io/f/mwvnvdko" method="POST" class="relative group">
+          <input type="email" name="email" placeholder="Terminal@address.com" required
+                 class="w-full px-5 py-4 rounded-2xl bg-white/[0.03] border border-white/10 text-white text-sm focus:outline-none focus:border-primary transition-all">
+          <button type="submit" class="absolute right-2 top-2 bottom-2 px-6 rounded-xl bg-primary text-black text-[10px] font-black uppercase tracking-widest hover:bg-white transition-all">
+            Join
+          </button>
+        </form>
+      </div>
+
+      <!-- SOCIAL COMM LINKS -->
+      <div class="lg:col-span-4 flex flex-col lg:items-end">
+        <h3 class="text-xs font-black text-white uppercase tracking-[0.3em] mb-6">Active Channels</h3>
+        <div class="flex gap-4">
+          <a href="https://linkedin.com..." class="w-12 h-12 rounded-2xl bg-white/[0.03] border border-white/10 flex items-center justify-center text-slate-400 hover:text-primary hover:border-primary/50 transition-all group">
+            <i class="fa-brands fa-linkedin-in text-lg group-hover:scale-110 transition-transform"></i>
+          </a>
+          <a href="https://instagram.com..." class="w-12 h-12 rounded-2xl bg-white/[0.03] border border-white/10 flex items-center justify-center text-slate-400 hover:text-primary hover:border-primary/50 transition-all group">
+            <i class="fa-brands fa-instagram text-lg group-hover:scale-110 transition-transform"></i>
+          </a>
+          <a href="https://x.com..." class="w-12 h-12 rounded-2xl bg-white/[0.03] border border-white/10 flex items-center justify-center text-slate-400 hover:text-primary hover:border-primary/50 transition-all group">
+            <i class="fa-brands fa-x-twitter text-lg group-hover:scale-110 transition-transform"></i>
+          </a>
+        </div>
       </div>
     </div>
 
-    <!-- BOTTOM -->
-    <div class="border-t border-white/10 py-6 text-center">
-      <p class="text-slate-400 text-sm">
-        © 2026 SYNLOTECH TECHNOLOGIES. All rights reserved.
+    <!-- MIDDLE TIER: NAVIGATION MATRIX -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-12 py-16 border-y border-white/5">
+      <div>
+        <h4 class="text-[10px] font-black text-slate-600 uppercase tracking-[0.4em] mb-6">Navigation</h4>
+        <ul class="space-y-4">
+          <li><a href="#services" class="text-sm text-slate-400 hover:text-primary transition-colors">Core Services</a></li>
+          <li><a href="#work" class="text-sm text-slate-400 hover:text-primary transition-colors">Case Archive</a></li>
+          <li><a href="#process" class="text-sm text-slate-400 hover:text-primary transition-colors">Logic Flow</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-[10px] font-black text-slate-600 uppercase tracking-[0.4em] mb-6">Support</h4>
+        <ul class="space-y-4">
+          <li><a href="mailto:synlotech@outlook.com" class="text-sm text-slate-400 hover:text-primary transition-colors">Direct Uplink</a></li>
+          <li><a href="https://wa.me..." class="text-sm text-slate-400 hover:text-primary transition-colors">WhatsApp Sync</a></li>
+          <li><a href="#maintenance" class="text-sm text-slate-400 hover:text-primary transition-colors">SLA Plans</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-[10px] font-black text-slate-600 uppercase tracking-[0.4em] mb-6">Legal</h4>
+        <ul class="space-y-4">
+          <li><a href="Privacy-Policy.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Privacy Protocol</a></li>
+          <li><a href="Terms-Of-Service.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Service Terms</a></li>
+        </ul>
+      </div>
+      <div class="flex flex-col items-start md:items-end">
+        <h4 class="text-[10px] font-black text-slate-600 uppercase tracking-[0.4em] mb-6">Global Ops</h4>
+        <p class="text-xs text-slate-500 font-mono text-left md:text-right">DAR ES SALAAM, TZ<br/>GLOBAL REMOTE DEPLOYMENT</p>
+      </div>
+    </div>
+
+    <!-- LOWER TIER: SYSTEM COPYRIGHT -->
+    <div class="pt-12 flex flex-col md:flex-row justify-between items-center gap-6">
+      <p class="text-[10px] font-mono text-slate-700 uppercase tracking-[0.4em]">
+        © 2026 SYNLOTECH // PERFORMANCE ENGINEERING
       </p>
+      <div class="flex items-center gap-6">
+        <div class="h-[1px] w-12 bg-white/5"></div>
+        <p class="text-[10px] font-mono text-slate-700 uppercase tracking-[0.4em]">Integrated Terminal v2.4.0</p>
+      </div>
     </div>
 
   </div>
 </footer>
 
+
 <script>
-  const btn = document.getElementById('menuBtn');
-  const menu = document.getElementById('mobileMenu');
-  btn.addEventListener('click', () => {
-    btn.classList.toggle('open');
-    menu.classList.toggle('scale-y-0');
-    menu.classList.toggle('opacity-0');
-  });
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Navbar Logic
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const bars = menuBtn ? menuBtn.querySelectorAll('span') : [];
 
-  window.addEventListener('load', () => {
-    document.body.classList.remove('opacity-0');
-  });
+    if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', () => {
+            const isClosed = mobileMenu.classList.contains('-translate-y-full');
+            if (isClosed) {
+                // Open Menu
+                mobileMenu.classList.remove('-translate-y-full', 'opacity-0', 'pointer-events-none');
+                mobileMenu.classList.add('translate-y-0', 'opacity-100', 'pointer-events-auto');
+                // Morph to X
+                bars[0].style.transform = "translateY(4px) rotate(45deg)";
+                bars[1].style.transform = "translateY(-4px) rotate(-45deg)";
+                bars[1].style.width = "1.5rem";
+            } else {
+                // Close Menu
+                mobileMenu.classList.add('-translate-y-full', 'opacity-0', 'pointer-events-none');
+                mobileMenu.classList.remove('translate-y-0', 'opacity-100', 'pointer-events-auto');
+                // Reset Bars
+                bars[0].style.transform = "none";
+                bars[1].style.transform = "none";
+                bars[1].style.width = "1rem";
+            }
+        });
+    }
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if(entry.isIntersecting) {
-        entry.target.classList.add('in-view');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, {threshold: 0.1, rootMargin: '0px 0px -50px 0px'});
+    // 2. Scroll Animations (Intersection Observer)
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('in-view');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
 
-  document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+    document.querySelectorAll('.animate-on-scroll').forEach(section => observer.observe(section));
+
+    // 3. WhatsApp Form Uplink
+    const form = document.getElementById("form");
+    if (form) {
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const name = form.elements["name"].value;
+            const email = form.elements["email"].value;
+            const message = form.elements["message"].value;
+            const text = `Hello, I have a new project inquiry:\n\nName: ${name}\nEmail: ${email}\nMessage: ${message}`;
+            window.open(`https://wa.me{encodeURIComponent(text)}`, "_blank");
+        });
+    }
+});
 </script>
+
 
  
   <a href="https://wa.me/255788296274" target="_blank" aria-label="Chat on WhatsApp" class="fixed bottom-6 right-5 z-50 group"> 

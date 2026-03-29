@@ -121,325 +121,367 @@
 <body style="font-family: inter;" class="bg-dark">
 
     <!-- NAVBAR -->
-  <header class="fixed top-0 inset-x-0 z-50 backdrop-blur bg-dark/90 border-b border-white/5 py-3 sticky">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="flex items-center justify-between h-20">
-
-       <!-- LOGO -->
-         <div style="margin-bottom: 30px;">
-        <a href="homepage.html#home"  class="text-2xl font-extrabold text-primary tracking-tight">
-          <img style="width: 40px;
-          height: 45px;
-          display: inline-block;
-          " loading="lazy" src="thumbnails/theS.png">
-        
-         <p  class="text-xl font-extrabold text-accent tracking-tight" style="display: inline-block;
-         margin-top: 35px;
-          ">
-          <span style="font-size: 1.2rem;" >SYNLOTECH</span><br>
-          </p>
-          </a>
-         </div>
-
-        <!-- DESKTOP NAV -->
-        <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
-          <a href="homepage.html#services" class="hover:text-primary transition">Services</a>
-          <a href="homepage.html#work" class="hover:text-primary transition">Work</a>
-          <a href="homepage.html#process" class="hover:text-primary transition">Process</a>
-          <a href="homepage.html#contact-form" class="hover:text-primary transition">Contact Us</a>
-        </nav>
-
-        <!-- CTA -->
-        <div class="hidden md:block">
-          <a href="homepage.html#contact-form"
-             class="px-5 py-2.5 rounded-lg bg-primary text-white font-semibold
-                    hover:bg-blue-700 transition shadow-lg shadow-primary/30">
-            Get a Quote
-          </a>
+     
+<header class="fixed top-6 inset-x-0 z-50 transition-all duration-500">
+  <div class="max-w-5xl mx-auto px-4 relative">
+    <!-- Main Bar -->
+    <div class="backdrop-blur-xl bg-black/40 border border-white/10 rounded-[2rem] px-8 py-2 flex items-center justify-between shadow-2xl relative z-50">
+      
+      <a href="#home" class="group flex items-center gap-3 py-2">
+        <div class="relative">
+          <div class="absolute inset-0 bg-primary/40 blur-md rounded-full group-hover:bg-primary transition-all"></div>
+          <img src="thumbnails/theS.png" class="relative w-8 h-9 object-contain group-hover:scale-110 transition-transform">
         </div>
+        <span class="text-lg font-black text-white tracking-tighter uppercase">Synlo<span class="text-primary italic">tech</span></span>
+      </a>
 
-        <!-- MOBILE MENU BUTTON -->
-       <button
-  id="menuBtn"
-  class="md:hidden relative w-10 h-10 flex items-center justify-center
-         z-50 rounded-md hover: transition"
-  aria-label="Open menu"
->
-  <span class="bar top"></span>
-  <span class="bar middle"></span>
-  <span class="bar bottom"></span>
-</button>
+      <!-- DESKTOP NAV -->
+      <nav class="hidden md:flex items-center gap-10">
+        <a href="#services" class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 hover:text-primary transition-colors">Services</a>
+        <a href="#work" class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 hover:text-primary transition-colors">Work</a>
+        <a href="#process" class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 hover:text-primary transition-colors">Process</a>
+      </nav>
 
+      <div class="hidden md:block">
+        <a href="#contact-form" class="px-6 py-3 rounded-xl bg-white text-black text-[10px] font-black uppercase tracking-widest hover:bg-primary transition-all active:scale-95">
+          Initiate Quote
+        </a>
       </div>
+
+      <!-- MOBILE TOGGLE -->
+      <button id="menuBtn" class="md:hidden w-10 h-10 flex flex-col justify-center items-center gap-1.5 focus:outline-none">
+        <span class="bar-1 w-6 h-0.5 bg-white rounded-full transition-all duration-300"></span>
+        <span class="bar-2 w-4 h-0.5 bg-primary self-end rounded-full transition-all duration-300"></span>
+      </button>
     </div>
 
-    <!-- MOBILE MENU -->
-    <div id="mobileMenu"
-  class="md:hidden absolute top-full left-0 w-full
-         bg-dark backdrop-blur
-         transform scale-y-0 origin-top
-         opacity-0
-         transition-all duration-300 ease-out">
-
-      <nav class="px-6 py-6 flex flex-col gap-4 text-sm font-medium border-t text-center border-white/10">
-        <a href="homepage.html#services" class="hover:text-primary">Services</a>
-        <a href="homepage.html#work" class="hover:text-primary">Work</a>
-        <a href="homepage.html#process" class="hover:text-primary">Process</a>
-        <a href="homepage.html#contact-form" class="hover:text-primary">Contact Us</a>
-
-        <a href="homepage.html#contact-form"
-           class="mt-4 inline-flex justify-center px-6 py-3 rounded-lg bg-primary text-white font-semibold">
-          Get a Quote
-        </a>
+    <!-- MOBILE MENU (The part you were missing) -->
+    <div id="mobileMenu" class="absolute top-0 left-4 right-4 pt-24 pb-8 px-8 bg-black/90 backdrop-blur-2xl border border-white/10 rounded-[2.5rem] transform -translate-y-full opacity-0 pointer-events-none transition-all duration-500 ease-in-out z-40">
+      <nav class="flex flex-col gap-6 text-center">
+        <a href="#services" class="text-xs font-black uppercase tracking-[0.3em] text-white hover:text-primary transition-colors">Services</a>
+        <a href="#work" class="text-xs font-black uppercase tracking-[0.3em] text-white hover:text-primary transition-colors">Work</a>
+        <a href="#process" class="text-xs font-black uppercase tracking-[0.3em] text-white hover:text-primary transition-colors">Process</a>
+        <div class="h-px bg-white/10 my-2"></div>
+        <a href="#contact-form" class="py-4 rounded-2xl bg-primary text-black text-xs font-black uppercase tracking-widest">Initiate Quote</a>
       </nav>
     </div>
-  </header>
+  </div>
+</header>
 
 <!-- HERO -->
-<section class="max-w-4xl mx-auto px-6 pt-5">
-  <h1 class="text-4xl md:text-5xl font-extrabold text-primary mt-4 mb-6 leading-tight">
-    Why Cloud Computing Is the Future
-  </h1>
-  <p class="text-slate-300 text-lg">
-    From startups to enterprises, cloud computing is redefining how businesses build,
-    scale, and secure their digital operations.
-  </p>
-</section>
+ <div class="bg-[#020202] text-slate-400 font-sans selection:bg-primary/30 overflow-x-hidden">
 
-<!-- FEATURE IMAGE -->
-<section class="max-w-5xl mx-auto px-6 mt-12">
-  <img loading="lazy" src="thumbnails/cloud.jpg"
-       alt="Cloud Computing Infrastructure"
-       class="rounded-3xl w-full object-cover shadow-lg shadow-blue-500/10">
-</section>
+  <!-- THE CLOUD MESH (Background Logic) -->
+  <div class="fixed inset-0 pointer-events-none">
+    <div class="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:60px_60px]"></div>
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-primary to-transparent opacity-20"></div>
+  </div>
 
-<!-- ARTICLE CONTENT -->
-<main class="max-w-4xl mx-auto px-6 mt-16 space-y-14 leading-relaxed">
+  <!-- HERO: INFRASTRUCTURE DEPLOYMENT -->
+  <section class="relative pt-32 pb-20 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col lg:flex-row items-end justify-between gap-12">
+        <div class="max-w-3xl">
+          <div class="inline-flex items-center gap-3 mb-8">
+            <div class="flex gap-1">
+                <div class="w-1 h-4 bg-primary/40"></div>
+                <div class="w-1 h-4 bg-primary/70"></div>
+                <div class="w-1 h-4 bg-primary"></div>
+            </div>
+            <span class="text-[10px] font-mono tracking-[0.5em] text-primary uppercase">Cloud_Core // Active</span>
+          </div>
 
-  <section>
-    <h2 class="text-2xl font-bold text-primary mb-4">1. Scalability Without Limits</h2>
-    <p class="text-slate-300">
-      Cloud platforms allow businesses to scale resources instantly based on demand.
-      Whether traffic spikes or usage drops, you only pay for what you use. No expensive
-      hardware upgrades, no downtime.
-    </p>
-  </section>
+          <h1 class="text-6xl md:text-[120px] font-black text-white leading-[0.8] tracking-tighter uppercase mb-10">
+            The New <br/>
+            <span class="text-outline-white text-transparent" style="-webkit-text-stroke: 1px rgba(255,255,255,0.4)">Standard.</span>
+          </h1>
+        </div>
 
-  <section>
-    <h2 class="text-2xl font-bold text-primary mb-4">2. Lower Costs, Higher Efficiency</h2>
-    <p class="text-slate-300">
-      Traditional infrastructure requires upfront capital, maintenance, and constant
-      upgrades. Cloud computing shifts this to predictable operational costs while reducing
-      IT overhead and energy consumption.
-    </p>
-  </section>
-
-  <section class="grid md:grid-cols-2 gap-8 items-center">
-    <div>
-      <h2 class="text-2xl font-bold text-primary mb-4">3. Built-In Security & Reliability</h2>
-      <p class="text-slate-300">
-        Modern cloud providers invest heavily in security, redundancy, and compliance.
-        Features like automated backups, disaster recovery, and encrypted storage make
-        cloud environments more secure than most on-premise systems.
-      </p>
+        <div class="lg:w-1/3 border-l border-white/10 pl-8 pb-4">
+          <p class="text-lg text-slate-400 leading-relaxed font-light mb-6 italic">
+            "Hardware is a liability. Connectivity is the asset."
+          </p>
+          <div class="font-mono text-[10px] text-white/20 tracking-widest uppercase">
+            Protocol: Distributed_Compute_v2026
+          </div>
+        </div>
+      </div>
     </div>
-    <img loading="lazy" src="thumbnails/cloud security.jpg"
-         alt="Cloud Security"
-         class="rounded-2xl shadow-lg shadow-blue-500/10">
   </section>
 
-  <section>
-    <h2 class="text-2xl font-bold text-primary mb-4">4. Work From Anywhere</h2>
-    <p class="text-slate-300">
-      Cloud-based systems enable teams to collaborate from anywhere in the world.
-      Files, applications, and data are accessible in real time hence supporting remote work
-      and faster decision-making.
-    </p>
+  <!-- FEATURE: SYSTEM HARDWARE -->
+  <section class="max-w-7xl mx-auto px-6 mb-40">
+    <div class="relative group">
+      <div class="absolute -inset-1 bg-gradient-to-r from-primary/50 to-transparent blur-2xl opacity-20 group-hover:opacity-40 transition-opacity"></div>
+      <div class="relative rounded-[3rem] overflow-hidden border border-white/10 bg-[#050505] p-2">
+        <img loading="lazy" src="thumbnails/cloud.jpg" alt="Cloud Infra" class="w-full object-cover aspect-[21/9] rounded-[2.5rem] grayscale group-hover:grayscale-0 transition-all duration-1000">
+        
+        <!-- Status HUD Overlay -->
+        <div class="absolute bottom-12 left-12 flex gap-10">
+            <div>
+                <p class="text-white font-black text-xl">0.003ms</p>
+                <p class="text-[9px] uppercase tracking-widest text-slate-500">Latency</p>
+            </div>
+            <div>
+                <p class="text-white font-black text-xl">∞ GB</p>
+                <p class="text-[9px] uppercase tracking-widest text-slate-500">Scalability</p>
+            </div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section>
-    <h2 class="text-2xl font-bold text-primary mb-4">5. Faster Innovation</h2>
-    <p class="text-slate-300">
-      Cloud platforms integrate seamlessly with modern tools like AI, analytics, and
-      automation. Businesses can launch products faster, test ideas quickly, and adapt
-      without infrastructure limitations.
-    </p>
-  </section>
+  <!-- THE INFRASTRUCTURE GRID -->
+  <main class="max-w-7xl mx-auto px-6 pb-40">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-px bg-white/10 border border-white/10">
+      
+      <!-- 01: SCALABILITY -->
+      <article class="md:col-span-7 bg-[#050505] p-16 group relative overflow-hidden">
+        <span class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></span>
+        <span class="font-mono text-[10px] text-white/30 block mb-24 tracking-[0.4em] uppercase">01_ELASTIC_COMPUTE</span>
+        <h2 class="text-4xl font-black text-white uppercase mb-6 tracking-tighter">Scalability <br/> Without Limits</h2>
+        <p class="text-slate-400 text-lg leading-relaxed max-w-md">
+          Resources that breathe with your demand. Deploy instantly, scale infinitely, and pay only for the compute cycles you consume.
+        </p>
+      </article>
 
-  <section class="bg-white/5 border border-white/10 rounded-3xl p-8">
-    <h3 class="text-2xl font-bold text-primary mb-4">Final Thoughts</h3>
-    <p class="text-slate-300">
-      Cloud computing isn’t a trend it’s the foundation of modern digital business.
-      Companies that embrace the cloud gain flexibility, resilience, and a competitive edge
-      in an increasingly connected world.
-    </p>
-  </section>
+      <!-- 02: COST -->
+      <article class="md:col-span-5 bg-[#050505] p-16 border-l border-white/10 flex flex-col justify-between group">
+        <div class="flex justify-between items-start">
+            <span class="font-mono text-[10px] text-white/30 tracking-[0.4em] uppercase">02_OPEX_EFFICIENCY</span>
+            <div class="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
+        </div>
+        <div class="mt-20">
+            <h3 class="text-3xl font-black text-white uppercase mb-4">Shift To <br/> Efficiency</h3>
+            <p class="text-sm text-slate-500 leading-relaxed">Kill the capital expenditure. Predictable operational costs replace the hardware refresh cycle.</p>
+        </div>
+      </article>
+
+      <!-- 03: SECURITY (SIDE IMAGE GRID) -->
+      <article class="md:col-span-12 bg-[#050505] border-t border-white/10 grid md:grid-cols-2">
+        <div class="p-16 border-r border-white/10">
+            <span class="font-mono text-[10px] text-white/30 block mb-12 uppercase tracking-[0.4em]">03_DEFENSIVE_LAYERING</span>
+            <h2 class="text-4xl font-black text-white uppercase mb-8">Fortified Reliability</h2>
+            <p class="text-slate-400 leading-relaxed mb-10">
+                Providers invest billions in security architecture. Automated backups, encrypted storage, and disaster recovery come standard—not as an after-thought.
+            </p>
+            <div class="inline-flex gap-4 p-4 bg-white/5 border border-white/10 rounded-xl">
+                <div class="h-10 w-10 bg-primary/20 rounded flex items-center justify-center text-primary">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                </div>
+                <div class="text-[10px] font-mono uppercase text-slate-500">
+                    Encryption_Status: <span class="text-white">AES_256_ACTIVE</span><br/>
+                    Redundancy: <span class="text-white">MULTI_ZONE_SYNC</span>
+                </div>
+            </div>
+        </div>
+        <div class="relative bg-[#020202] overflow-hidden group">
+            <img src="thumbnails/cloud security.jpg" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-110 transition-transform duration-1000" />
+            <div class="absolute inset-0 bg-gradient-to-r from-[#050505] to-transparent"></div>
+        </div>
+      </article>
+
+      <!-- 04 & 05: INNOVATION -->
+      <article class="md:col-span-6 bg-[#050505] p-16 border-t border-white/10">
+        <span class="font-mono text-[10px] text-white/30 block mb-12 uppercase tracking-[0.4em]">04_GLOBAL_COLLAB</span>
+        <h3 class="text-2xl font-black text-white uppercase mb-4 tracking-tight">Work Anywhere</h3>
+        <p class="text-slate-400">Total synchronization. Real-time data accessibility from any node on the planet.</p>
+      </article>
+
+      <article class="md:col-span-6 bg-primary p-16 border-t border-white/10 group">
+        <span class="font-mono text-[10px] text-black/40 block mb-12 uppercase tracking-[0.4em]">05_AGILE_RELEASE</span>
+        <h3 class="text-2xl font-black text-black uppercase mb-4 tracking-tight">Accelerated Innovation</h3>
+        <p class="text-black/70 leading-relaxed font-medium">Integrate AI, analytics, and automation at the click of a button. Launch products, not servers.</p>
+      </article>
+    </div>
+
+    <!-- FINAL SUMMARY: SYSTEM REPORT -->
+    <section class="mt-40 relative p-16 bg-[#050505] border border-white/10 rounded-[3rem] overflow-hidden">
+        <div class="absolute top-0 right-0 p-8 font-mono text-[10px] text-white/10">FINAL_ANALYSIS_LOG</div>
+        <h3 class="text-3xl font-black text-white uppercase mb-8">Executive Summary</h3>
+        <p class="text-2xl text-slate-400 font-light leading-relaxed max-w-4xl italic">
+            Cloud computing is the <span class="text-white font-bold underline decoration-primary underline-offset-8">operating system of the modern era</span>. It is no longer a strategic choice, but the baseline requirement for digital resilience and global scale.
+        </p>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section class="mt-40 flex flex-col items-center">
+        <div class="w-px h-24 bg-gradient-to-b from-transparent to-primary mb-12"></div>
+        <h2 class="text-5xl md:text-7xl font-black text-white uppercase tracking-tighter text-center mb-12">
+            Ready to <span class="text-primary italic">Migrate?</span>
+        </h2>
+        <a href="homepage.html#contact-form" class="group relative px-16 py-8 bg-white text-black font-black text-2xl uppercase tracking-tighter transition-all hover:bg-primary hover:text-white">
+            Initialize Migration
+            <span class="absolute -top-2 -left-2 w-4 h-4 bg-primary"></span>
+            <span class="absolute -bottom-2 -right-2 w-4 h-4 bg-primary group-hover:bg-white transition-colors"></span>
+        </a>
+    </section>
+  </main>
+</div>
+
 
 </main>
-
-<!-- CTA -->
-<section class="max-w-5xl mx-auto px-6 mt-20 mb-24">
-  <div class="rounded-3xl bg-gradient-to-r from-blue-600 to-indigo-600 p-10 text-center">
-    <h3 class="text-3xl font-extrabold text-white mb-4">
-      Ready to Move Your Business to the Cloud?
-    </h3>
-    <p class="text-white/90 mb-6">
-      We design and deploy secure cloud solutions tailored to your growth.
-    </p>
-    <a href="homepage.html#contact-form"
-       class="inline-block px-8 py-3 rounded-xl bg-white text-blue-700 font-bold hover:scale-105 transition">
-      Talk to Our Experts
-    </a>
-  </div>
-</section>
-
-
 <!-- FOOTER -->
-<footer class="relative bg-dark border-t border-white/10 pt-16">
-  <div class="max-w-7xl mx-auto px-6">
+<footer class="relative bg-[#020202] pt-24 pb-12 overflow-hidden border-t border-white/5">
+  <!-- Decorative Grid Overlay -->
+  <div class="absolute inset-0 bg-[radial-gradient(#ffffff03_1px,transparent_1px)] bg-[size:30px_30px] pointer-events-none"></div>
 
-    <div class="pb-12">
-      <!-- AUTO-FIT GRID (THE FIX) -->
-      <div class="grid gap-12 grid-cols-[repeat(auto-fit,minmax(220px,1fr))]">
-
-        <!-- CONTACT -->
-        <div>
-          <h3 class="text-white text-xl font-bold mb-4">Contact Us</h3>
-          <p class="text-white text-sm mb-2">
-            Email:
-            <a href="mailto:synlotech@outlook.com" class="text-gray-400 hover:text-primary transition">
-              synlotech@outlook.com
-            </a>
-          </p>
-          <p class="text-white text-sm">
-            WhatsApp:
-            <a href="https://wa.me/255788296274" class="text-gray-400 hover:text-primary transition">
-              Chat Now
-            </a>
-          </p>
+  <div class="relative max-w-7xl mx-auto px-6">
+    
+    <!-- UPPER TIER: BRAND & NEWSLETTER -->
+    <div class="grid lg:grid-cols-12 gap-16 mb-20">
+      
+      <!-- BRAND HUB -->
+      <div class="lg:col-span-4">
+        <a href="homepage.html#home" class="group flex items-center gap-4 mb-8">
+          <div class="relative">
+            <div class="absolute inset-0 bg-primary/20 blur-lg rounded-full group-hover:bg-primary/40 transition-all"></div>
+            <img loading="lazy" src="thumbnails/theS.png" class="relative w-12 h-12 object-contain grayscale group-hover:grayscale-0 transition-all">
+          </div>
+          <span class="text-3xl font-black text-white tracking-tighter uppercase">Synlo<span class="text-primary italic">tech</span></span>
+        </a>
+        <p class="text-slate-500 text-sm leading-relaxed max-w-xs mb-8">
+          Engineering high-frequency digital assets for global innovators. Built for performance, reliability, and growth.
+        </p>
+        <!-- SYSTEM STATUS INDICATOR -->
+        <div class="inline-flex items-center gap-3 px-4 py-2 rounded-xl bg-white/[0.03] border border-white/10">
+          <div class="h-2 w-2 rounded-full bg-green-500 animate-pulse"></div>
+          <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest">All Systems Operational</span>
         </div>
+      </div>
 
-        <!-- SOCIAL -->
-       <div>
-  <h3 class="text-white text-xl font-bold mb-4">Follow Us</h3>
-  <div class="flex gap-4">
-    <a href="https://www.linkedin.com/in/synlotech-technologies-7252933b2" target="_blank" class="text-gray-400 hover:text-primary transition">
-      <i class="fa-brands fa-linkedin-in"></i>
-    </a>
+      <!-- THE FEED (NEWSLETTER) -->
+      <div class="lg:col-span-4">
+        <h3 class="text-xs font-black text-white uppercase tracking-[0.3em] mb-6">Internal Feed</h3>
+        <p class="text-slate-500 text-xs mb-6">Join the technical dispatch for weekly performance insights.</p>
+        <form action="https://formspree.io/f/mwvnvdko" method="POST" class="relative group">
+          <input type="email" name="email" placeholder="Terminal@address.com" required
+                 class="w-full px-5 py-4 rounded-2xl bg-white/[0.03] border border-white/10 text-white text-sm focus:outline-none focus:border-primary transition-all">
+          <button type="submit" class="absolute right-2 top-2 bottom-2 px-6 rounded-xl bg-primary text-black text-[10px] font-black uppercase tracking-widest hover:bg-white transition-all">
+            Join
+          </button>
+        </form>
+      </div>
 
-    <a href="https://www.instagram.com/synlo_tech" target="_blank" class="text-gray-400 hover:text-primary transition">
-      <i class="fa-brands fa-instagram"></i>
-    </a>
-
-    <a href="https://x.com/synlotech" target="_blank" class="text-gray-400 hover:text-primary transition">
-      <i class="fa-brands fa-x-twitter"></i>
-    </a>
-  </div>
-</div>
-
-        <!-- POLICIES -->
-        <div>
-          <h3 class="text-white text-xl font-bold mb-4">Policies</h3>
-          <p class="text-slate-300 text-sm">
-            <a href="Privacy-Policy.html" class="text-gray-400 hover:text-primary transition">Privacy Policy</a>
-            <span class="mx-2">|</span>
-            <a href="Terms-Of-Service.html" class="text-gray-400 hover:text-primary transition">Terms of Service</a>
-            <span class="mx-2">|</span>
-            <a href="disclaimer.html" class="text-gray-400 hover:text-primary transition">Disclaimer</a>
-          </p>
-        </div>
-
-        <!-- QUICK LINKS -->
-        <div>
-          <h4 class="text-white font-bold mb-4">Quick Links</h4>
-          <ul class="space-y-2">
-            <li><a href="homepage.html#services" class="text-gray-400 hover:text-primary transition">Services</a></li>
-            <li><a href="homepage.html#work" class="text-gray-400 hover:text-primary transition">Work</a></li>
-            <li><a href="homepage.html#process" class="text-gray-400 hover:text-primary transition">Process</a></li>
-            <li><a href="homepage.html#contact-form" class="text-gray-400 hover:text-primary transition">Contact Us</a></li>
-          </ul>
-        </div>
-
-        <!-- NEWSLETTER -->
-
-         <div>
-  <h3 class="mb-5">Subscribe to Our Newsletter</h3>
-
-  <form 
-    action="https://formspree.io/f/mwvnvdko" 
-    method="POST"
-    class="flex flex-col gap-2"
-  >
-    <input 
-      type="email" 
-      name="email"
-      placeholder="Your email"
-      required
-      class="w-full px-3 py-4 rounded-lg mb-4 bg-white/5 border border-white/10 text-white text-sm focus:outline-none focus:border-primary"
-    />
-
-    <button 
-      type="submit"
-      class="w-full px-4 py-2 rounded-lg bg-primary text-white text-sm font-semibold hover:opacity-90 transition"
-    >
-      Subscribe
-    </button>
-  </form>
-</div>
-
-
-        <!-- BRANDING -->
-        <div>
-          <a href="homepage.html#home" class="flex items-center gap-3">
-            <img loading="lazy" src="thumbnails/theS.png" class="w-10 h-11 object-contain">
-            <p class="text-xl font-extrabold text-accent leading-tight">
-              SYNLOTECH 
-            </p>
+      <!-- SOCIAL COMM LINKS -->
+      <div class="lg:col-span-4 flex flex-col lg:items-end">
+        <h3 class="text-xs font-black text-white uppercase tracking-[0.3em] mb-6">Active Channels</h3>
+        <div class="flex gap-4">
+          <a href="https://linkedin.com..." class="w-12 h-12 rounded-2xl bg-white/[0.03] border border-white/10 flex items-center justify-center text-slate-400 hover:text-primary hover:border-primary/50 transition-all group">
+            <i class="fa-brands fa-linkedin-in text-lg group-hover:scale-110 transition-transform"></i>
+          </a>
+          <a href="https://instagram.com..." class="w-12 h-12 rounded-2xl bg-white/[0.03] border border-white/10 flex items-center justify-center text-slate-400 hover:text-primary hover:border-primary/50 transition-all group">
+            <i class="fa-brands fa-instagram text-lg group-hover:scale-110 transition-transform"></i>
+          </a>
+          <a href="https://x.com..." class="w-12 h-12 rounded-2xl bg-white/[0.03] border border-white/10 flex items-center justify-center text-slate-400 hover:text-primary hover:border-primary/50 transition-all group">
+            <i class="fa-brands fa-x-twitter text-lg group-hover:scale-110 transition-transform"></i>
           </a>
         </div>
-
       </div>
     </div>
 
-    <!-- BOTTOM -->
-    <div class="border-t border-white/10 py-6 text-center">
-      <p class="text-slate-400 text-sm">
-        © 2026 SYNLOTECH TECHNOLOGIES. All rights reserved.
+    <!-- MIDDLE TIER: NAVIGATION MATRIX -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-12 py-16 border-y border-white/5">
+      <div>
+        <h4 class="text-[10px] font-black text-slate-600 uppercase tracking-[0.4em] mb-6">Navigation</h4>
+        <ul class="space-y-4">
+          <li><a href="#services" class="text-sm text-slate-400 hover:text-primary transition-colors">Core Services</a></li>
+          <li><a href="#work" class="text-sm text-slate-400 hover:text-primary transition-colors">Case Archive</a></li>
+          <li><a href="#process" class="text-sm text-slate-400 hover:text-primary transition-colors">Logic Flow</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-[10px] font-black text-slate-600 uppercase tracking-[0.4em] mb-6">Support</h4>
+        <ul class="space-y-4">
+          <li><a href="mailto:synlotech@outlook.com" class="text-sm text-slate-400 hover:text-primary transition-colors">Direct Uplink</a></li>
+          <li><a href="https://wa.me..." class="text-sm text-slate-400 hover:text-primary transition-colors">WhatsApp Sync</a></li>
+          <li><a href="#maintenance" class="text-sm text-slate-400 hover:text-primary transition-colors">SLA Plans</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-[10px] font-black text-slate-600 uppercase tracking-[0.4em] mb-6">Legal</h4>
+        <ul class="space-y-4">
+          <li><a href="Privacy-Policy.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Privacy Protocol</a></li>
+          <li><a href="Terms-Of-Service.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Service Terms</a></li>
+        </ul>
+      </div>
+      <div class="flex flex-col items-start md:items-end">
+        <h4 class="text-[10px] font-black text-slate-600 uppercase tracking-[0.4em] mb-6">Global Ops</h4>
+        <p class="text-xs text-slate-500 font-mono text-left md:text-right">DAR ES SALAAM, TZ<br/>GLOBAL REMOTE DEPLOYMENT</p>
+      </div>
+    </div>
+
+    <!-- LOWER TIER: SYSTEM COPYRIGHT -->
+    <div class="pt-12 flex flex-col md:flex-row justify-between items-center gap-6">
+      <p class="text-[10px] font-mono text-slate-700 uppercase tracking-[0.4em]">
+        © 2026 SYNLOTECH // PERFORMANCE ENGINEERING
       </p>
+      <div class="flex items-center gap-6">
+        <div class="h-[1px] w-12 bg-white/5"></div>
+        <p class="text-[10px] font-mono text-slate-700 uppercase tracking-[0.4em]">Integrated Terminal v2.4.0</p>
+      </div>
     </div>
 
   </div>
 </footer>
 
-      <script>
-      const btn = document.getElementById('menuBtn');
-const menu = document.getElementById('mobileMenu');
 
-btn.addEventListener('click', () => {
-  btn.classList.toggle('open');
-  menu.classList.toggle('scale-y-0');
-  menu.classList.toggle('opacity-0');
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Navbar Logic
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const bars = menuBtn ? menuBtn.querySelectorAll('span') : [];
 
+    if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', () => {
+            const isClosed = mobileMenu.classList.contains('-translate-y-full');
+            if (isClosed) {
+                // Open Menu
+                mobileMenu.classList.remove('-translate-y-full', 'opacity-0', 'pointer-events-none');
+                mobileMenu.classList.add('translate-y-0', 'opacity-100', 'pointer-events-auto');
+                // Morph to X
+                bars[0].style.transform = "translateY(4px) rotate(45deg)";
+                bars[1].style.transform = "translateY(-4px) rotate(-45deg)";
+                bars[1].style.width = "1.5rem";
+            } else {
+                // Close Menu
+                mobileMenu.classList.add('-translate-y-full', 'opacity-0', 'pointer-events-none');
+                mobileMenu.classList.remove('translate-y-0', 'opacity-100', 'pointer-events-auto');
+                // Reset Bars
+                bars[0].style.transform = "none";
+                bars[1].style.transform = "none";
+                bars[1].style.width = "1rem";
+            }
+        });
+    }
+
+    // 2. Scroll Animations (Intersection Observer)
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('in-view');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.animate-on-scroll').forEach(section => observer.observe(section));
+
+    // 3. WhatsApp Form Uplink
+    const form = document.getElementById("form");
+    if (form) {
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const name = form.elements["name"].value;
+            const email = form.elements["email"].value;
+            const message = form.elements["message"].value;
+            const text = `Hello, I have a new project inquiry:\n\nName: ${name}\nEmail: ${email}\nMessage: ${message}`;
+            window.open(`https://wa.me{encodeURIComponent(text)}`, "_blank");
+        });
+    }
 });
-
- window.addEventListener('load', () => {
-    document.body.classList.remove('opacity-0');
-  });
-
-   window.addEventListener('load', () => document.body.classList.remove('opacity-0'));
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if(entry.isIntersecting) {
-        entry.target.classList.add('in-view');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, {threshold: 0.1, rootMargin: '0px 0px -50px 0px'});
-
-  document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
-      </script>
-</footer>
+</script>
 
 
   <a href="https://wa.me/255788296274" target="_blank" aria-label="Chat on WhatsApp" class="fixed bottom-6 right-5 z-50 group"> 

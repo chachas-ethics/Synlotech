@@ -110,145 +110,119 @@
 }
 </script>
 
-<body style="font-family: inter;" class="bg-dark text-slate-200 antialiased opacity-0 transition-opacity duration-700 ease-out">
+<body class="bg-dark text-slate-200 antialiased  transition-opacity duration-700 ease-out">
 
-  <!-- NAVBAR -->
-  <header class="fixed top-0 inset-x-0 z-50 backdrop-blur bg-dark/90 border-b border-white/5 py-3">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="flex items-center justify-between h-20">
-
-        <!-- LOGO -->
-         <div style="margin-bottom: 30px;">
-        <a href="homepage.html#home" class="text-2xl font-extrabold text-primary tracking-tight">
-          <img style="width: 40px;
-          height: 45px;
-          display: inline-block;
-          " loading="lazy" src="thumbnails/theS.png">
-        
-         <p  class="text-xl font-extrabold text-accent tracking-tight" style="display: inline-block;
-         margin-top: 35px;
-          ">
-          <span style="font-size: 1.2rem;" >SYNLOTECH</span><br>
-          </p>
-          </a>
-         </div>
-
-        <!-- DESKTOP NAV -->
-        <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
-          <a href="homepage.html#services" class="hover:text-primary transition">Services</a>
-          <a href="homepage.html#work" class="hover:text-primary transition">Work</a>
-          <a href="homepage.html#process" class="hover:text-primary transition">Process</a>
-          <a href="homepage.html#contact-form" class="hover:text-primary transition">Contact Us</a>
-        </nav>
-
-        <!-- CTA -->
-        <div class="hidden md:block">
-          <a href="homepage.html#contact-form"
-             class="px-5 py-2.5 rounded-lg bg-primary text-white font-semibold
-                    hover:bg-blue-700 transition shadow-lg shadow-primary/30">
-            Get a Quote
-          </a>
+  <!-- NAVIGATION -->
+<header class="fixed top-6 inset-x-0 z-50 transition-all duration-500">
+  <div class="max-w-5xl mx-auto px-4 relative">
+    <!-- Main Bar -->
+    <div class="backdrop-blur-xl bg-black/40 border border-white/10 rounded-[2rem] px-8 py-2 flex items-center justify-between shadow-2xl relative z-50">
+      
+      <a href="#home" class="group flex items-center gap-3 py-2">
+        <div class="relative">
+          <div class="absolute inset-0 bg-primary/40 blur-md rounded-full group-hover:bg-primary transition-all"></div>
+          <img src="thumbnails/theS.png" class="relative w-8 h-9 object-contain  group-hover:scale-110 transition-transform">
         </div>
+        <span class="text-lg font-black text-accent tracking-tighter uppercase">Synlotech</span>
+      </a>
 
-        <!-- MOBILE MENU BUTTON -->
-       <button
-  id="menuBtn"
-  class="md:hidden relative w-10 h-10 flex items-center justify-center
-         z-50 rounded-md hover: transition mb-1"
-  aria-label="Open menu"
->
-  <span class="bar top"></span>
-  <span class="bar middle"></span>
-  <span class="bar bottom"></span>
-</button>
+      <!-- DESKTOP NAV -->
+      <nav class="hidden md:flex items-center gap-10">
+        <a href="#services" class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 hover:text-primary transition-colors">Services</a>
+        <a href="#work" class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 hover:text-primary transition-colors">Work</a>
+        <a href="#process" class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 hover:text-primary transition-colors">Process</a>
+      <a href="#about" class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 hover:text-primary transition-colors">ABOUT US</a>
+        <a href="#maintenance" class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 hover:text-primary transition-colors">PLANS</a>
+      </nav>
 
+      <div class="hidden md:block">
+        <a href="#contact-form" class="px-6 py-3 rounded-xl bg-accent text-white text-[10px] font-black uppercase tracking-widest hover:bg-primary transition-all active:scale-95">
+          Initiate Quote
+        </a>
       </div>
+
+      <!-- MOBILE TOGGLE -->
+      <button id="menuBtn" class="md:hidden w-10 h-10 flex flex-col justify-center items-center gap-1.5 focus:outline-none">
+        <span class="bar-1 w-6 h-0.5 bg-white rounded-full transition-all duration-300"></span>
+        <span class="bar-2 w-4 h-0.5 bg-primary self-end rounded-full transition-all duration-300"></span>
+      </button>
     </div>
 
-    <!-- MOBILE MENU -->
-    <div id="mobileMenu"
-  class="md:hidden absolute top-full left-0 w-full
-         bg-dark backdrop-blur
-         transform scale-y-0 origin-top
-         opacity-0
-         transition-all duration-300 ease-out">
-
-      <nav class="px-6 py-6 flex flex-col gap-4 text-sm font-medium border-t text-center border-white/10">
-        <a href="homepage.html#services" class="hover:text-primary">Services</a>
-        <a href="homepage.html#work" class="hover:text-primary">Work</a>
-        <a href="homepage.html#process" class="hover:text-primary">Process</a>
-        <a href="homepage.html#contact-form" class="hover:text-primary">Contact Us</a>
-
-        <a href="homepage.html#contact-form"
-           class="mt-4 inline-flex justify-center px-6 py-3 rounded-lg bg-primary text-white font-semibold">
-          Get a Quote
-        </a>
+    <!-- MOBILE MENU (The part you were missing) -->
+    <div id="mobileMenu" class="absolute top-0 left-4 right-4 pt-24 pb-8 px-8 bg-black/90 backdrop-blur-2xl border border-white/10 rounded-[2.5rem] transform -translate-y-full opacity-0 pointer-events-none transition-all duration-500 ease-in-out z-40">
+      <nav class="flex flex-col gap-6 text-center">
+        <a href="#services" class="text-xs font-black uppercase tracking-[0.3em] text-white hover:text-primary transition-colors">Services</a>
+        <a href="#work" class="text-xs font-black uppercase tracking-[0.3em] text-white hover:text-primary transition-colors">Work</a>
+        <a href="#process" class="text-xs font-black uppercase tracking-[0.3em] text-white hover:text-primary transition-colors">Process</a>
+         <a href="#about" class="text-xs font-black uppercase tracking-[0.3em] text-white hover:text-primary transition-colors">about us</a>
+        <a href="#maintenance" class="text-xs font-black uppercase tracking-[0.3em] text-white hover:text-primary transition-colors">Plans</a>
+       <div class="h-px bg-white/10 my-2"></div>
+        <a href="#contact-form" class="py-4 rounded-2xl bg-accent text-white hover:bg-primary text-xs font-black uppercase tracking-widest">Initiate Quote</a>
       </nav>
     </div>
-  </header>
+  </div>
+</header>
 
-  <!-- HERO SECTION -->
-<section id="home" class="animate-on-scroll relative overflow-hidden pt-28">
-  <!-- Background Gradient -->
-  <div class="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-accent/10"></div>
 
-  <!-- Grid Pattern -->
-  <div class="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.15)_1px,transparent_0)] bg-[size:32px_32px]"></div>
 
-  <div class="relative max-w-7xl mx-auto px-6 py-10">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+<!-- HERO SECTION: THE TITAN DEPLOYMENT -->
+<section id="home" class="relative min-h-screen flex items-center pt-20 overflow-hidden bg-[#020202]">
+  
+  <!-- KINETIC BACKGROUND ELEMENTS -->
+  <div class="absolute top-0 right-0 w-[800px] h-[600px] bg-primary/10 blur-[150px] rounded-full -mr-96 -mt-48 animate-pulse"></div>
+  <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-accent/5 blur-[120px] rounded-full -ml-48 -mb-48"></div>
+  
+  <!-- THE GRID ARCHITECTURE -->
+  <div class="absolute inset-0 bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-[size:40px_40px]"></div>
 
-      <!-- TEXT CONTENT -->
-      <div class="max-w-3xl">
-        <p class="inline-flex items-center gap-2 text-sm font-medium text-accent mb-6">
-          <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
-          Future-Driven Digital Solutions
-        </p>
+  <div class="relative max-w-7xl mx-auto px-6 py-20 z-10">
+    <div class="grid lg:grid-cols-12 gap-16 items-center">
 
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-white">
-         <span class="text-primary">High-Performance</span> Websites for Modern Businesses
+      <!-- COLUMN 1: THE MANIFESTO -->
+      <div class="lg:col-span-7">
+        <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-8">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+          </span>
+          <span class="text-[10px] font-black uppercase tracking-[0.3em] text-slate-300">System v2.0 Operational</span>
+        </div>
+
+        <h1 style="font-family: inter;" class="text-5xl md:text-8xl font-black text-white tracking-tighter leading-[0.85] mb-8">
+          HIGH <br/> 
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-white to-white/20 italic">VELOCITY</span> <br/>
+          ENGINEERING.
         </h1>
 
-        <p class="mt-6 text-lg sm:text-xl text-slate-300 max-w-2xl">
-          Synlotech Technologies builds high-performance websites, web applications,
-          and digital systems for a
-          <span class="text-white font-medium">broad field of businesses</span>
-          that want to scale with confidence.
+        <p class="text-xl text-slate-400 max-w-xl leading-relaxed mb-12 border-l-2 border-primary/20 pl-8">
+          We architect digital ecosystems for <span class="text-white font-bold">Broad-Field Businesses</span> who demand sub-second performance and aggressive growth logic.
         </p>
 
-        <div class="mt-10 flex flex-col sm:flex-row gap-4">
-          <a
-            href="#contact-form"
-            class="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white
-                   bg-primary rounded-xl hover:bg-blue-700 transition-all duration-300
-                   shadow-lg shadow-primary/30"
-          >
-            Get a Quote
+        <div class="flex flex-col sm:flex-row gap-6">
+          <a href="#contact-form" class="group relative px-10 py-5 bg-primary rounded-2xl overflow-hidden transition-all hover:scale-105 active:scale-95 shadow-[0_20px_50px_-15px_rgba(37,99,235,0.5)]">
+            <span class="relative z-10 text-black font-black uppercase tracking-widest text-sm">Deploy Project</span>
+            <div class="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-300 mix-blend-overlay"></div>
           </a>
 
-          <a
-            href="https://wa.me/255788296274" target="_blank"
-            class="inline-flex items-center justify-center px-8 py-4 text-base font-semibold
-                   text-primary border border-primary/40 rounded-xl
-                   hover:bg-primary/10 transition-all duration-300"
-          >
-            Contact Us
+          <a href="https://wa.me/255788296274" class="group flex items-center justify-center px-10 py-5 border border-white/10 rounded-2xl text-white font-black uppercase tracking-widest text-xs hover:bg-white/5 transition-all">
+            <svg class="w-4 h-4 mr-3 text-primary" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.417-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.5-5.688-1.448l-6.305 1.652zm6.599-3.835c1.52.909 3.253 1.388 5.025 1.389 5.405 0 9.803-4.398 9.805-9.805.001-2.621-1.02-5.085-2.871-6.938-1.852-1.853-4.318-2.873-6.94-2.873-5.407 0-9.805 4.398-9.808 9.805-.001 1.84.509 3.634 1.474 5.195l-1.082 3.95 4.045-1.061-.348-.162z"/></svg>
+            Direct Sync
           </a>
         </div>
       </div>
 
-      <!-- IMAGE / VISUAL -->
-      <div class="relative flex justify-center lg:justify-end">
-        <!-- Glow -->
-        <div class="absolute -inset-8 bg-primary/20 blur-3xl rounded-full -z-10"></div>
-
-        <img
-          src="thumbnails/digitalgif.gif"
-          alt="Digital solutions illustration"
-          loading="lazy"
-          class="w-full max-w-lg rounded-2xl shadow-2xl shadow-primary/20
-                 transform transition-transform duration-500 hover:scale-[1.02]"
-        />
+      <!-- COLUMN 2: THE KINETIC VISUAL -->
+      <div class="lg:col-span-5 relative group">
+        <div class="absolute -inset-10 bg-primary/20 blur-[100px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
+        <div class="relative p-2 rounded-[3rem] bg-gradient-to-br from-white/10 to-transparent shadow-2xl">
+          <img src="thumbnails/digitalgif.gif" alt="Interface" class="rounded-[2.5rem] w-full mix-blend-screen grayscale group-hover:grayscale-0 transition-all duration-700">
+          
+          <!-- OVERLAY DATA BOX -->
+          <div class="absolute -bottom-6 -left-6 p-6 rounded-2xl bg-white text-black shadow-2xl transition-transform group-hover:-translate-y-2">
+            <p class="text-4xl font-black tracking-tighter leading-none">99%</p>
+            <p class="text-[10px] font-bold uppercase tracking-widest text-slate-500">Peak Performance</p>
+          </div>
+        </div>
       </div>
 
     </div>
@@ -256,1357 +230,1619 @@
 </section>
 
 
-  <!-- TRUST SIGNALS -->
-<section class="animate-on-scroll relative bg-dark border-t border-white/5">
-  <div class="max-w-7xl mx-auto px-6 py-20">
+<!-- TRUST & METRICS: THE BENTO POWER GRID -->
+<section class="relative bg-[#050505] py-24 overflow-hidden">
+  <!-- Subtle Radial Glow -->
+  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent opacity-50"></div>
 
-    <!-- SECTION HEADER -->
-    <div class="text-center max-w-2xl mx-auto mb-12">
-      <p class="text-sm font-medium text-accent uppercase tracking-wider ">
-        Trusted by Growing Businesses
+  <div class="max-w-7xl mx-auto px-6 relative z-10">
+    <div class="flex flex-col lg:flex-row gap-12 items-end justify-between mb-16">
+      <div class="max-w-xl">
+        <span class="inline-block px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-[0.2em] mb-4">
+          Engineered for Excellence
+        </span>
+        <h2 style="font-family: inter;" class="text-4xl md:text-5xl font-black text-white leading-tight">
+          Obsessed with <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Precision.</span>
+        </h2>
+      </div>
+      <p class="text-slate-400 max-w-sm text-lg leading-relaxed border-l-2 border-primary/30 pl-6">
+        We don't just build websites; we engineer high-frequency digital assets.
       </p>
-      <h2 class="mt-4 text-2xl sm:text-3xl font-bold text-white py-5">
-        Built for <span class="text-primary"> Performance, Reliability</span> & <span class="text-primary">Growth</span>
-      </h2>
     </div>
 
-    <!-- METRICS -->
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 pb-14">
-      
-      <div class="text-center p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur">
-        <p class="text-3xl font-extrabold text-primary">5+</p>
-        <p class="mt-2 text-sm text-slate-300">Years Combined Experience</p>
+    <!-- METRICS BENTO GRID -->
+    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <!-- High Impact Metric -->
+      <div class="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-white/10 to-transparent p-[1px] md:col-span-2">
+        <div class="bg-black/40 backdrop-blur-xl rounded-[23px] p-8 h-full flex flex-col justify-between transition-all duration-500 group-hover:bg-black/20">
+          <div class="flex justify-between items-start">
+            <p class="text-5xl font-black text-white tracking-tighter italic">99.9%</p>
+            <div class="h-8 w-8 rounded-full bg-primary/20 flex items-center justify-center animate-pulse">
+              <div class="h-2 w-2 rounded-full bg-primary"></div>
+            </div>
+          </div>
+          <p class="mt-8 text-xl font-medium text-slate-300">Uptime Reliability</p>
+          <p class="text-sm text-slate-500 mt-2">Maximum availability for global scale.</p>
+        </div>
       </div>
 
-     <div class="text-center p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur">
-  <p class="text-3xl font-extrabold text-primary">90+</p>
-  <p class="mt-2 text-sm text-slate-300">Lighthouse Performance Score</p>
+      <!-- Compact Metric -->
+      <div class="group relative overflow-hidden rounded-3xl bg-white/5 p-8 border border-white/10 hover:border-primary/50 transition-all">
+        <p class="text-4xl font-black text-primary group-hover:scale-110 transition-transform">90+</p>
+        <p class="mt-4 text-sm font-semibold text-slate-300 uppercase tracking-widest">Lighthouse</p>
+        <div class="mt-2 h-1 w-full bg-white/10 rounded-full overflow-hidden">
+          <div class="h-full bg-primary w-[92%]"></div>
+        </div>
+      </div>
+
+      <!-- Compact Metric -->
+      <div class="group relative overflow-hidden rounded-3xl bg-white/5 p-8 border border-white/10 hover:border-accent/50 transition-all">
+        <p class="text-4xl font-black text-accent group-hover:scale-110 transition-transform">&lt;2s</p>
+        <p class="mt-4 text-sm font-semibold text-slate-300 uppercase tracking-widest">Load Speed</p>
+        <p class="text-xs text-slate-500 mt-2">Instant interaction.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES: THE MESH GRADIENT SECTION -->
+<section id="services" class="relative bg-[#050505] py-32">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid lg:grid-cols-12 gap-16 items-start">
+      
+      <!-- Sticky Header -->
+      <div class="lg:col-span-5 lg:sticky lg:top-32">
+        <h2 style="font-family: inter;" class="text-5xl md:text-7xl font-black text-white tracking-tighter leading-none">
+          SERVICES <br/>
+          <span class="text-white/20">THAT SCALE</span>
+        </h2>
+        <p class="mt-8 text-slate-400 text-xl leading-relaxed">
+          High-impact digital services designed to help businesses convert faster and scale smarter.
+        </p>
+        <div class="mt-10 inline-flex items-center gap-4 text-primary font-bold group cursor-pointer">
+          <span>Explore our methodology</span>
+          <div class="h-px w-12 bg-primary transition-all group-hover:w-20"></div>
+        </div>
+      </div>
+
+      <!-- Service Cards Stack -->
+      <div class="lg:col-span-7 space-y-6">
+        <div class="group relative p-10 rounded-[2rem] bg-[#0A0A0A] border border-white/5 hover:border-primary/20 transition-all duration-500">
+          <div class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-100 transition-opacity">
+            <span class="text-6xl font-black text-white select-none">01</span>
+          </div>
+          <h3 class="text-2xl font-bold text-white mb-4">Performance Engineering</h3>
+          <p class="text-slate-400 leading-relaxed max-w-md">
+            Custom-built architectures focused on raw speed and core web vitals.
+          </p>
+        </div>
+
+        <div class="group relative p-10 rounded-[2rem] bg-[#0A0A0A] border border-white/5 hover:border-primary/20 transition-all duration-500">
+           <div class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-100 transition-opacity">
+            <span class="text-6xl font-black text-white select-none">02</span>
+          </div>
+          <h3 class="text-2xl font-bold text-white mb-4">Growth Infrastructure</h3>
+          <p class="text-slate-400 leading-relaxed max-w-md">
+            Scalable backend systems that grow alongside your user base without friction.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES GRID: THE DEPTH REVOLUTION -->
+ 
+<section id="services" class="relative bg-[#050505] py-32">
+<div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-3 items-start">
+
+  <!-- SERVICE CARD: FLOATING IMAGE STYLE -->
+  <div class="group relative pt-16 transition-all duration-500 hover:-translate-y-2">
+    <!-- The "Shadow" Glow -->
+    <div class="absolute inset-0 bg-gradient-to-b from-primary/20 to-transparent blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+    
+    <div class="relative p-8 rounded-[2.5rem] bg-[#0A0A0A] border border-white/5 backdrop-blur-3xl overflow-visible">
+      <!-- Floating Image: Pops out of the card -->
+      <div class="absolute -top-12 left-8 right-8 transition-transform duration-500 group-hover:scale-105 group-hover:-rotate-2">
+        <img loading="lazy" src="thumbnails/setup.jpg" alt="Design" class="rounded-2xl shadow-2xl border border-white/10 object-cover h-44 w-full" />
+      </div>
+
+      <div class="mt-36">
+        <h3 style="font-family: inter;" class="text-2xl font-black text-white mb-3 tracking-tight">
+          Web <span class="text-primary">Development</span>
+        </h3>
+        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+          High-performance, mobile-first engines designed to convert visitors into loyal customers.
+        </p>
+        <a href="Web-design-and-development.html" class="group/btn inline-flex items-center gap-3 py-3 px-6 rounded-xl bg-primary text-white text-xs font-bold uppercase tracking-widest hover:bg-accent hover:text-white transition-all">
+          Launch Project 
+          <span class="group-hover/btn:translate-x-1 transition-transform">→</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICE CARD: THE "MINIMALIST" (STAGGERED DOWN) -->
+  <div class="group relative pt-16 lg:mt-12 transition-all duration-500 hover:-translate-y-2">
+    <div class="relative p-8 rounded-[2.5rem] bg-[#0A0A0A] border border-white/5 backdrop-blur-3xl">
+      <div class="absolute -top-12 left-8 right-8 transition-transform duration-500 group-hover:scale-105 group-hover:rotate-2">
+        <img loading="lazy" src="thumbnails/graphics.avif" alt="Branding" class="rounded-2xl shadow-2xl border border-white/10 object-cover h-44 w-full" />
+      </div>
+
+      <div class="mt-36">
+        <h3 style="font-family: inter;" class="text-2xl font-black text-white mb-3 tracking-tight">
+          Brand <span class="text-primary">Identity</span>
+        </h3>
+        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+          Visual systems that make your business instantly recognizable in a crowded market.
+        </p>
+        <a href="Graphics.html" class="group/btn inline-flex items-center gap-3 py-3 px-6 rounded-xl bg-primary text-white text-xs font-bold uppercase tracking-widest hover:bg-accent hover:text-wjite transition-all">
+          Identity Design <span>→</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICE CARD: THE "GLASS" (STAGGERED UP) -->
+  <div class="group relative pt-16 transition-all duration-500 hover:-translate-y-2">
+    <div class="relative p-8 rounded-[2.5rem] bg-[#0A0A0A] border border-white/5 backdrop-blur-3xl">
+      <div class="absolute -top-12 left-8 right-8 transition-transform duration-500 group-hover:scale-105 group-hover:-rotate-1">
+        <img loading="lazy" src="thumbnails/uiux.avif" alt="UIUX" class="rounded-2xl shadow-2xl border border-white/10 object-cover h-44 w-full" />
+      </div>
+
+      <div class="mt-36">
+        <h3 style="font-family: inter;" class="text-2xl font-black text-white mb-3 tracking-tight">
+          UI/UX <span class="text-primary">Lab</span>
+        </h3>
+        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+          Intuitive interfaces engineered to eliminate friction and maximize user retention.
+        </p>
+        <a href="UI-UX-Design.html" class="group/btn inline-flex items-center gap-3 py-3 px-6 rounded-xl bg-primary text-white text-xs font-bold uppercase tracking-widest hover:bg-accent hover:text-white transition-all">
+          Optimize Flow <span>→</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- SERVICE CARD: WEBSITE MAINTENANCE (STAGGERED DOWN) -->
+<div class="group relative pt-16 lg:mt-12 transition-all duration-500 hover:-translate-y-2">
+  <!-- The "Shadow" Glow using your Accent Color -->
+  <div class="absolute inset-0 bg-gradient-to-b from-accent/20 to-transparent blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+  
+  <div class="relative p-8 rounded-[2.5rem] bg-[#0A0A0A] border border-white/5 backdrop-blur-3xl overflow-visible">
+    <!-- Floating Image: Use a high-tech server or code image -->
+    <div class="absolute -top-12 left-8 right-8 transition-transform duration-500 group-hover:scale-105 group-hover:rotate-1">
+      <img loading="lazy" src="thumbnails/maintenancesupport.jpg" alt="Maintenance" class="rounded-2xl shadow-2xl border border-white/10 object-cover h-44 w-full" />
+    </div>
+
+    <div class="mt-36">
+      <h3 style="font-family: inter;" class="text-2xl font-black text-white mb-3 tracking-tight">
+        Website <span class="text-primary">Maintenance</span>
+      </h3>
+      <p class="text-slate-400 text-sm leading-relaxed mb-6">
+        Proactive security patches, speed optimization, and 24/7 uptime monitoring to keep your engine running.
+      </p>
+      
+      <!-- Primary Action Button -->
+      <a href="#maintenance" class="group/btn w-full inline-flex items-center justify-center gap-3 py-4 px-6 rounded-xl bg-primary text-xs font-bold uppercase hover:bg-accent tracking-widest hover:shadow-[0_0_20px_rgba(56,189,248,0.4)] transition-all duration-300">
+        View Maintenance Plans 
+        <span class="group-hover/btn:translate-x-1 transition-transform">→</span>
+      </a>
+    </div>
+  </div>
 </div>
 
-      <div class="text-center p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur">
-        <p class="text-3xl font-extrabold text-primary">99.9%</p>
-        <p class="mt-2 text-sm text-slate-300">Uptime Reliability</p>
+  <!-- COMING SOON CARD: THE "GLITCH" BOX -->
+  <div class="group relative p-1 rounded-[2.5rem] bg-gradient-to-br from-white/10 to-transparent lg:col-span-2">
+    <div class="bg-black/60 backdrop-blur-3xl rounded-[2.4rem] p-10 flex flex-col md:flex-row items-center gap-10">
+      <img src="thumbnails/webapp.png" class="w-full md:w-1/3 rounded-2xl grayscale group-hover:grayscale-0 transition-all duration-700" />
+      <div class="flex-1">
+        <span class="px-3 py-1 rounded-full border border-primary/30 text-primary text-[10px] font-bold uppercase tracking-widest">In Development</span>
+        <h3 style="font-family: inter;" class="text-3xl font-black text-white mt-4 mb-4">Web Apps & Custom Systems</h3>
+        <p class="text-slate-400 mb-6">Automate your entire workflow with bespoke software solutions tailored to your unique scaling needs.</p>
+        <div class="h-1 w-full bg-white/5 rounded-full overflow-hidden">
+          <div class="h-full bg-primary w-[70%] animate-pulse"></div>
+        </div>
       </div>
-
-      <div class="text-center p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur">
-        <p class="text-3xl font-extrabold text-primary">&lt;2s</p>
-        <p class="mt-2 text-sm text-slate-300">Load Speed Target</p>
-      </div>
+    </div>
   </div>
+
+  
+</div>
 </section>
 
-<!-- SERVICES SECTION -->
-<section id="services" class="animate-on-scroll relative bg-dark">
-  <!-- Background Accent -->
-  <div class="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent"></div>
-
-  <div class="relative max-w-7xl mx-auto px-6 py-24">
-
-    <!-- SECTION HEADER -->
-    <div class="max-w-2xl mb-16">
-      <p class="text-sm font-medium text-accent uppercase tracking-wider">
-        What We Do
-      </p>
-      <h2 class="mt-4 text-3xl sm:text-4xl font-extrabold text-white">
-        <span class="text-primary">Services</span> Built to Drive Results
-      </h2>
-      <p class="mt-4 text-slate-300">
-        We focus on high-impact digital services that help businesses operate better, convert faster, and scale smarter.
-      </p>
-    </div>
-
-    <!-- SERVICES GRID -->
-    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-
-      <!-- SERVICE CARD -->
-      <div class="group relative p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur
-                  hover:border-primary/40 transition">
-  <img loading="lazy" 
-    src="thumbnails/setup.jpg"
-    alt="Logo design"
-    class="rounded-xl mb-5"
-  />
-        <h3 class="text-xl font-bold text-primary mb-3">
-          Website Design & Development
-        </h3>
-        <p class="text-slate-300 text-sm mb-6">
-          High-performance, mobile-first websites designed to convert visitors into customers.
-        </p>
-        <a href="Web-design-and-development.html" class="inline-flex items-center gap-2 text-primary font-semibold text-sm hover:underline">
-          Get Started →
-        </a>
-      </div>
-
-       
-
-      <!-- SERVICE CARD -->
-      <div class="group relative p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur
-                  hover:border-primary/40 transition">
-<img loading="lazy"
-  src="thumbnails/graphics.avif"
-    alt="Logo design"
-    class="rounded-xl mb-5"
-  />
-        
-        <h3 class="text-xl font-bold text-primary mb-3">
-          Graphics Design And Branding
-        </h3>
-        <p class="text-slate-300 text-sm mb-6">
-          Visual identities and marketing assets that make your brand instantly recognizable.
-        </p>
-        <a href="Graphics.html" class="inline-flex items-center gap-2 text-primary font-semibold text-sm hover:underline">
-          Build My Brand →
-        </a>
-      </div>
-
-      <!-- SERVICE CARD -->
-      <div class="group relative p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur
-                  hover:border-primary/40 transition">
-        <div class="mb-6">
-              <img loading="lazy"
-            src="thumbnails/uiux.avif"
-    alt="Logo design"
-    class="rounded-xl mb-5"
-  />
-        </div>
-        <h3 class="text-xl font-bold text-primary mb-3">
-          UI/UX Design
-        </h3>
-        <p class="text-slate-300 text-sm mb-6">
-          Intuitive interfaces and user experiences that keep users engaged and converting.
-        </p>
-        <a href="UI-UX-Design.html" class="inline-flex items-center gap-2 text-primary font-semibold text-sm hover:underline">
-          Improve UX →
-        </a>
-      </div>
-
-      <!-- SERVICE CARD -->
-      <div class="group relative p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur
-                  hover:border-primary/40 transition">
-        <img loading="lazy"
-      src="thumbnails/webapp.png"
-    alt="Logo design"
-    class="rounded-xl mb-5"
-  />
-        
-        <h3 class="text-xl font-bold text-primary mb-3">
-          Web Applications & Systems
-        </h3>
-        <p class="text-slate-300 text-sm mb-6">
-          Custom web applications that automate operations and scale with your business.
-        </p>
-        <button class="bg-primary p-3 rounded-2xl">
-          Coming Soon
-        </button>
-      </div>
-
-      <!-- SERVICE CARD -->
-      <div class="group relative p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur
-                  hover:border-primary/40 transition">
-        <div class="mb-6">
-              <img loading="lazy"
-            src="thumbnails/maintenancesupport.jpg"
-    alt="Logo design"
-    class="rounded-xl mb-5"
-  />
-        </div>
-        <h3 class="text-xl font-bold text-primary mb-3">
-          Maintenance & Support
-        </h3>
-        <p class="text-slate-300 text-sm mb-6">
-          Ongoing updates, security, and performance monitoring so your systems stay reliable.
-        </p>
-        <a href="#maintenance" class="inline-flex items-center gap-2 text-primary font-semibold text-sm hover:underline">
-          View Plans →
-        </a>
-      </div>
-
-      
-
-    </div>
-
-  </div>
-</section>
 
 <!-- WHY SYNLOTECH -->
-<section id="why-synlotech" class="animate-on-scroll relative bg-dark overflow-hidden">
-  <!-- Ambient Background -->
-  <div class="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/5"></div>
+ <!-- THE COMMAND CENTER: WHY SYNLOTECH -->
+<section id="about" class="relative bg-[#030303] py-32 overflow-hidden">
+  
+  <!-- Kinetic Background Elements -->
+  <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/10 blur-[120px] rounded-full -mr-64 -mt-64"></div>
+  <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-accent/5 blur-[120px] rounded-full -ml-64 -mb-64"></div>
 
-  <div class="relative max-w-7xl mx-auto px-6 py-24">
+  <div class="max-w-7xl mx-auto px-6 relative z-10">
+    <div class="grid lg:grid-cols-12 gap-20 items-center">
 
-    <div class="grid lg:grid-cols-2 gap-16 items-center">
+      <!-- LEFT: THE MANIFESTO -->
+      <div class="lg:col-span-6">
+        <div class="space-y-2 mb-8">
+          <span class="text-xs font-bold tracking-[0.4em] text-primary uppercase inline-block pb-2 border-b-2 border-primary/30">
+            Internal Protocol
+          </span>
+          <h2 style="font-family: inter;" class="text-5xl md:text-6xl font-black text-white leading-[1.1] tracking-tighter">
+            Built <span class="italic font-light text-slate-500">Different.</span><br/>
+            Engineered <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-white">to Last.</span>
+          </h2>
+        </div>
 
-      <!-- LEFT CONTENT -->
-      <div>
-        <p class="text-sm font-medium text-accent uppercase tracking-wider">
-          Why Choose Synlotech
+        <p class="text-xl text-slate-400 leading-relaxed max-w-lg mb-12">
+          We don't "build" websites. We deploy high-frequency digital ecosystems designed for aggressive growth.
         </p>
 
-        <h2 class="mt-4 text-3xl sm:text-4xl font-extrabold text-white">
-          Built <span class="text-primary">Different</span>. Built for <span class="text-primary">Growth.</span>
-        </h2>
+        <!-- THE SPECS (REPLACING THE LIST) -->
+        <div class="grid grid-cols-1 gap-4">
+          <!-- Item 1 -->
+          <div class="group flex items-center gap-6 p-4 rounded-2xl border border-white/5 bg-white/[0.02] hover:bg-white/[0.05] hover:border-primary/20 transition-all duration-500">
+            <div class="flex-shrink-0 w-14 h-14 rounded-xl bg-gradient-to-br from-primary/20 to-transparent flex items-center justify-center border border-primary/20 group-hover:scale-110 transition-transform">
+              <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            </div>
+            <div>
+              <h3 class="text-white font-bold text-lg leading-none mb-2">High-Velocity Output</h3>
+              <p class="text-slate-500 text-sm">Optimized for LCP, CLS, and real-world conversion metrics.</p>
+            </div>
+          </div>
 
-        <p class="mt-6 text-slate-300 max-w-xl">
-          We don’t just build websites or systems, we engineer digital products
-          with performance, scalability, and long-term support in mind.
-        </p>
-
-        <!-- DIFFERENTIATORS -->
-        <div class="mt-10 space-y-6">
-
-          <div class="flex gap-4">
-  <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-primary/20 text-primary flex items-center justify-center">
-    
-    <svg xmlns="http://www.w3.org/2000/svg"
-         class="w-5 h-5"
-         fill="none"
-         viewBox="0 0 24 24"
-         stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-        d="M13 10V3L4 14h7v7l9-11h-7z" />
-    </svg>
-
-  </div>
-
-  <div>
-    <h3 class="text-lg font-bold text-white">Performance First</h3>
-    <p class="text-sm text-slate-300">
-      Fast load times, clean code, and systems optimized for real-world usage and not just demos.
-    </p>
-  </div>
-</div>
-
-          <div class="flex gap-4">
-  <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-primary/20 text-primary flex items-center justify-center">
-
-    <svg xmlns="http://www.w3.org/2000/svg"
-         class="w-5 h-5"
-         fill="none"
-         viewBox="0 0 24 24"
-         stroke="currentColor">
-      <circle cx="12" cy="12" r="10" stroke-width="2"/>
-      <circle cx="12" cy="12" r="4" stroke-width="2"/>
-      <line x1="12" y1="2" x2="12" y2="6" stroke-width="2"/>
-      <line x1="12" y1="18" x2="12" y2="22" stroke-width="2"/>
-      <line x1="2" y1="12" x2="6" y2="12" stroke-width="2"/>
-      <line x1="18" y1="12" x2="22" y2="12" stroke-width="2"/>
-
-    </svg>
-
-  </div>
-
-  <div>
-    <h3 class="text-lg font-bold text-white">
-      Long-Term Support
-    </h3>
-    <p class="text-sm text-slate-300">
-      We don’t disappear after launch. Ongoing maintenance, updates, and real human support.
-    </p>
-  </div>
-</div>
-
-           <div class="flex gap-4">
-  <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-primary/20 text-primary flex items-center justify-center">
-    
-    <svg xmlns="http://www.w3.org/2000/svg"
-         class="w-5 h-5"
-         fill="none"
-         viewBox="0 0 24 24"
-         stroke="currentColor">
-      <path stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M3 17l6-6 4 4 7-7M14 8h7v7"/>
-    </svg>
-
-  </div>
-
-  <div>
-    <h3 class="text-lg font-bold text-white">Built to scale</h3>
-    <p class="text-sm text-slate-300">
-        Your platform is designed to grow with your business, not limit it
-      </p>
-  </div>
-</div>
+          <!-- Item 2 -->
+          <div class="group flex items-center gap-6 p-4 rounded-2xl border border-white/5 bg-white/[0.02] hover:bg-white/[0.05] hover:border-primary/20 transition-all duration-500">
+            <div class="flex-shrink-0 w-14 h-14 rounded-xl bg-gradient-to-br from-primary/20 to-transparent flex items-center justify-center border border-primary/20 group-hover:scale-110 transition-transform">
+              <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke-width="1.5"/><path d="M12 2v4m0 12v4M2 12h4m12 0h4" stroke-width="1.5"/></svg>
+            </div>
+            <div>
+              <h3 class="text-white font-bold text-lg leading-none mb-2">Zero-Latency Support</h3>
+              <p class="text-slate-500 text-sm">Human-led maintenance that evolves with your roadmap.</p>
+            </div>
+          </div>
         </div>
       </div>
 
-      <!-- RIGHT VISUAL CARD -->
-      <div class="relative">
-        <div class="relative p-10 rounded-3xl bg-white/5 border border-white/10 backdrop-blur">
+      <!-- RIGHT: THE "SPEC SHEET" CARD -->
+      <div class="lg:col-span-6 relative">
+        <!-- Floating Decorative Element -->
+        <div class="absolute -top-10 -right-10 w-32 h-32 bg-primary/20 rounded-full blur-3xl animate-pulse"></div>
+        
+        <div class="relative overflow-hidden rounded-[2.5rem] bg-[#0A0A0A] border border-white/10 p-1">
+          <!-- Inner Content -->
+          <div class="bg-[#050505] rounded-[2.3rem] p-10 md:p-12">
+            <div class="flex justify-between items-center mb-10">
+              <h3 class="text-xs font-black text-slate-500 uppercase tracking-[0.3em]">System Standards</h3>
+              <div class="flex gap-1">
+                <div class="w-2 h-2 rounded-full bg-red-500/50"></div>
+                <div class="w-2 h-2 rounded-full bg-yellow-500/50"></div>
+                <div class="w-2 h-2 rounded-full bg-green-500/50"></div>
+              </div>
+            </div>
 
-          <h3 class="text-2xl font-bold text-white mb-6">
-            Our Standards
-          </h3>
+            <div class="space-y-8">
+              <!-- Standard Item -->
+              <div class="flex items-start gap-5 group">
+                <div class="mt-1 flex-shrink-0 w-5 h-5 rounded-full border border-primary flex items-center justify-center group-hover:bg-primary transition-colors">
+                  <div class="w-1.5 h-1.5 bg-primary group-hover:bg-black rounded-full"></div>
+                </div>
+                <div class="flex-1 pb-6 border-b border-white/5">
+                  <p class="text-white font-medium mb-1 italic">Infrastructure Readiness</p>
+                  <p class="text-slate-500 text-xs uppercase tracking-tighter">SEO-Ready / Mobile-First / Secure Core</p>
+                </div>
+              </div>
 
-          <ul class="space-y-4 text-slate-300 text-sm">
-            <li class="flex items-start gap-3">
-              <span class="text-primary font-bold">✓</span>
-              SEO-ready and mobile-first builds by default
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="text-primary font-bold">✓</span>
-              Secure, maintainable, and scalable codebases
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="text-primary font-bold">✓</span>
-              Clear communication and predictable timelines
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="text-primary font-bold">✓</span>
-              Post-launch support and performance monitoring
-            </li>
-          </ul>
+              <!-- Standard Item -->
+              <div class="flex items-start gap-5 group">
+                <div class="mt-1 flex-shrink-0 w-5 h-5 rounded-full border border-primary flex items-center justify-center group-hover:bg-primary transition-colors">
+                  <div class="w-1.5 h-1.5 bg-primary group-hover:bg-black rounded-full"></div>
+                </div>
+                <div class="flex-1 pb-6 border-b border-white/5">
+                  <p class="text-white font-medium mb-1 italic">Lifecycle Management</p>
+                  <p class="text-slate-500 text-xs uppercase tracking-tighter">Predictable Timelines / Real-time Sync</p>
+                </div>
+              </div>
+            </div>
 
-          <!-- CTA -->
-          <a href="#contact-form"
-             class="mt-8 inline-flex items-center justify-center px-6 py-3 rounded-xl
-                    bg-primary text-white font-semibold hover:bg-blue-700 transition shadow-lg shadow-primary/30">
-            Start a Project
-          </a>
+            <!-- THE BIG CTA -->
+            <a href="#contact-form" class="mt-12 group relative w-full inline-flex items-center justify-center px-8 py-5 font-black text-white transition-all duration-200 bg-primary rounded-2xl hover:bg-white hover:text-black overflow-hidden">
+              <span class="relative z-10 uppercase tracking-widest text-sm">Initiate Partnership</span>
+              <div class="absolute inset-0 bg-white translate-y-[101%] group-hover:translate-y-0 transition-transform duration-300"></div>
+            </a>
+          </div>
+        </div>
 
+        <!-- Metric Floating Tag -->
+        <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-2xl hidden md:block">
+          <p class="text-black text-3xl font-black leading-none">100%</p>
+          <p class="text-slate-500 text-[10px] font-bold uppercase tracking-tighter">Code Integrity</p>
         </div>
       </div>
 
     </div>
-
   </div>
 </section>
 
+
 <!-- PROCESS / HOW IT WORKS -->
-<section id="process" class="animate-on-scroll relative bg-dark overflow-hidden">
-  <!-- Subtle Background Pattern -->
-  <div class="absolute inset-0 bg-[linear-gradient(to_right,rgba(37,99,235,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(37,99,235,0.05)_1px,transparent_1px)] bg-[size:48px_48px]"></div>
+ <!-- THE MOMENTUM ENGINE: PROCESS SECTION -->
+<section id="process" class="relative bg-[#020202] py-32 overflow-hidden">
+  
+  <!-- Animated Grid Substrate -->
+  <div class="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:64px_64px]"></div>
+  
+  <!-- Radial Spotlight -->
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(circle_at_center,rgba(37,99,235,0.08),transparent_70%)]"></div>
 
-  <div class="relative max-w-7xl mx-auto px-6 py-24">
-
-    <!-- SECTION HEADER -->
-    <div class="max-w-2xl mb-16">
-      <p class="text-sm font-medium text-accent uppercase tracking-wider">
-        How It Works
-      </p>
-      <h2 class="mt-4 text-3xl sm:text-4xl font-extrabold text-white">
-        A <span class="text-primary">Clear</span> Process From Idea to <span class="text-primary">Launch</span>
-      </h2>
-      <p class="mt-4 text-slate-300">
-        We follow a proven, transparent process so you always know what’s happening, what’s next,
-        and when you’ll see results.
-      </p>
+  <div class="relative max-w-7xl mx-auto px-6">
+    
+    <!-- HEADER: ARCHITECTURAL STYLE -->
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-24 gap-8">
+      <div class="max-w-xl">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="h-[1px] w-12 bg-primary"></div>
+          <span class="text-xs font-black uppercase tracking-[0.5em] text-primary">Execution Phase</span>
+        </div>
+        <h2 style="font-family: inter;" class="text-5xl md:text-7xl font-black text-white tracking-tighter leading-none">
+          IDEATION <span class="text-primary">TO</span> <br/>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-white/20">DEPLOYMENT.</span>
+        </h2>
+      </div>
+      <div class="pb-2">
+        <p class="text-slate-500 text-lg max-w-xs border-l border-white/10 pl-6 italic">
+          A high-velocity workflow engineered for transparency.
+        </p>
+      </div>
     </div>
 
-    <!-- STEPS -->
-    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-5">
-
+    <!-- THE ENGINE TRACK (Horizontal Scroll on Mobile / Grid on Desktop) -->
+    <div class="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 lg:gap-2">
+      
       <!-- STEP 1 -->
-      <div class="relative p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur">
-        <span class="absolute -top-4 right-6 text-5xl font-extrabold text-primary">01</span>
-        <h3 class="text-lg font-bold text-primary mb-3">
-          Discovery & Planning
-        </h3>
-        <p class="text-sm text-slate-300">
-          We understand your goals, users, and requirements before anything is built.
-        </p>
-        <p class="mt-3 text-xs text-slate-400">
-          Outcome: Clear roadmap & timeline
-        </p>
+      <div class="group relative p-8 rounded-[2rem] bg-white/[0.03] border border-white/5 hover:bg-white/[0.07] transition-all duration-500 hover:-translate-y-2">
+        <!-- Connecting Line (Desktop Only) -->
+        <div class="hidden lg:block absolute top-1/2 -right-1 w-full h-[1px] bg-gradient-to-r from-primary/50 to-transparent z-0"></div>
+        
+        <div class="relative z-10">
+          <div class="mb-12 flex justify-between items-start">
+            <span class="text-xs font-mono text-primary/50 group-hover:text-primary transition-colors">[ 01 ]</span>
+            <div class="w-8 h-8 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center group-hover:scale-125 transition-transform">
+                <div class="w-1.5 h-1.5 bg-primary rounded-full animate-ping"></div>
+            </div>
+          </div>
+          
+          <h3 class="text-xl font-black text-white mb-4 tracking-tight group-hover:text-primary transition-colors">Extraction</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-6">Deep-dive into goals and architecture mapping.</p>
+          
+          <div class="inline-block px-3 py-1 rounded-lg bg-black text-[10px] font-bold text-slate-300 uppercase tracking-widest border border-white/10">
+            Output: Roadmap
+          </div>
+        </div>
       </div>
 
       <!-- STEP 2 -->
-      <div class="relative p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur">
-        <span class="absolute -top-4 right-6 text-5xl font-extrabold text-primary">02</span>
-        <h3 class="text-lg font-bold text-primary mb-3">
-          Design & Prototyping
-        </h3>
-        <p class="text-sm text-slate-300">
-          Visual layouts and user flows are designed for usability and conversion.
-        </p>
-        <p class="mt-3 text-xs text-slate-400">
-          Outcome: Approved designs
-        </p>
+      <div class="group relative p-8 rounded-[2rem] bg-white/[0.03] border border-white/5 hover:bg-white/[0.07] transition-all duration-500 lg:mt-8 hover:-translate-y-2">
+        <div class="hidden lg:block absolute top-1/2 -right-1 w-full h-[1px] bg-gradient-to-r from-primary/50 to-transparent z-0"></div>
+        <div class="relative z-10">
+          <div class="mb-12">
+            <span class="text-xs font-mono text-primary/50">[ 02 ]</span>
+          </div>
+          <h3 class="text-xl font-black text-white mb-4 tracking-tight group-hover:text-primary transition-colors">Visual Logic</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-6">User flows and high-fidelity prototyping.</p>
+          <div class="inline-block px-3 py-1 rounded-lg bg-black text-[10px] font-bold text-slate-300 uppercase tracking-widest border border-white/10">
+            Output: Prototypes
+          </div>
+        </div>
       </div>
 
       <!-- STEP 3 -->
-      <div class="relative p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur">
-        <span class="absolute -top-4 right-6 text-5xl font-extrabold text-primary">03</span>
-        <h3 class="text-lg font-bold text-primary mb-3">
-          Development
-        </h3>
-        <p class="text-sm text-slate-300">
-          Clean, scalable code is built with performance, SEO, and security in mind.
-        </p>
-        <p class="mt-3 text-xs text-slate-400">
-          Outcome: Functional product
-        </p>
+      <div class="group relative p-8 rounded-[2rem] bg-white/[0.03] border border-white/5 hover:bg-white/[0.07] transition-all duration-500 hover:-translate-y-2">
+        <div class="hidden lg:block absolute top-1/2 -right-1 w-full h-[1px] bg-gradient-to-r from-primary/50 to-transparent z-0"></div>
+        <div class="relative z-10">
+          <div class="mb-12">
+            <span class="text-xs font-mono text-primary/50">[ 03 ]</span>
+          </div>
+          <h3 class="text-xl font-black text-white mb-4 tracking-tight group-hover:text-primary transition-colors">Synthesis</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-6">Production-grade engineering & system building.</p>
+          <div class="inline-block px-3 py-1 rounded-lg bg-black text-[10px] font-bold text-slate-300 uppercase tracking-widest border border-white/10">
+            Output: Core Build
+          </div>
+        </div>
       </div>
 
       <!-- STEP 4 -->
-      <div class="relative p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur">
-        <span class="absolute -top-4 right-6 text-5xl font-extrabold text-primary">04</span>
-        <h3 class="text-lg font-bold text-primary mb-3">
-          Testing & Launch
-        </h3>
-        <p class="text-sm text-slate-300">
-          We test across devices, optimize speed, and launch with confidence.
-        </p>
-        <p class="mt-3 text-xs text-slate-400">
-          Outcome: Live & optimized
-        </p>
+      <div class="group relative p-8 rounded-[2rem] bg-white/[0.03] border border-white/5 hover:bg-white/[0.07] transition-all duration-500 lg:mt-8 hover:-translate-y-2">
+        <div class="hidden lg:block absolute top-1/2 -right-1 w-full h-[1px] bg-gradient-to-r from-primary/50 to-transparent z-0"></div>
+        <div class="relative z-10">
+          <div class="mb-12">
+            <span class="text-xs font-mono text-primary/50">[ 04 ]</span>
+          </div>
+          <h3 class="text-xl font-black text-white mb-4 tracking-tight group-hover:text-primary transition-colors">Stress Test</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-6">Cross-device audits and speed optimization.</p>
+          <div class="inline-block px-3 py-1 rounded-lg bg-black text-[10px] font-bold text-slate-300 uppercase tracking-widest border border-white/10">
+            Output: Final V1
+          </div>
+        </div>
       </div>
 
       <!-- STEP 5 -->
-      <div class="relative p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur">
-        <span class="absolute -top-4 right-6 text-5xl font-extrabold text-primary">05</span>
-        <h3 class="text-lg font-bold text-primary mb-3">
-          Support & Growth
-        </h3>
-        <p class="text-sm text-slate-300">
-          Ongoing maintenance, improvements, and support as your business grows.
-        </p>
-        <p class="mt-3 text-xs text-slate-400">
-          Outcome: Long-term reliability
-        </p>
+      <div class="group relative p-8 rounded-[2rem] bg-primary border border-primary transition-all duration-500 hover:-translate-y-2 shadow-[0_0_50px_-12px_rgba(37,99,235,0.5)]">
+        <div class="relative z-10">
+          <div class="mb-12 flex justify-between items-start">
+            <span class="text-xs font-mono text-black/50">[ 05 ]</span>
+            <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+          </div>
+          <h3 class="text-xl font-black text-black mb-4 tracking-tight">Expansion</h3>
+          <p class="text-blue-900 text-sm leading-relaxed mb-6">Live monitoring and iterative growth support.</p>
+          <div class="inline-block px-3 py-1 rounded-lg bg-black/20 text-[10px] font-bold text-black uppercase tracking-widest border border-black/10">
+            Status: Infinite
+          </div>
+        </div>
       </div>
 
     </div>
 
-    <!-- TIMELINE NOTE -->
-    <div class="mt-16 max-w-3xl">
-      <p class="text-slate-300 text-medium">
-        <span class="font-semibold text-white">Typical timelines:</span>
-        Initial designs in 7–14 days. Most projects launch within 2–6 weeks depending on scope.
-      </p>
+    <!-- TIMELINE TICKER -->
+    <div class="mt-20 flex flex-wrap items-center gap-6 p-6 rounded-2xl bg-white/[0.02] border border-white/5">
+        <div class="flex -space-x-2">
+            <div class="w-8 h-8 rounded-full bg-slate-800 border-2 border-black flex items-center justify-center text-[10px] text-white">JD</div>
+            <div class="w-8 h-8 rounded-full bg-primary border-2 border-black flex items-center justify-center text-[10px] text-white font-bold">SY</div>
+        </div>
+        <p class="text-sm text-slate-400">
+            <span class="text-white font-bold">Standard Velocity:</span> 
+            7 days for prototypes. 2-6 weeks for full production launch.
+        </p>
     </div>
 
   </div>
 </section>
+
 
 <!-- PORTFOLIO / CASE STUDIES -->
-<section id="work" class="animate-on-scroll relative bg-dark">
-  <!-- Background Accent -->
-  <div class="absolute inset-0 bg-gradient-to-t from-primary/5 via-transparent to-transparent"></div>
+ <!-- THE INTEL ENGINE: CASE STUDIES -->
+<section id="work" class="relative bg-[#020202] py-32 overflow-hidden">
+  <!-- Dynamic Grid Aura -->
+  <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_-20%,#2563eb15,transparent_50%)]"></div>
 
-  <div class="relative max-w-7xl mx-auto px-6 py-24">
+  <div class="relative max-w-7xl mx-auto px-6">
+    
+    <!-- HEADER: THE "REPORTS" STYLE -->
+    <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-20 gap-8">
+      <div class="max-w-2xl">
+        <span class="text-xs font-black uppercase tracking-[0.4em] text-primary inline-block mb-4">Archive 2024-25</span>
+        <h2 style="font-family: inter;" class="text-5xl md:text-7xl font-black text-white tracking-tighter leading-none">
+          PROVEN <span class="text-primary italic">IMPACT.</span>
+        </h2>
+        <p class="mt-8 text-slate-400 text-lg leading-relaxed border-l-2 border-primary/20 pl-6">
+          We don't just ship code; we solve bottlenecks. Explore our high-frequency deployments.
+        </p>
+      </div>
+      <div class="hidden lg:block h-px flex-1 bg-white/10 mx-10 mb-4"></div>
+    </div>
 
-    <!-- SECTION HEADER -->
-    <div class="max-w-2xl mb-16">
-      <p class="text-sm font-medium text-accent uppercase tracking-wider">
-        Our Work
-      </p>
-      <h2 class="mt-4 text-3xl sm:text-4xl font-extrabold text-white">
-        <span class="text-primary">Proven</span> Results, <span class="text-primary">Real</span> Solutions
-      </h2>
-      <p class="mt-4 text-slate-300">
-        A selection of projects where we solved real business problems with clean, scalable digital solutions.
+    <!-- CASE STUDIES: THE "REVEAL" GRID -->
+    <div class="grid gap-8 lg:grid-cols-3">
+
+      <!-- LOGISTICS CASE STUDY -->
+      <article class="group relative rounded-[2.5rem] bg-[#0A0A0A] border border-white/5 overflow-hidden transition-all duration-700 hover:border-primary/50">
+        <!-- Image Container with Scanned Effect -->
+        <div class="relative h-72 overflow-hidden">
+          <div class="absolute inset-0 bg-primary/20 mix-blend-overlay z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <img loading="lazy" src="thumbnails/image_b7bb81d8.png" alt="Logistics" class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700" />
+          <!-- Type Badge -->
+          <div class="absolute top-6 left-6 z-20 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/10 text-[10px] font-bold text-white uppercase tracking-widest">
+            Logistics & Ops
+          </div>
+        </div>
+
+        <div class="p-8 relative">
+          <h3 class="text-2xl font-black text-white mb-6 tracking-tight group-hover:text-primary transition-colors">Logistics Storefront</h3>
+          
+          <!-- The Info Stack -->
+          <div class="space-y-4">
+            <div class="flex gap-4">
+              <span class="text-[10px] font-black text-primary uppercase pt-1 tracking-tighter">Prob</span>
+              <p class="text-sm text-slate-400 leading-snug">Manual quoting and PDF reliance stalling growth.</p>
+            </div>
+            <div class="flex gap-4 border-t border-white/5 pt-4">
+              <span class="text-[10px] font-black text-primary uppercase pt-1 tracking-tighter">Soln</span>
+              <p class="text-sm text-slate-400 leading-snug">24/7 Digital Lead Gen & Authority Engine.</p>
+            </div>
+          </div>
+
+          <!-- Bottom Action -->
+          <div class="mt-8 pt-6 border-t border-white/10 flex justify-between items-center">
+            <div class="flex flex-col">
+              <span class="text-[9px] font-bold text-slate-600 uppercase">Impact</span>
+              <span class="text-xs font-bold text-white uppercase italic">Zero-Manual Flow</span>
+            </div>
+            <a href="https://chachas-ethics.github.io/Logistics/" target="_blank" class="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-primary hover:text-black transition-all group/btn">
+              <svg class="w-5 h-5 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- SCHOOL CASE STUDY -->
+      <article class="group relative rounded-[2.5rem] bg-[#0A0A0A] border border-white/5 overflow-hidden transition-all duration-700 hover:border-primary/50 lg:mt-12">
+        <div class="relative h-72 overflow-hidden">
+          <div class="absolute inset-0 bg-primary/20 mix-blend-overlay z-10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+          <img loading="lazy" src="thumbnails/camblog.jpg" alt="School" class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700" />
+          <div class="absolute top-6 left-6 z-20 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/10 text-[10px] font-bold text-white uppercase tracking-widest">
+            EdTech / Management
+          </div>
+        </div>
+
+        <div class="p-8">
+          <h3 class="text-2xl font-black text-white mb-6 tracking-tight group-hover:text-primary transition-colors">EduPortal System</h3>
+          <div class="space-y-4">
+            <div class="flex gap-4">
+              <span class="text-[10px] font-black text-primary uppercase pt-1 tracking-tighter">Prob</span>
+              <p class="text-sm text-slate-400 leading-snug">Paper-heavy admissions creating communication lag.</p>
+            </div>
+            <div class="flex gap-4 border-t border-white/5 pt-4">
+              <span class="text-[10px] font-black text-primary uppercase pt-1 tracking-tighter">Soln</span>
+              <p class="text-sm text-slate-400 leading-snug">Centralized Admissions Hub & Sync Engine.</p>
+            </div>
+          </div>
+
+          <div class="mt-8 pt-6 border-t border-white/10 flex justify-between items-center">
+            <div class="flex flex-col">
+              <span class="text-[9px] font-bold text-slate-600 uppercase">Impact</span>
+              <span class="text-xs font-bold text-white uppercase italic">90% Faster Intake</span>
+            </div>
+            <a href="https://chachas-ethics.github.io/school/" target="_blank" class="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-primary transition-all">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- HEALTHCARE CASE STUDY -->
+      <article class="group relative rounded-[2.5rem] bg-[#0A0A0A] border border-white/5 overflow-hidden transition-all duration-700 hover:border-primary/50">
+        <div class="relative h-72 overflow-hidden">
+          <div class="absolute inset-0 bg-primary/20 mix-blend-overlay z-10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+          <img loading="lazy" src="thumbnails/hoslog.jpg" alt="Health" class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700" />
+          <div class="absolute top-6 left-6 z-20 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/10 text-[10px] font-bold text-white uppercase tracking-widest">
+            Health & Scheduling
+          </div>
+        </div>
+
+        <div class="p-8">
+          <h3 class="text-2xl font-black text-white mb-6 tracking-tight group-hover:text-primary transition-colors">Med-Connect Pro</h3>
+          <div class="space-y-4">
+            <div class="flex gap-4">
+              <span class="text-[10px] font-black text-primary uppercase pt-1 tracking-tighter">Prob</span>
+              <p class="text-sm text-slate-400 leading-snug">Patient confusion & front-desk call saturation.</p>
+            </div>
+            <div class="flex gap-4 border-t border-white/5 pt-4">
+              <span class="text-[10px] font-black text-primary uppercase pt-1 tracking-tighter">Soln</span>
+              <p class="text-sm text-slate-400 leading-snug">Mobile-First Triage & Appointment Booking.</p>
+            </div>
+          </div>
+
+          <div class="mt-8 pt-6 border-t border-white/10 flex justify-between items-center">
+            <div class="flex flex-col">
+              <span class="text-[9px] font-bold text-slate-600 uppercase">Impact</span>
+              <span class="text-xs font-bold text-white uppercase italic">Reduced Phone Load</span>
+            </div>
+            <a href="https://chachas-ethics.github.io/healthcare/" target="_blank" class="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-primary transition-all">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- THE FEEDBACK ENGINE: TESTIMONIALS -->
+<section id="testimonials" class="relative bg-[#020202] py-32 overflow-hidden">
+  <!-- Grid Substrate -->
+  <div class="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:40px_40px]"></div>
+
+  <div class="relative max-w-7xl mx-auto px-6">
+    
+    <!-- SECTION HEADER: MINIMALIST & BOLD -->
+    <div class="flex flex-col lg:flex-row items-end justify-between mb-24 gap-8">
+      <div class="max-w-xl">
+        <div class="flex items-center gap-2 mb-4">
+          <div class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+          <span class="text-xs font-black uppercase tracking-[0.4em] text-slate-500">Live Client Data</span>
+        </div>
+        <h2 style="font-family: inter;" class="text-5xl md:text-7xl font-black text-white tracking-tighter leading-none">
+          TRUSTED <br/>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-white/40">BY VOICES.</span>
+        </h2>
+      </div>
+      <p class="text-slate-500 text-lg max-w-xs italic border-l border-white/10 pl-6">
+        Real impact, recorded across diverse industries.
       </p>
     </div>
 
-    <!-- CASE STUDIES GRID -->
-    <div class="grid gap-10 lg:grid-cols-3">
+    <!-- TESTIMONIALS: THE "PULSE" GRID -->
+    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
 
-      <!-- CASE STUDY -->
-     <article class="group rounded-3xl bg-white/5 border border-white/10 overflow-hidden backdrop-blur hover:border-primary/40 transition">
-  <div class="relative h-48 overflow-hidden">
-  <img loading="lazy" 
-    src="thumbnails/ChatGPT Image Feb 21, 2026, 01_43_16 AM.png"
-    alt="Portfolio Website"
-    class="absolute inset-0 w-full h-60 object-cover
-           group-hover:scale-105 transition duration-500"
-  />
-  <div class="absolute inset-0 bg-black/20"></div>
-</div>
+      <!-- TESTIMONIAL 1: THE FOOD TECH LOG -->
+      <div class="group relative p-10 rounded-[2.5rem] bg-[#0A0A0A] border border-white/5 hover:border-primary/30 transition-all duration-500">
+        <!-- Floating Quote Icon -->
+        <div class="absolute -top-4 -right-4 w-12 h-12 bg-primary rounded-2xl flex items-center justify-center rotate-12 group-hover:rotate-0 transition-transform shadow-xl shadow-primary/20">
+          <svg class="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 7.55228 14.017 7V5C14.017 4.44772 14.4647 4 15.017 4H20.017C21.1216 4 22.017 4.89543 22.017 6V15C22.017 16.6569 20.6739 18 19.017 18H17.017L17.017 21H14.017ZM2.017 21L2.017 18C2.017 16.8954 2.91243 16 4.017 16H7.017C7.56929 16 8.017 15.5523 8.017 15V9C8.017 8.44772 7.56929 8 7.017 8H3.017C2.46472 8 2.017 7.55228 2.017 7V5C2.017 4.44772 2.46472 4 3.017 4H8.017C9.12157 4 10.017 4.89543 10.017 6V15C10.017 16.6569 8.67386 18 7.017 18H5.017L5.017 21H2.017Z"/></svg>
+        </div>
 
+        <div class="mb-10">
+          <span class="inline-block px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-[10px] font-black uppercase tracking-widest mb-6">Impact: 24/7 Revenue</span>
+          <p class="text-white text-lg font-medium leading-relaxed tracking-tight">
+            "Listen, you’ve been a lifesaver. Since the site went live, the <span class="text-primary italic">kitchen hasn’t stopped buzzing</span>. We couldn't have scaled this fast without you!"
+          </p>
+        </div>
 
-  <div class="p-8">
-    <h3 class="text-xl font-bold text-white mb-3">
-      Portfolio Website
-    </h3>
+        <div class="flex items-center gap-4 pt-6 border-t border-white/5">
+          <div class="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-accent p-[1px]">
+            <div class="w-full h-full rounded-full bg-black flex items-center justify-center text-white font-black text-xs">HK</div>
+          </div>
+          <div>
+            <h4 class="text-white font-bold text-sm">Hajra Khan</h4>
+            <p class="text-slate-500 text-[10px] font-bold uppercase tracking-tighter">CEO, kayy. Kafe & Grill</p>
+          </div>
+        </div>
+      </div>
 
-   <p class="text-sm text-slate-300 mb-4">
-  <span class="font-semibold text-white">Problem:</span>
-  The photographer had no professional online presence and relied mostly on word-of-mouth and social media, making it difficult for potential clients to view work or book services easily.
-</p>
+      <!-- TESTIMONIAL 2: THE ECOMMERCE LOG -->
+      <div class="group relative p-10 rounded-[2.5rem] bg-[#0A0A0A] border border-white/5 hover:border-primary/30 transition-all duration-500 lg:mt-12">
+        <div class="mb-10">
+          <span class="inline-block px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-[10px] font-black uppercase tracking-widest mb-6">Impact: Conversion Boost</span>
+          <p class="text-white text-lg font-medium leading-relaxed tracking-tight">
+            "This site is the icing on the cake. We’re seeing <span class="text-primary italic">way more orders</span> for our custom boxes. Synlotech was the secret ingredient we needed."
+          </p>
+        </div>
 
-<p class="text-sm text-slate-300 mb-4">
-  <span class="font-semibold text-white">Solution:</span>
-  Designed and developed a modern portfolio website showcasing high-quality photo galleries, service packages, and a simple contact and booking system optimized for mobile users.
-</p>
+        <div class="flex items-center gap-4 pt-6 border-t border-white/5">
+          <div class="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-accent p-[1px]">
+            <div class="w-full h-full rounded-full bg-black flex items-center justify-center text-white font-black text-xs">HA</div>
+          </div>
+          <div>
+            <h4 class="text-white font-bold text-sm">Hudhaifa Ashraf</h4>
+            <p class="text-slate-500 text-[10px] font-bold uppercase tracking-tighter">CEO, THE SCOOP</p>
+          </div>
+        </div>
+      </div>
 
-<p class="text-sm text-slate-300 mb-6">
-  <span class="font-semibold text-white">Result:</span>
-  Improved client trust and visibility, allowing potential clients to easily explore the photographer’s work and inquire about bookings, leading to more consistent client leads.
-</p>
+      <!-- TESTIMONIAL 3: THE EDTECH LOG -->
+      <div class="group relative p-10 rounded-[2.5rem] bg-[#0A0A0A] border border-white/5 hover:border-primary/30 transition-all duration-500">
+        <div class="mb-10">
+          <span class="inline-block px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-[10px] font-black uppercase tracking-widest mb-6">Impact: System Efficiency</span>
+          <p class="text-white text-lg font-medium leading-relaxed tracking-tight">
+            "The new portal is a total win. We’ve seen a <span class="text-primary italic">massive spike</span> in registrations. Synlotech is the technical backbone we needed."
+          </p>
+        </div>
 
-    <a href="https://chachas-ethics.github.io/iddigude/" target="_blank" class="text-primary font-semibold text-sm">
-      View Project →
-    </a>
+        <div class="flex items-center gap-4 pt-6 border-t border-white/5">
+          <div class="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-accent p-[1px]">
+            <div class="w-full h-full rounded-full bg-black flex items-center justify-center text-white font-black text-xs">AM</div>
+          </div>
+          <div>
+            <h4 class="text-white font-bold text-sm">Aboubakr Moustapha</h4>
+            <p class="text-slate-500 text-[10px] font-bold uppercase tracking-tighter">IT Head, Tech Inst.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
-</article>
+</section>
 
 
-      <!-- CASE STUDY -->
-      <article class="group rounded-3xl bg-white/5 border border-white/10 overflow-hidden backdrop-blur hover:border-primary/40 transition">
-  <div class="relative h-48 overflow-hidden">
-  <img loading="lazy" 
-    src="thumbnails/camblog.jpg"
-    alt="Restaurant Website"
-    class="absolute inset-0 w-full h-50 object-cover
-           group-hover:scale-105 transition duration-500"
-  />
-  <div class="absolute inset-0 bg-black/20"></div>
-</div>
 
 
-  <div class="p-8">
-    <h3 class="text-xl font-bold text-white mb-3">
-      School Management Website
-    </h3>
+<!-- THE VALUATION ENGINE: CUSTOM QUOTES -->
+<section id="pricing" class="relative bg-[#020202] py-32 overflow-hidden">
+  <!-- Top Glow for Separation -->
+  <div class="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent"></div>
 
-    <p class="text-sm text-slate-300 mb-4">
-      <span class="font-semibold text-white">Problem:</span>
-      The school relied on manual processes for admissions and announcements, with no central online platform for parents or students.
-    </p>
+  <div class="relative max-w-7xl mx-auto px-6">
+    
+    <!-- SECTION INTRO -->
+    <div class="text-center max-w-3xl mx-auto mb-24">
+      <h2 style="font-family: inter;" class="text-5xl md:text-7xl font-black text-white tracking-tighter leading-tight">
+        INVESTMENT <br/>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-white/40 italic">ARCHITECTURE.</span>
+      </h2>
+      <p class="mt-8 text-slate-400 text-lg">
+        We don't offer "packages." we engineer custom scopes based on your specific scaling requirements.
+      </p>
+    </div>
 
-    <p class="text-sm text-slate-300 mb-4">
-      <span class="font-semibold text-white">Solution:</span>
-      Developed a modern school website with online admissions, downloadable forms, and a centralized information system for updates.
-    </p>
+    <!-- THE SERVICE MATRIX -->
+    <div class="space-y-32">
 
-    <p class="text-sm text-slate-300 mb-6">
-      <span class="font-semibold text-white">Result:</span>
-      Faster admissions processing, improved parent communication, and a stronger online presence for the school.
-    </p>
+      <!-- CATEGORY 01: WEB DEVELOPMENT -->
+      <div class="relative">
+        <div class="flex flex-col lg:flex-row gap-12 items-start">
+          <!-- Sticky Side Header -->
+          <div class="lg:w-1/3 lg:sticky lg:top-24">
+            <span class="text-primary font-mono text-xs tracking-[0.5em] uppercase mb-4 block">Archive_01</span>
+            <h3 style="font-family: inter;" class="text-3xl font-black text-white mb-4">Web Engineering</h3>
+            <p class="text-slate-500 text-sm leading-relaxed">High-frequency digital storefronts and performance-first architectures.</p>
+          </div>
+          
+          <!-- Value Pills Grid -->
+          <div class="lg:w-2/3 grid gap-4 sm:grid-cols-2">
+            <div class="group p-8 rounded-3xl bg-white/[0.02] border border-white/5 hover:border-primary/30 transition-all">
+              <div class="w-8 h-8 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center mb-6">
+                <div class="w-1.5 h-1.5 bg-primary rounded-full"></div>
+              </div>
+              <h4  class="text-white font-bold mb-2 uppercase tracking-tight">Adaptive Scoping</h4>
+              <p class="text-slate-500 text-xs leading-relaxed">Pricing scales with complexity—from high-conversion landing pages to complex systems.</p>
+            </div>
+            <div class="group p-8 rounded-3xl bg-white/[0.02] border border-white/5 hover:border-primary/30 transition-all">
+               <div class="w-8 h-8 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center mb-6">
+                <div class="w-1.5 h-1.5 bg-primary rounded-full"></div>
+              </div>
+              <h4 class="text-white font-bold mb-2 uppercase tracking-tight">Zero-Friction Costing</h4>
+              <p class="text-slate-500 text-xs leading-relaxed">No hidden fees or infrastructure surprises. Transparent billing from day one.</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    <a href="https://chachas-ethics.github.io/school/" target="_blank" class="text-primary font-semibold text-sm">
-      View Project →
-    </a>
-  </div>
-</article>
+      <!-- CATEGORY 02: BRANDING -->
+      <div class="relative">
+        <div class="flex flex-col lg:flex-row gap-12 items-start">
+          <div class="lg:w-1/3 lg:sticky lg:top-24">
+            <span class="text-primary font-mono text-xs tracking-[0.5em] uppercase mb-4 block">Archive_02</span>
+            <h3 style="font-family: inter;" class="text-3xl font-black text-white mb-4">Visual Identity</h3>
+            <p class="text-slate-500 text-sm leading-relaxed">Strategic brand systems designed to command attention and authority.</p>
+          </div>
+          
+          <div class="lg:w-2/3 grid gap-4 sm:grid-cols-2">
+            <div class="group p-8 rounded-3xl bg-white/[0.02] border border-white/5 hover:border-primary/30 transition-all">
+              <h4 class="text-white font-bold mb-2 uppercase tracking-tight">Consistent Ecosystems</h4>
+              <p class="text-slate-500 text-xs leading-relaxed">Cross-platform visual harmony. Typography and color systems that scale.</p>
+            </div>
+            <div class="group p-8 rounded-3xl bg-white/[0.02] border border-white/5 hover:border-primary/30 transition-all">
+              <h4 class="text-white font-bold mb-2 uppercase tracking-tight">Purpose-Driven Design</h4>
+              <p class="text-slate-500 text-xs leading-relaxed">Every asset is engineered to communicate your core message instantly.</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
+      <!-- CATEGORY 03: UI/UX -->
+      <div class="relative">
+        <div class="flex flex-col lg:flex-row gap-12 items-start">
+          <div class="lg:w-1/3 lg:sticky lg:top-24">
+            <span class="text-primary font-mono text-xs tracking-[0.5em] uppercase mb-4 block">Archive_03</span>
+            <h3 style="font-family: inter;" class="text-3xl font-black text-white mb-4">UI/UX Strategy</h3>
+            <p class="text-slate-500 text-sm leading-relaxed">User-centric interfaces optimized for conversion and retention.</p>
+          </div>
+          
+          <div class="lg:w-2/3 grid gap-4 sm:grid-cols-2">
+            <div class="group p-8 rounded-3xl bg-white/[0.02] border border-white/5 hover:border-primary/30 transition-all">
+              <h4 class="text-white font-bold mb-2 uppercase tracking-tight">Behavioral Logic</h4>
+              <p class="text-slate-500 text-xs leading-relaxed">Interfaces built around user psychology to maximize effortless navigation.</p>
+            </div>
+            <div class="group p-8 rounded-3xl bg-white/[0.02] border border-white/5 hover:border-primary/30 transition-all">
+              <h4 class="text-white font-bold mb-2 uppercase tracking-tight">Conversion Focus</h4>
+              <p class="text-slate-500 text-xs leading-relaxed">Every pixel serves a business goal—turning passive users into active leads.</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
-      <!-- CASE STUDY -->
-     <article class="group rounded-3xl bg-white/5 border border-white/10 overflow-hidden backdrop-blur hover:border-primary/40 transition">
-  <div class="relative h-48 overflow-hidden">
-  <img 
-    src="thumbnails/hoslog.jpg"
-    alt="Restaurant Website"
-    class="absolute inset-0 w-full h-60 object-cover
-           group-hover:scale-105 transition duration-500"
-  />
-  <div class="absolute inset-0 bg-black/20"></div>
-</div>
+    </div>
 
-
-  <div class="p-8">
-    <h3 class="text-xl font-bold text-white mb-3">
-      Hospital Information & Appointment Platform
-    </h3>
-
-    <p class="text-sm text-slate-300 mb-4">
-      <span class="font-semibold text-white">Problem:</span>
-      Patients struggled to find accurate information, clinic hours, and services, leading to frequent phone calls and confusion.
-    </p>
-
-    <p class="text-sm text-slate-300 mb-4">
-      <span class="font-semibold text-white">Solution:</span>
-      Built a clear, user-friendly hospital website with service listings, doctor profiles, appointment requests, and mobile-first navigation.
-    </p>
-
-    <p class="text-sm text-slate-300 mb-6">
-      <span class="font-semibold text-white">Result:</span>
-      Reduced front-desk inquiries, improved patient experience, and easier access to hospital services online.
-    </p>
-
-    <a href="https://chachas-ethics.github.io/healthcare/" target="_blank" class="text-primary font-semibold text-sm">
-      View Project →
-    </a>
-  </div>
-</article>
-
-
+    <!-- THE FINAL PROTOCOL: CTA -->
+    <div class="mt-32 p-1 relative overflow-hidden rounded-[3rem] bg-gradient-to-r from-primary/20 via-white/5 to-accent/20">
+      <div class="bg-black/90 backdrop-blur-xl rounded-[2.9rem] p-12 md:p-20 text-center relative">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-64 h-64 bg-primary/10 blur-[100px]"></div>
+        
+        <h3 style="font-family: inter;" class="text-4xl md:text-5xl font-black text-white mb-6">READY TO INITIATE?</h3>
+        <p class="text-slate-400 mb-10 max-w-lg mx-auto">Get a precision-tailored quote for your next high-impact project.</p>
+        
+        <a href="#contact-form" class="inline-flex items-center gap-4 bg-white text-black px-10 py-5 rounded-2xl font-black uppercase tracking-widest hover:bg-primary transition-all duration-300">
+          Request Quote 
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+        <p class="mt-6 text-[10px] text-slate-600 font-bold uppercase tracking-[0.2em]">Response Time: &lt; 24 Hours</p>
+      </div>
     </div>
 
   </div>
 </section>
 
-<!-- SOCIAL PROOF / TESTIMONIALS -->
-<section id="testimonials" class="animate-on-scroll relative bg-dark overflow-hidden">
-  <!-- Subtle Background Glow -->
-  <div class="absolute inset-0 bg-gradient-to-t from-accent/5 via-transparent to-transparent"></div>
-
-  <div class="relative max-w-7xl mx-auto px-6 py-24">
-
-    <!-- SECTION HEADER -->
-    <div class="max-w-2xl text-center mx-auto mb-16">
-      <p class="text-sm font-medium text-accent uppercase tracking-wider">
-        Trusted by Businesses & Organizations
-      </p>
-      <h2 class="mt-4 text-3xl sm:text-4xl font-extrabold text-white">
-        What Our <span class="text-primary">Clients</span> Say
-      </h2>
-      <p class="mt-4 text-slate-300">
-        Real feedback from people who trusted us to deliver high-performing online presence.
-      </p>
-    </div>
-
-    <!-- TESTIMONIAL CARDS -->
-    <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
-
-      <!-- TESTIMONIAL 1 -->
-      <div class="group relative p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur hover:border-primary/40 transition">
-        <div class="mb-4">
-          <p class="text-slate-300 text-sm">
-           "Listen, you’ve been a lifesaver. Since the site went live, the kitchen hasn’t stopped buzzing and the online orders are flying in it’s a total game-changer for our bottom line. Huge thanks to Synlotech for being the exact boost we needed to get this right. We couldn't have scaled this fast without you!"
-
-          </p>
-        </div>
-        <div class="mt-4 flex items-center gap-3">
-          <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">
-            1
-          </div>
-          <div>
-            <p class="text-white font-semibold text-sm">Hajra Khan, kayy. Kafe & Grill CEO</p>
-            <p class="text-slate-400 text-xs">Restaurant</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- TESTIMONIAL 2 -->
-      <div class="group relative p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur hover:border-primary/40 transition">
-        <div class="mb-4">
-          <p class="text-slate-300 text-sm">
-          "Honestly, this site is the icing on the cake. We’re seeing way more orders for our custom boxes now that people can just click and buy it’s been a massive boost for us. Big thanks to Synlotech for being the secret ingredient we needed to finally get our shop online!"
-          </p>
-        </div>
-        <div class="mt-4 flex items-center gap-3">
-          <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">
-            2
-          </div>
-          <div>
-            <p class="text-white font-semibold text-sm">Hudhaifa Ashraf, THE SCOOP CEO</p>
-            <p class="text-slate-400 text-xs">Desserts café</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- TESTIMONIAL 3 -->
-      <div class="group relative p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur hover:border-primary/40 transition">
-        <div class="mb-4">
-          <p class="text-slate-300 text-sm">
-            "The new booking form is a total win. We’ve seen a massive spike in photo shoot bookings now that clients can select a package and pay in seconds, it’s completely streamlined my workflow. Huge shoutout to Synlotech for being the technical backbone I needed to level up my business!" </p>
-        </div>
-        <div class="mt-4 flex items-center gap-3">
-          <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">
-            3
-          </div>
-          <div>
-            <p class="text-white font-semibold text-sm">Iddi Said, Photographer</p>
-            <p class="text-slate-400 text-xs">Photography Studio</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-   
-  </div>
-</section>
-
-<!-- PRICING SIGNAL / PRE-QUALIFIER -->
-<section id="pricing" class="animate-on-scroll relative bg-dark overflow-hidden">
-  <!-- Subtle Background Glow -->
-  <div class="absolute inset-0 bg-gradient-to-r from-primary/10 via-transparent to-accent/10"></div>
-
-  <div class="relative max-w-7xl mx-auto px-6 py-24 text-center">
-
-    <!-- SECTION HEADER -->
-    <div class="max-w-2xl mx-auto mb-12">
-      <p class="text-sm font-medium text-accent uppercase tracking-wider">
-        Pricing Overview
-      </p>
-      <h2 class="mt-4 text-3xl sm:text-4xl font-extrabold text-white">
-       Custom <span class="text-primary">Website</span> projects tailored to your goals and scope.
-      </h2>
-      <p class="mt-4 text-slate-300">
-        Each project is tailored to your goals and scope. We focus on quality, performance, and long-term results.
-      </p>
-    </div>
-
-    <!-- BENEFITS / SIGNALS -->
-    <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 max-w-4xl mx-auto mb-12">
-      <div class="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur">
-        <h3 class="text-white font-bold mb-2">Custom Scope</h3>
-        <p class="text-slate-300 text-sm">Pricing adapts to your project’s size and complexity.</p>
-      </div>
-      <div class="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur">
-        <h3 class="text-white font-bold mb-2">No Hidden Fees</h3>
-        <p class="text-slate-300 text-sm">Transparent communication on costs from the start.</p>
-      </div>
-      <div class="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur">
-        <h3 class="text-white font-bold mb-2">High ROI</h3>
-        <p class="text-slate-300 text-sm">We prioritize solutions that deliver measurable value.</p>
-        </div>
-        </div>
-
-        <div class="max-w-2xl mx-auto mb-12 mt-24">
-      
-      <h2 class="mt-4 text-3xl sm:text-4xl font-extrabold text-white">
-        Custom <span class="text-primary">Graphics and Branding</span> projects tailored to your needs.
-      </h2>
-      <p class="mt-4 text-slate-300">
-  Our designs are built to attract attention, build trust, and elevate your brand presence.
-</p>
-
-    </div>
-
-    <!-- BENEFITS / SIGNALS -->
-   <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 max-w-4xl mx-auto mb-12">
-  <div class="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur">
-    <h3 class="text-white font-bold mb-2">Purpose-Driven Design</h3>
-    <p class="text-slate-300 text-sm">
-      Every visual is crafted to communicate your brand’s message clearly and memorably.
-    </p>
-  </div>
-
-  <div class="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur">
-    <h3 class="text-white font-bold mb-2">Consistent Brand Identity</h3>
-    <p class="text-slate-300 text-sm">
-      Colors, typography, and style aligned across all platforms for brand recognition.
-    </p>
-  </div>
-
-  <div class="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur">
-    <h3 class="text-white font-bold mb-2">Visuals That Convert</h3>
-    <p class="text-slate-300 text-sm">
-      Design that doesn’t just look good — it builds trust and drives action.
-    </p>
-  </div>
-</div>
-
-
-    <div class="max-w-2xl mx-auto mt-24">
-      <h2 class="mt-12 text-3xl sm:text-4xl font-extrabold text-white">
-  Strategic <span class="text-primary">UI/UX Design</span> built for usability and real user behavior.
-</h2>
-<p class="mt-4 mb-12 text-slate-300">
-  Every interface is designed around how users think, navigate, and interact. The goal is simple: intuitive experiences that convert and keep users engaged.
-</p>
-</div>
-
-<!-- BENEFITS / SIGNALS -->
- 
-   <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3 max-w-4xl mx-auto mb-12">
+<!-- THE KINETIC CLOSE: FINAL CTA -->
+<section id="contact" class="relative bg-[#020202] py-40 overflow-hidden">
   
-  <div class="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur">
-    <h3 class="text-white font-bold mb-2">User-Centered Design</h3>
-    <p class="text-slate-300 text-sm">
-      Interfaces are structured around user behavior to make navigation effortless.
-    </p>
-  </div>
+  <!-- BACKGROUND DEPTH: MESH GRADIENT & GRID -->
+  <div class="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:40px_40px]"></div>
+  <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/20 blur-[120px] rounded-full opacity-50"></div>
 
-  <div class="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur">
-    <h3 class="text-white font-bold mb-2">Clear User Flows</h3>
-    <p class="text-slate-300 text-sm">
-      Thoughtful layouts guide users smoothly from entry point to desired action.
-    </p>
-  </div>
+  <div class="relative max-w-7xl mx-auto px-6">
+    <div class="grid lg:grid-cols-12 gap-16 items-center">
+      
+      <!-- LEFT: THE MANIFESTO -->
+      <div class="lg:col-span-7">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-8">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+          </span>
+          <span class="text-[10px] font-black uppercase tracking-[0.2em] text-primary">System Online: Ready for Deployment</span>
+        </div>
+        
+        <h2 style="font-family: inter;" class="text-6xl md:text-8xl font-black text-white tracking-tighter leading-[0.9] mb-8">
+          LET’S <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent to-primary italic">ENGINEER</span> <br/>
+          THE FUTURE.
+        </h2>
+        
+        <p class="text-slate-400 text-xl max-w-xl leading-relaxed mb-12 border-l-2 border-primary/30 pl-8">
+          Transforming abstract ideas into high-frequency digital assets. No fluff. No friction. Just performance.
+        </p>
 
-  <div class="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur">
-    <h3 class="text-white font-bold mb-2">Conversion Focused</h3>
-    <p class="text-slate-300 text-sm">
-      Design decisions prioritize engagement, clarity, and measurable results.
-    </p>
-  </div>
-</div>
+        <!-- SECURITY/TRUST SIGNALS -->
+        <div class="flex flex-wrap gap-8 opacity-40 grayscale hover:grayscale-0 transition-all duration-500">
+           <div class="flex flex-col">
+             <span class="text-white font-black text-lg tracking-tighter">SECURE</span>
+             <span class="text-[10px] text-slate-500 uppercase font-bold tracking-widest">Protocol</span>
+           </div>
+           <div class="flex flex-col">
+             <span class="text-white font-black text-lg tracking-tighter">SCALABLE</span>
+             <span class="text-[10px] text-slate-500 uppercase font-bold tracking-widest">Architecture</span>
+           </div>
+           <div class="flex flex-col">
+             <span class="text-white font-black text-lg tracking-tighter">HUMAN</span>
+             <span class="text-[10px] text-slate-500 uppercase font-bold tracking-widest">Support</span>
+           </div>
+        </div>
+      </div>
 
+      <!-- RIGHT: THE ACTION HUB -->
+      <div class="lg:col-span-5 relative">
+        <div class="relative p-1 rounded-[3rem] bg-gradient-to-br from-white/10 via-transparent to-white/5 backdrop-blur-3xl shadow-2xl">
+          <div class="bg-[#080808] rounded-[2.9rem] p-10 md:p-14 border border-white/5 text-center">
+            
+            <div class="space-y-6">
+              <!-- PRIMARY ACTION -->
+              <a href="#contact-form" class="group relative flex items-center justify-center w-full py-6 bg-primary rounded-2xl overflow-hidden transition-all hover:scale-[1.02] active:scale-95 shadow-[0_20px_50px_-12px_rgba(37,99,235,0.5)]">
+                <span class="relative z-10 text-white font-black uppercase tracking-widest text-sm">Initiate Project</span>
+                <!-- Hover Glow Effect -->
+                <div class="absolute inset-0 bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 mix-blend-overlay"></div>
+              </a>
 
-    <!-- CTA -->
-    <a href="#contact-form"
-       class="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-primary text-white font-semibold
-              hover:bg-blue-700 transition shadow-lg shadow-primary/30">
-      Request Your Quote
-    </a>
+              <!-- SECONDARY ACTION -->
+              <a href="https://wa.me/255788296274" target="_blank" class="flex items-center justify-center w-full py-6 border border-white/10 rounded-2xl text-white font-black uppercase tracking-widest text-sm hover:bg-white/5 transition-all">
+                <svg class="w-5 h-5 mr-3 text-primary" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.417-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.5-5.688-1.448l-6.305 1.652zm6.599-3.835c1.52.909 3.253 1.388 5.025 1.389 5.405 0 9.803-4.398 9.805-9.805.001-2.621-1.02-5.085-2.871-6.938-1.852-1.853-4.318-2.873-6.94-2.873-5.407 0-9.805 4.398-9.808 9.805-.001 1.84.509 3.634 1.474 5.195l-1.082 3.95 4.045-1.061-.348-.162z"/></svg>
+                Message Directly
+              </a>
+            </div>
 
-    <p class="mt-4 text-slate-400 text-sm">
-      Custom pricing ensures you get exactly what your business needs without overpaying.
-    </p>
+            <div class="mt-12 pt-8 border-t border-white/5">
+              <p class="text-[10px] text-slate-500 font-bold uppercase tracking-[0.3em] mb-4">Onboarding Process</p>
+              <div class="flex justify-center gap-2">
+                <div class="h-1 w-8 bg-primary rounded-full"></div>
+                <div class="h-1 w-8 bg-white/10 rounded-full"></div>
+                <div class="h-1 w-8 bg-white/10 rounded-full"></div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-  </div>
-</section>
-
-<!-- CTA / HARD CLOSE -->
-<section id="contact" class="animate-on-scroll relative bg-dark py-32">
-  <!-- Background Glow -->
-  <div class="absolute inset-0 bg-gradient-to-tr from-primary/20 via-accent/10 to-transparent"></div>
-
-  <div class="relative max-w-3xl mx-auto px-6 text-center">
-    <!-- HEADER -->
-    <h2 class="text-4xl sm:text-5xl font-extrabold text-white mb-6">
-      Ready to <span class="text-primary">Build</span> Your Digital <span class="text-primary">Future</span>?
-    </h2>
-    <p class="text-slate-300 text-lg sm:text-xl mb-12">
-      Let’s turn your ideas into high-performance websites, apps, and systems that scale with your business.
-    </p>
-
-    <!-- BUTTONS -->
-    <div class="flex flex-col sm:flex-row justify-center gap-6">
-      <a href="#contact-form"
-         class="inline-flex items-center justify-center px-10 py-4 rounded-xl bg-primary text-white font-semibold
-                hover:bg-blue-700 transition shadow-lg shadow-primary/30">
-        Start a Project
-      </a>
-
-      <a href="https://wa.me/255788296274" target="_blank"
-         class="inline-flex items-center justify-center px-10 py-4 rounded-xl text-primary border border-primary/40
-                hover:bg-primary/10 transition font-semibold">
-        Contact Us
-      </a>
+        <!-- Floating Badge -->
+        <div class="absolute -bottom-10 -right-6 hidden md:block p-4 bg-white rounded-2xl shadow-2xl -rotate-6">
+          <p class="text-black font-black text-2xl tracking-tighter">Zero Risk.</p>
+          <p class="text-slate-500 text-[9px] font-bold uppercase tracking-widest">Protocol Guaranteed</p>
+        </div>
+      </div>
     </div>
-
-    <!-- TRUST / REASSURANCE -->
-    <p class="mt-8 text-slate-400 text-sm">
-      No commitments. Transparent communication. Your project, your control.
-    </p>
   </div>
 </section>
 
-<!-- INDUSTRIES / WHO WE HELP -->
-<section id="industries" class="animate-on-scroll relative bg-dark py-24">
-  <!-- Subtle Background Grid -->
-  <div class="absolute inset-0 bg-[linear-gradient(to_right,rgba(37,99,235,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(37,99,235,0.05)_1px,transparent_1px)] bg-[size:48px_48px]"></div>
+
+ <!-- THE SECTOR HUB: INDUSTRIES -->
+<section id="industries" class="relative bg-[#020202] py-32 overflow-hidden">
+  <!-- Architectural Background -->
+  <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(37,99,235,0.07),transparent_50%)]"></div>
+  <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com')]"></div>
 
   <div class="relative max-w-7xl mx-auto px-6">
 
-    <!-- SECTION HEADER -->
-    <div class="text-center max-w-2xl mx-auto mb-16">
-      <p class="text-sm font-medium text-accent uppercase tracking-wider">
-        Who We Help
-      </p>
-      <h2 class="mt-4 text-3xl sm:text-4xl font-extrabold text-white">
-        We Serve a <span class="text-primary">Wide Range</span> of Industries
-      </h2>
-      <p class="mt-4 text-slate-300">
-        Whether you’re a startup, an established business, or an educational institution, our solutions are tailored for your needs.
+    <!-- SECTION HEADER: ASYMMETRICAL STYLE -->
+    <div class="flex flex-col md:flex-row items-start justify-between mb-20 gap-8">
+      <div class="max-w-xl">
+        <span class="text-xs font-black uppercase tracking-[0.5em] text-primary block mb-4">Target Verticals</span>
+        <h2 style="font-family: inter;" class="text-5xl md:text-6xl font-black text-white tracking-tighter leading-none">
+          ENGINEERED <br/>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-white to-white/20">FOR EVERY SECTOR.</span>
+        </h2>
+      </div>
+      <p class="text-slate-500 text-lg max-w-xs border-l border-white/10 pl-6 italic mt-4">
+        Custom-tailored deployment for diverse business landscapes.
       </p>
     </div>
 
-    <!-- INDUSTRIES GRID -->
-    <div class="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
+    <!-- INDUSTRIES: THE MICRO-POD GRID -->
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
 
-      <div class="flex flex-col items-center justify-center p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur hover:border-primary/40 transition">
-       <div class="w-16 h-16 mb-4 flex items-center justify-center rounded-full bg-primary/20 text-primary">
-            <img loading="lazy" src="thumbnails/startup.png">
-</div>
-<p class="text-white font-semibold text-sm text-center">Startups</p>
+      <!-- STARTUPS -->
+      <div class="group relative p-8 rounded-[2rem] bg-white/[0.03] border border-white/5 flex flex-col items-center justify-center transition-all duration-500 hover:bg-primary hover:scale-105 hover:-rotate-2 shadow-2xl">
+        <div class="relative z-10 w-12 h-12 mb-6 transition-transform duration-500 group-hover:scale-110 group-hover:brightness-0">
+          <img loading="lazy" src="thumbnails/startup.png" class="w-full h-full object-contain opacity-70 group-hover:opacity-100">
+        </div>
+        <p class="relative z-10 text-[10px] font-black uppercase tracking-widest text-slate-400 group-hover:text-black transition-colors">Startups</p>
+        <!-- Background Glow -->
+        <div class="absolute inset-0 bg-primary opacity-0 group-hover:opacity-100 blur-xl -z-10 transition-opacity duration-500"></div>
       </div>
 
-      <div class="flex flex-col items-center justify-center p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur hover:border-primary/40 transition">
-        <div class="w-16 h-16 mb-4 flex items-center justify-center rounded-full bg-primary/20 text-primary font-bold text-lg">
-           <img loading="lazy" src="thumbnails/business.png">
+      <!-- BUSINESSES -->
+      <div class="group relative p-8 rounded-[2rem] bg-white/[0.03] border border-white/5 flex flex-col items-center justify-center transition-all duration-500 hover:bg-primary hover:scale-105 hover:rotate-2 shadow-2xl">
+        <div class="relative z-10 w-12 h-12 mb-6 transition-transform duration-500 group-hover:scale-110 group-hover:brightness-0">
+          <img loading="lazy" src="thumbnails/business.png" class="w-full h-full object-contain opacity-70 group-hover:opacity-100">
         </div>
-        <p class="text-white font-semibold text-sm text-center">Businesses</p>
+        <p class="relative z-10 text-[10px] font-black uppercase tracking-widest text-slate-400 group-hover:text-black transition-colors">Enterprise</p>
+        <div class="absolute inset-0 bg-primary opacity-0 group-hover:opacity-100 blur-xl -z-10 transition-opacity duration-500"></div>
       </div>
 
-      <div class="flex flex-col items-center justify-center p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur hover:border-primary/40 transition">
-        <div class="w-16 h-16 mb-4 flex items-center justify-center rounded-full bg-primary/20 text-primary font-bold text-lg">
-          <img loading="lazy" src="thumbnails/school.png">
+      <!-- SCHOOLS -->
+      <div class="group relative p-8 rounded-[2rem] bg-white/[0.03] border border-white/5 flex flex-col items-center justify-center transition-all duration-500 hover:bg-primary hover:scale-105 hover:-rotate-2 shadow-2xl">
+        <div class="relative z-10 w-12 h-12 mb-6 transition-transform duration-500 group-hover:scale-110 group-hover:brightness-0">
+          <img loading="lazy" src="thumbnails/school.png" class="w-full h-full object-contain opacity-70 group-hover:opacity-100">
         </div>
-        <p class="text-white font-semibold text-sm text-center">Schools</p>
+        <p class="relative z-10 text-[10px] font-black uppercase tracking-widest text-slate-400 group-hover:text-black transition-colors">Education</p>
+        <div class="absolute inset-0 bg-primary opacity-0 group-hover:opacity-100 blur-xl -z-10 transition-opacity duration-500"></div>
       </div>
 
-      <div class="flex flex-col items-center justify-center p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur hover:border-primary/40 transition">
-        <div class="w-16 h-16 mb-4 flex items-center justify-center rounded-full bg-primary/20 text-primary font-bold text-lg">
-           <img loading="lazy" src="thumbnails/hospital.png">
+      <!-- HOSPITALS -->
+      <div class="group relative p-8 rounded-[2rem] bg-white/[0.03] border border-white/5 flex flex-col items-center justify-center transition-all duration-500 hover:bg-primary hover:scale-105 hover:rotate-2 shadow-2xl">
+        <div class="relative z-10 w-12 h-12 mb-6 transition-transform duration-500 group-hover:scale-110 group-hover:brightness-0">
+          <img loading="lazy" src="thumbnails/hospital.png" class="w-full h-full object-contain opacity-70 group-hover:opacity-100">
         </div>
-        <p class="text-white font-semibold text-sm text-center">Hospitals</p>
+        <p class="relative z-10 text-[10px] font-black uppercase tracking-widest text-slate-400 group-hover:text-black transition-colors">Healthcare</p>
+        <div class="absolute inset-0 bg-primary opacity-0 group-hover:opacity-100 blur-xl -z-10 transition-opacity duration-500"></div>
       </div>
 
-      <div class="flex flex-col items-center justify-center p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur hover:border-primary/40 transition">
-        <div class="w-16 h-16 mb-4 flex items-center justify-center rounded-full bg-primary/20 text-primary font-bold text-lg">
-           <img loading="lazy" src="thumbnails/ecommerce.png">
+      <!-- E-COMMERCE -->
+      <div class="group relative p-8 rounded-[2rem] bg-white/[0.03] border border-white/5 flex flex-col items-center justify-center transition-all duration-500 hover:bg-primary hover:scale-105 hover:-rotate-2 shadow-2xl">
+        <div class="relative z-10 w-12 h-12 mb-6 transition-transform duration-500 group-hover:scale-110 group-hover:brightness-0">
+          <img loading="lazy" src="thumbnails/ecommerce.png" class="w-full h-full object-contain opacity-70 group-hover:opacity-100">
         </div>
-        <p class="text-white font-semibold text-sm text-center">E-commerce Brands</p>
+        <p class="relative z-10 text-[10px] font-black uppercase tracking-widest text-slate-400 group-hover:text-black transition-colors">E-Commerce</p>
+        <div class="absolute inset-0 bg-primary opacity-0 group-hover:opacity-100 blur-xl -z-10 transition-opacity duration-500"></div>
       </div>
 
-      <div class="flex flex-col items-center justify-center p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur hover:border-primary/40 transition">
-        <div class="w-16 h-16 mb-4 flex items-center justify-center rounded-full bg-primary/20 text-primary font-bold text-lg">
-            <img loading="lazy" src="thumbnails/individual.png">
+      <!-- INDIVIDUALS -->
+      <div class="group relative p-8 rounded-[2rem] bg-white/[0.03] border border-white/5 flex flex-col items-center justify-center transition-all duration-500 hover:bg-primary hover:scale-105 hover:rotate-2 shadow-2xl">
+        <div class="relative z-10 w-12 h-12 mb-6 transition-transform duration-500 group-hover:scale-110 group-hover:brightness-0">
+          <img loading="lazy" src="thumbnails/individual.png" class="w-full h-full object-contain opacity-70 group-hover:opacity-100">
         </div>
-        <p class="text-white font-semibold text-sm text-center">Individuals</p>
+        <p class="relative z-10 text-[10px] font-black uppercase tracking-widest text-slate-400 group-hover:text-black transition-colors">Personal</p>
+        <div class="absolute inset-0 bg-primary opacity-0 group-hover:opacity-100 blur-xl -z-10 transition-opacity duration-500"></div>
       </div>
 
     </div>
-
   </div>
 </section>
+
 
 <!-- TECH STACK / TOOLS -->
-<section id="tech-stack" class="animate-on-scroll relative bg-dark py-24">
-  <!-- Subtle Background Glow -->
-  <div class="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/5"></div>
+ <!-- THE POWER GRID: TECH STACK -->
+<section id="tech-stack" class="relative bg-[#020202] py-32 overflow-hidden">
+  <!-- Scanline Animation Effect -->
+  <div class="absolute inset-0 bg-[linear-gradient(to_bottom,transparent_50%,rgba(37,99,235,0.03)_50%)] bg-[size:100%_4px] pointer-events-none"></div>
 
   <div class="relative max-w-7xl mx-auto px-6">
 
-    <!-- SECTION HEADER -->
-    <div class="text-center max-w-2xl mx-auto mb-16">
-      <p class="text-sm font-medium text-accent uppercase tracking-wider">
-        Our Tools & Technologies
-      </p>
-      <h2 class="mt-4 text-3xl sm:text-4xl font-extrabold text-white">
-        We Use <span class="text-primary">Modern, Reliable, & Scalable</span> Tech
-      </h2>
-      <p class="mt-4 text-slate-300">
-        We build with the best tools and platforms to ensure your digital solutions are fast, secure, and future-proof.
+    <!-- HEADER: THE "MANIFEST" STYLE -->
+    <div class="flex flex-col lg:flex-row items-end justify-between mb-24 gap-8">
+      <div class="max-w-2xl">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="w-12 h-[1px] bg-primary"></span>
+          <span class="text-xs font-black uppercase tracking-[0.4em] text-primary">Technical Manifest</span>
+        </div>
+        <h2 style="font-family: inter;" class="text-4xl md:text-7xl font-black text-white tracking-tighter leading-none">
+          THE <span class="italic text-transparent bg-clip-text bg-gradient-to-r from-primary via-white to-white/20">CORE</span> <br/>
+          INFRASTRUCTURE.
+        </h2>
+      </div>
+      <p class="text-slate-500 text-lg max-w-xs border-l border-white/10 pl-6 italic mb-2">
+        Battle-tested frameworks for high-velocity deployment.
       </p>
     </div>
 
-    <!-- TECH GRID -->
-    <div class="grid gap-8 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6">
+    <!-- TECH GRID: THE CYBER MODULES -->
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-px bg-white/10 border border-white/10 rounded-[2.5rem] overflow-hidden">
 
-      <div class="flex flex-col items-center justify-center p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur hover:border-primary/40 transition">
-        <img loading="lazy" src="thumbnails/reactlogo.png" alt="React.Js" class="h-12 mb-4">
-        <p class="text-white font-semibold text-sm text-center">React.Js</p>
+      <!-- REACT -->
+      <div class="group relative bg-[#050505] p-10 flex flex-col items-center justify-center transition-all duration-500 hover:bg-primary/5">
+        <div class="absolute top-4 right-4 text-[8px] font-black text-slate-700 group-hover:text-primary transition-colors uppercase tracking-widest">Sys_01</div>
+        <img loading="lazy" src="thumbnails/reactlogo.png" alt="React" class="h-12 w-auto mb-6 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500">
+        <p class="text-[10px] font-black text-slate-500 group-hover:text-white uppercase tracking-[0.2em] transition-colors">Frontend</p>
+        <div class="mt-2 text-[9px] font-bold text-primary opacity-0 group-hover:opacity-100 transition-opacity italic">React.js</div>
       </div>
 
-      <div class="flex flex-col items-center justify-center p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur hover:border-primary/40 transition">
-        <img loading="lazy" src="thumbnails/nodejslogo.png" alt="Node.js" class="h-12 mb-4">
-        <p class="text-white font-semibold text-sm text-center">Node.js</p>
+      <!-- NODE -->
+      <div class="group relative bg-[#050505] p-10 flex flex-col items-center justify-center transition-all duration-500 hover:bg-primary/5">
+        <div class="absolute top-4 right-4 text-[8px] font-black text-slate-700 group-hover:text-primary transition-colors uppercase tracking-widest">Sys_02</div>
+        <img loading="lazy" src="thumbnails/nodejslogo.png" alt="Node" class="h-12 w-auto mb-6 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500">
+        <p class="text-[10px] font-black text-slate-500 group-hover:text-white uppercase tracking-[0.2em] transition-colors">Backend</p>
+        <div class="mt-2 text-[9px] font-bold text-primary opacity-0 group-hover:opacity-100 transition-opacity italic">Node.js</div>
       </div>
 
-       <div class="flex flex-col items-center justify-center p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur hover:border-primary/40 transition">
-        <img loading="lazy" src="thumbnails/figmalogo.png" alt="Figma" class="h-12 mb-4">
-        <p class="text-white font-semibold text-sm text-center">Figma</p>
+      <!-- FIGMA -->
+      <div class="group relative bg-[#050505] p-10 flex flex-col items-center justify-center transition-all duration-500 hover:bg-primary/5">
+        <div class="absolute top-4 right-4 text-[8px] font-black text-slate-700 group-hover:text-primary transition-colors uppercase tracking-widest">Sys_03</div>
+        <img loading="lazy" src="thumbnails/figmalogo.png" alt="Figma" class="h-12 w-auto mb-6 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500">
+        <p class="text-[10px] font-black text-slate-500 group-hover:text-white uppercase tracking-[0.2em] transition-colors">Interface</p>
+        <div class="mt-2 text-[9px] font-bold text-primary opacity-0 group-hover:opacity-100 transition-opacity italic">Prototyping</div>
       </div>
 
-      <div class="flex flex-col items-center justify-center p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur hover:border-primary/40 transition">
-        <img loading="lazy" src="thumbnails/illustratorlogo.png" alt="Adobe Illustrator" class="h-12 mb-4">
-        <p class="text-white font-semibold text-sm text-center">Adobe Illustrator</p>
+      <!-- ILLUSTRATOR -->
+      <div class="group relative bg-[#050505] p-10 flex flex-col items-center justify-center transition-all duration-500 hover:bg-primary/5">
+        <div class="absolute top-4 right-4 text-[8px] font-black text-slate-700 group-hover:text-primary transition-colors uppercase tracking-widest">Sys_04</div>
+        <img loading="lazy" src="thumbnails/illustratorlogo.png" alt="Illustrator" class="h-12 w-auto mb-6 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500">
+        <p class="text-[10px] font-black text-slate-500 group-hover:text-white uppercase tracking-[0.2em] transition-colors">Vector</p>
+        <div class="mt-2 text-[9px] font-bold text-primary opacity-0 group-hover:opacity-100 transition-opacity italic">Graphics</div>
       </div>
 
-      <div class="flex flex-col items-center justify-center p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur hover:border-primary/40 transition">
-        <img loading="lazy" src="thumbnails/gitt.png" alt="Figma" class="h-12 mb-4">
-        <p class="text-white font-semibold text-sm text-center">GitHub</p>
+      <!-- GITHUB -->
+      <div class="group relative bg-[#050505] p-10 flex flex-col items-center justify-center transition-all duration-500 hover:bg-primary/5">
+        <div class="absolute top-4 right-4 text-[8px] font-black text-slate-700 group-hover:text-primary transition-colors uppercase tracking-widest">Sys_05</div>
+        <img loading="lazy" src="thumbnails/gitt.png" alt="GitHub" class="h-12 w-auto mb-6 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500">
+        <p class="text-[10px] font-black text-slate-500 group-hover:text-white uppercase tracking-[0.2em] transition-colors">Version</p>
+        <div class="mt-2 text-[9px] font-bold text-primary opacity-0 group-hover:opacity-100 transition-opacity italic">Deployment</div>
       </div>
 
-      <div class="flex flex-col items-center justify-center p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur hover:border-primary/40 transition">
-        <img loading="lazy" src="thumbnails/vercel.webp" alt="Tailwind CSS" class="h-12 mb-4">
-        <p class="text-white font-semibold text-sm text-center">Vercel</p>
+      <!-- VERCEL -->
+      <div class="group relative bg-[#050505] p-10 flex flex-col items-center justify-center transition-all duration-500 hover:bg-primary/5">
+        <div class="absolute top-4 right-4 text-[8px] font-black text-slate-700 group-hover:text-primary transition-colors uppercase tracking-widest">Sys_06</div>
+        <img loading="lazy" src="thumbnails/vercel.webp" alt="Vercel" class="h-12 w-auto mb-6 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500">
+        <p class="text-[10px] font-black text-slate-500 group-hover:text-white uppercase tracking-[0.2em] transition-colors">Serverless</p>
+        <div class="mt-2 text-[9px] font-bold text-primary opacity-0 group-hover:opacity-100 transition-opacity italic">Optimization</div>
       </div>
-
-      
 
     </div>
 
+    <!-- TERMINAL FOOTER -->
+    <div class="mt-12 flex items-center justify-center gap-6">
+       <div class="h-px w-24 bg-white/10"></div>
+       <p class="text-[10px] font-mono text-slate-600 uppercase tracking-[0.4em]">Integrated Stack v2.0 // Synlotech</p>
+       <div class="h-px w-24 bg-white/10"></div>
+    </div>
   </div>
 </section>
+
 
 <!-- MAINTENANCE & SUPPORT -->
-<section id="maintenance" style="scroll-margin-top: 20px;" class="animate-on-scroll relative bg-dark py-24">
-  <!-- Background Accent -->
-  <div class="absolute inset-0 bg-gradient-to-tr from-primary/10 via-transparent to-accent/10"></div>
+ <!-- THE UPTIME PROTOCOL: MAINTENANCE PLANS -->
+<section id="maintenance" class="relative bg-[#020202] py-32 overflow-hidden">
+  <!-- Dynamic Aura -->
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(circle_at_center,rgba(37,99,235,0.05),transparent_70%)]"></div>
 
   <div class="relative max-w-7xl mx-auto px-6">
-
+    
     <!-- SECTION HEADER -->
-    <div class="text-center max-w-2xl mx-auto mb-16">
-      <p class="text-sm font-medium text-accent uppercase tracking-wider">
-        Maintenance & Support
-      </p>
-      <h2 class="mt-4 text-3xl sm:text-4xl font-extrabold text-white">
-        Long-Term <span class="text-primary">Performance & Reliability</span>
-      </h2>
-      <p class="mt-4 text-slate-300">
-        Keep your digital products secure, up-to-date, and performing at their best with our comprehensive support plans.
+    <div class="flex flex-col md:flex-row items-end justify-between mb-24 gap-8">
+      <div class="max-w-xl">
+        <span class="text-xs font-black uppercase tracking-[0.5em] text-primary block mb-4 italic">System Continuity</span>
+        <h2 style="font-family: inter;" class="text-5xl md:text-7xl font-black text-white tracking-tighter leading-none">
+          POST-LAUNCH <br/>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-white to-white/20">VIGILANCE.</span>
+        </h2>
+      </div>
+      <p class="text-slate-500 text-lg max-w-xs border-l border-white/10 pl-6 italic">
+        Ensuring zero-latency performance and ironclad security.
       </p>
     </div>
 
-    <!-- SUPPORT PLANS GRID -->
-    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+    <!-- PRICING MATRIX -->
+    <div class="grid gap-6 lg:grid-cols-3 items-center">
 
-      <!-- PLAN 1 -->
-      <div class="p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur hover:border-primary/40 transition">
-  <h3 class="text-xl font-bold text-primary mb-1">Basic Plan</h3>
-  <p class="text-3xl font-extrabold text-white mb-4">
-    $80<span class="text-sm font-medium text-slate-400">/month</span>
-  </p>
+      <!-- BASIC: THE ESSENTIALS -->
+      <div class="group relative p-10 rounded-[2.5rem] bg-[#0A0A0A] border border-white/5 transition-all duration-500 hover:border-white/20">
+        <div class="mb-8">
+          <h3 class="text-xs font-black text-slate-500 uppercase tracking-[0.3em] mb-4">Tier_01 // Basic</h3>
+          <div class="flex items-baseline gap-1">
+            <span class="text-4xl font-black text-white">$80</span>
+            <span class="text-xs font-bold text-slate-600 uppercase tracking-widest">/ Monthly</span>
+          </div>
+        </div>
 
-  <ul class="text-slate-300 text-sm space-y-2 mb-6">
-    <li>✅ Monthly updates & backups</li>
-    <li>✅ Security monitoring</li>
-    <li>✅ Email support</li>
-  </ul>
+        <ul class="space-y-6 mb-12">
+          <li class="flex items-center gap-4 group/item">
+            <div class="w-1.5 h-1.5 rounded-full bg-primary shadow-[0_0_8px_rgba(37,99,235,0.8)]"></div>
+            <span class="text-sm text-slate-400 group-hover/item:text-white transition-colors">Monthly Core Updates</span>
+          </li>
+          <li class="flex items-center gap-4 group/item">
+            <div class="w-1.5 h-1.5 rounded-full bg-primary/30"></div>
+            <span class="text-sm text-slate-400 group-hover/item:text-white transition-colors">Standard Backups</span>
+          </li>
+          <li class="flex items-center gap-4 group/item">
+            <div class="w-1.5 h-1.5 rounded-full bg-primary/30"></div>
+            <span class="text-sm text-slate-400 group-hover/item:text-white transition-colors">Security Monitoring</span>
+          </li>
+        </ul>
 
-  <a href="https://wa.me/255788296274?text=Hi%20Synlotech,%20I%20want%20to%20start%20the%20Basic%20Plan"
-   target="_blank"
-   class="inline-flex items-center gap-2 text-primary font-semibold text-sm hover:underline">
-  Get Started →
-</a>
+        <a href="https://wa.me/255788296274?text=Hi%20Synlotech,%20I%20want%20to%20start%20the%20Basic%20Plan" target="_blank" class="block w-full py-4 rounded-xl border border-white/10 text-center text-[10px] font-black uppercase tracking-[0.2em] text-white hover:bg-white hover:text-black transition-all">
+          Deploy Basic
+        </a>
+      </div>
 
-</div>
+      <!-- PRO: THE "POP" CARD -->
+      <div class="group relative p-12 rounded-[3rem] bg-[#0D0D0D] border-2 border-primary shadow-[0_0_60px_-15px_rgba(37,99,235,0.4)] transform lg:scale-105 z-10">
+        <!-- Most Popular Badge -->
+        <div class="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-primary rounded-full text-[10px] font-black text-black uppercase tracking-widest">
+          High Performance
+        </div>
 
-<!--plan 2 -->
- <div class="p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur hover:border-primary/40 transition">
-  <h3 class="text-xl font-bold text-primary mb-1">Pro Plan</h3>
-  <p class="text-3xl font-extrabold text-white mb-4">
-    $140<span class="text-sm font-medium text-slate-400">/month</span>
-  </p>
+        <div class="mb-10">
+          <h3 class="text-xs font-black text-primary uppercase tracking-[0.3em] mb-4">Tier_02 // Professional</h3>
+          <div class="flex items-baseline gap-1">
+            <span class="text-5xl font-black text-white">$140</span>
+            <span class="text-xs font-bold text-slate-500 uppercase tracking-widest">/ Monthly</span>
+          </div>
+        </div>
 
-  <ul class="text-slate-300 text-sm space-y-2 mb-6">
-   <li>✅ Weekly updates & backups</li>
-          <li>✅ Security & performance monitoring</li>
-          <li>✅ Priority email & chat support</li>
-  </ul>
+        <ul class="space-y-6 mb-12">
+          <li class="flex items-center gap-4 group/item">
+            <div class="w-2 h-2 rounded-full bg-primary animate-pulse shadow-[0_0_12px_rgba(37,99,235,1)]"></div>
+            <span class="text-sm text-white font-bold italic">Weekly Optimization</span>
+          </li>
+          <li class="flex items-center gap-4 group/item">
+            <div class="w-2 h-2 rounded-full bg-primary"></div>
+            <span class="text-sm text-slate-300 group-hover/item:text-white transition-colors">Performance Audits</span>
+          </li>
+          <li class="flex items-center gap-4 group/item">
+            <div class="w-2 h-2 rounded-full bg-primary"></div>
+            <span class="text-sm text-slate-300 group-hover/item:text-white transition-colors">Priority Live Support</span>
+          </li>
+        </ul>
 
-  <a href="https://wa.me/255788296274?text=Hi%20Synlotech,%20I%20want%20to%20start%20the%20Pro%20Plan"
-   target="_blank"
-   class="inline-flex items-center gap-2 text-primary font-semibold text-sm hover:underline">
-  Get Started →
-</a>
+        <a href="https://wa.me/255788296274?text=Hi%20Synlotech,%20I%20want%20to%20start%20the%20Pro%20Plan" target="_blank" class="block w-full py-5 bg-primary rounded-2xl text-center text-xs font-black uppercase tracking-[0.2em] text-black shadow-lg shadow-primary/20 hover:scale-[1.02] transition-transform">
+          Activate Pro Tier
+        </a>
+      </div>
 
-</div>
+      <!-- ENTERPRISE: THE ELITE -->
+      <div class="group relative p-10 rounded-[2.5rem] bg-[#0A0A0A] border border-white/5 transition-all duration-500 hover:border-white/20">
+        <div class="mb-8">
+          <h3 class="text-xs font-black text-slate-500 uppercase tracking-[0.3em] mb-4">Tier_03 // Enterprise</h3>
+          <div class="flex items-baseline gap-1">
+            <span class="text-4xl font-black text-white">$200</span>
+            <span class="text-xs font-bold text-slate-600 uppercase tracking-widest">/ Monthly</span>
+          </div>
+        </div>
 
-<!--plan 3 -->
- <div class="p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur hover:border-primary/40 transition">
-  <h3 class="text-xl font-bold text-primary mb-1">Enterprise Plan</h3>
-  <p class="text-3xl font-extrabold text-white mb-4">
-    $200<span class="text-sm font-medium text-slate-400">/month</span>
-  </p>
+        <ul class="space-y-6 mb-12">
+          <li class="flex items-center gap-4 group/item">
+            <div class="w-1.5 h-1.5 rounded-full bg-primary/80"></div>
+            <span class="text-sm text-slate-400 group-hover/item:text-white transition-colors">Real-time Backups</span>
+          </li>
+          <li class="flex items-center gap-4 group/item">
+            <div class="w-1.5 h-1.5 rounded-full bg-primary/80"></div>
+            <span class="text-sm text-slate-400 group-hover/item:text-white transition-colors">Advanced Cyber-Defense</span>
+          </li>
+          <li class="flex items-center gap-4 group/item">
+            <div class="w-1.5 h-1.5 rounded-full bg-primary/80"></div>
+            <span class="text-sm text-slate-400 group-hover/item:text-white transition-colors">24/7 Dedicated Tunnel</span>
+          </li>
+        </ul>
 
-  <ul class="text-slate-300 text-sm space-y-2 mb-6">
-    <li>✅ Daily updates & backups</li>
-            <li>✅ Advanced security & performance monitoring</li>
-            <li>✅ 24/7 dedicated support</li>
-  </ul>
+        <a href="https://wa.me/255788296274?text=Hi%20Synlotech,%20I%20want%20to%20start%20the%20Enterprise%20Plan" target="_blank" class="block w-full py-4 rounded-xl border border-white/10 text-center text-[10px] font-black uppercase tracking-[0.2em] text-white hover:bg-white hover:text-black transition-all">
+          Initiate Enterprise
+        </a>
+      </div>
 
-  <a href="https://wa.me/255788296274?text=Hi%20Synlotech,%20I%20want%20to%20start%20the%20Enterprise%20Plan"
-   target="_blank"
-   class="inline-flex items-center gap-2 text-primary font-semibold text-sm hover:underline">
-  Get Started →
-</a>
-
-</div>
     </div>
 
-    <p class="mt-12 text-slate-400 text-sm max-w-2xl mx-auto text-center">
-      Ongoing support ensures your digital products stay reliable, secure, and high-performing after launch.
-    </p>
-
+    <!-- REASSURANCE BAR -->
+    <div class="mt-20 py-8 border-y border-white/5 flex flex-col md:flex-row items-center justify-between gap-6 opacity-60">
+       <p class="text-[10px] font-bold text-slate-500 uppercase tracking-[0.3em]">Status: Global Support Active</p>
+       <p class="text-[10px] font-bold text-slate-500 uppercase tracking-[0.3em]">Architecture: Scale-Ready</p>
+       <p class="text-[10px] font-bold text-slate-500 uppercase tracking-[0.3em]">Security: End-to-End</p>
+    </div>
   </div>
 </section>
+
 
 <!-- INSIGHTS / BLOG -->
-<section id="insights" class="animate-on-scroll relative bg-dark py-24 overflow-hidden">
-  <!-- Subtle Background Glow -->
-  <div class="absolute inset-0 bg-gradient-to-tr from-primary/10 via-transparent to-accent/10"></div>
+ <!-- THE INTELLIGENCE FEED: INSIGHTS & BLOG -->
+<section id="insights" class="relative bg-[#020202] py-32 overflow-hidden">
+  <!-- Subtle Background Grid -->
+  <div class="absolute inset-0 bg-[radial-gradient(#ffffff05_1px,transparent_1px)] bg-[size:40px_40px]"></div>
 
   <div class="relative max-w-7xl mx-auto px-6">
-
-    <!-- SECTION HEADER -->
-    <div class="text-center max-w-2xl mx-auto mb-16">
-      <p class="text-sm font-medium text-accent uppercase tracking-wider">
-        Insights & Blog
-      </p>
-      <h2 class="mt-4 text-3xl sm:text-4xl font-extrabold text-white">
-        <span class="text-primary">Latest</span> From the Tech World
-      </h2>
-      <p class="mt-4 text-slate-300">
-        Stay updated with the latest trends, tips, and case studies from Synlotech Technologies.
-      </p>
+    
+    <!-- SECTION HEADER: MAGAZINE STYLE -->
+    <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-24 gap-8">
+      <div class="max-w-2xl">
+        <div class="flex items-center gap-3 mb-6">
+          <span class="h-px w-8 bg-primary"></span>
+          <span class="text-xs font-black uppercase tracking-[0.5em] text-primary">The Syntax Journal</span>
+        </div>
+        <h2 style="font-family: inter;" class="text-6xl md:text-8xl font-black text-white tracking-tighter leading-[0.85]">
+          LATEST <br/>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-white to-white/20 italic">INSIGHTS.</span>
+        </h2>
+      </div>
+      <div class="pb-4">
+         <a href="articles.html" class="group flex items-center gap-4 text-white font-black uppercase tracking-widest text-xs border-b-2 border-primary pb-2 hover:text-primary transition-colors">
+          View All Dispatch
+          <svg class="w-4 h-4 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </div>
     </div>
 
-    <!-- BLOG CARDS GRID -->
-    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+    <!-- BLOG GRID: ASYMMETRICAL & BOLD -->
+    <div class="grid gap-12 lg:grid-cols-12">
 
-      <!-- BLOG CARD 1 -->
-      <div class="group relative rounded-2xl overflow-hidden bg-white/5 border border-white/10 backdrop-blur hover:shadow-lg hover:shadow-primary/30 transition">
-        <img loading="lazy" src="thumbnails/pexels-luis-gomes-166706-546819.jpg" alt="Blog 1" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
-        <div class="p-6">
-          <span class="text-primary text-xs font-bold uppercase">Web Development</span>
-          <h3 class="text-white text-lg font-bold mt-2 mb-2  transition">5 Tips for Building High-Performance Websites</h3>
-          <p class="text-slate-300 text-sm mb-4">Learn how to optimize websites for speed, SEO, and better user experience.</p>
-          <a href="highperfweb.html" class="text-primary font-semibold text-sm hover:underline">Read More →</a>
+      <!-- FEATURED POST (Spans 7 columns) -->
+      <article class="lg:col-span-7 group relative">
+        <div class="relative overflow-hidden rounded-[2.5rem] bg-[#0A0A0A] border border-white/5">
+          <div class="aspect-video overflow-hidden">
+            <img loading="lazy" src="thumbnails/pexels-luis-gomes-166706-546819.jpg" alt="Web Dev" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700">
+          </div>
+          <div class="p-10 md:p-14">
+            <div class="flex items-center gap-4 mb-6">
+              <span class="px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-[10px] font-black text-primary uppercase tracking-widest">Protocol</span>
+              <span class="text-[10px] font-bold text-slate-600 uppercase tracking-widest">5 Min Read</span>
+            </div>
+            <h3 class="text-3xl md:text-4xl font-black text-white mb-6 leading-tight group-hover:text-primary transition-colors tracking-tighter">
+              5 Critical Benchmarks for High-Velocity Web Performance.
+            </h3>
+            <p class="text-slate-400 text-lg leading-relaxed mb-8 max-w-xl">
+              Architecture strategies for sub-second load times and aggressive SEO indexing.
+            </p>
+            <a href="highperfweb.html" class="inline-flex items-center gap-2 text-white font-black text-xs uppercase tracking-widest group/link">
+              Read Analysis <span class="group-hover/link:translate-x-2 transition-transform text-primary">→</span>
+            </a>
+          </div>
         </div>
-      </div>
+      </article>
 
-      <!-- BLOG CARD 2 -->
-      <div class="group relative rounded-2xl overflow-hidden bg-white/5 border border-white/10 backdrop-blur hover:shadow-lg hover:shadow-primary/30 transition">
-        <img loading="lazy" src="thumbnails/AI.jpg" alt="Blog 2" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
-        <div class="p-6">
-          <span class="text-primary text-xs font-bold uppercase">AI & Tech</span>
-          <h3 class="text-white text-lg font-bold mt-2 mb-2  transition">AI Trends Every Developer Should Know</h3>
-          <p class="text-slate-300 text-sm mb-4">Explore the latest AI technologies and how they impact digital solutions.</p>
-          <a href="aitech.html" class="text-primary font-semibold text-sm hover:underline">Read More →</a>
-        </div>
-      </div>
+      <!-- SECONDARY POSTS (Spans 5 columns) -->
+      <div class="lg:col-span-5 space-y-12">
+        
+        <!-- POST 2 -->
+        <article class="group flex gap-8 items-start">
+          <div class="w-32 h-32 flex-shrink-0 overflow-hidden rounded-2xl border border-white/10 bg-[#0A0A0A]">
+            <img src="thumbnails/AI.jpg" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
+          </div>
+          <div class="flex-1">
+            <span class="text-[9px] font-black text-primary uppercase tracking-widest block mb-2">AI Intelligence</span>
+            <h3 class="text-xl font-bold text-white mb-3 leading-snug group-hover:text-primary transition-colors tracking-tight">
+              Dev Trends: The AI-First Deployment Cycle.
+            </h3>
+            <a href="aitech.html" class="text-[10px] font-black text-slate-500 uppercase tracking-widest hover:text-white transition-colors">View Entry +</a>
+          </div>
+        </article>
 
-      <!-- BLOG CARD 3 -->
-      <div class="group relative rounded-2xl overflow-hidden bg-white/5 border border-white/10 backdrop-blur hover:shadow-lg hover:shadow-primary/30 transition">
-        <img loading="lazy" src="thumbnails/chartup.jpg" alt="Blog 3" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
-        <div class="p-6">
-          <span class="text-primary text-xs font-bold uppercase">Case Study</span>
-          <h3 class="text-white text-lg font-bold mt-2 mb-2 ">How SYNLOTECH Boosted Startup Growth</h3>
-          <p class="text-slate-300 text-sm mb-4">See a real-world example of how we helped a startup scale with our solutions.</p>
-          <a href="casestudy.html" class="text-primary font-semibold text-sm hover:underline">Read More →</a>
+        <!-- POST 3 -->
+        <article class="group flex gap-8 items-start">
+          <div class="w-32 h-32 flex-shrink-0 overflow-hidden rounded-2xl border border-white/10 bg-[#0A0A0A]">
+            <img src="thumbnails/chartup.jpg" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
+          </div>
+          <div class="flex-1">
+            <span class="text-[9px] font-black text-primary uppercase tracking-widest block mb-2">Growth Ops</span>
+            <h3 class="text-xl font-bold text-white mb-3 leading-snug group-hover:text-primary transition-colors tracking-tight">
+              Scale Logic: How Synlotech Architected 10x Startup Growth.
+            </h3>
+            <a href="casestudy.html" class="text-[10px] font-black text-slate-500 uppercase tracking-widest hover:text-white transition-colors">View Entry +</a>
+          </div>
+        </article>
+
+        <!-- NEWSLETTER MINI-CARD -->
+        <div class="p-8 rounded-[2rem] bg-gradient-to-br from-primary/10 to-transparent border border-primary/20">
+          <h4 class="text-white font-bold mb-2 uppercase tracking-tight">Subscribe to the Feed</h4>
+          <p class="text-slate-500 text-xs mb-4">Get high-performance tech updates delivered to your terminal.</p>
+          <form action="https://formspree.io/f/mwvnvdko" method="POST" class="relative group">
+          <input type="email" name="email" placeholder="Terminal@address.com" required
+                 class="w-full px-5 py-4 rounded-2xl bg-white/[0.03] border border-white/10 text-white text-sm focus:outline-none focus:border-primary transition-all">
+          <button type="submit" class="absolute right-2 top-2 bottom-2 px-6 rounded-xl bg-accent text-white text-[10px] font-black uppercase tracking-widest hover:bg-primary transition-all">
+            Join
+          </button>
+        </form>
         </div>
+
       </div>
 
     </div>
-
-    <!-- VIEW ALL BUTTON -->
-    <div class="text-center mt-12">
-      <a href="articles.html" class="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-primary text-white font-semibold hover:bg-blue-700 transition shadow-lg shadow-primary/30">
-        View All Articles
-      </a>
-    </div>
-
   </div>
 </section>
+
 
 
 <!-- CONTACT / LEAD CAPTURE -->
-<section id="contact-form" class="animate-on-scroll relative bg-dark py-24">
-  <!-- Background Glow -->
-  <div class="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10"></div>
-
-  <div class="relative max-w-4xl mx-auto px-6">
-
-    <!-- SECTION HEADER -->
-    <div class="text-center max-w-2xl mx-auto mb-16">
-      <p class="text-sm font-medium text-accent uppercase tracking-wider">
-        Get in Touch
-      </p>
-      <h2 class="mt-4 text-3xl sm:text-4xl font-extrabold text-white">
-        <span class="text-primary">Start</span> Your Project <span class="text-primary">Today</span>
+ <!-- THE UPLINK: CONTACT & INQUIRY -->
+<section id="contact-form" class="relative bg-[#020202] py-32 overflow-hidden">
+  <!-- Kinetic Background -->
+  <div class="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,#2563eb10,transparent_50%)]"></div>
+  
+  <div class="relative max-w-6xl mx-auto px-6">
+    
+    <!-- SECTION HEADER: TERMINAL STYLE -->
+    <div class="mb-20">
+      <div class="flex items-center gap-3 mb-4">
+        <div class="h-2 w-2 rounded-full bg-primary animate-pulse"></div>
+        <span class="text-xs font-black uppercase tracking-[0.5em] text-primary">Secure Uplink Enabled</span>
+      </div>
+      <h2 style="font-family: inter;" class="text-5xl md:text-7xl font-black text-white tracking-tighter leading-none">
+        START THE <br/>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-white to-white/20 italic">MISSION.</span>
       </h2>
-      <p class="mt-4 text-slate-300">
-        Fill out the form, WhatsApp, email, or call us. We make contacting us ridiculously easy.
-      </p>
     </div>
 
-    <!-- CONTACT GRID -->
-    <div class="grid gap-12 md:grid-cols-2">
+    <!-- CONTACT MODULE -->
+    <div class="grid lg:grid-cols-12 gap-px bg-white/10 rounded-[3rem] overflow-hidden border border-white/10 shadow-2xl">
+      
+      <!-- LEFT: THE INPUT TERMINAL (FORM) -->
+      <div class="lg:col-span-7 bg-[#050505] p-10 md:p-16">
+        <form id="form" class="space-y-8">
+          <div class="group relative">
+            <label class="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-2 block group-focus-within:text-primary transition-colors">Identification</label>
+            <input type="text" name="name" placeholder="Full Name" required
+                   class="w-full px-0 py-4 bg-transparent border-b border-white/10 text-white placeholder-slate-700 focus:outline-none focus:border-primary transition-all text-xl font-medium">
+          </div>
 
-      <!-- FORM -->
-      <form id="form" class="space-y-6">
-  <input type="text" name="name" placeholder="Your Name" required
-         class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary">
+          <div class="group relative">
+            <label class="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-2 block group-focus-within:text-primary transition-colors">Digital Address</label>
+            <input type="email" name="email" placeholder="Email@domain.com" required
+                   class="w-full px-0 py-4 bg-transparent border-b border-white/10 text-white placeholder-slate-700 focus:outline-none focus:border-primary transition-all text-xl font-medium">
+          </div>
 
-  <input type="email" name="email" placeholder="Your Email" required
-         class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary">
+          <div class="group relative">
+            <label class="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-2 block group-focus-within:text-primary transition-colors">Project Brief</label>
+            <textarea name="message" placeholder="Describe the scope..." required rows="4"
+                      class="w-full px-0 py-4 bg-transparent border-b border-white/10 text-white placeholder-slate-700 focus:outline-none focus:border-primary transition-all text-xl font-medium resize-none"></textarea>
+          </div>
 
-  <textarea name="message" placeholder="Your Message" required rows="5"
-            class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
+          <button type="submit"
+                  class="group relative w-full mt-10 py-6 bg-primary rounded-2xl overflow-hidden transition-all active:scale-95">
+            <span class="relative z-10 text-white font-black uppercase tracking-[0.3em] text-sm">Transmit Message</span>
+            <div class="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-300 mix-blend-overlay"></div>
+          </button>
+        </form>
+      </div>
 
-  <button type="submit"
-          class="w-full px-6 py-4 rounded-xl bg-primary text-white font-semibold hover:bg-blue-700 transition shadow-lg shadow-primary/30">
-    Send Message
-  </button>
-</form>
+      <!-- RIGHT: LIVE CHANNELS (COMMS) -->
+      <div class="lg:col-span-5 bg-[#080808] p-10 md:p-16 flex flex-col justify-between relative overflow-hidden">
+        <!-- Decorative Grid -->
+        <div class="absolute inset-0 opacity-20 pointer-events-none bg-[radial-gradient(#ffffff10_1px,transparent_1px)] bg-[size:20px_20px]"></div>
 
+        <div class="relative z-10">
+          <h3 class="text-xs font-black text-slate-500 uppercase tracking-[0.4em] mb-12">Direct Channels</h3>
+          
+          <div class="space-y-12">
+            <!-- WHATSAPP -->
+            <a href="https://wa.me/255788296274" class="group block">
+              <p class="text-[10px] font-black text-primary uppercase tracking-widest mb-2">Instant Sync</p>
+              <p class="text-2xl font-bold text-white group-hover:text-primary transition-colors tracking-tight">+255 788 296 274</p>
+              <p class="text-xs text-slate-600 mt-1">Available 24/7</p>
+            </a>
 
-      <!-- OTHER CONTACT METHODS -->
-      <div class="flex flex-col justify-center space-y-6 text-center md:text-left">
-
-        <div class="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur hover:border-primary/40 transition">
-          <h3 class="text-white font-bold mb-2">Send us a Message</h3>
-          <p class="text-slate-300 mb-2">Chat with us instantly:</p>
-          <a href="https://wa.me/255788296274" class="text-primary font-semibold">+255 788 296 274</a>
+            <!-- EMAIL -->
+            <a href="mailto:synlotech@outlook.com" class="group block">
+              <p class="text-[10px] font-black text-primary uppercase tracking-widest mb-2">Official Inquiry</p>
+              <p class="text-2xl font-bold text-white group-hover:text-primary transition-colors tracking-tight">synlotech@outlook.com</p>
+              <p class="text-xs text-slate-600 mt-1">24hr Response Protocol</p>
+            </a>
+          </div>
         </div>
 
-        <div class="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur hover:border-primary/40 transition">
-          <h3 class="text-white font-bold mb-2">Send us an Email</h3>
-          <p class="text-slate-300 mb-2">Send us a message anytime:</p>
-          <a href="mailto:synlotech@outlook.com" class="text-primary font-semibold">synlotech@outlook.com</a>
+        <!-- STATUS BOX -->
+        <div class="relative z-10 mt-16 p-6 rounded-2xl bg-white/[0.03] border border-white/5">
+          <div class="flex items-center gap-3 mb-2">
+            <div class="h-1.5 w-1.5 rounded-full bg-green-500"></div>
+            <span class="text-[9px] font-black text-white uppercase tracking-widest">Global Status: Active</span>
+          </div>
+          <p class="text-[10px] text-slate-500 leading-relaxed">
+            All systems operational. Our engineering team typically responds to new inquiries within 12–24 business hours.
+          </p>
         </div>
-
-
       </div>
 
     </div>
+
+    <!-- FOOTER NOTE -->
+    <p class="mt-12 text-center text-[10px] font-mono text-slate-700 uppercase tracking-[0.5em]">
+      End of Transmission // Synlotech Terminal v2.0
+    </p>
 
   </div>
 </section>
 
+
 <!-- FOOTER -->
-<footer class="relative bg-dark border-t border-white/10 pt-16">
-  <div class="max-w-7xl mx-auto px-6">
+<footer class="relative bg-[#020202] pt-24 pb-12 overflow-hidden border-t border-white/5">
+  <!-- Decorative Grid Overlay -->
+  <div class="absolute inset-0 bg-[radial-gradient(#ffffff03_1px,transparent_1px)] bg-[size:30px_30px] pointer-events-none"></div>
 
-    <div class="pb-12">
-      <!-- AUTO-FIT GRID (THE FIX) -->
-      <div class="grid gap-12 grid-cols-[repeat(auto-fit,minmax(220px,1fr))]">
-
-        <!-- CONTACT -->
-        <div>
-          <h3 class="text-white text-xl font-bold mb-4">Contact Us</h3>
-          <p class="text-white text-sm mb-2">
-            Email:
-            <a href="mailto:synlotech@outlook.com" class="text-gray-400 hover:text-primary transition">
-              synlotech@outlook.com
-            </a>
-          </p>
-          <p class="text-white text-sm">
-            WhatsApp:
-            <a href="https://wa.me/255788296274" class="text-gray-400 hover:text-primary transition">
-              Chat Now
-            </a>
-          </p>
+  <div class="relative max-w-7xl mx-auto px-6">
+    
+    <!-- UPPER TIER: BRAND & NEWSLETTER -->
+    <div class="grid lg:grid-cols-12 gap-16 mb-20">
+      
+      <!-- BRAND HUB -->
+      <div class="lg:col-span-4">
+        <a href="homepage.html#home" class="group flex items-center gap-4 mb-8">
+          <div class="relative">
+            <div class="absolute inset-0 bg-primary/20 blur-lg rounded-full group-hover:bg-primary/40 transition-all"></div>
+            <img loading="lazy" src="thumbnails/theS.png" class="relative w-12 h-12 object-contain grayscale group-hover:grayscale-0 transition-all">
+          </div>
+          <span class="text-3xl font-black text-accent tracking-tighter uppercase">Synlotech</span>
+        </a>
+        <p class="text-slate-500 text-sm leading-relaxed max-w-xs mb-8">
+          Engineering high-frequency digital assets for global innovators. Built for performance, reliability, and growth.
+        </p>
+        <!-- SYSTEM STATUS INDICATOR -->
+        <div class="inline-flex items-center gap-3 px-4 py-2 rounded-xl bg-white/[0.03] border border-white/10">
+          <div class="h-2 w-2 rounded-full bg-green-500 animate-pulse"></div>
+          <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest">All Systems Operational</span>
         </div>
+      </div>
 
-        <!-- SOCIAL -->
-        <div>
-  <h3 class="text-white text-xl font-bold mb-4">Follow Us</h3>
-  <div class="flex gap-4">
-    <a href="https://www.linkedin.com/in/synlotech-technologies-7252933b2" target="_blank" class="text-gray-400 hover:text-primary transition">
-      <i class="fa-brands fa-linkedin-in"></i>
-    </a>
+      <!-- THE FEED (NEWSLETTER) -->
+      <div class="lg:col-span-4">
+        <h3 class="text-xs font-black text-white uppercase tracking-[0.3em] mb-6">Internal Feed</h3>
+        <p class="text-slate-500 text-xs mb-6">Join the technical dispatch for weekly performance insights.</p>
+        <form action="https://formspree.io/f/mwvnvdko" method="POST" class="relative group">
+          <input type="email" name="email" placeholder="Terminal@address.com" required
+                 class="w-full px-5 py-4 rounded-2xl bg-white/[0.03] border border-white/10 text-white text-sm focus:outline-none focus:border-primary transition-all">
+          <button type="submit" class="absolute right-2 top-2 bottom-2 px-6 rounded-xl bg-accent text-white text-[10px] font-black uppercase tracking-widest hover:bg-primary transition-all">
+            Join
+          </button>
+        </form>
+      </div>
 
-    <a href="https://www.instagram.com/synlo_tech" target="_blank" class="text-gray-400 hover:text-primary transition">
-      <i class="fa-brands fa-instagram"></i>
-    </a>
-
-    <a href="https://x.com/synlotech" target="_blank" class="text-gray-400 hover:text-primary transition">
-      <i class="fa-brands fa-x-twitter"></i>
-    </a>
-  </div>
-</div>
-
-        <!-- POLICIES -->
-        <div>
-          <h3 class="text-white text-xl font-bold mb-4">Policies</h3>
-          <p class="text-slate-300 text-sm">
-            <a href="Privacy-Policy.html" class="text-gray-400 hover:text-primary transition">Privacy Policy</a>
-            <span class="mx-2">|</span>
-            <a href="Terms-Of-Service.html" class="text-gray-400 hover:text-primary transition">Terms of Service</a>
-            <span class="mx-2">|</span>
-            <a href="disclaimer.html" class="text-gray-400 hover:text-primary transition">Disclaimer</a>
-          </p>
-        </div>
-
-        <!-- QUICK LINKS -->
-        <div>
-          <h4 class="text-white font-bold mb-4">Quick Links</h4>
-          <ul class="space-y-2">
-            <li><a href="homepage.html#services" class="text-gray-400 hover:text-primary transition">Services</a></li>
-            <li><a href="homepage.html#work" class="text-gray-400 hover:text-primary transition">Work</a></li>
-            <li><a href="homepage.html#process" class="text-gray-400 hover:text-primary transition">Process</a></li>
-            <li><a href="homepage.html#contact-form" class="text-gray-400 hover:text-primary transition">Contact Us</a></li>
-          </ul>
-        </div>
-
-        <!-- NEWSLETTER -->
-
-         <div>
-  <h3 class="mb-5">Subscribe to Our Newsletter</h3>
-
-  <form 
-    action="https://formspree.io/f/mwvnvdko" 
-    method="POST"
-    class="flex flex-col gap-2"
-  >
-    <input 
-      type="email" 
-      name="email"
-      placeholder="Your email"
-      required
-      class="w-full px-3 py-4 rounded-lg mb-4 bg-white/5 border border-white/10 text-white text-sm focus:outline-none focus:border-primary"
-    />
-
-    <button 
-      type="submit"
-      class="w-full px-4 py-2 rounded-lg bg-primary text-white text-sm font-semibold hover:opacity-90 transition"
-    >
-      Subscribe
-    </button>
-  </form>
-</div>
-
-
-        <!-- BRANDING -->
-        <div>
-          <a href="homepage.html#home" class="flex items-center gap-3">
-            <img loading="lazy" src="thumbnails/theS.png" class="w-10 h-11 object-contain">
-            <p class="text-xl text-accent font-extrabold leading-tight">
-              SYNLOTECH 
-            </p>
+      <!-- SOCIAL COMM LINKS -->
+      <div class="lg:col-span-4 flex flex-col lg:items-end">
+        <h3 class="text-xs font-black text-white uppercase tracking-[0.3em] mb-6">Active Channels</h3>
+        <div class="flex gap-4">
+          <a href="https://linkedin.com/in/synlotech-technologies-7252933b2" target="_blank" class="w-12 h-12 rounded-2xl bg-white/[0.03] border border-white/10 flex items-center justify-center text-slate-400 hover:text-primary hover:border-primary/50 transition-all group">
+            <i class="fa-brands fa-linkedin-in text-lg group-hover:scale-110 transition-transform"></i>
+          </a>
+          <a href="https://instagram.com/synlo_tech" target="_blank" class="w-12 h-12 rounded-2xl bg-white/[0.03] border border-white/10 flex items-center justify-center text-slate-400 hover:text-primary hover:border-primary/50 transition-all group">
+            <i class="fa-brands fa-instagram text-lg group-hover:scale-110 transition-transform"></i>
+          </a>
+          <a href="https://x.com/synlotech" class="w-12 h-12 rounded-2xl bg-white/[0.03] border border-white/10 flex items-center justify-center text-slate-400 hover:text-primary hover:border-primary/50 transition-all group">
+            <i class="fa-brands fa-x-twitter text-lg group-hover:scale-110 transition-transform"></i>
           </a>
         </div>
-
       </div>
     </div>
 
-    <!-- BOTTOM -->
-    <div class="border-t border-white/10 py-6 text-center">
-      <p class="text-slate-400 text-sm">
-        © 2026 SYNLOTECH TECHNOLOGIES. All rights reserved.
+    <!-- MIDDLE TIER: NAVIGATION MATRIX -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-12 py-16 border-y border-white/5">
+      <div>
+        <h4 class="text-[10px] font-black text-slate-600 uppercase tracking-[0.4em] mb-6">Navigation</h4>
+        <ul class="space-y-4">
+          <li><a href="#services" class="text-sm text-slate-400 hover:text-primary transition-colors">Services</a></li>
+          <li><a href="#work" class="text-sm text-slate-400 hover:text-primary transition-colors">Work</a></li>
+          <li><a href="#process" class="text-sm text-slate-400 hover:text-primary transition-colors">Process</a></li>
+        <li><a href="#aboout" class="text-sm text-slate-400 hover:text-primary transition-colors">About Us</a></li>
+          <li><a href="#maintenance" class="text-sm text-slate-400 hover:text-primary transition-colors">Plans</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-[10px] font-black text-slate-600 uppercase tracking-[0.4em] mb-6">Support</h4>
+        <ul class="space-y-4">
+          <li><a href="mailto:synlotech@outlook.com" class="text-sm text-slate-400 hover:text-primary transition-colors">Send Email</a></li>
+          <li><a href="https://wa.me/255788296274" class="text-sm text-slate-400 hover:text-primary transition-colors">WhatsApp</a></li>
+          <li><a href="tel:255296274" class="text-sm text-slate-400 hover:text-primary transition-colors">Hotline</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-[10px] font-black text-slate-600 uppercase tracking-[0.4em] mb-6">Legal</h4>
+        <ul class="space-y-4">
+          <li><a href="Privacy-Policy.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Privacy Protocol</a></li>
+          <li><a href="Terms-Of-Service.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Service Terms</a></li>
+        </ul>
+      </div>
+      <div class="flex flex-col items-start md:items-end">
+        <h4 class="text-[10px] font-black text-slate-600 uppercase tracking-[0.4em] mb-6">Global Ops</h4>
+        <p class="text-xs text-slate-500 font-mono text-left md:text-right">DAR ES SALAAM, TZ<br/>GLOBAL REMOTE DEPLOYMENT</p>
+      </div>
+    </div>
+
+    <!-- LOWER TIER: SYSTEM COPYRIGHT -->
+    <div class="pt-12 flex flex-col md:flex-row justify-between items-center gap-6">
+      <p class="text-[10px] font-mono text-slate-700 uppercase tracking-[0.4em]">
+        © 2026 SYNLOTECH // PERFORMANCE ENGINEERING
       </p>
+      <div class="flex items-center gap-6">
+        <div class="h-[1px] w-12 bg-white/5"></div>
+        <p class="text-[10px] font-mono text-slate-700 uppercase tracking-[0.4em]">Integrated Terminal v2.4.0</p>
+      </div>
     </div>
 
   </div>
 </footer>
 
 
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Navbar Logic
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const bars = menuBtn ? menuBtn.querySelectorAll('span') : [];
 
+    if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', () => {
+            const isClosed = mobileMenu.classList.contains('-translate-y-full');
+            if (isClosed) {
+                // Open Menu
+                mobileMenu.classList.remove('-translate-y-full', 'opacity-0', 'pointer-events-none');
+                mobileMenu.classList.add('translate-y-0', 'opacity-100', 'pointer-events-auto');
+                // Morph to X
+                bars[0].style.transform = "translateY(4px) rotate(45deg)";
+                bars[1].style.transform = "translateY(-4px) rotate(-45deg)";
+                bars[1].style.width = "1.5rem";
+            } else {
+                // Close Menu
+                mobileMenu.classList.add('-translate-y-full', 'opacity-0', 'pointer-events-none');
+                mobileMenu.classList.remove('translate-y-0', 'opacity-100', 'pointer-events-auto');
+                // Reset Bars
+                bars[0].style.transform = "none";
+                bars[1].style.transform = "none";
+                bars[1].style.width = "1rem";
+            }
+        });
+    }
 
-  <!-- MOBILE MENU SCRIPT -->
-  <script>
-   const btn = document.getElementById('menuBtn');
-const menu = document.getElementById('mobileMenu');
+    // 2. Scroll Animations (Intersection Observer)
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('in-view');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
 
-btn.addEventListener('click', () => {
-  btn.classList.toggle('open');
-  menu.classList.toggle('scale-y-0');
-  menu.classList.toggle('opacity-0');
+    document.querySelectorAll('.animate-on-scroll').forEach(section => observer.observe(section));
 
+    // 3. WhatsApp Form Uplink
+    const form = document.getElementById("form");
+    if (form) {
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const name = form.elements["name"].value;
+            const email = form.elements["email"].value;
+            const message = form.elements["message"].value;
+            const text = `Hello, I have a new project inquiry:\n\nName: ${name}\nEmail: ${email}\nMessage: ${message}`;
+            window.open(`https://wa.me{encodeURIComponent(text)}`, "_blank");
+        });
+    }
 });
 
-  window.addEventListener('load', () => {
-    document.body.classList.remove('opacity-0');
-  });
+  const form = document.getElementById('form');
 
-  // Scroll-triggered animation for sections
-  const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-  };
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('in-view');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, observerOptions);
+    const name = form.name.value.trim();
+    const email = form.email.value.trim();
+    const message = form.message.value.trim();
 
-  document.querySelectorAll('.animate-on-scroll').forEach(section => {
-    observer.observe(section);
-  });
-
-  const form = document.getElementById("form");
-
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-
-  const name = form.elements["name"].value.trim();
-  const email = form.elements["email"].value.trim();
-  const message = form.elements["message"].value.trim();
-
-  const phoneNumber = "255788296274"; // ← Your WhatsApp number (no +)
-
-  const text = 
-`Hello, I have a new message from the SYNLOTECH website:
-
+    const text = 
+`New Project Inquiry:
 Name: ${name}
 Email: ${email}
 Message: ${message}`;
 
-  const encodedText = encodeURIComponent(text);
+    const phone = '255788296274'; // your number (no +)
 
-  const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedText}`;
+    const url = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
 
-  window.open(whatsappURL, "_blank");
-});
-  </script>
+    window.open(url, '_blank');
+  });
+</script>
+
+
   <a href="https://wa.me/255788296274" target="_blank" aria-label="Chat on WhatsApp" class="fixed bottom-6 right-5 z-50 group"> 
     <div class="flex items-center gap-3">
      <!-- Optional Tooltip --> 
