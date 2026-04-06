@@ -49,6 +49,7 @@
       transform: translateY(0);
     }
 
+
     /* Hamburger menu bars */
     .bar { position: absolute; width: 24px; height: 2.5px; background-color: #ffffff; border-radius: 999px; transition: all 0.3s ease; }
     .top { transform: translateY(-7px); }
@@ -86,15 +87,16 @@
 }
 </script>
 
-<body style="font-family: inter;" class="bg-dark text-white font-sans transition-opacity duration-700 ease-out">
+<body style="font-family: inter;" class="bg-dark text-white transition-opacity duration-700 ease-out">
 
 <!-- NAVBAR -->
+ 
 <header class="fixed top-6 inset-x-0 z-50 transition-all duration-500">
   <div class="max-w-5xl mx-auto px-4 relative">
     <!-- Main Bar -->
     <div class="backdrop-blur-xl bg-black/40 border border-white/10 rounded-[2rem] px-8 py-2 flex items-center justify-between shadow-2xl relative z-50">
       
-      <a href="#home" class="group flex items-center gap-3 py-2">
+      <a href="homepage.html#home" class="group flex items-center gap-3 py-2">
         <div class="relative">
           <div class="absolute inset-0 bg-primary/40 blur-md rounded-full group-hover:bg-primary transition-all"></div>
           <img src="thumbnails/theS.png" class="relative w-8 h-9 object-contain  group-hover:scale-110 transition-transform">
@@ -129,7 +131,7 @@
       <nav class="flex flex-col gap-6 text-center">
         <a href="homepage.html#services" class="text-xs font-black uppercase tracking-[0.3em] text-white hover:text-primary transition-colors">Services</a>
         <a href="homepage.html#work" class="text-xs font-black uppercase tracking-[0.3em] text-white hover:text-primary transition-colors">Work</a>
-        <a href="hompage.html#process" class="text-xs font-black uppercase tracking-[0.3em] text-white hover:text-primary transition-colors">Process</a>
+        <a href="homepage.html#process" class="text-xs font-black uppercase tracking-[0.3em] text-white hover:text-primary transition-colors">Process</a>
          <a href="homepage.html#about" class="text-xs font-black uppercase tracking-[0.3em] text-white hover:text-primary transition-colors">about us</a>
         <a href="homepage.html#maintenance" class="text-xs font-black uppercase tracking-[0.3em] text-white hover:text-primary transition-colors">Plans</a>
        <div class="h-px bg-white/10 my-2"></div>
@@ -182,7 +184,7 @@
         <div class="flex flex-col h-full justify-between relative z-10">
           <div>
             <span class="font-mono text-[10px] text-blue-500 uppercase tracking-[0.4em] mb-12 block">Ref_01 // Visual_Payload</span>
-            <h2 class="text-5xl font-black uppercase tracking-tighter mb-6">Asset <br/>Compression</h2>
+            <h2 class="text-4xl font-black uppercase tracking-tighter mb-6">Asset <br/>Compression</h2>
             <p class="text-slate-400 max-w-sm text-lg leading-relaxed">WebP/AVIF isn't a suggestion; it's the standard. Slash payload size without losing a single pixel of clarity.</p>
           </div>
           <div class="mt-12 relative grayscale group-hover:grayscale-0 transition-all duration-700">
@@ -236,7 +238,7 @@
             </h2>
             <p class="text-slate-600 text-xl font-medium border-l-4 border-black pl-8">Prioritize the first fold. Defer heavy scripts. Users don't wait for your site to finish loading; they wait for it to <span class="text-black font-black">become useful.</span></p>
           </div>
-          <a href="#" class="shrink-0 group/btn relative px-12 py-8 bg-black text-white font-black uppercase text-xl tracking-tighter hover:bg-blue-600 transition-all duration-300">
+          <a href="homepage.html#contact-form" class="shrink-0 group/btn relative px-12 py-8 bg-black text-white font-black uppercase text-xl tracking-tighter hover:bg-blue-600 transition-all duration-300">
             Deploy Audit
             <div class="absolute -top-2 -right-2 w-4 h-4 bg-blue-600 group-hover/btn:bg-black transition-colors"></div>
           </a>
@@ -245,7 +247,7 @@
     </div>
 
     <!-- CALL TO ACTION: THE FINAL DEPLOYMENT -->
-    <footer class="mt-48 text-center relative py-32 border-y border-white/5">
+    <footer id="contact" class="mt-48 text-center relative py-32 border-y border-white/5">
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[300px] bg-blue-600/10 blur-[150px] rounded-full"></div>
         
         <h2 class="relative z-10 text-5xl md:text-8xl font-black uppercase tracking-tighter mb-10 leading-none">
@@ -256,7 +258,7 @@
             Don't let a 2015 tech stack limit your 2026 growth. <span class="text-white font-bold">Synlotech</span> engineers the speed you need to dominate the index.
         </p>
 
-        <a href="#contact" class="relative z-10 inline-flex items-center gap-8 group">
+        <a href="homepage.html#contact-form" class="relative z-10 inline-flex items-center gap-8 group">
             <span class="text-2xl font-black uppercase tracking-tighter border-b-2 border-blue-600 pb-2 group-hover:text-blue-500 transition-colors">Start Project Pipeline</span>
             <div class="w-16 h-16 rounded-full border border-blue-500 flex items-center justify-center group-hover:bg-blue-600 transition-all">
                 <svg class="w-6 h-6 text-blue-500 group-hover:text-black transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
