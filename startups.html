@@ -12,7 +12,7 @@
   gtag('config', 'G-4PMXTMQXM4');
 </script>
 
-  <link rel="icon" href="thumbnails/theS.png" type="image/x-icon">
+  <link rel="icon" href="thumbnails/Asset 3.svg" type="image/x-icon">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -119,8 +119,7 @@
 
 <body style="font-family: inter;" class="bg-dark">
 
- <!-- NAVBAR -->
-  
+  <!-- NAVIGATION -->
 <header class="fixed top-6 inset-x-0 z-50 transition-all duration-500">
   <div class="max-w-5xl mx-auto px-4 relative">
     <!-- Main Bar -->
@@ -129,7 +128,7 @@
       <a href="homepage.html#home" class="group flex items-center gap-3 py-2">
         <div class="relative">
           <div class="absolute inset-0 bg-primary/40 blur-md rounded-full group-hover:bg-primary transition-all"></div>
-          <img src="thumbnails/theS.png" class="relative w-8 h-9 object-contain  group-hover:scale-110 transition-transform">
+          <img src="thumbnails/Asset 3.svg" class="relative w-8 h-9 object-contain rounded-full group-hover:scale-110 transition-transform">
         </div>
         <span class="text-lg font-black text-accent tracking-tighter uppercase">Synlotech</span>
       </a>
@@ -471,111 +470,115 @@
 
 
 
-<!-- FOOTER -->
- 
-<footer class="relative bg-[#020202] pt-24 pb-12 overflow-hidden border-t border-white/5">
-  <!-- Decorative Grid Overlay -->
-  <div class="absolute inset-0 bg-[radial-gradient(#ffffff03_1px,transparent_1px)] bg-[size:30px_30px] pointer-events-none"></div>
-
-  <div class="relative max-w-7xl mx-auto px-6">
+<!-- FOOTER --><footer class="relative bg-[#050505] pt-24 pb-12 overflow-hidden border-t border-white/10 font-mono">
+  <!-- Scanline Effect Overlay -->
+  <div class="absolute inset-0 bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] z-10 pointer-events-none bg-[length:100%_2px,3px_100%]"></div>
+  
+  <div class="relative max-w-7xl mx-auto px-6 z-20">
     
-    <!-- UPPER TIER: BRAND & NEWSLETTER -->
-    <div class="grid lg:grid-cols-12 gap-16 mb-20">
+    <!-- TOP MODULE: BRAND & DISPATCH -->
+    <div class="grid lg:grid-cols-12 gap-12 mb-16 pb-16 border-b border-white/5">
       
-      <!-- BRAND HUB -->
-      <div class="lg:col-span-4">
-        <a href="homepage.html#home" class="group flex items-center gap-4 mb-8">
-          <div class="relative">
-            <div class="absolute inset-0 bg-primary/20 blur-lg rounded-full group-hover:bg-primary/40 transition-all"></div>
-            <img loading="lazy" src="thumbnails/theS.png" class="relative w-12 h-12 object-contain grayscale group-hover:grayscale-0 transition-all">
+      <!-- ID BLOCK -->
+      <div class="lg:col-span-4 space-y-8">
+        <a href="homepage.html#home" class="inline-flex items-center gap-3 group">
+          <div class="p-2  group-hover:border-primary/50 transition-colors">
+            <img loading="lazy" src="thumbnails/Asset 3.svg" class="w-8 h-8 opacity-80 group-hover:opacity-100 transition-opacity">
           </div>
-          <span class="text-3xl font-black text-accent tracking-tighter uppercase">Synlotech</span>
+          <span style="font-family: inter;" class="text-2xl text-accent font-black tracking-widest uppercase">Synlotech</span>
         </a>
-        <p class="text-slate-500 text-sm leading-relaxed max-w-xs mb-8">
-          Engineering high-frequency digital assets for global innovators. Built for performance, reliability, and growth.
-        </p>
-        <!-- SYSTEM STATUS INDICATOR -->
-        <div class="inline-flex items-center gap-3 px-4 py-2 rounded-xl bg-white/[0.03] border border-white/10">
-          <div class="h-2 w-2 rounded-full bg-green-500 animate-pulse"></div>
-          <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest">All Systems Operational</span>
+        <div class="space-y-4">
+          <p class="text-slate-500 text-[11px] leading-relaxed uppercase tracking-tighter max-w-xs">
+            High-frequency engineering for global innovators. Performance // Reliability // Scale.
+          </p>
+          <div class="flex items-center gap-3 py-1 px-3 border border-emerald-500/20 bg-emerald-500/5 w-fit">
+            <span class="relative flex h-2 w-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+            </span>
+            <span class="text-[9px] font-bold text-emerald-500 uppercase tracking-widest">System Status: active</span>
+          </div>
         </div>
       </div>
 
-      <!-- THE FEED (NEWSLETTER) -->
-      <div class="lg:col-span-4">
-        <h3 class="text-xs font-black text-white uppercase tracking-[0.3em] mb-6">Internal Feed</h3>
-        <p class="text-slate-500 text-xs mb-6">Join the technical dispatch for weekly performance insights.</p>
-        <form action="https://formspree.io/f/mwvnvdko" method="POST" class="relative group">
-          <input type="email" name="email" placeholder="Terminal@address.com" required
-                 class="w-full px-5 py-4 rounded-2xl bg-white/[0.03] border border-white/10 text-white text-sm focus:outline-none focus:border-primary transition-all">
-          <button type="submit" class="absolute right-2 top-2 bottom-2 px-6 rounded-xl bg-accent text-white text-[10px] font-black uppercase tracking-widest hover:bg-primary transition-all">
-            Join
-          </button>
-        </form>
+      <!-- FEED INPUT -->
+      <div class="lg:col-span-5">
+        <div class="p-6 border border-white/5 bg-white/[0.02] relative group">
+          <div class="absolute top-0 left-0 w-2 h-2 border-t border-l border-primary/50"></div>
+          <h3 class="text-[10px] font-bold text-slate-400 uppercase tracking-[0.4em] mb-4">Internal Dispatch</h3>
+          <form action="https://formspree.io/f/mwvnvdko" method="POST" class="flex flex-col sm:flex-row gap-2">
+            <input type="email" name="email" placeholder="user@email.com" required
+                   class="flex-1 bg-black border border-white/10 px-4 py-3 text-xs text-white focus:outline-none focus:border-primary transition-colors">
+            <button type="submit" class="bg-white text-black text-[10px] font-bold uppercase px-6 py-3 hover:bg-primary hover:text-white transition-all">
+              Execute
+            </button>
+          </form>
+        </div>
       </div>
 
-      <!-- SOCIAL COMM LINKS -->
-      <div class="lg:col-span-4 flex flex-col lg:items-end">
-        <h3 class="text-xs font-black text-white uppercase tracking-[0.3em] mb-6">Active Channels</h3>
-        <div class="flex gap-4">
-          <a href="https://linkedin.com/in/synlotech-technologies-7252933b2" target="_blank" class="w-12 h-12 rounded-2xl bg-white/[0.03] border border-white/10 flex items-center justify-center text-slate-400 hover:text-primary hover:border-primary/50 transition-all group">
-            <i class="fa-brands fa-linkedin-in text-lg group-hover:scale-110 transition-transform"></i>
-          </a>
-          <a href="https://instagram.com/synlo_tech" target="_blank" class="w-12 h-12 rounded-2xl bg-white/[0.03] border border-white/10 flex items-center justify-center text-slate-400 hover:text-primary hover:border-primary/50 transition-all group">
-            <i class="fa-brands fa-instagram text-lg group-hover:scale-110 transition-transform"></i>
-          </a>
-          <a href="https://x.com/synlotech" class="w-12 h-12 rounded-2xl bg-white/[0.03] border border-white/10 flex items-center justify-center text-slate-400 hover:text-primary hover:border-primary/50 transition-all group">
-            <i class="fa-brands fa-x-twitter text-lg group-hover:scale-110 transition-transform"></i>
-          </a>
+      <!-- COMMS CHANNELS -->
+      <div class="lg:col-span-3 flex flex-col lg:items-end gap-6">
+        <h3 class="text-[10px] font-bold text-slate-400 uppercase tracking-[0.4em]">Channels</h3>
+        <div class="grid grid-cols-3 gap-2 w-full lg:w-auto">
+           <a href="https://linkedin.com/in/synlotech-technologies-7252933b2" target="_blank" class="aspect-square w-12 flex items-center justify-center border border-white/10 text-slate-500 hover:border-primary hover:text-primary transition-all"><i class="fa-brands fa-linkedin-in text-sm"></i></a>
+          <a href="https://instagram.com/synlo_tech" target="_blank" class="aspect-square w-12 flex items-center justify-center border border-white/10 text-slate-500 hover:border-primary hover:text-primary transition-all"><i class="fa-brands fa-instagram text-sm"></i></a>
+           <a href="https://x.com/synlotech" target="_blank" class="aspect-square w-12 flex items-center justify-center border border-white/10 text-slate-500 hover:border-primary hover:text-primary transition-all"><i class="fa-brands fa-x-twitter text-sm"></i></a>
         </div>
       </div>
     </div>
 
-    <!-- MIDDLE TIER: NAVIGATION MATRIX -->
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-12 py-16 border-y border-white/5">
-      <div>
-        <h4 class="text-[10px] font-black text-slate-600 uppercase tracking-[0.4em] mb-6">Navigation</h4>
-        <ul class="space-y-4">
-          <li><a href="homepage.html#services" class="text-sm text-slate-400 hover:text-primary transition-colors">Services</a></li>
-          <li><a href="homepage.html#work" class="text-sm text-slate-400 hover:text-primary transition-colors">Work</a></li>
-          <li><a href="homepage.html#process" class="text-sm text-slate-400 hover:text-primary transition-colors">Process</a></li>
-        <li><a href="homepage.html#about" class="text-sm text-slate-400 hover:text-primary transition-colors">About Us</a></li>
-          <li><a href="homepage.html#maintenance" class="text-sm text-slate-400 hover:text-primary transition-colors">Plans</a></li>
+    <!-- MAIN MATRIX: NAVIGATION -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-12 mb-16">
+      <div class="space-y-6">
+        <h4 class="text-[10px] font-black text-white uppercase tracking-[0.4em] flex items-center gap-2">
+          <span class="w-1 h-1 bg-primary"></span> Navigation
+        </h4>
+        <ul class="space-y-3">
+          <li><a href="#services" class="text-[11px] text-slate-500 hover:text-primary transition-colors flex items-center gap-2 uppercase">Services</a></li>
+          <li><a href="#work" class="text-[11px] text-slate-500 hover:text-primary transition-colors flex items-center gap-2 uppercase"> Work</a></li>
+          <li><a href="#about" class="text-[11px] text-slate-500 hover:text-primary transition-colors flex items-center gap-2 uppercase"> About</a></li>
         </ul>
       </div>
-      <div>
-        <h4 class="text-[10px] font-black text-slate-600 uppercase tracking-[0.4em] mb-6">Support</h4>
-        <ul class="space-y-4">
-          <li><a href="mailto:synlotech@outlook.com" class="text-sm text-slate-400 hover:text-primary transition-colors">Send Email</a></li>
-          <li><a href="https://wa.me/255788296274" class="text-sm text-slate-400 hover:text-primary transition-colors">WhatsApp</a></li>
-          <li><a href="tel:255296274" class="text-sm text-slate-400 hover:text-primary transition-colors">Hotline</a></li>
+      
+      <div class="space-y-6">
+        <h4 class="text-[10px] font-black text-white uppercase tracking-[0.4em] flex items-center gap-2">
+          <span class="w-1 h-1 bg-primary"></span> Communications
+        </h4>
+        <ul class="space-y-3">
+          <li><a href="mailto:synlotech@outlook.com" class="text-[11px] text-slate-500 hover:text-primary transition-colors uppercase">Email</a></li>
+          <li><a href="https://wa.me" class="text-[11px] text-slate-500 hover:text-primary transition-colors uppercase">Whatsapp</a></li>
+          <li><a href="tel:255296274" class="text-[11px] text-slate-500 hover:text-primary transition-colors uppercase">Hotline</a></li>
         </ul>
       </div>
-      <div>
-        <h4 class="text-[10px] font-black text-slate-600 uppercase tracking-[0.4em] mb-6">Legal</h4>
-        <ul class="space-y-4">
-          <li><a href="Privacy-Policy.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Privacy Protocol</a></li>
-          <li><a href="Terms-Of-Service.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Service Terms</a></li>
-        <li><a href="disclaimer.html" class="text-sm text-slate-400 hover:text-primary transition-colors">Disclaimer</a></li>
+
+      <div class="space-y-6">
+        <h4 class="text-[10px] font-black text-white uppercase tracking-[0.4em] flex items-center gap-2">
+          <span class="w-1 h-1 bg-primary"></span> Legal
+        </h4>
+        <ul class="space-y-3">
+          <li><a href="Privacy-Policy.html" class="text-[11px] text-slate-500 hover:text-primary transition-colors uppercase">Privacy policy</a></li>
+          <li><a href="Terms-Of-Service.html" class="text-[11px] text-slate-500 hover:text-primary transition-colors uppercase">Terms of service</a></li>
         </ul>
       </div>
-      <div class="flex flex-col items-start md:items-end">
-        <h4 class="text-[10px] font-black text-slate-600 uppercase tracking-[0.4em] mb-6">Global Ops</h4>
-        <p class="text-xs text-slate-500 font-mono text-left md:text-right">DAR ES SALAAM, TZ<br/>GLOBAL REMOTE DEPLOYMENT</p>
+
+      <div class="flex flex-col items-start md:items-end space-y-6">
+        <h4 class="text-[10px] font-black text-white uppercase tracking-[0.4em]">Global Operations</h4>
+        <div class="text-left md:text-right font-mono">
+          <p class="text-[10px] text-slate-400">DAR ES SALAAM, TANZANIA</p>
+          <p class="text-[9px] text-slate-600 tracking-widest mt-1 uppercase">Deployment: Active.</p>
+        </div>
       </div>
     </div>
 
-    <!-- LOWER TIER: SYSTEM COPYRIGHT -->
-    <div class="pt-12 flex flex-col md:flex-row justify-between items-center gap-6">
-      <p class="text-[10px] font-mono text-slate-700 uppercase tracking-[0.4em]">
-        © 2026 SYNLOTECH // PERFORMANCE ENGINEERING
+    <!-- LOWER TIER: SYSTEM DATA -->
+    <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+      <p class="text-[9px] text-slate-700 uppercase tracking-[0.5em]">
+        © 2026 SYNLOTECH TECHNOLOGIES— <span class="text-slate-800">TRANSFORMING IDEAS INTO DIGITAL REALITY</span>
       </p>
-      <div class="flex items-center gap-6">
-        <div class="h-[1px] w-12 bg-white/5"></div>
-        <p class="text-[10px] font-mono text-slate-700 uppercase tracking-[0.4em]">Integrated Terminal v2.4.0</p>
+      <div class="flex items-center gap-4 border border-white/5 px-3 py-1 bg-white/[0.01]">
+        <span class="text-[9px] text-primary font-bold">v2.0</span>
       </div>
     </div>
-
   </div>
 </footer>
 
@@ -657,6 +660,10 @@ Message: ${message}`;
 
     window.open(url, '_blank');
   });
+
+  
+/* ios hover */
+ document.addEventListener("touchstart", function() {}, true);
 </script>
 
   
@@ -702,3 +709,5 @@ Message: ${message}`;
 </a>
 </body>
 </html>
+
+
