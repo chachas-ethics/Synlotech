@@ -3,154 +3,108 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>Web Design & Development, Graphics Design and Digital Solutions | Synlotech Technologies</title>
+  <title>Synlotech Technologies | Deploying Soon</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="icon" href="thumbnails/Asset 3.svg" type="image/x-icon">
-
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#2563EB', 
-            accent: '#38BDF8',
-            dark: '#020617',
-          },
-          animation: {
-            'spin-slow': 'spin 8s linear infinite',
-            'pulse-fast': 'pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-          }
-        }
-      }
-    }
-  </script>
-
   <style>
-    @keyframes scanline {
-      0% { transform: translateY(-100%); }
-      100% { transform: translateY(100vh); }
+    /* Custom blinking terminal caret */
+    .caret {
+      animation: blink 0.8s step-end infinite;
     }
-    .scanline {
-      width: 100%;
-      height: 100px;
-      z-index: 10;
-      background: linear-gradient(0deg, rgba(37, 99, 235, 0.05) 0%, transparent 100%);
-      position: absolute;
-      animation: scanline 4s linear infinite;
+    @keyframes blink {
+      from, to { border-color: transparent }
+      50% { border-color: #38bdf8 }
     }
-    .glitch { text-shadow: 2px 0 #2563EB, -2px 0 #38BDF8; }
   </style>
 </head>
+<body class="bg-black text-slate-400 flex items-center justify-center min-h-screen font-mono selection:bg-slate-800">
 
-<body class="bg-[#020202] flex items-center justify-center min-h-screen overflow-hidden font-mono">
+  <!-- Code Center Block -->
+  <div class="w-full max-w-xl px-6 text-xs sm:text-sm leading-relaxed tracking-wide">
+    <pre class="whitespace-pre"><span class="text-pink-500">import</span> time
+<span class="text-pink-500">from</span> synlotech <span class="text-pink-500">import</span> CoreEngine, ProductionServer
 
-  <!-- HUD Scanline Overlay -->
-  <div class="scanline"></div>
-
-  <!-- Loader Overlay -->
-  <div id="loader" class="fixed inset-0 flex flex-col items-center justify-center bg-[#020202] z-50">
+<span class="text-blue-400">def</span> <span class="text-green-400">launch_sequence</span>():
+    system = CoreEngine(version=<span class="text-amber-300">"4.0.2"</span>)
+    production = ProductionServer(cluster=<span class="text-amber-300">"prod-east-1"</span>)
     
-    <!-- Ambient Neural Glow -->
-    <div class="absolute w-[600px] h-[600px] bg-primary/10 blur-[150px] rounded-full"></div>
+    print(<span class="text-amber-300">"[INFO] Initializing kernel framework..."</span>)
+    system.boot_sequence()
+    
+    <span class="text-slate-500"># System deployment payload loop</span>
+    <span class="text-pink-500">for</span> progress <span class="text-pink-500">in</span> system.load_assets():
+        print(f<span class="text-amber-300">"[LOAD] Syncing nodes... {progress}%"</span>)
+        time.sleep(<span class="text-cyan-400">0.05</span>)
+        
+    <span class="text-pink-500">if</span> system.is_ready() <span class="text-pink-500">and</span> production.is_secure():
+        print(<span class="text-amber-300">"[SUCCESS] All structures verified."</span>)
+        production.deploy_live()
+    <span class="text-pink-500">else</span>:
+        <span class="text-pink-500">raise</span> SystemError(<span class="text-amber-300">"Deployment handshake failure"</span>)
 
-    <!-- REACTOR CORE ASSEMBLY -->
-    <div class="relative flex flex-col items-center">
-      
-      <!-- Outer Rotating Ring -->
-      <div class="absolute w-80 h-80 border-2 border-dashed border-white/10 rounded-full animate-spin-slow"></div>
-      
-      <!-- Inner Progress Ring -->
-      <svg class="w-72 h-72 transform -rotate-90">
-        <circle cx="144" cy="144" r="130" stroke="currentColor" stroke-width="2" fill="transparent" class="text-white/5" />
-        <circle id="progress-circle" cx="144" cy="144" r="130" stroke="currentColor" stroke-width="4" fill="transparent" 
-                stroke-dasharray="816" stroke-dashoffset="816" class="text-primary transition-all duration-300 ease-out shadow-[0_0_20px_rgba(37,99,235,0.8)]" />
-      </svg>
+<span class="text-pink-500">if</span> __name__ == <span class="text-amber-300">"__main__"</span>:
+    launch_sequence()</pre>
 
-      <!-- CENTER IMAGE MODULE -->
-      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-        <div class="relative p-1 rounded-full bg-gradient-to-tr from-primary via-white/20 to-accent group">
-          <div class="overflow-hidden rounded-full bg-black border-4 border-black w-32 h-32 flex items-center justify-center">
-            <img src="thumbnails/Asset 3.svg" class="w-16 h-20 object-contain animate-pulse-fast brightness-150">
-          </div>
-        </div>
-      </div>
-
-      <!-- PERCENTAGE READOUT -->
-      <div class="absolute -bottom-16 text-center">
-        <div class="text-5xl font-black text-white tracking-tighter italic glitch">
-            <span id="percent">00</span>%
-        </div>
-        <div class="mt-2 text-[10px] text-primary tracking-[0.4em] uppercase font-bold">
-            Synlotech_Engine_Active
-        </div>
-      </div>
-
-    </div>
-
-    <!-- TERMINAL LOGS (Bottom Left) -->
-    <div class="fixed bottom-10 left-10 hidden md:block max-w-xs">
-        <div id="logs" class="text-[9px] text-white/30 space-y-1">
-            <p>> initializing_kernel_v4.0.2</p>
-            <p>> establishing_secure_handshake</p>
-            <p>> mapping_neural_nodes</p>
-        </div>
-    </div>
-
-    <!-- VERSION TAG (Bottom Right) -->
-    <div class="fixed bottom-10 right-10">
-        <span class="text-[9px] font-bold text-white/10 tracking-[0.5em] uppercase">Architecture // Synlotech_OS</span>
+    <!-- Terminal Output Stream -->
+    <div id="terminal-output" class="mt-6 pt-4 border-t border-slate-900 font-bold min-h-[50px]">
+      <span class="text-slate-600">&gt; </span><span id="log-text" class="text-sky-400"></span><span class="border-r-2 border-sky-400 caret">&nbsp;</span>
     </div>
   </div>
 
   <script>
-    const percentEl = document.getElementById("percent");
-    const circleEl = document.getElementById("progress-circle");
-    const logsEl = document.getElementById("logs");
-    
-    let count = 0;
-    const dashArray = 816; // 2 * PI * R (130)
-
-    const logMessages = [
-        "> loading_assets_optimized",
-        "> deploying_ui_infrastructure",
-        "> establishing_synlotech_link",
-        "> protocol_override_complete",
-        "> system_ready_for_deployment"
+    const outputLines = [
+      "Initializing kernel framework...",
+      "Syncing architectural nodes... 24%",
+      "Syncing architectural nodes... 58%",
+      "Syncing architectural nodes... 89%",
+      "Syncing architectural nodes... 100%",
+      "All structures verified.",
+      "Synlotech Core Engine: LAUNCHING SOON..."
     ];
 
-    function updateLoader() {
-      if (count <= 100) {
-        // Update Percentage
-        percentEl.textContent = count.toString().padStart(2, '0');
-        
-        // Update Circle Dash Offset
-        const offset = dashArray - (count / 100) * dashArray;
-        circleEl.style.strokeDashoffset = offset;
+    const logTextEl = document.getElementById("log-text");
+    let lineIndex = 0;
+    let charIndex = 0;
+    let currentLine = "";
 
-        // Add Log Messages occasionally
-        if (count % 20 === 0 && count > 0) {
-            const newLog = document.createElement("p");
-            newLog.textContent = logMessages[(count/20)-1];
-            newLog.className = "text-accent font-bold";
-            logsEl.appendChild(newLog);
+    function typeLog() {
+      if (lineIndex < outputLines.length) {
+        if (charIndex === 0) {
+          // Add custom prefix styling depending on message state
+          if (lineIndex === 5) {
+            currentLine = "[SUCCESS] ";
+            logTextEl.className = "text-emerald-400";
+          } else if (lineIndex === 6) {
+            currentLine = "[READY] ";
+            logTextEl.className = "text-amber-400 tracking-widest uppercase";
+          } else {
+            currentLine = "[LOAD] ";
+            logTextEl.className = "text-sky-400";
+          }
         }
 
-        count++;
-        let speed = Math.random() * 40 + 20; // Varied speed for realism
-        setTimeout(updateLoader, speed);
+        currentLine += outputLines[lineIndex][charIndex];
+        logTextEl.textContent = currentLine;
+        charIndex++;
+
+        if (charIndex < outputLines[lineIndex].length) {
+          setTimeout(typeLog, Math.random() * 30 + 15); // Natural typing rhythm
+        } else {
+          // Line complete, pause briefly before next terminal step
+          charIndex = 0;
+          lineIndex++;
+          setTimeout(typeLog, 900);
+        }
       } else {
-        // Finalize
-        percentEl.classList.add("text-accent");
+        // Redirection trigger point when sequence completes
         setTimeout(() => {
-            window.location.href = "homepage.html";
-        }, 800);
+          window.location.href = "homepage.html";
+        }, 2500);
       }
     }
 
-    // Start boot sequence
-    window.onload = updateLoader;
+    // Initialize clean boot system logs
+    window.onload = () => setTimeout(typeLog, 500);
   </script>
-
 </body>
 </html>
