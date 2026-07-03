@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-s
 <head>
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4PMXTMQXM4"></script>
@@ -12,71 +12,82 @@
   gtag('config', 'G-4PMXTMQXM4');
 </script>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <link rel="icon" class="rounded-full" href="thumbnails/Asset 3.svg" type="image/x-icon">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
+  <!-- BASIC META -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web Design & Development, Graphics Design and Digital Solutions | Synlotech Technologies</title>
+  <meta name="description" content="Synlotech Technologies builds high-performance websites, web apps, and digital systems for businesses, startups, schools, and hospitals in Tanzania and beyond." />
+  <meta name="keywords" content="Web Design Tanzania, Web Development, Software Company Tanzania, Synlotech Technologies" />
+  <meta name="author" content="Synlotech Technologies" />
 
-  <title>Privacy Policy | Synlotech Technologies</title>
-  <meta name="description" content="Read Synlotech Technologies' Privacy Policy to understand how we collect, use, and protect your personal information. Full transparency and compliance with global standards." />
-
-  <link rel="icon" href="thumbnails/Asset 3.svg" />
+  <!-- TAILWIND CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
+  <!-- CUSTOM CONFIG -->
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            primary: '#2563EB',
+            primary: '#2563EB', 
             accent: '#38BDF8',
-            dark: '#020617'
+            dark: '#020617',
           }
         }
       }
     }
   </script>
 
-   <style>
-     .bar {
+  <style>
+    .bar {
   position: absolute;
   width: 24px;
-  height: 2px;
-  background: white;
-  transition: 0.3s ease;
+  height: 2.5px;              /* thicker = visible */
+  background-color: #ffffff; /* force white */
+  border-radius: 999px;
+  transition: all 0.3s ease;
 }
 
-
-.top {
-  top: 12px;
-}
-
-.middle {
-  opacity: 1;
-}
-
-.bottom {
-  bottom: 12px;
-}
+.top { transform: translateY(-7px); }
+.middle { opacity: 1; }
+.bottom { transform: translateY(7px); }
 
 /* OPEN STATE */
-#menuBtn.open .top {
-  transform: translateY(6px) rotate(45deg);
+.open .top {
+  transform: rotate(45deg);
 }
 
-#menuBtn.open .middle {
+.open .middle {
   opacity: 0;
 }
 
-#menuBtn.open .bottom {
-  transform: translateY(-6px) rotate(-45deg);
+.open .bottom {
+  transform: rotate(-45deg);
 }
+
+    /* Scroll-triggered animations */
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .animate-on-scroll.in-view {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
 
 @keyframes whatsappPulse { 0% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.6); } 70% { box-shadow: 0 0 0 14px rgba(37, 99, 235, 0); } 100% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0); } } 
 .whatsapp-pulse { animation: whatsappPulse 2.5s infinite; }
-
   </style>
 </head>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -86,7 +97,7 @@
   "logo": "https://synlotech.com/images/logo.png",
   "description": "Synlotech Technologies specializes in stunning website design, responsive web development, graphics, motion visuals, and 3D animations.",
   "sameAs": [
-    "https://instagram.com/synlotech",
+    "https://instagram.com/synlo_tech",
     "https://facebook.com/synlotech",
     "https://linkedin.com/company/synlotech"
   ],
@@ -100,311 +111,403 @@
 }
 </script>
 
-<body style="font-family: inter;" class="bg-dark text-white transition-all duration-700 ease-out">
+<body style="font-family: inter;" class="bg-dark text-slate-200 antialiased  transition-opacity duration-700 ease-out">
 
-  <!-- NAVIGATION -->
+  
+ <!-- NAVIGATION -->
 <header class="fixed top-6 inset-x-0 z-50 transition-all duration-500">
-  <div class="max-w-5xl mx-auto px-4 relative">
-    <!-- Main Bar -->
-    <div class="backdrop-blur-xl bg-black/40 border border-white/10 rounded-[2rem] px-8 py-2 flex items-center justify-between shadow-2xl relative z-50">
+  <div class="max-w-4xl mx-auto px-4 relative">
+    
+    <!-- MAIN CYBER BAR -->
+    <div class="backdrop-blur-xl bg-black/40 border border-white/10 rounded-full px-4 py-2 flex items-center justify-between shadow-2xl relative z-50">
       
-      <a href="homepage.html#home" class="group flex items-center gap-3 py-2">
-        <div class="relative">
-          <div class="absolute inset-0 bg-primary/40 blur-md rounded-full group-hover:bg-primary transition-all"></div>
-          <img src="thumbnails/Asset 3.svg" class="relative w-8 h-9 object-contain rounded-full group-hover:scale-110 transition-transform">
+      <!-- LOGO ANCHOR: AUTOMATIC RESPONSIVE TEXT FOR MOBILE -->
+      <a href="homepage.html#home" class="group relative flex items-center gap-3 pl-1 pr-3 py-1 rounded-full hover:bg-white/5 md:hover:bg-transparent md:p-0 border border-transparent md:border-none transition-all">
+        <!-- The Glowing Status Orb (Always Visible) -->
+        <div class="relative flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/[0.02] border border-white/10 group-hover:border-blue-500/30 transition-colors duration-300">
+          <div class="absolute inset-1 bg-blue-500/10 blur-sm rounded-full group-hover:bg-blue-500/20 transition-all"></div>
+          <img src="thumbnails/Asset 3.svg" alt="Synlotech" class="relative w-5 h-6 md:w-6 md:h-7 object-contain transition-transform duration-500 transform group-hover:scale-105">
+          
+         
         </div>
-        <span class="text-lg font-black text-accent tracking-tighter uppercase">Synlotech</span>
+        
+        <!-- Brand Text: Hidden on Desktop, Visible on Mobile to prevent the navigation bar from looking empty -->
+        <span class="text-base font-serif font-black text-white tracking-tight uppercase md:hidden block transition-colors group-hover:text-blue-400">
+          SYNLOTECH
+        </span>
       </a>
 
-      <!-- DESKTOP NAV -->
-      <nav class="hidden md:flex items-center gap-10">
-        <a href="homepage.html#services" class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 hover:text-primary transition-colors">Services</a>
-        <a href="homepage.html#work" class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 hover:text-primary transition-colors">Work</a>
-        <a href="homepage.html#process" class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 hover:text-primary transition-colors">Process</a>
-      <a href="homepage.html#about" class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 hover:text-primary transition-colors">ABOUT US</a>
-        <a href="homepage.html#maintenance" class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 hover:text-primary transition-colors">PLANS</a>
-      </nav>
+      <!-- DESKTOP NAVIGATION MATRIX (Hidden on Mobile) -->
+      <nav class="hidden md:flex items-center gap-1 py-1 px-1 rounded-full bg-white/[0.01] border border-white/5">
+        <a href="homepage.html#services" class="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 hover:text-white px-5 py-2.5 rounded-full hover:bg-white/5 transition-all">Services</a>
+        <a href="homepage.html#about" class="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 hover:text-white px-5 py-2.5 rounded-full hover:bg-white/5 transition-all">About Us</a>
+         <a href="homepage.html#process" class="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 hover:text-white px-5 py-2.5 rounded-full hover:bg-white/5 transition-all">Process</a>
+        <a href="homepage.html#work" class="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 hover:text-white px-5 py-2.5 rounded-full hover:bg-white/5 transition-all">Work</a>
+         </nav>
 
+      <!-- PRIMARY ACTION BUTTON (Hidden on Mobile) -->
       <div class="hidden md:block">
-        <a href="homepage.html#contact-form" class="px-6 py-3 rounded-xl bg-accent text-white text-[10px] font-black uppercase tracking-widest hover:bg-primary transition-all active:scale-95">
-          Initiate Quote
+        <a href="homepage.html#contact-form" class="group/btn relative inline-flex items-center justify-center px-6 py-3 rounded-full bg-primary hover:bg-blue-700 text-white text-[10px] font-black uppercase tracking-wider transition-all duration-300 shadow-md shadow-blue-600/20 active:scale-95 overflow-hidden">
+          <span class="relative z-10">Initiate Quote</span>
+          <div class="absolute inset-0 bg-white/10 translate-y-full group-hover/btn:translate-y-0 transition-transform duration-300"></div>
         </a>
       </div>
 
-      <!-- MOBILE TOGGLE -->
-      <button id="menuBtn" class="md:hidden w-10 h-10 flex flex-col justify-center items-center gap-1.5 focus:outline-none">
-        <span class="bar-1 w-6 h-0.5 bg-white rounded-full transition-all duration-300"></span>
-        <span class="bar-2 w-4 h-0.5 bg-primary self-end rounded-full transition-all duration-300"></span>
+      <!-- MOBILE TOGGLE SWITCH (Hidden on Desktop) -->
+      <button id="menuBtn" aria-label="Toggle Navigation Menu" class="md:hidden w-10 h-10 rounded-full bg-white/[0.01] border border-white/5 flex flex-col justify-center items-center gap-1.5 focus:outline-none group transition-colors hover:bg-white/5">
+        <span class="bar-1 w-5 h-0.5 bg-white rounded-full transition-all duration-300"></span>
+        <span class="bar-2 w-4 h-0.5 bg-blue-500 self-end mr-2.5 rounded-full transition-all duration-300 group-hover:w-5 group-hover:mr-0"></span>
       </button>
     </div>
 
-    <!-- MOBILE MENU (The part you were missing) -->
-    <div id="mobileMenu" class="absolute top-0 left-4 right-4 pt-24 pb-8 px-8 bg-black/90 backdrop-blur-2xl border border-white/10 rounded-[2.5rem] transform -translate-y-full opacity-0 pointer-events-none transition-all duration-500 ease-in-out z-40">
-      <nav class="flex flex-col gap-6 text-center">
-        <a href="homepage.html#services" class="text-xs font-black uppercase tracking-[0.3em] text-white hover:text-primary transition-colors">Services</a>
-        <a href="homepage.html#work" class="text-xs font-black uppercase tracking-[0.3em] text-white hover:text-primary transition-colors">Work</a>
-        <a href="homepage.html#process" class="text-xs font-black uppercase tracking-[0.3em] text-white hover:text-primary transition-colors">Process</a>
-         <a href="homepage.html#about" class="text-xs font-black uppercase tracking-[0.3em] text-white hover:text-primary transition-colors">about us</a>
-        <a href="homepage.html#maintenance" class="text-xs font-black uppercase tracking-[0.3em] text-white hover:text-primary transition-colors">Plans</a>
-       <div class="h-px bg-white/10 my-2"></div>
-        <a href="homepage.html#contact-form" class="py-4 rounded-2xl bg-accent text-white hover:bg-primary text-xs font-black uppercase tracking-widest">Initiate Quote</a>
+    <!-- MOBILE MENU DROPDOWN OVERLAY -->
+    <div id="mobileMenu" class="absolute top-0 left-4 right-4 pt-24 pb-8 px-8 bg-[#050505]/95 backdrop-blur-2xl border border-white/10 rounded-[2.5rem] transform -translate-y-full opacity-0 pointer-events-none transition-all duration-500 ease-in-out z-40">
+      <nav class="flex flex-col gap-5 text-center">
+        <a href="homepage.html#services" class="text-xs font-bold uppercase tracking-[0.2em] text-slate-300 hover:text-primary transition-colors py-2 rounded-xl hover:bg-white/5">Services</a>
+         <a href="homepage.html#about" class="text-xs font-bold uppercase tracking-[0.2em] text-slate-300 hover:text-primary transition-colors py-2 rounded-xl hover:bg-white/5">About Us</a>
+          <a href="homepage.html#process" class="text-xs font-bold uppercase tracking-[0.2em] text-slate-300 hover:text-primary transition-colors py-2 rounded-xl hover:bg-white/5">Process</a>
+        <a href="homepage.html#work" class="text-xs font-bold uppercase tracking-[0.2em] text-slate-300 hover:text-primary transition-colors py-2 rounded-xl hover:bg-white/5">Work</a>
+        
+        <div class="h-px bg-white/5 my-2"></div>
+        
+        <a href="homepage.html#contact-form" class="py-3.5 rounded-xl bg-primary text-white hover:bg-blue-700 text-xs font-black uppercase tracking-wider shadow-lg shadow-blue-600/10 transition-all">
+          Initiate Quote
+        </a>
       </nav>
     </div>
+    
   </div>
 </header>
 
-<!-- HERO -->
- <div class="bg-[#020202] text-slate-400 font-sans selection:bg-primary/30 overflow-x-hidden">
 
-  <!-- DYNAMIC SECURITY OVERLAY -->
-  <div class="fixed inset-0 pointer-events-none z-0">
-    <div class="absolute inset-0 bg-[radial-gradient(#ffffff05_1px,transparent_1px)] [background-size:32px_32px]"></div>
-    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent"></div>
-  </div>
-
-  <!-- HERO: ENCRYPTION PROTOCOL -->
-  <header class="relative pt-48 pb-24 px-6 overflow-hidden">
-    <div class="max-w-7xl mx-auto relative z-10">
-      <div class="flex flex-col items-center text-center">
-        <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-primary/5 border border-primary/20 mb-12 backdrop-blur-xl animate-pulse">
-          <span class="h-2 w-2 bg-primary rounded-full"></span>
-          <span class="text-[10px] font-mono tracking-[0.5em] text-primary uppercase">Vault_Access // Privacy_Protocol_v2.6</span>
-        </div>
-
-        <h1 class="text-6xl md:text-9xl font-black text-white leading-[0.8] tracking-tighter uppercase mb-12">
-          Data <br/>
-          <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-white to-white/20 italic">Integrity.</span>
-        </h1>
-
-        <p class="max-w-2xl text-xl text-slate-400 leading-relaxed font-light border-x border-white/10 px-8">
-          At Synlotech, your privacy is treated as <span class="text-white font-medium italic underline decoration-primary underline-offset-8">Mission Critical Infrastructure</span>. This is how we architect your digital safety.
-        </p>
+  <!-- NAVIGATION HEADER -->
+  <nav style="display: none;" class="sticky top-0 z-50 bg-dark/80 backdrop-blur-md border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3 group">
+        <img src="thumbnails/Asset 3.svg" class="w-10 h-10 object-contain rounded-full border border-slate-700 group-hover:border-primary transition-colors" alt="Synlotech Logo">
+        <span class="font-black text-xl tracking-tight text-white">SYNLOTECH</span>
+      </a>
+      
+      <div class="hidden md:flex items-center gap-8 font-medium text-sm">
+        <a href="index.html" class="text-slate-400 hover:text-white transition-colors">Home</a>
+        <a href="index.html#services" class="text-slate-400 hover:text-white transition-colors">Services</a>
+        <a href="index.html#portfolio" class="text-slate-400 hover:text-white transition-colors">Portfolio</a>
+        <a href="index.html#contact" class="px-5 py-2.5 bg-primary text-white rounded-xl hover:bg-blue-700 transition-colors shadow-lg shadow-blue-900/20">Get a Quote</a>
       </div>
+
+      <!-- Mobile Menu Button Trigger Toggle Toggle Button Logic handled by script -->
+      <button id="menu-btn" class="md:hidden relative w-10 h-10 flex items-center justify-center focus:outline-none" aria-label="Toggle Navigation Menu">
+        <span class="bar top"></span>
+        <span class="bar middle"></span>
+        <span class="bar bottom"></span>
+      </button>
+    </div>
+
+    <!-- Mobile Menu Container -->
+    <div id="mobile-menu" class="hidden absolute top-20 left-0 w-full bg-dark/95 backdrop-blur-lg border-b border-slate-800 py-8 px-6 flex flex-col gap-6 text-lg font-semibold shadow-2xl">
+      <a href="index.html" class="text-slate-300 hover:text-primary transition-colors">Home</a>
+      <a href="index.html#services" class="text-slate-300 hover:text-primary transition-colors">Services</a>
+      <a href="index.html#portfolio" class="text-slate-300 hover:text-primary transition-colors">Portfolio</a>
+      <a href="index.html#contact" class="w-full text-center py-3 bg-primary text-white rounded-xl shadow-lg">Get a Quote</a>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <header class="relative py-32 border-b border-slate-900 overflow-hidden">
+    <div class="absolute -top-40 right-0 w-[500px] h-[500px] bg-gradient-to-br from-primary/10 to-transparent blur-[150px] pointer-events-none"></div>
+    <div class="absolute bottom-0 -left-40 w-[400px] h-[400px] bg-gradient-to-tr from-accent/5 to-transparent blur-[120px] pointer-events-none"></div>
+    
+    <div class="relative max-w-4xl mx-auto px-6 text-center space-y-6">
+      
+      <h1 class="text-4xl sm:text-5xl font-black text-white tracking-tight uppercase">
+        Privacy Policy
+      </h1>
+      <p class="text-slate-400 text-sm max-w-xl mx-auto leading-relaxed">
+        Last Updated: July 3, 2026. This policy outlines our precise parameters regarding data handling under international frameworks and the United Republic of Tanzania Personal Data Protection Act (PDPA).
+      </p>
     </div>
   </header>
 
-  <!-- DATA INFRASTRUCTURE GRID -->
-  <main class="max-w-7xl mx-auto px-6 pb-40 relative z-10">
-    <div class="grid grid-cols-1 md:grid-cols-12 gap-px bg-white/10 border border-white/10">
+  <!-- EDITORIAL CONTENT LAYOUT -->
+  <main class="max-w-7xl mx-auto px-6 py-24 grid lg:grid-cols-12 gap-16 items-start">
+    
+    <!-- STICKY QUICK LINKS NAV -->
+    <aside class="lg:col-span-4 lg:sticky lg:top-32 space-y-6 bg-slate-950/40 p-6 rounded-2xl border border-slate-900">
+      <h3 class="font-mono text-xs uppercase tracking-widest text-slate-500 font-bold px-3">
+        Document Chapters
+      </h3>
+      <nav class="flex flex-col gap-1 text-sm font-medium text-slate-400">
+        <a href="#collect" class="px-3 py-2 rounded-xl hover:bg-slate-900 hover:text-white transition-colors flex items-center gap-2"><i class="fa-solid fa-database w-4 text-primary"></i> 1. Information We Collect</a>
+        <a href="#usage" class="px-3 py-2 rounded-xl hover:bg-slate-900 hover:text-white transition-colors flex items-center gap-2"><i class="fa-solid fa-chart-pie w-4 text-primary"></i> 2. How Data is Utilized</a>
+        <a href="#share" class="px-3 py-2 rounded-xl hover:bg-slate-900 hover:text-white transition-colors flex items-center gap-2"><i class="fa-solid fa-handshake w-4 text-primary"></i> 3. Third-Party Sharing</a>
+        <a href="#security" class="px-3 py-2 rounded-xl hover:bg-slate-900 hover:text-white transition-colors flex items-center gap-2"><i class="fa-solid fa-lock w-4 text-primary"></i> 4. Structural Security</a>
+        <a href="#rights" class="px-3 py-2 rounded-xl hover:bg-slate-900 hover:text-white transition-colors flex items-center gap-2"><i class="fa-solid fa-user-check w-4 text-primary"></i> 5. Your Legal Rights</a>
+        <a href="#contact-info" class="px-3 py-2 rounded-xl hover:bg-slate-900 hover:text-white transition-colors flex items-center gap-2"><i class="fa-solid fa-envelope w-4 text-primary"></i> 6. Contact Data Protection</a>
+      </nav>
+    </aside>
+
+    <!-- LEGAL ARTICLES -->
+    <div class="lg:col-span-8 space-y-16">
       
-      <!-- 01: INTRODUCTION -->
-      <article class="md:col-span-12 bg-[#050505] p-12 md:p-16 group">
-        <span class="font-mono text-[10px] text-primary mb-8 block tracking-[0.5em] uppercase">// SYSTEM_SCOPE</span>
-        <p class="text-xl md:text-3xl text-slate-300 font-light leading-relaxed max-w-5xl">
-          Synlotech Technologies (“we”, “our”, “us”) respects your digital footprint. By navigating our systems, you agree to the <span class="text-white font-bold">Encrypted Governance</span> outlined below.
+      <!-- CHAPTER 1 -->
+      <section id="collect" class="scroll-smooth space-y-4">
+        <div class="flex items-center gap-3">
+          <span class="text-xs font-mono font-bold text-accent bg-slate-900 px-2.5 py-1 border border-slate-800 rounded-md">01</span>
+          <h2 class="text-2xl font-black uppercase text-white tracking-tight">Information We Collect</h2>
+        </div>
+        <p class="text-slate-400 text-sm leading-relaxed font-light">
+          Synlotech Technologies collects specific variations of data points to optimize our high-performance systems and development workflows. This includes:
         </p>
-      </article>
+        <ul class="space-y-2 text-sm text-slate-300 font-light list-none pl-0">
+          <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-accent mt-1 text-xs"></i> <strong>Identity Elements:</strong> Name, business name, registration fields, and structural operational profiles.</li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-accent mt-1 text-xs"></i> <strong>Contact Points:</strong> Email addresses, telephone markers, physical office vectors, and active communication pipelines.</li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-accent mt-1 text-xs"></i> <strong>Technical Footprints:</strong> IP tracking, device telemetry configurations, connection duration logs via standard Google Analytics (G-4PMXTMQXM4).</li>
+        </ul>
+      </section>
 
-      <!-- 02: COLLECTION VECTORS (Bento Style) -->
-      <article class="md:col-span-7 bg-[#050505] p-12 group relative overflow-hidden">
-        <div class="absolute -right-20 -top-20 w-80 h-80 bg-primary/5 rounded-full blur-[100px] group-hover:bg-primary/10 transition-all duration-700"></div>
-        <span class="font-mono text-[10px] text-white/20 mb-16 block tracking-[0.5em] uppercase">01_INPUT_VECTORS</span>
-        <h2 class="text-4xl font-black text-white uppercase tracking-tighter mb-8">Data Collection</h2>
+      <!-- CHAPTER 2 -->
+      <section id="usage" class="animate-on-scroll space-y-4">
+        <div class="flex items-center gap-3">
+          <span class="text-xs font-mono font-bold text-accent bg-slate-900 px-2.5 py-1 border border-slate-800 rounded-md">02</span>
+          <h2 class="text-2xl font-black uppercase text-white tracking-tight">How Data is Utilized</h2>
+        </div>
+        <p class="text-slate-400 text-sm leading-relaxed font-light">
+                    Your extracted payloads are explicitly used to fulfill development frameworks and system maintenance loops without causing processing latency. We use it to:
+        </p>
+        <div class="p-6 rounded-2xl bg-slate-950 border border-slate-900 space-y-3">
+          <p class="text-sm text-slate-300"><i class="fa-solid fa-gear text-primary mr-2"></i> Deliver high-converting custom applications and custom portals.</p>
+          <p class="text-sm text-slate-300"><i class="fa-solid fa-shield text-primary mr-2"></i> Troubleshoot development packages, security bottlenecks, and server infrastructure bugs.</p>
+          <p class="text-sm text-slate-300"><i class="fa-solid fa-chart-line text-primary mr-2"></i> Monitor visitor behaviors using internal tracking layers to improve platform speed thresholds.</p>
+        </div>
+      </section>
+
+      <!-- CHAPTER 3 -->
+      <section id="share" class="animate-on-scroll space-y-4">
+        <div class="flex items-center gap-3">
+          <span class="text-xs font-mono font-bold text-accent bg-slate-900 px-2.5 py-1 border border-slate-800 rounded-md">03</span>
+          <h2 class="text-2xl font-black uppercase text-white tracking-tight">Third-Party Sharing</h2>
+        </div>
+        <p class="text-slate-400 text-sm leading-relaxed font-light">
+          Synlotech Technologies enforces strict data isolation architectures. We do not sell, lease, or distribute your localized parameters to external marketing agents or third-party networks for advertising. Data transmission occurs strictly under the following isolated conditions:
+        </p>
+        <ul class="space-y-2 text-sm text-slate-300 font-light list-none pl-0">
+          <li class="flex items-start gap-2"><i class="fa-solid fa-building-shield text-accent mt-1 text-xs"></i> <strong>Judicial Compliance:</strong> To comply with legal mandates under the United Republic of Tanzania Personal Data Protection Act (PDPA).</li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-server text-accent mt-1 text-xs"></i> <strong>Core Infrastructure:</strong> To trusted database modules and cloud pipelines operating under non-disclosure execution terms.</li>
+        </ul>
+      </section>
+
+      <!-- CHAPTER 4 -->
+      <section id="security" class="animate-on-scroll space-y-4">
+        <div class="flex items-center gap-3">
+          <span class="text-xs font-mono font-bold text-accent bg-slate-900 px-2.5 py-1 border border-slate-800 rounded-md">04</span>
+          <h2 class="text-2xl font-black uppercase text-white tracking-tight">Structural Security</h2>
+        </div>
+        <p class="text-slate-400 text-sm leading-relaxed font-light">
+          We integrate multi-level defense measures across our digital architectures. Secure Sockets Layer (SSL) channels encrypt all raw text variables during interaction phases. Access keys to customer assets are dynamically locked out unless manual deployment procedures require explicit privilege elevation.
+        </p>
+      </section>
+
+      <!-- CHAPTER 5 -->
+      <section id="rights" class="animate-on-scroll space-y-4">
+        <div class="flex items-center gap-3">
+          <span class="text-xs font-mono font-bold text-accent bg-slate-900 px-2.5 py-1 border border-slate-800 rounded-md">05</span>
+          <h2 class="text-2xl font-black uppercase text-white tracking-tight">Your Legal Rights</h2>
+        </div>
+        <p class="text-slate-400 text-sm leading-relaxed font-light">
+          As a user or corporate client, you possess complete sovereign control over your underlying assets. Under regional data laws, you retain the right to query the extraction log, request absolute deletion from active server containers, restrict specific analytical parameters, or challenge flawed profiles.
+        </p>
+      </section>
+
+      <!-- CHAPTER 6 -->
+      <section id="contact-info" class="animate-on-scroll space-y-6">
+        <div class="flex items-center gap-3">
+          <span class="text-xs font-mono font-bold text-accent bg-slate-900 px-2.5 py-1 border border-slate-800 rounded-md">06</span>
+          <h2 class="text-2xl font-black uppercase text-white tracking-tight">Contact Data Protection</h2>
+        </div>
+        <p class="text-slate-400 text-sm leading-relaxed font-light">
+          If you have any questions about this document or want to submit a formal deletion request, please reach out directly through our administration parameters:
+        </p>
+        <div class="grid sm:grid-cols-2 gap-4 text-sm">
+          <div class="p-4 rounded-xl bg-slate-950 border border-slate-900">
+            <p class="text-xs uppercase text-slate-500 tracking-wider mb-1">Headquarters</p>
+            <p class="text-white uppercase font-bold">Synlotech Technologies</p>
+            <p class="text-slate-400 text-xs">Dar es Salaam, Tanzania</p>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-950 border border-slate-900">
+            <p class="text-xs uppercase text-slate-500 font-mono tracking-wider mb-1">Electronic Support</p>
+            <a href="mailto:synlotech@outlook.com" class="text-primary font-bold hover:underline cursor-pointer block">synlotech@outlook.com</a>
+            <p class="text-slate-400 text-xs">Response window  &lt; 12 Hrs</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  
+<!-- FOOTER -->
+<footer class="relative bg-[#020202] pt-40 pb-12 overflow-hidden border-t border-white/5 font-sans">
+  
+  <!-- BACKLIGHT KINETIC GLOWS -->
+  <div class="absolute top-0 right-1/4 w-[600px] h-[600px] bg-blue-600/5 blur-[150px] rounded-full pointer-events-none animate-pulse"></div>
+  <div class="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-emerald-500/5 blur-[130px] rounded-full pointer-events-none"></div>
+  <div class="absolute inset-0 bg-[linear-gradient(to_right,#ffffff01_1px,transparent_1px),linear-gradient(to_bottom,#ffffff01_1px,transparent_1px)] bg-[size:50px_50px]"></div>
+
+  <div class="relative max-w-7xl mx-auto px-6 z-20 w-full">
+    
+    <!-- UPPER MODULE: THE SCALING BLOCK (HERO CTA PITCH) -->
+    <div class="grid lg:grid-cols-12 gap-12 items-center pb-24 border-b border-white/5">
+      
+      <!-- HERO PITCH HEADER -->
+      <div class="lg:col-span-8 space-y-6">
+       
         
-        <div class="space-y-6">
-            <div class="flex gap-4 items-start">
-                <div class="h-6 w-px bg-primary"></div>
-                <p class="text-slate-400 text-sm"><strong class="text-white">Active Telemetry:</strong> Name, email, and phone signatures provided via intake forms.</p>
-            </div>
-            <div class="flex gap-4 items-start">
-                <div class="h-6 w-px bg-primary"></div>
-                <p class="text-slate-400 text-sm"><strong class="text-white">Hardware ID:</strong> IP address, browser architecture, and device metadata via automated analytics.</p>
-            </div>
-        </div>
-      </article>
+        <h3 class="text-6xl md:text-7xl font-serif font-black text-white tracking-tighter leading-[0.95]">
+          READY TO INITIATE <br/>
+          <span class="text-transparent bg-clip-text bg-primary">YOUR PROJECT?</span>
+        </h3>
+        
+        <p class="text-slate-400 text-base md:text-lg max-w-2xl leading-relaxed">
+          Don't settle for static pages. Let's deploy an optimized web infrastructure, stunning graphic designs, and dominant social media marketing strategies tailored to scale your brand revenue.
+        </p>
+      </div>
 
-      <!-- 03: COOKIES (Small Tech Card) -->
-      <article class="md:col-span-5 bg-[#050505] p-12 border-l border-white/10 flex flex-col justify-between group">
-        <span class="font-mono text-[10px] text-white/20 uppercase tracking-widest block mb-12">02_TRACKING_NODES</span>
-        <div>
-            <h3 class="text-2xl font-black text-white uppercase mb-4">Tracking <br/> Packets</h3>
-            <p class="text-xs text-slate-500 leading-relaxed uppercase font-mono tracking-wider mb-6">Cookies deployed for UX optimization. Packets can be neutralized via browser settings.</p>
-            <div class="h-1 w-full bg-white/5"><div class="h-full bg-primary w-2/3"></div></div>
-        </div>
-      </article>
-
-      <!-- 04: USAGE LOGIC (Full Width Dark) -->
-      <article class="md:col-span-12 bg-white text-black p-12 md:p-20 border-t border-white/10 relative overflow-hidden">
-        <div class="absolute top-0 right-0 p-8 font-mono text-[10px] text-black/20 tracking-[0.5em]">DATA_PROCESSING_UNIT</div>
-        <div class="grid md:grid-cols-2 gap-16 items-center">
-            <div>
-                <span class="font-mono text-[10px] text-primary mb-12 block tracking-[0.5em] uppercase">03_UTILIZATION_LOG</span>
-                <h2 class="text-5xl font-black uppercase tracking-tighter mb-6 leading-none">Purpose of <br/> <span class="italic text-primary">Intelligence.</span></h2>
-            </div>
-            <ul class="space-y-4 font-bold uppercase text-xs tracking-widest text-slate-800">
-                <li class="flex items-center gap-4"><span class="h-1.5 w-1.5 bg-primary"></span> Service Architecture Deployment</li>
-                <li class="flex items-center gap-4"><span class="h-1.5 w-1.5 bg-primary"></span> Structural Website Optimization</li>
-                <li class="flex items-center gap-4"><span class="h-1.5 w-1.5 bg-primary"></span> Opt-in Transmission Protocols</li>
-            </ul>
-        </div>
-      </article>
-
-      <!-- 05: SECURITY & RIGHTS (Asymmetric Grid) -->
-      <article class="md:col-span-6 bg-[#050505] p-12 border-t border-white/10 group">
-        <span class="font-mono text-[10px] text-white/20 mb-12 block tracking-[0.5em] uppercase">04_VAULT_INTEGRITY</span>
-        <h3 class="text-3xl font-black text-white uppercase mb-4">Security Layer</h3>
-        <p class="text-sm text-slate-500 leading-relaxed max-w-sm">We implement high-tier organizational measures to prevent unauthorized data injection or extraction. Total security is an asymptote; we strive for the maximum.</p>
-      </article>
-
-      <article class="md:col-span-6 bg-[#050505] p-12 border-t md:border-l border-white/10 group">
-        <span class="font-mono text-[10px] text-white/20 mb-12 block tracking-[0.5em] uppercase">05_USER_AUTHORITY</span>
-        <h3 class="text-3xl font-black text-white uppercase mb-4">Your Rights</h3>
-        <p class="text-sm text-slate-500 leading-relaxed max-w-sm mb-8">Access, correct, or neutralize your data strings at any time. Your authority over your data is absolute.</p>
-        <a href="mailto:hello@synlotech.dev" class="text-xs font-mono text-primary border-b border-primary/30 pb-1 hover:text-white transition-colors uppercase tracking-[0.3em]">Initialize_Request_Link</a>
-      </article>
-
-      <!-- 06: EXTERNAL LINKS & CHILDREN (Footer Bento) -->
-      <article class="md:col-span-12 bg-[#050505] p-12 border-t border-white/10 grid md:grid-cols-2 gap-12">
-        <div>
-            <span class="font-mono text-[10px] text-white/20 mb-4 block uppercase tracking-widest">06_External_Nodes</span>
-            <p class="text-xs text-slate-600 leading-relaxed">Third-party links are outside our encryption perimeter. Review their protocols before engagement.</p>
-        </div>
-        <div>
-            <span class="font-mono text-[10px] text-white/20 mb-4 block uppercase tracking-widest">07_Minor_Protection</span>
-            <p class="text-xs text-slate-600 leading-relaxed">System usage restricted to age 13+. Immediate deletion protocol activated if minor data is detected.</p>
-        </div>
-      </article>
+      <!-- REVENUE ACTIONS -->
+      <div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-4 w-full">
+        <a href="#contact-form" class="w-full font-serif inline-flex items-center justify-center gap-3 bg-primary hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-bold uppercase tracking-wider text-sm transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-blue-600/20 text-center">
+          Initiate Free Quote
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+          </svg>
+        </a>
+        <a href="https://wa.me/255788296274" target="_blank" class="w-full font-serif inline-flex items-center justify-center gap-2 border border-emerald-500/30 text-emerald-400 px-8 py-4 rounded-xl font-bold uppercase tracking-wider text-sm hover:bg-emerald-500/10 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] text-center">
+          Chat With Us
+        </a>
+      </div>
 
     </div>
 
-    <!-- CALL TO ACTION: DIRECT ENCRYPTION SUPPORT -->
-    <section class="mt-40 text-center relative py-20 border-y border-white/5">
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[300px] bg-primary/5 blur-[150px] rounded-full"></div>
-        
-        <h2 class="relative z-10 text-4xl md:text-6xl font-black text-white uppercase tracking-tighter mb-10 leading-none">
-            Query the <span class="text-primary italic text-outline-primary" style="-webkit-text-stroke: 1px var(--primary)">DPO?</span>
-        </h2>
+    <!-- MIDDLE MODULE: NAVIGATION ARCHITECTURE -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-12 py-16 items-start">
+      
+      <!-- Brand Ident -->
+      <div class="space-y-4">
+        <a href="#home" class="inline-flex items-center gap-2.5 group">
+          <img loading="lazy" src="thumbnails/Asset 3.svg" alt="Synlotech Core Icon" class="w-5 h-5 opacity-80 group-hover:opacity-100 transition-opacity">
+          <span class="text-base font-serif font-black text-primary uppercase tracking-tight">SYNLOTECH</span>
+        </a>
+        <p class="text-slate-500 text-sm leading-relaxed max-w-xs">
+          High-performance websites, striking multi-medium graphic designs, and aggressive social media marketing campaigns.
+        </p>
+      </div>
 
-        <div class="relative z-10 flex flex-wrap justify-center gap-6">
-            <a href="mailto:synlotech@outlook.com" class="px-12 py-5 bg-white text-black font-black uppercase text-sm tracking-widest hover:bg-primary transition-all">
-                Access_Secure_Email
-            </a>
-            <a href="https://wa.me/255788296274" target="_blank" class="px-12 py-5 border border-white/10 text-white font-black uppercase text-sm tracking-widest hover:bg-white hover:text-black transition-all">
-                Live_Encrypted_Chat
-            </a>
-        </div>
-    </section>
+      <!-- Capabilities -->
+      <div class="space-y-4 font-serif">
+        <span class="text-[10px] font-bold tracking-[0.1em] text-primary block uppercase">OUR SERVICES</span>
+        <ul class="space-y-2.5">
+          <li><a href="homepage.html#service1" class="text-xs text-slate-400 hover:text-white transition-colors">Web Development</a></li>
+          <li><a href="homepage.html#service2" class="text-xs text-slate-400 hover:text-white transition-colors">Graphic Design</a></li>
+          <li><a href="homepage.html#service3" class="text-xs text-slate-400 hover:text-white transition-colors">Social Media Marketing</a></li>
+        </ul>
+      </div>
 
-    <footer class="mt-20 text-center opacity-20">
-        <p class="font-mono text-[9px] text-slate-600 uppercase tracking-[1em]">End_Privacy_Briefing // Protocol_Stable_2026</p>
-    </footer>
-
-  </main>
+     <!-- Comms Matrix Block with Icons -->
+<div class="space-y-5 font-serif">
+  <span class="text-[10px] font-bold tracking-[0.1em] text-primary block uppercase">
+    COMMUNICATION LINES
+  </span>
+  <ul class="space-y-3.5">
+    <!-- EMAIL -->
+    <li>
+      <a href="mailto:synlotech@outlook.com" class="group flex items-center gap-3 text-xs text-slate-400 hover:text-blue-700 transition-colors duration-200">
+        <span class="flex items-center justify-center w-8 h-8 rounded bg-white/5 border border-white/10 group-hover:border-blue-500/30 text-[10px] transition-colors">
+          <i class="fa-regular fa-envelope text-slate-500 group-hover:text-blue-700 transition-colors"></i>
+        </span>
+        <span class="font-sans">Email</span>
+      </a>
+    </li>
+    
+    <!-- WHATSAPP -->
+    <li>
+      <a href="https://wa.me/255788296274" target="_blank" class="group flex items-center gap-3 text-xs text-slate-400 hover:text-blue-700 transition-colors duration-200">
+        <span class="flex items-center justify-center w-8 h-8 rounded bg-white/5 border border-white/10 group-hover:border-blue-500/30 text-[10px] transition-colors">
+          <i class="fa-brands fa-whatsapp text-slate-500 group-hover:text-blue-700 transition-colors"></i>
+        </span>
+        <span class="font-sans">WhatsApp</span>
+      </a>
+    </li>
+    
+    <!-- HOTLINE -->
+    <li>
+      <a href="tel:+255788296274" class="group flex items-center gap-3 text-xs text-slate-400 hover:text-blue-700 transition-colors duration-200">
+        <span class="flex items-center justify-center w-8 h-8 rounded bg-white/5 border border-white/10 group-hover:border-blue-500/30 text-[10px] transition-colors">
+          <i class="fa-solid fa-phone text-slate-500 group-hover:text-blue-700 transition-colors"></i>
+        </span>
+        <span class="font-sans">Hotline</span>
+      </a>
+    </li>
+  </ul>
 </div>
 
-<!-- FOOTER --><footer class="relative bg-[#050505] pt-24 pb-12 overflow-hidden border-t border-white/10 font-mono">
-  <!-- Scanline Effect Overlay -->
-  <div class="absolute inset-0 bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] z-10 pointer-events-none bg-[length:100%_2px,3px_100%]"></div>
-  
-  <div class="relative max-w-7xl mx-auto px-6 z-20">
-    
-    <!-- TOP MODULE: BRAND & DISPATCH -->
-    <div class="grid lg:grid-cols-12 gap-12 mb-16 pb-16 border-b border-white/5">
-      
-      <!-- ID BLOCK -->
-      <div class="lg:col-span-4 space-y-8">
-        <a href="homepage.html#home" class="inline-flex items-center gap-3 group">
-          <div class="p-2  group-hover:border-primary/50 transition-colors">
-            <img loading="lazy" src="thumbnails/Asset 3.svg" class="w-8 h-8 opacity-80 group-hover:opacity-100 transition-opacity">
-          </div>
-          <span style="font-family: inter;" class="text-2xl text-accent font-black tracking-widest uppercase">Synlotech</span>
-        </a>
-        <div class="space-y-4">
-          <p class="text-slate-500 text-[11px] leading-relaxed uppercase tracking-tighter max-w-xs">
-            High-frequency engineering for global innovators. Performance // Reliability // Scale.
-          </p>
-          <div class="flex items-center gap-3 py-1 px-3 border border-emerald-500/20 bg-emerald-500/5 w-fit">
-            <span class="relative flex h-2 w-2">
-              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-              <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-            </span>
-            <span class="text-[9px] font-bold text-emerald-500 uppercase tracking-widest">System Status: active</span>
-          </div>
-        </div>
+
+      <!-- Newsletter Sync Box -->
+      <div class="space-y-4 font-serif">
+        <span class="text-[10px] font-bold tracking-[0.1em] text-primary block uppercase">SUBSCRIBE TO OUR NEWSLETTER</span>
+        <form action="https://formspree.io/f/mlgwgyrv" method="POST" class="relative">
+          <input type="email" name="email" placeholder="Workspace Email" required
+                 class="w-full px-4 py-3 rounded-xl bg-white/[0.02] border border-white/10 text-xs text-white placeholder:text-slate-700 focus:outline-none focus:border-blue-500 transition-colors">
+          <button type="submit" aria-label="Subscribe" class="absolute right-1.5 top-1.5 bottom-1.5 px-2.5 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition-colors flex items-center justify-center">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+            </svg>
+          </button>
+        </form>
       </div>
 
-      <!-- FEED INPUT -->
-      <div class="lg:col-span-5">
-        <div class="p-6 border border-white/5 bg-white/[0.02] relative group">
-          <div class="absolute top-0 left-0 w-2 h-2 border-t border-l border-primary/50"></div>
-          <h3 class="text-[10px] font-bold text-slate-400 uppercase tracking-[0.4em] mb-4">Internal Dispatch</h3>
-          <form action="https://formspree.io/f/mwvnvdko" method="POST" class="flex flex-col sm:flex-row gap-2">
-            <input type="email" name="email" placeholder="user@email.com" required
-                   class="flex-1 bg-black border border-white/10 px-4 py-3 text-xs text-white focus:outline-none focus:border-primary transition-colors">
-            <button type="submit" class="bg-white text-black text-[10px] font-bold uppercase px-6 py-3 hover:bg-primary hover:text-white transition-all">
-              Execute
-            </button>
-          </form>
-        </div>
-      </div>
-
-      <!-- COMMS CHANNELS -->
-      <div class="lg:col-span-3 flex flex-col lg:items-end gap-6">
-        <h3 class="text-[10px] font-bold text-slate-400 uppercase tracking-[0.4em]">Channels</h3>
-        <div class="grid grid-cols-3 gap-2 w-full lg:w-auto">
-           <a href="https://linkedin.com/in/synlotech-technologies-7252933b2" target="_blank" class="aspect-square w-12 flex items-center justify-center border border-white/10 text-slate-500 hover:border-primary hover:text-primary transition-all"><i class="fa-brands fa-linkedin-in text-sm"></i></a>
-          <a href="https://instagram.com/synlo_tech" target="_blank" class="aspect-square w-12 flex items-center justify-center border border-white/10 text-slate-500 hover:border-primary hover:text-primary transition-all"><i class="fa-brands fa-instagram text-sm"></i></a>
-           <a href="https://x.com/synlotech" target="_blank" class="aspect-square w-12 flex items-center justify-center border border-white/10 text-slate-500 hover:border-primary hover:text-primary transition-all"><i class="fa-brands fa-x-twitter text-sm"></i></a>
-        </div>
-      </div>
     </div>
 
-    <!-- MAIN MATRIX: NAVIGATION -->
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-12 mb-16">
-      <div class="space-y-6">
-        <h4 class="text-[10px] font-black text-white uppercase tracking-[0.4em] flex items-center gap-2">
-          <span class="w-1 h-1 bg-primary"></span> Navigation
-        </h4>
-        <ul class="space-y-3">
-          <li><a href="#services" class="text-[11px] text-slate-500 hover:text-primary transition-colors flex items-center gap-2 uppercase">Services</a></li>
-          <li><a href="#work" class="text-[11px] text-slate-500 hover:text-primary transition-colors flex items-center gap-2 uppercase"> Work</a></li>
-          <li><a href="#about" class="text-[11px] text-slate-500 hover:text-primary transition-colors flex items-center gap-2 uppercase"> About</a></li>
-        </ul>
-      </div>
-      
-      <div class="space-y-6">
-        <h4 class="text-[10px] font-black text-white uppercase tracking-[0.4em] flex items-center gap-2">
-          <span class="w-1 h-1 bg-primary"></span> Communications
-        </h4>
-        <ul class="space-y-3">
-          <li><a href="mailto:synlotech@outlook.com" class="text-[11px] text-slate-500 hover:text-primary transition-colors uppercase">Email</a></li>
-          <li><a href="https://wa.me" class="text-[11px] text-slate-500 hover:text-primary transition-colors uppercase">Whatsapp</a></li>
-          <li><a href="tel:255296274" class="text-[11px] text-slate-500 hover:text-primary transition-colors uppercase">Hotline</a></li>
-        </ul>
-      </div>
-
-      <div class="space-y-6">
-        <h4 class="text-[10px] font-black text-white uppercase tracking-[0.4em] flex items-center gap-2">
-          <span class="w-1 h-1 bg-primary"></span> Legal
-        </h4>
-        <ul class="space-y-3">
-          <li><a href="Privacy-Policy.html" class="text-[11px] text-slate-500 hover:text-primary transition-colors uppercase">Privacy policy</a></li>
-          <li><a href="Terms-Of-Service.html" class="text-[11px] text-slate-500 hover:text-primary transition-colors uppercase">Terms of service</a></li>
-        </ul>
-      </div>
-
-      <div class="flex flex-col items-start md:items-end space-y-6">
-        <h4 class="text-[10px] font-black text-white uppercase tracking-[0.4em]">Global Operations</h4>
-        <div class="text-left md:text-right font-mono">
-          <p class="text-[10px] text-slate-400">DAR ES SALAAM, TANZANIA</p>
-          <p class="text-[9px] text-slate-600 tracking-widest mt-1 uppercase">Deployment: Active.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- LOWER TIER: SYSTEM DATA -->
+    <!-- LOWER MODULE: SYSTEM FOOTER DATA & SOCIAL INDEX -->
     <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
-      <p class="text-[9px] text-slate-700 uppercase tracking-[0.5em]">
-        © 2026 SYNLOTECH TECHNOLOGIES— <span class="text-slate-800">TRANSFORMING IDEAS INTO DIGITAL REALITY</span>
-      </p>
-      <div class="flex items-center gap-4 border border-white/5 px-3 py-1 bg-white/[0.01]">
-        <span class="text-[9px] text-primary font-bold">v2.0</span>
+      
+
+       <!-- Social Signal Networks -->
+      <div class="flex items-center gap-2.5">
+        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn" class="w-9 h-9 flex items-center justify-center rounded-xl bg-white/[0.01] border border-white/5 text-slate-400 hover:border-blue-500/40 hover:text-primary transition-all duration-300">
+          <i class="fa-brands fa-linkedin-in text-xs"></i>
+        </a>
+        <a href="https://instagram.com/synlo_tech" target="_blank" aria-label="Instagram" class="w-9 h-9 flex items-center justify-center rounded-xl bg-white/[0.01] border border-white/5 text-slate-400 hover:border-blue-500/40 hover:text-primary transition-all duration-300">
+          <i class="fa-brands fa-instagram text-xs"></i>
+        </a>
+        <a href="https://x.com" target="_blank" aria-label="Twitter X" class="w-9 h-9 flex items-center justify-center rounded-xl bg-white/[0.01] border border-white/5 text-slate-400 hover:border-blue-500/40 hover:text-primary transition-all duration-300">
+          <i class="fa-brands fa-x-twitter text-xs"></i>
+        </a>
+      
+         </div>
+
+
+      <!-- Legal Tracks -->
+      <div class="flex flex-wrap items-center justify-center md:justify-start gap-6 text-[10px] font-mono text-slate-500 uppercase tracking-wider font-bold">
+       
+        <a href="Privacy-Policy.html" class="hover:text-slate-300 transition-colors">Privacy Policy</a>
+        <span class="text-slate-800">•</span>
+        <a href="Terms-Of-Service.html" class="hover:text-slate-300 transition-colors">Terms of Service</a>
+         <span class="text-slate-800">•</span>
+         <span>© 2026 SYNLOTECH TECHNOLOGIES</span>
       </div>
+
+     
+
     </div>
+
   </div>
 </footer>
 
+  <!-- FLOATING INTERACTIVE CTA WHATSAPP -->
+  <a href="https://wa.me" target="_blank" class="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-2xl whatsapp-pulse transition-transform hover:scale-110" aria-label="Chat with us on WhatsApp">
+    <i class="fa-brands fa-whatsapp text-2xl"></i>
+  </a>
 
+  
 <script>
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Navbar Logic
@@ -483,54 +586,39 @@ Message: ${message}`;
     window.open(url, '_blank');
   });
 
+  document.getElementById("form").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const service = document.getElementById("service_type").value;
+    const message = document.getElementById("message").value;
+
+    const whatsappMessage =
+`🚀 NEW WEBSITE LEAD
+
+👤 Name: ${name}
+
+📧 Email: ${email}
+
+🛠 Service: ${service}
+
+📝 Project Details:
+${message}`;
+
+    const phoneNumber = "255788296274";
+
+    window.open(
+      `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`,
+      "_blank"
+    );
+});
+
   
 /* ios hover */
  document.addEventListener("touchstart", function() {}, true);
 </script>
 
- 
-  <a href="https://wa.me/255788296274" target="_blank" aria-label="Chat on WhatsApp" class="fixed bottom-6 right-5 z-50 group"> 
-    <div class="flex items-center gap-3">
-     <!-- Optional Tooltip --> 
-      <span class="hidden md:block opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 transition-all duration-300 bg-dark text-white text-sm px-4 py-2 rounded-lg shadow-lg"> Chat with us </span> 
-      <!-- Button --> <div class="w-14 h-14 rounded-full bg-green-500 flex items-center justify-center shadow-lg shadow-green-500/80 hover:scale-110 hover:shadow-green-500/60 transition-all duration-300"> <i class="fa-brands fa-whatsapp text-white text-2xl"></i> 
-      </div>
-     </div>
-     </a>
-
-     <a href="tel:+255788296274" target="_blank" aria-label="Call us" class="fixed bottom-24 right-5 z-50 group"> 
-  <div class="flex items-center gap-3">
-
-    <!-- Optional Tooltip --> 
-    <span class="hidden md:block opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 transition-all duration-300 bg-dark text-white text-sm px-4 py-2 rounded-lg shadow-lg">
-      Call us
-    </span> 
-
-    <!-- Button --> 
-    <div class="w-14 h-14 rounded-full bg-primary flex items-center justify-center shadow-lg shadow-primary/80 hover:scale-110 hover:shadow-primary/60 transition-all duration-300"> 
-      <i class="fa-solid fa-phone text-white text-2xl"></i>
-    </div>
-
-  </div>
-</a>
-
-  <a href="tel:+255788296274" target="_blank" aria-label="Call us" class="fixed bottom-24 right-5 z-50 group"> 
-  <div class="flex items-center gap-3">
-
-    <!-- Optional Tooltip --> 
-    <span class="hidden md:block opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 transition-all duration-300 bg-dark text-white text-sm px-4 py-2 rounded-lg shadow-lg">
-      Call us
-    </span> 
-
-    <!-- Button --> 
-    <div class="w-14 h-14 rounded-full bg-primary flex items-center justify-center shadow-lg shadow-primary/80 hover:scale-110 hover:shadow-primary/60 transition-all duration-300"> 
-      <i class="fa-solid fa-phone text-white text-2xl"></i>
-    </div>
-
-  </div>
-</a>
-
 </body>
 </html>
-
 

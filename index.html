@@ -3,108 +3,100 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Synlotech Technologies | Deploying Soon</title>
+  <title>Synlotech Technologies | Loading</title>
+  <!-- Official Tailwind CSS v4 CDN Play Script -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="icon" href="thumbnails/Asset 3.svg" type="image/x-icon">
-  <style>
-    /* Custom blinking terminal caret */
-    .caret {
-      animation: blink 0.8s step-end infinite;
-    }
-    @keyframes blink {
-      from, to { border-color: transparent }
-      50% { border-color: #38bdf8 }
-    }
-  </style>
 </head>
-<body class="bg-black text-slate-400 flex items-center justify-center min-h-screen font-mono selection:bg-slate-800">
+<body class="bg-slate-950 text-slate-200 flex flex-col items-center justify-center min-h-screen font-sans p-6 overflow-hidden select-none antialiased relative">
 
-  <!-- Code Center Block -->
-  <div class="w-full max-w-xl px-6 text-xs sm:text-sm leading-relaxed tracking-wide">
-    <pre class="whitespace-pre"><span class="text-pink-500">import</span> time
-<span class="text-pink-500">from</span> synlotech <span class="text-pink-500">import</span> CoreEngine, ProductionServer
+  <!-- Ambient Glow -->
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-sky-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
-<span class="text-blue-400">def</span> <span class="text-green-400">launch_sequence</span>():
-    system = CoreEngine(version=<span class="text-amber-300">"4.0.2"</span>)
-    production = ProductionServer(cluster=<span class="text-amber-300">"prod-east-1"</span>)
+  <!-- Main Card Container -->
+  <div class="w-full max-w-sm bg-slate-900/40 backdrop-blur-xl border border-slate-800/80 rounded-2xl p-8 shadow-2xl z-10 flex flex-col items-center text-center">
     
-    print(<span class="text-amber-300">"[INFO] Initializing kernel framework..."</span>)
-    system.boot_sequence()
-    
-    <span class="text-slate-500"># System deployment payload loop</span>
-    <span class="text-pink-500">for</span> progress <span class="text-pink-500">in</span> system.load_assets():
-        print(f<span class="text-amber-300">"[LOAD] Syncing nodes... {progress}%"</span>)
-        time.sleep(<span class="text-cyan-400">0.05</span>)
-        
-    <span class="text-pink-500">if</span> system.is_ready() <span class="text-pink-500">and</span> production.is_secure():
-        print(<span class="text-amber-300">"[SUCCESS] All structures verified."</span>)
-        production.deploy_live()
-    <span class="text-pink-500">else</span>:
-        <span class="text-pink-500">raise</span> SystemError(<span class="text-amber-300">"Deployment handshake failure"</span>)
-
-<span class="text-pink-500">if</span> __name__ == <span class="text-amber-300">"__main__"</span>:
-    launch_sequence()</pre>
-
-    <!-- Terminal Output Stream -->
-    <div id="terminal-output" class="mt-6 pt-4 border-t border-slate-900 font-bold min-h-[50px]">
-      <span class="text-slate-600">&gt; </span><span id="log-text" class="text-sky-400"></span><span class="border-r-2 border-sky-400 caret">&nbsp;</span>
+       <!-- App Icon / Logo -->
+    <div class="mb-6">
+      <div class="w-32 max-h-32 rounded-2xl bg-transparent flex items-center justify-center overflow-hidden">
+        <!-- Replaced SVG with an Image Element -->
+        <img 
+          src="thumbnails/Asset 3.svg" 
+          alt="Synlotech Logo" 
+          class="w-full h-full object-cover p-3"
+        />
+      </div>
     </div>
+
+
+    <!-- Headers -->
+    <h1 class="text-xl font-serif font-bold tracking-tight uppercase text-white mb-1">Synlotech Technologies</h1>
+    <p class="text-xs text-slate-400 mb-6">Preparing your environment...</p>
+
+    <!-- Progress Track -->
+    <div class="w-full bg-slate-950 rounded-full h-1.5 border border-slate-800/60 mb-3 overflow-hidden">
+      <div id="progress-bar" class="bg-gradient-to-r from-sky-400 to-blue-500 h-full w-0 transition-all duration-100 ease-out"></div>
+    </div>
+
+    <!-- Status Output -->
+    <div class="w-full flex justify-between items-center text-[11px] font-mono text-slate-500">
+      <span id="status-text">Connecting to infrastructure...</span>
+      <span id="percentage-text" class="text-sky-400 font-bold">0%</span>
+    </div>
+
+   
   </div>
 
+  <!-- Footer -->
+  <p class="mt-6 text-[10px] text-slate-600 tracking-wide">&copy; 2026 Synlotech Technologies.</p>
+
   <script>
-    const outputLines = [
-      "Initializing kernel framework...",
-      "Syncing architectural nodes... 24%",
-      "Syncing architectural nodes... 58%",
-      "Syncing architectural nodes... 89%",
-      "Syncing architectural nodes... 100%",
-      "All structures verified.",
-      "Synlotech Core Engine: LAUNCHING SOON..."
+    const progressBar = document.getElementById("progress-bar");
+    const statusText = document.getElementById("status-text");
+    const percentageText = document.getElementById("percentage-text");
+
+    // Human phrases triggered at specific ranges
+    const statusPhrases = [
+      { upTo: 30, text: "Initializing framework..." },
+      { upTo: 60, text: "Syncing secure cloud nodes..." },
+      { upTo: 90, text: "Optimizing layout parameters..." },
+      { upTo: 100, text: "Final checks complete!" }
     ];
 
-    const logTextEl = document.getElementById("log-text");
-    let lineIndex = 0;
-    let charIndex = 0;
-    let currentLine = "";
+    let progress = 0;
+    const totalDuration = 5000; // Exact 5 seconds
+    const intervalTime = 50; // Update UI every 50ms
+    const stepIncrement = (intervalTime / totalDuration) * 100;
 
-    function typeLog() {
-      if (lineIndex < outputLines.length) {
-        if (charIndex === 0) {
-          // Add custom prefix styling depending on message state
-          if (lineIndex === 5) {
-            currentLine = "[SUCCESS] ";
-            logTextEl.className = "text-emerald-400";
-          } else if (lineIndex === 6) {
-            currentLine = "[READY] ";
-            logTextEl.className = "text-amber-400 tracking-widest uppercase";
-          } else {
-            currentLine = "[LOAD] ";
-            logTextEl.className = "text-sky-400";
-          }
-        }
+    const loader = setInterval(() => {
+      progress += stepIncrement;
 
-        currentLine += outputLines[lineIndex][charIndex];
-        logTextEl.textContent = currentLine;
-        charIndex++;
-
-        if (charIndex < outputLines[lineIndex].length) {
-          setTimeout(typeLog, Math.random() * 30 + 15); // Natural typing rhythm
-        } else {
-          // Line complete, pause briefly before next terminal step
-          charIndex = 0;
-          lineIndex++;
-          setTimeout(typeLog, 900);
-        }
-      } else {
-        // Redirection trigger point when sequence completes
+      if (progress >= 100) {
+        progress = 100;
+        clearInterval(loader);
+        
+        // Final presentation update before redirect
+        progressBar.style.width = "100%";
+        percentageText.textContent = "100%";
+        statusText.textContent = "Redirecting...";
+        statusText.className = "text-emerald-400 font-mono text-[11px] font-bold";
+        
         setTimeout(() => {
           window.location.href = "homepage.html";
-        }, 2500);
-      }
-    }
+        }, 400); // Tiny pause at 100% for aesthetic closure
+      } else {
+        // Main updates
+        const displayVal = Math.floor(progress);
+        progressBar.style.width = `${displayVal}%`;
+        percentageText.textContent = `${displayVal}%`;
 
-    // Initialize clean boot system logs
-    window.onload = () => setTimeout(typeLog, 500);
+        // Match current percentage to right descriptive phrase
+        const activePhrase = statusPhrases.find(p => displayVal <= p.upTo);
+        if (activePhrase) {
+          statusText.textContent = activePhrase.text;
+        }
+      }
+    }, intervalTime);
   </script>
 </body>
 </html>
